@@ -1,0 +1,10 @@
+{
+  "name": "documentcss",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A documentation and guide portal for the Live Style Guide feature of DocumentJS",
+  "dependencies": {
+  	"documentjs": "git://github.com/bitovi/documentjs.git#0.3",
+  	"documentjs.com": "git://github.com/bitovi/documentjs.git#styleguide"
+  }
+}

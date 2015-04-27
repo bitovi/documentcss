@@ -17,13 +17,14 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>DocumentJS - DocumentJS for Designers </title>
+	<title>Live Style Guides - DocumentJS for Designers </title>
 	<meta name="description" content="">
 	<meta name="author" content="">
-
-	<link rel="stylesheet" type="text/css" href='./static/bundles/static.css'/>
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
 	<!--[if lt IE 9]>
-   <script type="text/javascript" src="./static/html5shiv.js"></script>
+   <script type="text/javascript" src="static/html5shiv.js"></script>
     <!--<![endif]-->
 </head>
 
@@ -32,28 +33,9 @@
 		<nav class="container">
 
 			<div class="logo-menu">
-				<a class="brand" href="../../index.html">DocumentJS</a>
-				<ul class="dropdown-menu">
-		          <li><a href="http://javascriptmvc.com">JavaScriptMVC</a></li>
-		          <li><a href="http://canjs.com">CanJS</a></li>
-		          <li><a href="http://jquerypp.com">jQuery++</a></li>
-		          <li><a href="http://stealjs.com">StealJS</a></li>
-		          <li><a href="http://funcunit.com">FuncUnit</a></li>
-		          <li><a href="http://documentjs.com" class="active">DocumentJS</a></li>
-		        </ul>
+				<a class="brand" href="./index.html">Live Style Guides</a>
 			</div>
-			<ul class="nav">
-		  	<li >
-        	<a href="../../index.html">Home</a>
-        </li>
-        <li >
-          <a href="/guides/index.html">Guides</a>
-        </li>
-        <li >
-          <a href="/examples/index.html">Example</a>
-        </li>
-	      <li class=""><a href="https://documentjs.com">DocumentJS</a></li>
-	    </ul>
+
 			<div class="pull-right">
 				<div class="bitovi-menu">
 					<a href="http://bitovi.com" class="bitovi icon-bits">Bitovi</a>
@@ -321,8 +303,15 @@
 
 
 	
-		<script type="text/javascript">
-		var docObject = {"type":"page","name":"lsg-adding-designers","src":"./node_modules/documentjs/docs/livestyleguide/guides/adding/fordesigners.md","description":"If you're working on a project that is already using DocumentJS, it is being used to generate JavaScript API docs. Since it's already being used, with only a little configuration you should be able to:","title":"DocumentJS for Designers","parent":"lsg-adding-group-intro","order":1,"templates":"/Users/Jan/Workspace/documentcss/theme/templates","dest":"/Users/Jan/Workspace/documentcss/site/guides","glob":{"pattern":"./node_modules/documentjs/docs/livestyleguide/**/*.md","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/Jan/Workspace/documentcss"},"forceBuild":true,"generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+	<footer>
+		<nav class="container">
+			<a class="brand javascriptmvc" href="index.html"></a>
+		</nav>
+	</footer>
+	
+	
+	<script type="text/javascript">
+		var docObject = {"type":"page","name":"lsg-adding-designers","src":"./node_modules/documentjs/docs/livestyleguide/guides/adding/fordesigners.md","description":"If you're working on a project that is already using DocumentJS, it is being used to generate JavaScript API docs. Since it's already being used, with only a little configuration you should be able to:","title":"DocumentJS for Designers","parent":"lsg-adding-group-intro","order":1,"dest":"/Users/Jan/Workspace/documentcss/site/guides","glob":{"pattern":"./node_modules/documentjs/docs/livestyleguide/**/*.md","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/Jan/Workspace/documentcss"},"generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 	
 	
@@ -337,7 +326,7 @@
 				data-main="static"
 				data-config="./static/config.js"
 				src="./static/steal.production.js"
-		    		bundles-path="bundles"></script>
+	    		bundles-path="bundles"></script>
 	
 </body>
 

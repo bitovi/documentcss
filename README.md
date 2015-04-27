@@ -9,7 +9,7 @@ After cloning repo:
 
 To work on the site:
 
-    grunt
+    > grunt
 
 This will build the site, open it up in your browser, and reload the
 browser when any changes are made.
@@ -21,10 +21,10 @@ The `pages` directory contains `index.md`, which is the landing page.
 Live Style Guide resources are being built from `node_modules/documentjs`.
 To make changes to those:
 
-    cd MyWorkspace
-    git clone git@github.com:bitovi/documentjs.git
-    cd documentjs
-    git checkout myBranch
-    npm link
-    cd ../documentcss
-    npm link documentjs
+    > cd MyWorkspace
+    > git clone git@github.com:bitovi/documentjs.git
+    > cd documentjs
+    > git checkout myBranch
+    > npm link
+    > cd ../documentcss
+    > npm link documentjs

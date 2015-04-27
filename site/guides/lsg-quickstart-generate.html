@@ -17,14 +17,13 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Live Style Guides - Generating the Site </title>
+	<title>DocumentJS - Generating the Site </title>
 	<meta name="description" content="">
 	<meta name="author" content="">
-	
-	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
-	
+
+	<link rel="stylesheet" type="text/css" href='./static/bundles/static.css'/>
 	<!--[if lt IE 9]>
-   <script type="text/javascript" src="static/html5shiv.js"></script>
+   <script type="text/javascript" src="./static/html5shiv.js"></script>
     <!--<![endif]-->
 </head>
 
@@ -33,9 +32,28 @@
 		<nav class="container">
 
 			<div class="logo-menu">
-				<a class="brand" href="./index.html">Live Style Guides</a>
+				<a class="brand" href="../../index.html">DocumentJS</a>
+				<ul class="dropdown-menu">
+		          <li><a href="http://javascriptmvc.com">JavaScriptMVC</a></li>
+		          <li><a href="http://canjs.com">CanJS</a></li>
+		          <li><a href="http://jquerypp.com">jQuery++</a></li>
+		          <li><a href="http://stealjs.com">StealJS</a></li>
+		          <li><a href="http://funcunit.com">FuncUnit</a></li>
+		          <li><a href="http://documentjs.com" class="active">DocumentJS</a></li>
+		        </ul>
 			</div>
-
+			<ul class="nav">
+		  	<li >
+        	<a href="../../index.html">Home</a>
+        </li>
+        <li >
+          <a href="/guides/index.html">Guides</a>
+        </li>
+        <li >
+          <a href="/examples/index.html">Example</a>
+        </li>
+	      <li class=""><a href="https://documentjs.com">DocumentJS</a></li>
+	    </ul>
 			<div class="pull-right">
 				<div class="bitovi-menu">
 					<a href="http://bitovi.com" class="bitovi icon-bits">Bitovi</a>
@@ -385,15 +403,8 @@
 
 
 	
-	<footer>
-		<nav class="container">
-			<a class="brand javascriptmvc" href="index.html"></a>
-		</nav>
-	</footer>
-	
-	
-	<script type="text/javascript">
-		var docObject = {"type":"page","name":"lsg-quickstart-generate","src":"./node_modules/documentjs/docs/livestyleguide/guides/quickstart/generate.md","description":"Now that you have your first page, you can generate the site for the first time. Open up a terminal in your project's directory and run:","title":"Generating the Site","parent":"lsg-quickstart-group-your-first-page","order":1,"dest":"/Users/Jan/Workspace/documentcss/site/guides","glob":{"pattern":"./node_modules/documentjs/docs/livestyleguide/**/*.md","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/Jan/Workspace/documentcss"},"generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		<script type="text/javascript">
+		var docObject = {"type":"page","name":"lsg-quickstart-generate","src":"./node_modules/documentjs/docs/livestyleguide/guides/quickstart/generate.md","description":"Now that you have your first page, you can generate the site for the first time. Open up a terminal in your project's directory and run:","title":"Generating the Site","parent":"lsg-quickstart-group-your-first-page","order":1,"dest":"/Users/Jan/Workspace/documentcss/site/guides","glob":{"pattern":"./node_modules/documentjs/docs/livestyleguide/**/*.md","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/Jan/Workspace/documentcss"},"templates":"/Users/Jan/Workspace/documentcss/theme/templates","forceBuild":true,"generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 	
 	
@@ -408,7 +419,7 @@
 				data-main="static"
 				data-config="./static/config.js"
 				src="./static/steal.production.js"
-	    		bundles-path="bundles"></script>
+		    		bundles-path="bundles"></script>
 	
 </body>
 

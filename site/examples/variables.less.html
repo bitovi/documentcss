@@ -17,14 +17,13 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Styles - Variables </title>
+	<title>DocumentJS - Variables </title>
 	<meta name="description" content="">
 	<meta name="author" content="">
-	
-	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
-	
+
+	<link rel="stylesheet" type="text/css" href='./static/bundles/static.css'/>
 	<!--[if lt IE 9]>
-   <script type="text/javascript" src="static/html5shiv.js"></script>
+   <script type="text/javascript" src="./static/html5shiv.js"></script>
     <!--<![endif]-->
 </head>
 
@@ -33,9 +32,28 @@
 		<nav class="container">
 
 			<div class="logo-menu">
-				<a class="brand" href="./index.html">Styles</a>
+				<a class="brand" href="../../index.html">DocumentJS</a>
+				<ul class="dropdown-menu">
+		          <li><a href="http://javascriptmvc.com">JavaScriptMVC</a></li>
+		          <li><a href="http://canjs.com">CanJS</a></li>
+		          <li><a href="http://jquerypp.com">jQuery++</a></li>
+		          <li><a href="http://stealjs.com">StealJS</a></li>
+		          <li><a href="http://funcunit.com">FuncUnit</a></li>
+		          <li><a href="http://documentjs.com" class="active">DocumentJS</a></li>
+		        </ul>
 			</div>
-
+			<ul class="nav">
+		  	<li >
+        	<a href="../../index.html">Home</a>
+        </li>
+        <li >
+          <a href="/guides/index.html">Guides</a>
+        </li>
+        <li >
+          <a href="/examples/index.html">Example</a>
+        </li>
+	      <li class=""><a href="https://documentjs.com">DocumentJS</a></li>
+	    </ul>
 			<div class="pull-right">
 				<div class="bitovi-menu">
 					<a href="http://bitovi.com" class="bitovi icon-bits">Bitovi</a>
@@ -393,15 +411,8 @@
 
 
 	
-	<footer>
-		<nav class="container">
-			<a class="brand javascriptmvc" href="index.html"></a>
-		</nav>
-	</footer>
-	
-	
-	<script type="text/javascript">
-		var docObject = {"src":"./node_modules/documentjs/site/default/static/styles/variables.less","line":0,"codeLine":8,"type":"stylesheet","description":"Variables hold all sorts of site-wide visual configurations. This site has color palettes, logo images, and font declarations set, which are demo'd throughout this live style guide.","name":"variables.less","title":"Variables","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"Styles.theme","order":0,"dest":"/Users/Jan/Workspace/documentcss/site/examples","glob":{"pattern":"./node_modules/documentjs/{styles,site/default/static/styles}/**/*.{less,css,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/Jan/Workspace/documentcss"},"generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		<script type="text/javascript">
+		var docObject = {"src":"./node_modules/documentjs/site/default/static/styles/variables.less","line":0,"codeLine":8,"type":"stylesheet","description":"Variables hold all sorts of site-wide visual configurations. This site has color palettes, logo images, and font declarations set, which are demo'd throughout this live style guide.","name":"variables.less","title":"Variables","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"Styles.theme","order":0,"dest":"/Users/Jan/Workspace/documentcss/site/examples","glob":{"pattern":"./node_modules/documentjs/{styles,site/default/static/styles}/**/*.{less,css,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/Jan/Workspace/documentcss"},"templates":"/Users/Jan/Workspace/documentcss/theme/templates","forceBuild":true,"generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 	
 	
@@ -416,7 +427,7 @@
 				data-main="static"
 				data-config="./static/config.js"
 				src="./static/steal.production.js"
-	    		bundles-path="bundles"></script>
+		    		bundles-path="bundles"></script>
 	
 </body>
 

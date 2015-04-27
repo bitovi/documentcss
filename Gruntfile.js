@@ -12,21 +12,24 @@ module.exports = function(grunt){
 					"dest": "site",
 					"glob": {
 						"pattern": "_pages/*.md"
-					}
+					},
+					"templates": "theme/templates"
 				},
 				"example": {
 					"parent": "Styles",
 					"dest": "site/examples",
 					"glob": {
 						"pattern": "./node_modules/documentjs/{styles,site/default/static/styles}/**/*.{less,css,md}"
-					}
+					},
+					"templates": "theme/templates"
 				},
 				"guides": {
 					"parent": "live-style-guide",
 					"dest": "site/guides",
 					"glob": {
 						"pattern": "./node_modules/documentjs/docs/livestyleguide/**/*.md"
-					}
+					},
+					"templates": "theme/templates"
 				}
 			}
 		},

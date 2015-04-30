@@ -57,3 +57,7 @@ To make changes to those:
     > npm link
     > cd ../documentcss
     > npm link documentjs
+
+## _documentcss.com
+
+This directory should be in the .gitignore in every branch other than gh-pages. This is to keep the commit history clean in every branch where the built page isn't required.

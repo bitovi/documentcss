@@ -67,18 +67,17 @@ module.exports = function(grunt){
 	}
 
 	grunt.registerTask('build', function(options){
-		if(options){
+		if(options.indexOf('forceBuild')!==-1){
 			for(site in sites){
-				grunt.task.run('documentjs:' + site + ":" + options);
+				grunt.config('documentjs.sites.' + site + '.forceBuild', true);
 			}
-		}else{
-			grunt.task.run('documentjs');
 		}
+
+		grunt.task.run('documentjs');
 	});
 
 	grunt.registerTask('generate', function(options){
 		if(options){
-			console.log(options)
 			for(site in sites){
 				grunt.task.run('build:' + options, 'connect:server', 'watch')
 			}

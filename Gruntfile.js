@@ -1,7 +1,6 @@
 module.exports = function(grunt){
 	grunt.loadNpmTasks('documentjs');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-npm-install');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 
 	grunt.initConfig({
@@ -9,34 +8,37 @@ module.exports = function(grunt){
 			sites: {
 				"pages": {
 					"parent": "home",
-					"dest": "site",
+					"dest": "_documentcss.com",
 					"glob": {
-						"pattern": "_pages/*.md"
+						"pattern": "pages/*.md"
 					},
-					"templates": "theme/templates"
+					"templates": "theme/templates",
+					"static": "theme/static"
 				},
 				"example": {
 					"parent": "Styles",
-					"dest": "site/examples",
+					"dest": "_documentcss.com/examples",
 					"glob": {
 						"pattern": "./node_modules/documentjs/{styles,site/default/static/styles}/**/*.{less,css,md}"
 					},
-					"templates": "theme/templates"
+					"templates": "theme/templates",
+					"static": "theme/static"
 				},
 				"guides": {
 					"parent": "live-style-guide",
-					"dest": "site/guides",
+					"dest": "_documentcss.com/docs",
 					"glob": {
 						"pattern": "./node_modules/documentjs/docs/livestyleguide/**/*.md"
 					},
-					"templates": "theme/templates"
+					"templates": "theme/templates",
+					"static": "theme/static"
 				}
 			}
 		},
 		connect: {
 			server: {
 				options: {
-					base: 'site',
+					base: '_documentcss.com',
 					livereload: true,
 					open: true
 				}
@@ -45,6 +47,7 @@ module.exports = function(grunt){
 	});
 
 	var sites = grunt.config('documentjs.sites');
+
 	for(site in sites){
 		grunt.config('watch.' + site, {
 			files: sites[site].glob.pattern,
@@ -53,9 +56,37 @@ module.exports = function(grunt){
 				livereload: true
 			}
 		});
+
+		grunt.config('watch.forceBuild' + site, {
+			files: sites[site].glob.pattern,
+			tasks: ['documentjs:' + site + ':forceBuild'],
+			options: {
+				livereload: true
+			}
+		});
 	}
 
-	grunt.registerTask('build', ['npm-install', 'documentjs']);
-	grunt.registerTask('default', ['documentjs', 'connect:server', 'watch'])
+	grunt.registerTask('build', function(options){
+		if(options){
+			for(site in sites){
+				grunt.task.run('documentjs:' + site + ":" + options);
+			}
+		}else{
+			grunt.task.run('documentjs');
+		}
+	});
+
+	grunt.registerTask('generate', function(options){
+		if(options){
+			console.log(options)
+			for(site in sites){
+				grunt.task.run('build:' + options, 'connect:server', 'watch')
+			}
+		}else {
+			grunt.task.run('documentjs', 'connect:server', 'watch');
+		}
+	});
+
+	grunt.registerTask('default', ['generate:forceBuild']);
 
 }

@@ -13,8 +13,35 @@ To work on the site:
 
     > grunt
 
-This will build the site, open it up in your browser, and reload the
+This will build the site (including static pages), open it up in your browser, and reload the
 browser when any changes are made.
+
+## Grunt Tasks
+
+### Work on Site, Force Build and Live Update
+
+This will build the site, start a server, open the page, and watch.
+"Watch" means it will automatically regenerate (including static files) whenever changes occur. Pages have live-reloading built in.
+
+    > grunt
+
+This is an alias for the default task:
+
+    > grunt generate:forceBuild
+
+### Work on Site, do not force build
+
+Almost the same as previous task, but slightly faster because it does not build static files when changes occur:
+
+    > grunt generate
+
+### Only build the pages
+
+    > grunt build
+
+With force building static pages:
+
+    > grunt build:forceBuild
 
 ## Where Stuff Is
 

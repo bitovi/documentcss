@@ -24,7 +24,7 @@
   <a href="examples/variables.less.html" class="button" style="background-color: #706f70; border-color: #484848; font-size: 1em;">View Example</a>
 </div>
     
-<img src="theme/static/img/style-guide-demo.png"/>
+<img src="static/img/style-guide-demo.png"/>
 </section>
 
 <section style="width: 800px; margin:0 auto; overflow:hidden;">

@@ -4,7 +4,7 @@
   "private": true,
   "description": "A documentation and guide portal for the Live Style Guide feature of DocumentJS",
   "dependencies": {
-    "documentjs": "git://github.com/bitovi/documentjs.git#0.3"
+    "documentjs": "git://github.com/bitovi/documentjs.git"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

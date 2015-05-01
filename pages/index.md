@@ -9,7 +9,7 @@
 
 <section class="homepage-section">
   <h1>Create live style guides with interactive examples, that change as your design does.</h1>
-  <p><small><i>Powered by <a href="http://documentjs.com">DocumentJS</a></i></small></p>
+  <p class="homepage-section-note"><small><i>Powered by <a href="http://documentjs.com">DocumentJS</a></i></small></p>
 
 <div class="homepage-section-cta">
   <a href="guides/index.html" class="button button-main">Get Started</a>

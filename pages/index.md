@@ -6,19 +6,23 @@
 @hide article
 @body
 
-<section style="width: 800px; margin:100px auto 20px auto; overflow:hidden;">
-<div style="border-right: 1px solid #ccc; padding-right:20px; margin-right:50px; float:left;">
-<img src="theme/docjs-landing-page-logo.png" alt="StealJS Logo" />
-</div>  
-<div style="float:left; width: 340px; padding-top: 36px;">
-<p style="-webkit-font-smoothing: antialiased; font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300; ">Create a detailed style guide with live demos that change every time your design does.
-<br><small><i>Powered by <a href="http://documentjs.com">DocumentJS</a></i></small></p>
-</div>
-</section>
-<section style="width: 800px; margin:0 auto; overflow:hidden;">
-<p>Document your CSS, LESS, or SASS Files:</p>
 
-```css
+<section class="homepage-section">
+  <h1>Create live style guides with interactive examples, that change as your design does.</h1>
+  <p class="homepage-section-note"><small><i>Powered by <a href="http://documentjs.com">DocumentJS</a></i></small></p>
+
+<div class="homepage-section-cta">
+  <a href="guides/index.html" class="button button-main">Get Started</a>
+  <a href="examples/variables.less.html" class="button button-secondary">View Example</a>
+</div>
+    
+<img src="static/img/style-guide-demo.png"/>
+</section>
+
+<section class="homepage-section">
+<h2>How it Works</h2>
+<p>Using a combination of custom tags and markdown <strong>DocumentCSS</strong> parses coments on your CSS, LESS, or SASS and autogenerates a site with your documentation.</p>
+<pre><code class="language-css">
 /**
  * @styles color-palette Color Palette
  * 
@@ -37,18 +41,17 @@
 @@rain: #1f54c6; 
 @@sunrise: #f7f8c3; 
 @@sunset: #d9534f;
-
-```
-
+</code></pre>
 </section>  
 
-<section style="width: 800px; margin:0 auto; overflow:hidden;">
-<p>Automatically generate a live style guide with examples that change when your design does:</p>
-<div style="overflow: hidden; height: 550px;">
-<div style="position: relative">
-<div style="position: absolute; top: 0; left: 0; width: 100%; height: 550px;"></div>
-</div>
-<iframe scrolling="no" src="/examples/variables.less.html" style="width: 100%; height: 620px; margin-top: -70px; border: 0px;"></iframe>
-</div>
+<section class="homepage-section-closing">
+<section class="homepage-section">
+<h2>DocumentCSS makes it easy to incorporate style documentation as part of your design workflow.</h2>
 
+<div class="homepage-section-cta">
+  <a href="guides/index.html" class="button button-main">Get Started</a>
+  <a href="examples/variables.less.html" class="button button-secondary">View Example</a>
+</div>
 </section>
+</section>
+

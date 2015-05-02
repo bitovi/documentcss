@@ -17,7 +17,7 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>DocumentCSS {{#if title}}- {{title}} {{else}} {{#if name}}- {{name}}{{/if}}{{/if}}</title>
+	<title>DocumentJS  - Fonts</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -32,7 +32,7 @@
 		<nav class="container">
 
 			<div class="logo-menu">
-				<a class="brand" href="{{urlFromConfig 'index.html'}}">DocumentJS</a>
+				<a class="brand" href="../../index.html">DocumentJS</a>
 				<ul class="dropdown-menu">
 		          <li><a href="http://javascriptmvc.com">JavaScriptMVC</a></li>
 		          <li><a href="http://canjs.com">CanJS</a></li>
@@ -43,13 +43,13 @@
 		        </ul>
 			</div>
 			<ul class="nav">
-		  	<li {{#ifCurrentFromConfig "index.html"}}class="active"{{/ifCurrentFromConfig}}>
-        	<a href="{{urlFromConfig 'index.html'}}">Home</a>
+		  	<li >
+        	<a href="../../index.html">Home</a>
         </li>
-        <li {{#ifEqual page "index"}}class='active'{{/ifEqual}}>
+        <li >
           <a href="/guides/index.html">Guides</a>
         </li>
-        <li {{#ifEqual page "index"}}class='active'{{/ifEqual}}>
+        <li >
           <a href="/examples/index.html">Example</a>
         </li>
 	      <li class=""><a href="https://documentjs.com">DocumentJS</a></li>
@@ -71,24 +71,113 @@
 		</nav>
 	</header>
 
-	{{{content}}}
-	{{#if showFooter}}
-	<footer>
-		<nav class="container">
-			<a class="brand javascriptmvc" href="index.html"></a>
-		</nav>
-	</footer>
-	{{/if}}
+	
+<div class="container api">
+
+	
+	<nav class="sidebar">
+		
+		<ul class="api cascading primary-grouping"> 
+	
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="index.html" data-search="Styles">
+				Styles
+			</a>
+			
+		</li>
+		
+		
+			
+			<li class="search-container active">
+			<a class="sidebar-title" href="Fonts.html" data-search="Fonts">
+				Fonts
+			</a>
+			
+		</li>
+			
+		
+	
+</ul>
+	</nav>
+	
+	
+	
+	<article class="content docs">
+	
+	
+		
+		<section class="title">
+			<div class="heading">
+<h1>Fonts</h1>
+	<ul class="tags">
+		<li>page</li>
+	</ul>
+	
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+	<span class="inherits">&nbsp;</span>
+</div>
+
+<ul class="links">
+	
+	
+	
+	
+</ul>
+<br />
+		</section>
+		
+		
+		
+		<section class="contents">
+		</section>
+		
+		
+		
+
+		
+		<section class="description">
+			<p>Fonts example</p>
+
+		</section>
+		
+
+		
+			
+		
+		
+		
+		
+
+		
+		
+
+		
+
+		
+	
+	
+	</article>
+	
+	
+
+</div>
+
+
+
+
+
+	
 		<script type="text/javascript">
-		var docObject = {{{docObjectString}}};
+		var docObject = {"type":"page","name":"Fonts","src":"./node_modules/documentjs/styles/typeography/fonts.md","description":"Fonts example","parent":"Styles.typeography","templates":"/Users/Jan/Workspace/documentcss/theme/templates","dest":"/Users/Jan/Workspace/documentcss/site/examples","glob":{"pattern":"./node_modules/documentjs/{styles,site/default/static/styles}/**/*.{less,css,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/Jan/Workspace/documentcss"},"forceBuild":true,"generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 	
-	{{#if devBuild}}
-		<script type='text/javascript' 
-				data-main="static"
-				data-config="./static/config.js"
-				src="./static/steal/steal.js"></script>
-	{{else}}
+	
 		<script>
 		  steal = {
 		    instantiated: {
@@ -101,7 +190,7 @@
 				data-config="./static/config.js"
 				src="./static/steal.production.js"
 		    		bundles-path="bundles"></script>
-	{{/if}}
+	
 </body>
 
 </html>

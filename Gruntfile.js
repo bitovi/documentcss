@@ -15,13 +15,23 @@ module.exports = function(grunt){
 					"templates": "theme/templates",
 					"static": "theme/static"
 				},
-				"example": {
+				"examples": {
 					"parent": "Styles",
-					"dest": "_documentcss.com/examples",
+					"dest": "_documentcss.com/examples/styles",
 					"glob": {
-						"pattern": "./node_modules/documentjs/{styles,site/default/static/styles}/**/*.{less,css,md}"
+						"pattern": "{pages/example.md,./node_modules/documentjs/{styles,site/default/static/styles}/**/*.{less,css,md}}",
+						"ignore": "./node_modules/documentjs/styles/styles.md"
 					},
 					"templates": "theme/templates",
+					"static": "theme/static"
+				},
+				"examples/demos": {
+					"parent": "demos",
+					"dest": "_documentcss.com/demos",
+					"glob": {
+						"pattern": "./node_modules/documentjs/styles/demos/demos/**/*.md"
+					},
+					"templates": "./node_modules/documentjs/styles/demos/templates",
 					"static": "theme/static"
 				},
 				"guides": {

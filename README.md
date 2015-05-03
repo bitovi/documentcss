@@ -58,6 +58,10 @@ To make changes to those:
     > cd ../documentcss
     > npm link documentjs
 
-## _documentcss.com
+## Generated Directories
 
-This directory should be in the .gitignore in every branch other than gh-pages. This is to keep the commit history clean in every branch where the built page isn't required.
+These shouldn't be changed manually:
+- static
+- demos
+- examples
+- docs

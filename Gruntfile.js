@@ -8,16 +8,16 @@ module.exports = function(grunt){
 			sites: {
 				"pages": {
 					"parent": "home",
-					"dest": "_documentcss.com",
+					"dest": "./",
 					"glob": {
-						"pattern": "pages/*.md"
+						"pattern": "pages/index.md"
 					},
 					"templates": "theme/templates",
 					"static": "theme/static"
 				},
 				"examples": {
 					"parent": "Styles",
-					"dest": "_documentcss.com/examples/styles",
+					"dest": "examples/styles",
 					"glob": {
 						"pattern": "{pages/example.md,./node_modules/documentjs/{styles,site/default/static/styles}/**/*.{less,css,md}}",
 						"ignore": "./node_modules/documentjs/styles/styles.md"
@@ -27,7 +27,7 @@ module.exports = function(grunt){
 				},
 				"examples/demos": {
 					"parent": "demos",
-					"dest": "_documentcss.com/demos",
+					"dest": "demos",
 					"glob": {
 						"pattern": "./node_modules/documentjs/styles/demos/demos/**/*.md"
 					},
@@ -36,7 +36,7 @@ module.exports = function(grunt){
 				},
 				"guides": {
 					"parent": "live-style-guide",
-					"dest": "_documentcss.com/docs",
+					"dest": "docs",
 					"glob": {
 						"pattern": "./node_modules/documentjs/docs/livestyleguide/**/*.md"
 					},
@@ -48,7 +48,6 @@ module.exports = function(grunt){
 		connect: {
 			server: {
 				options: {
-					base: '_documentcss.com',
 					livereload: true,
 					open: true
 				}

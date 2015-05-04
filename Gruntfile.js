@@ -21,7 +21,7 @@ module.exports = function(grunt){
 					"dest": "examples/styles",
 					"glob": {
 						"pattern": "{pages/example.md,./node_modules/documentjs/{styles,site/default/static/styles}/**/*.{less,css,md}}",
-						"ignore": "./node_modules/documentjs/styles/styles.md"
+						"ignore": "{./node_modules/documentjs/styles/styles.md,./node_modules/documentjs/styles/demos/**/*}"
 					},
 					"templates": "theme/templates",
 					"static": "theme/static"
@@ -51,7 +51,8 @@ module.exports = function(grunt){
 			server: {
 				options: {
 					livereload: true,
-					open: true
+					open: true,
+					port: 4000
 				}
 			}
 		}

@@ -24,11 +24,11 @@
 <p>Using a combination of custom tags and markdown <strong>DocumentCSS</strong> parses coments on your CSS, LESS, or SASS and autogenerates a site with your documentation.</p>
 <pre><code class="language-css">
 /**
- * @styles color-palette Color Palette
+ * @@styles color-palette Color Palette
  * 
- * @description
+ * @@description
  * Variables used to define the site's color palette.
- * @iframe demos/variables/color-palette/demo.html 630
+ * @@iframe demos/variables/color-palette/demo.html 630
  **/
 @@night: #000000; 
 @@darkSkies: #484848; 

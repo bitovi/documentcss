@@ -11,7 +11,7 @@ module.exports = function(grunt){
 					"dest": "./",
 					"glob": {
 						"pattern": "pages/*.md",
-						"ignore": "pages/example.md"
+						"ignore": "pages/{example,livestyleguide}.md"
 					},
 					"templates": "theme/templates",
 					"static": "theme/static"
@@ -36,10 +36,11 @@ module.exports = function(grunt){
 					"static": "theme/static"
 				},
 				"guides": {
-					"parent": "live-style-guide",
+					"parent": "lsg.guides",
 					"dest": "docs",
 					"glob": {
-						"pattern": "./node_modules/documentjs/docs/livestyleguide/**/*.md"
+						"pattern": "{./node_modules/documentjs/docs/livestyleguide/**/*.md,pages/livestyleguide.md}",
+						"ignore": "./node_modules/documentjs/docs/livestyleguide/livestyleguide.md"
 					},
 					"templates": "theme/templates",
 					"static": "theme/static"

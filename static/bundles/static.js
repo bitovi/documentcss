@@ -63,14 +63,14 @@ define("can/view/mustache/mustache",["can/util/util","can/view/scope/scope","can
 System.set('can/view/mustache/system', System.newModule({}));
 /*content_list.mustache!can/view/mustache/system*/
 define("content_list.mustache!can/view/mustache/system",["can/view/mustache/mustache"],function(t){return t.view.preloadStringRenderer("content_list.mustache",t.Mustache(function(e,s){var n=[];return n.push("<ul>"),n.push("\n"),n.push(t.view.txt(0,"ul",0,this,t.Mustache.txt({scope:e,options:s},"#",{get:"sections"},[{fn:function(e,s){var n=[];return n.push('	<li><a href="#'),n.push(t.view.txt(!0,"a","href",this,t.Mustache.txt({scope:e,options:s},null,{get:"id"}))),n.push('"',t.view.pending({scope:e,options:s}),">"),n.push(t.view.txt(1,"a",0,this,t.Mustache.txt({scope:e,options:s},null,{get:"text"}))),n.push("</a></li>"),n.push("\n"),n.join("")}}]))),n.push("</ul>"),n.join("")}))});
+/*can/util/domless/domless*/
+System.set('can/util/domless/domless', System.newModule({}));
+/*can/util/array/makeArray*/
+System.set('can/util/array/makeArray', System.newModule({}));
 /*can/observe/observe*/
 define("can/observe/observe",["can/util/util","can/map/map","can/list/list","can/compute/compute"],function(t){return t.Observe=t.Map,t.Observe.startBatch=t.batch.start,t.Observe.stopBatch=t.batch.stop,t.Observe.triggerBatch=t.batch.trigger,t});
 /*content_list*/
 define("content_list",["can/control/control","./content_list.mustache!","jquery/jquery","can/observe/observe"],function(e,t,n){return can.Control.extend({init:function(){var e=[];if(this.collectSignatures().each(function(t){var i=n("h2",this);this.id="sig_"+i.text().replace(/\s/g,"").replace(/[^\w]/g,"_"),e.push({id:this.id,text:i.text()})}),this.collectHeadings().each(function(t){var i=n(this);this.id="section_"+i.text().replace(/\s/g,"").replace(/[^\w]/g,"_"),e.push({id:this.id,text:i.text()})}),this.element.html(t({sections:e},{encode:function(){return encodeURIComponent(this)}})),window.location.hash.length){var i=window.location.hash.replace("#",""),c=document.getElementById(i);c&&c.scrollIntoView(!0)}},collectSignatures:function(){var e=n(".content .signature").clone();return e.find(".release").remove(),e},collectHeadings:function(){return n(".content .comment h2")}})});
-/*can/util/array/makeArray*/
-System.set('can/util/array/makeArray', System.newModule({}));
-/*can/util/domless/domless*/
-System.set('can/util/domless/domless', System.newModule({}));
 /*demo_frame.mustache!can/view/mustache/system*/
 define("demo_frame.mustache!can/view/mustache/system",["can/view/mustache/mustache"],function(t){return t.view.preloadStringRenderer("demo_frame.mustache",t.Mustache(function(e,s){var a=[];return a.push('<div class="demo">\n	<ul>\n		<li class="tab" data-tab="demo">Demo</li>\n		<li class="tab" data-tab="html">HTML</li>\n		<li class="tab" data-tab="js" '),a.push(t.view.txt(2,"li","style",this,function(){var t=[];return t.push('style="'),t.push('display:none;"'),t.join("")})),a.push('>JS</li>\n	</ul>\n	<div class="tab-content" data-for="demo">\n		<iframe src="'),a.push(t.view.txt(!0,"iframe","src",this,t.Mustache.txt({scope:e,options:s},null,{get:"demoSrc"}))),a.push('"',t.view.pending({scope:e,options:s}),"/>"),a.push('\n	</div>\n	<div class="tab-content" data-for="html">\n		<pre class="prettyprint"></pre>\n	</div>\n	<div class="tab-content" data-for="js">\n		<pre class="prettyprint lang-js"></pre>\n	</div>\n</div>'),a.join("")}))});
 /*prettify*/

@@ -10,7 +10,8 @@ module.exports = function(grunt){
 					"parent": "home",
 					"dest": "./",
 					"glob": {
-						"pattern": "pages/index.md"
+						"pattern": "pages/*.md",
+						"ignore": "pages/example.md"
 					},
 					"templates": "theme/templates",
 					"static": "theme/static"
@@ -27,7 +28,7 @@ module.exports = function(grunt){
 				},
 				"examples/demos": {
 					"parent": "demos",
-					"dest": "demos",
+					"dest": "examples/demos",
 					"glob": {
 						"pattern": "./node_modules/documentjs/styles/demos/demos/**/*.md"
 					},

@@ -17,7 +17,7 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>DocumentCSS - DocumentCSS </title>
+	<title>DocumentCSS - Guides </title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -83,8 +83,8 @@
 		
 			
 			<li class="search-container active">
-			<a class="sidebar-title" href="index.html" data-search="DocumentCSS">
-				DocumentCSS
+			<a class="sidebar-title" href="index.html" data-search="Guides">
+				Guides
 			</a>
 			
 	<ul>
@@ -142,7 +142,7 @@
 		
 		<section class="title">
 			<div class="heading">
-<h1>DocumentCSS</h1>
+<h1>Guides</h1>
 	<ul class="tags">
 		<li>page</li>
 	</ul>
@@ -179,7 +179,7 @@
 
 		
 		<section class="description">
-			<h2>Get Started</h2>
+			<style>
 
 		</section>
 		
@@ -193,27 +193,32 @@
 
 		
 		<section class="comment">
-			<p>This will get you up and running as quickly as possible. Click <code>&gt;&gt;</code> on any of the headings for more detail.</p>
-<h2>Install <a href="/docs/lsg-quickstart-installation.html">&gt;&gt;</a></h2>
-<p>Install Node.js on your computer. From the console use npm to install DocumentJS:</p>
-<blockquote>
-<p>cd path/to/myproject
-npm install documentjs --save-dev</p>
-</blockquote>
-<p><em>The --sav-dev flag saves DocumentJS in your package.json so other people who are working on your project can also use DocumentJS.</em></p>
-<h2>Configure <a href="/docs/lsg-quickstart-configuration.html">&gt;&gt;</a></h2>
-<p>To generate a Live Style Guide, create a file called <code>documentjs.json</code> in the top level of your project like this:
-{
-&quot;sites&quot;: {
-&quot;styles&quot;: {
-&quot;glob&quot;: &quot;styles/**/*.{css,less,md}&quot;,
-&quot;dest&quot;: &quot;styleguide&quot;
-}
-}
+			<p>section.contents {
+display: none;
 }</p>
-<p>In this configuration “glob” is used to configure what stylesheet files are being documented. “dest” is used to configure where the Live Style Guide should be generated.</p>
-<h2>Document <a href="/docs/lsg-quickstart-stylesheet.html">&gt;&gt;</a></h2>
-<p>DocumentJS uses tags prefixed with an @. To document your CSS use:</p>
+</style>
+<p>For in depth instructions, check out the <a href="/docs/lsg-quickstart.html">Standalone Live Style Guide</a>.</p>
+<h2>Get Started</h2>
+<h3>Install</h3>
+<p>Install Node.js on your computer. From the console use npm to install DocumentJS:</p>
+<pre><code>&gt; cd path/to/myproject
+&gt; npm install documentjs --save-dev
+</code></pre>
+<p><em>The --sav-dev flag saves DocumentJS in your package.json so other people who are working on your project can also use DocumentJS.</em></p>
+<h3>Configure</h3>
+<p>To generate a Live Style Guide, create a file called <code>documentjs.json</code> in the top level of your project like this:</p>
+<pre><code>{
+    &quot;sites&quot;: {
+        &quot;styles&quot;: {
+            &quot;glob&quot;: &quot;styles/**/*.{css,less,md}&quot;,
+            &quot;dest&quot;: &quot;styleguide&quot;
+        }
+    }
+}
+</code></pre>
+<p><em>“glob” is used to configure what stylesheet files are being documented. “dest” is used to configure where the Live Style Guide should be generated.</em></p>
+<h3>Document</h3>
+<p>To document your CSS use the following <a href="http://documentjs.com/docs/documentjs.tags.html">tags</a>:</p>
 <ul>
 <li><code>@stylesheet</code> to create a page for each stylesheet documented</li>
 <li><code>@styles</code> to document individual styles</li>
@@ -248,24 +253,21 @@ button, .button {
     }
 }
 </code></pre>
-<h2>Run <a href="/docs/lsg-quickstart-generate.html">&gt;&gt;</a></h2>
+<h3>Run</h3>
 <p>To generate the Style Guide first install DocumentJS globally (so it can be run anywhere on your computer):</p>
-<blockquote>
-<p>npm install -g documentjs</p>
-</blockquote>
+<pre><code>&gt; npm install -g documentjs
+</code></pre>
 <p>Then from your project directory run:</p>
-<blockquote>
-<p>documentjs -w</p>
-</blockquote>
+<pre><code>&gt; documentjs -w
+</code></pre>
 <p><em>-w is a flag that tell DocumentJS to watch changes and regenerate the style guide every time you make updates.</em></p>
 <p>To see the generated site, using terminal navigate to the styleguide directory and use python to start a server*:</p>
-<blockquote>
-<p>cd styleguide
-python -m SimpleHTTPServer</p>
-</blockquote>
-<p>*this only applies to Mac or a Linux machines</p>
-<p>Open up a browser and navigate to http://localhost:8000 (if the number above is not 8000, use whatever number you see in your terminal instead). You should see the Live Style Guide with the documentation you just created!</p>
-<p>For detailed step by step instructions, check out the <a href="/docs/lsg-quickstart.html">detailed guides</a>.</p>
+<pre><code>&gt; cd styleguide
+&gt; python -m SimpleHTTPServer
+</code></pre>
+<p><em>This only applies to Mac or a Linux machines</em></p>
+<p>Open up a browser and navigate to <strong>http://localhost:8000</strong> (if the number above is not 8000, use whatever number you see in your terminal instead). You should see the Live Style Guide with the documentation you just created!</p>
+<p>For in depth instructions, check out the <a href="/docs/lsg-quickstart.html">Standalone Live Style Guide</a>.</p>
 
 		</section>
 		
@@ -288,7 +290,7 @@ python -m SimpleHTTPServer</p>
 
 	
 		<script type="text/javascript">
-		var docObject = {"type":"page","name":"lsg.guides","src":"pages/livestyleguide.md","description":"## Get Started","title":"DocumentCSS","dest":"/Users/Jan/Workspace/documentcss/docs","glob":{"pattern":"{./node_modules/documentjs/docs/livestyleguide/**/*.md,pages/livestyleguide.md}","ignore":"./node_modules/documentjs/docs/livestyleguide/livestyleguide.md","cwd":"/Users/Jan/Workspace/documentcss"},"templates":"/Users/Jan/Workspace/documentcss/theme/templates","static":"/Users/Jan/Workspace/documentcss/theme/static","forceBuild":true,"generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+		var docObject = {"type":"page","name":"lsg.guides","src":"pages/livestyleguide.md","description":"<style>","title":"Guides","dest":"/Users/Jan/Workspace/documentcss/docs","glob":{"pattern":"{./node_modules/documentjs/docs/livestyleguide/**/*.md,pages/livestyleguide.md}","ignore":"./node_modules/documentjs/docs/livestyleguide/livestyleguide.md","cwd":"/Users/Jan/Workspace/documentcss"},"templates":"/Users/Jan/Workspace/documentcss/theme/templates","static":"/Users/Jan/Workspace/documentcss/theme/static","forceBuild":true,"generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
 	</script>
 	
 	

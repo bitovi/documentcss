@@ -36,7 +36,7 @@ To generate a Live Style Guide, create a file called `documentjs.json` in the to
 }
 ```
 
-*“glob” is used to configure what stylesheet files are being documented. “dest” is used to configure where the Live Style Guide should be generated.
+*“glob” is used to configure what stylesheet files are being documented. “dest” is used to configure where the Live Style Guide should be generated.*
 
 
 ### Document
@@ -102,7 +102,7 @@ To see the generated site, using terminal navigate to the styleguide directory a
 > python -m SimpleHTTPServer
 ```
 
-*This only applies to Mac or a Linux machines
+*This only applies to Mac or a Linux machines*
 
 Open up a browser and navigate to **http://localhost:8000** (if the number above is not 8000, use whatever number you see in your terminal instead). You should see the Live Style Guide with the documentation you just created!
 

@@ -12,7 +12,7 @@
   <p class="homepage-section-note"><small><i>Powered by <a href="http://documentjs.com">DocumentJS</a></i></small></p>
 
 <div class="homepage-section-cta">
-  <a href="docs/lsg-quickstart.html" class="button button-main">Get Started</a>
+  <a href="docs/index.html" class="button button-main">Get Started</a>
   <a href="examples/styles/variables.less.html" class="button button-secondary">View Example</a>
 </div>
     
@@ -49,7 +49,7 @@
 <h2>DocumentCSS makes it easy to incorporate style documentation as part of your design workflow.</h2>
 
 <div class="homepage-section-cta">
-  <a href="docs/lsg-quickstart.html" class="button button-main">Get Started</a>
+  <a href="docs/index.html" class="button button-main">Get Started</a>
   <a href="examples/styles/variables.less.html" class="button button-secondary">View Example</a>
 </div>
 </section>

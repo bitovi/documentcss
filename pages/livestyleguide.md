@@ -12,15 +12,39 @@ For in depth instructions, check out the [Standalone Live Style Guide](/docs/lsg
 
 ### Install
 
-Install Node.js on your computer. From the console use npm to install DocumentJS:
+Install [Node.js](https://nodejs.org/) on your computer and create a `package.json` file in your project's root directory with something like:
+```
+{
+  "name": "style-guide",
+  "version": "0.0.1",
+  "description": "My style guide",
+  "author": "",
+  "license": ""
+}
+
+```
+
+From the console or terminal, go to your project folder and use `npm` to install DocumentJS:
 
 ```
 > cd path/to/myproject
 > npm install documentjs --save-dev
 ```
 
-*The --sav-dev flag saves DocumentJS in your package.json so other people who are working on your project can also use DocumentJS.*
+*The --sav-dev flag saves DocumentJS in your `package.json` so other people who are working on your project can also use DocumentJS.*
 
+### File Structure
+
+Create the files and folders that DocumentCSS will use to generate the docs. 
+* Create a folder called `styles` which will hold all of your CSS or Less files. 
+* Create a markdown file to define as the primary parent, like `styles.md`, inside the `styles` folder
+
+Inside the `styles.md` add:
+```
+@page styles Styles
+
+This is my style guide
+```
 
 ### Configure
 
@@ -30,18 +54,29 @@ To generate a Live Style Guide, create a file called `documentjs.json` in the to
     "sites": {
         "styles": {
             "glob": "styles/**/*.{css,less,md}",
-            "dest": "styleguide"
+            "dest": "styleguide",
+            "parent": "styles" 
         }
     }
 }
 ```
 
-*“glob” is used to configure what stylesheet files are being documented. “dest” is used to configure where the Live Style Guide should be generated.*
+* "glob" tells DocumentCSS to look in the `styles` folder and read all files with a `css`, `less`, or `md` extension.
+* "dest" tells DocumentCSS to automatically create a `styleguide` folder to host the generated HTML pages.
+* "parent" tells DocumentCSS to use the parent declaration `styles` from `styles.md` as the main landing page.
 
+Your project's folder structure should look like this:
+```
+project/
+    package.json
+    styles/
+        styles.md
+    documentjs.json
+```
 
 ### Document
 
-To document your CSS use the following [tags](http://documentjs.com/docs/documentjs.tags.html):
+To document your CSS use the following [tags](http://documentjs.com/docs/documentjs.tags.html) insides your CSS, Less, or Markdown files:
 
 - `@stylesheet` to create a page for each stylesheet documented
 - `@styles` to document individual styles
@@ -49,18 +84,19 @@ To document your CSS use the following [tags](http://documentjs.com/docs/documen
 - `@iframe` to display an html live demonstration 
 - `@demo` to display an html live demonstration that also renders a tab with the html used on the demo
 
-Example:
+Create a `buttons.less` file inside the `styles` folder and add this:
 ```
 /**
   * @stylesheet buttons.less Buttons
-  * @parent Styles.baseline-elements
+  * @parent styles
   *
   * @description
   * All defined button styles and states belong here, including any "helper class" button style options, like `default`, `primary` etc.*
   * The same button styles have been applied to a button class, for use on other html elements emulating a button.
   *
-  * @demo demos/buttons/demo.html
+  * @demo demos/buttons.html
   **/
+  
 button, .button {
     background-color: @colorLinks;
     border: 1px solid darken(@colorLinks, 10%);
@@ -77,14 +113,41 @@ button, .button {
     }
 }
 ```
+Next, create a `demos` folder inside the `styles` folder and a file called `buttons.html`
 
+Inside `buttons.html` add the HTML markup needed to demonstrate the styles for `buttons.less`
+
+For example: 
+```
+  <p>
+    <button>Example Button 1</button>
+  </p>
+  <p>
+    <a href="#" class="button">Example Button 2</a>
+  </p>
+```
+
+Your project's folder structure should now look like this:
+```
+project/
+    package.json
+    styles/
+        styles.md
+        demos/buttons.html
+    documentjs.json
+```
 
 ### Run
 
-To generate the Style Guide first install DocumentJS globally (so it can be run anywhere on your computer):
+To generate the Style Guide using a simple command like `documentjs`, you'll want to install DocumentJS globally using:
 
 ```
 > npm install -g documentjs
+```
+
+This might require admin privileges to install, so use sudo and enter your password when prompted:
+```
+> sudo npm install -g documentjs
 ```
 
 Then from your project directory run:

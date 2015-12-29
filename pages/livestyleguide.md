@@ -102,7 +102,8 @@ To see the generated site, using terminal navigate to the styleguide directory a
 > python -m SimpleHTTPServer
 ```
 
-*This only applies to Mac or a Linux machines*
+*The command `python -m SimpleHTTPServer` works for python version 2.x, for python version 3.x command should look like `python -m http.server`. Also check that python is installed on your machine.
+As pure Node.js alternatives you could use Express (installation: `npm install -g express`, usage: `express`) or local-web-server (installation: `npm install -g local-web-server`, usage: `ws`)*
 
 Open up a browser and navigate to **http://localhost:8000** (if the number above is not 8000, use whatever number you see in your terminal instead). You should see the Live Style Guide with the documentation you just created!
 

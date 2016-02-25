@@ -41,7 +41,7 @@ Create the files and folders that DocumentCSS will use to generate the docs.
 
 Inside the `styles.md` add:
 ```
-@page styles Styles
+@@page styles Styles
 
 This is my style guide
 ```
@@ -53,7 +53,7 @@ To generate a Live Style Guide, create a file called `documentjs.json` in the to
 {
     "sites": {
         "styles": {
-            "glob": "styles/**/*.{css,less,md}",
+            "glob": "styles/**/*.{css,less,scss,md}",
             "dest": "styleguide",
             "parent": "styles" 
         }
@@ -61,7 +61,8 @@ To generate a Live Style Guide, create a file called `documentjs.json` in the to
 }
 ```
 
-* "glob" tells DocumentCSS to look in the `styles` folder and read all files with a `css`, `less`, or `md` extension.
+* "glob" tells DocumentCSS to look in the `styles` folder and read all files with a `css`, `less`, `scss` or `md` extension.
+  * *You can remove either less and/or scss depending on what you're writing styles with.*
 * "dest" tells DocumentCSS to automatically create a `styleguide` folder to host the generated HTML pages.
 * "parent" tells DocumentCSS to use the parent declaration `styles` from `styles.md` as the main landing page.
 
@@ -76,55 +77,55 @@ project/
 
 ### Document
 
-To document your CSS use the following [tags](http://documentjs.com/docs/documentjs.tags.html) insides your CSS, Less, or Markdown files:
+To document your CSS use the following [tags](http://documentjs.com/docs/documentjs.tags.html) inside your CSS, Scss, Less, or Markdown files:
 
-- `@stylesheet` to create a page for each stylesheet documented
-- `@styles` to document individual styles
-- `@parent` to organize how your styles get rendered on the Style Guide
-- `@iframe` to display an html live demonstration 
-- `@demo` to display an html live demonstration that also renders a tab with the html used on the demo
+- `@@stylesheet` to create a page for each stylesheet documented
+- `@@styles` to document individual styles
+- `@@parent` to organize how your styles get rendered on the Style Guide
+- `@@iframe` to display an html live demonstration 
+- `@@demo` to display an html live demonstration that also renders a tab with the html used on the demo
 
-Create a `buttons.less` file inside the `styles` folder and add this:
+Create a `buttons.css` file inside the `styles` folder and add this:
 ```
 /**
-  * @stylesheet buttons.less Buttons
-  * @parent styles
+  * @@stylesheet buttons.css Buttons
+  * @@parent styles
   *
-  * @description
-  * All defined button styles and states belong here, including any "helper class" button style options, like `default`, `primary` etc.*
-  * The same button styles have been applied to a button class, for use on other html elements emulating a button.
+  * @@description
+  * This buttons page is being pulled from documentation in the`buttons.css` file.
   *
-  * @demo demos/buttons.html
-  **/
-  
-button, .button {
-    background-color: @colorLinks;
-    border: 1px solid darken(@colorLinks, 10%);
-    color: @clear;
-    .text-shadow;
-        border-radius: 2px;
-        padding: 5px 15px;
-        position: relative;
-        font-size: 14px;
-        line-height: 18px;
-        text-decoration: none;
-    &:hover, &.active {
-        background-color: darken(@colorLinks, 10%);
-    }
-}
+  * @@demo demos/buttons.html
+**/
+   
+  button {
+     background-color: skyblue;
+     border: 1px solid skyblue;
+     color: white;
+     font-size: 18px;
+     padding: 10px 20px;
+  }
+  button:hover {
+    background-color: deepskyblue;
+    border-color: deepskyblue;
+    cursor: pointer;
+  }
 ```
-Next, create a `demos` folder inside the `styles` folder and a file called `buttons.html`
+Next, create a `demos` folder inside the 'styles' folder, and a file called `buttons.html`
 
-Inside `buttons.html` add the HTML markup needed to demonstrate the styles for `buttons.less`
+Inside `buttons.html` add a link to the css file, and the HTML markup needed to demonstrate the styles for `buttons.css`. 
+
+*If you've got a master css file (especially if you're using a css pre-processor), you should link to that master file in the demos for your app.*
 
 For example: 
 ```
-  <p>
+<html>
+  <head>
+    <link rel="stylesheet" href="/styles/buttons.css" />
+  </head>
+  <body>
     <button>Example Button 1</button>
-  </p>
-  <p>
-    <a href="#" class="button">Example Button 2</a>
-  </p>
+  <body>
+<html>
 ```
 
 Your project's folder structure should now look like this:
@@ -132,8 +133,10 @@ Your project's folder structure should now look like this:
 project/
     package.json
     styles/
+        buttons.css
         styles.md
-        demos/buttons.html
+    demos/
+      buttons.html
     documentjs.json
 ```
 
@@ -168,5 +171,19 @@ To see the generated site, using terminal navigate to the styleguide directory a
 *This only applies to Mac or a Linux machines*
 
 Open up a browser and navigate to **http://localhost:8000** (if the number above is not 8000, use whatever number you see in your terminal instead). You should see the Live Style Guide with the documentation you just created!
+
+### Ignoring Generated Files
+
+Because DocumentJS generates a whole directory based on source files, you'll probably want to mark those files to be ignored by git (or whichever code revision manager you're using).
+
+If you're using git, create a file named `.gitignore` at the root of your project (if it doesn't already exist.) Then add the following:
+
+```
+ # DocumentJS generated files
+ styleguide
+```
+
+This will mark the whole folder as something to be ignored and your team can avoid merge conflicts on generated files.
+
 
 For in depth instructions, check out the [Standalone Live Style Guide](/docs/lsg-quickstart.html).

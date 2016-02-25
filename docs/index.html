@@ -52,7 +52,7 @@
         <li >
           <a href="/examples/styles/index.html">Example</a>
         </li>
-	      <li class=""><a href="https://documentjs.com">DocumentJS</a></li>
+	      <li class=""><a href="http://documentjs.com">DocumentJS</a></li>
 	    </ul>
 			<div class="pull-right">
 				<div class="bitovi-menu">
@@ -201,25 +201,61 @@ display: none;
 <p>For in depth instructions, check out the <a href="/docs/lsg-quickstart.html">Standalone Live Style Guide</a>.</p>
 <h2>Get Started</h2>
 <h3>Install</h3>
-<p>Install Node.js on your computer. From the console use npm to install DocumentJS:</p>
+<p>Install <a href="https://nodejs.org/">Node.js</a> on your computer and create a <code>package.json</code> file in your project's root directory with something like:</p>
+<pre><code>{
+  &quot;name&quot;: &quot;style-guide&quot;,
+  &quot;version&quot;: &quot;0.0.1&quot;,
+  &quot;description&quot;: &quot;My style guide&quot;,
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;&quot;
+}
+
+</code></pre>
+<p>From the console or terminal, go to your project folder and use <code>npm</code> to install DocumentJS:</p>
 <pre><code>&gt; cd path/to/myproject
 &gt; npm install documentjs --save-dev
 </code></pre>
-<p><em>The --sav-dev flag saves DocumentJS in your package.json so other people who are working on your project can also use DocumentJS.</em></p>
+<p><em>The --sav-dev flag saves DocumentJS in your <code>package.json</code> so other people who are working on your project can also use DocumentJS.</em></p>
+<h3>File Structure</h3>
+<p>Create the files and folders that DocumentCSS will use to generate the docs.</p>
+<ul>
+<li>Create a folder called <code>styles</code> which will hold all of your CSS or Less files.</li>
+<li>Create a markdown file to define as the primary parent, like <code>styles.md</code>, inside the <code>styles</code> folder</li>
+</ul>
+<p>Inside the <code>styles.md</code> add:</p>
+<pre><code>@page styles Styles
+
+This is my style guide
+</code></pre>
 <h3>Configure</h3>
 <p>To generate a Live Style Guide, create a file called <code>documentjs.json</code> in the top level of your project like this:</p>
 <pre><code>{
     &quot;sites&quot;: {
         &quot;styles&quot;: {
-            &quot;glob&quot;: &quot;styles/**/*.{css,less,md}&quot;,
-            &quot;dest&quot;: &quot;styleguide&quot;
+            &quot;glob&quot;: &quot;styles/**/*.{css,less,scss,md}&quot;,
+            &quot;dest&quot;: &quot;styleguide&quot;,
+            &quot;parent&quot;: &quot;styles&quot; 
         }
     }
 }
 </code></pre>
-<p><em>“glob” is used to configure what stylesheet files are being documented. “dest” is used to configure where the Live Style Guide should be generated.</em></p>
+<ul>
+<li>&quot;glob&quot; tells DocumentCSS to look in the <code>styles</code> folder and read all files with a <code>css</code>, <code>less</code>, <code>scss</code> or <code>md</code> extension.
+<ul>
+<li><em>You can remove either less and/or scss depending on what you're writing styles with.</em></li>
+</ul></li>
+<li>&quot;dest&quot; tells DocumentCSS to automatically create a <code>styleguide</code> folder to host the generated HTML pages.</li>
+<li>&quot;parent&quot; tells DocumentCSS to use the parent declaration <code>styles</code> from <code>styles.md</code> as the main landing page.</li>
+</ul>
+<p>Your project's folder structure should look like this:</p>
+<pre><code>project/
+    package.json
+    styles/
+        styles.md
+    documentjs.json
+</code></pre>
 <h3>Document</h3>
-<p>To document your CSS use the following <a href="http://documentjs.com/docs/documentjs.tags.html">tags</a>:</p>
+<p>To document your CSS use the following <a href="http://documentjs.com/docs/documentjs.tags.html">tags</a> inside your CSS, Scss, Less, or Markdown files:</p>
 <ul>
 <li><code>@stylesheet</code> to create a page for each stylesheet documented</li>
 <li><code>@styles</code> to document individual styles</li>
@@ -227,36 +263,59 @@ display: none;
 <li><code>@iframe</code> to display an html live demonstration</li>
 <li><code>@demo</code> to display an html live demonstration that also renders a tab with the html used on the demo</li>
 </ul>
-<p>Example:</p>
+<p>Create a <code>buttons.css</code> file inside the <code>styles</code> folder and add this:</p>
 <pre><code>/**
-  * @stylesheet buttons.less Buttons
-  * @parent Styles.baseline-elements
+  * @stylesheet buttons.css Buttons
+  * @parent styles
   *
   * @description
-  * All defined button styles and states belong here, including any &quot;helper class&quot; button style options, like `default`, `primary` etc.*
-  * The same button styles have been applied to a button class, for use on other html elements emulating a button.
+  * This buttons page is being pulled from documentation in the`buttons.css` file.
   *
-  * @demo demos/buttons/demo.html
-  **/
-button, .button {
-    background-color: @colorLinks;
-    border: 1px solid darken(@colorLinks, 10%);
-    color: @clear;
-    .text-shadow;
-        border-radius: 2px;
-        padding: 5px 15px;
-        position: relative;
-        font-size: 14px;
-        line-height: 18px;
-        text-decoration: none;
-    &amp;:hover, &amp;.active {
-        background-color: darken(@colorLinks, 10%);
-    }
-}
+  * @demo demos/buttons.html
+**/
+   
+  button {
+     background-color: skyblue;
+     border: 1px solid skyblue;
+     color: white;
+     font-size: 18px;
+     padding: 10px 20px;
+  }
+  button:hover {
+    background-color: deepskyblue;
+    border-color: deepskyblue;
+    cursor: pointer;
+  }
+</code></pre>
+<p>Next, create a <code>demos</code> folder inside the 'styles' folder, and a file called <code>buttons.html</code></p>
+<p>Inside <code>buttons.html</code> add a link to the css file, and the HTML markup needed to demonstrate the styles for <code>buttons.css</code>.</p>
+<p><em>If you've got a master css file (especially if you're using a css pre-processor), you should link to that master file in the demos for your app.</em></p>
+<p>For example:</p>
+<pre><code>&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/styles/buttons.css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button&gt;Example Button 1&lt;/button&gt;
+  &lt;body&gt;
+&lt;html&gt;
+</code></pre>
+<p>Your project's folder structure should now look like this:</p>
+<pre><code>project/
+    package.json
+    styles/
+        buttons.css
+        styles.md
+    demos/
+      buttons.html
+    documentjs.json
 </code></pre>
 <h3>Run</h3>
-<p>To generate the Style Guide first install DocumentJS globally (so it can be run anywhere on your computer):</p>
+<p>To generate the Style Guide using a simple command like <code>documentjs</code>, you'll want to install DocumentJS globally using:</p>
 <pre><code>&gt; npm install -g documentjs
+</code></pre>
+<p>This might require admin privileges to install, so use sudo and enter your password when prompted:</p>
+<pre><code>&gt; sudo npm install -g documentjs
 </code></pre>
 <p>Then from your project directory run:</p>
 <pre><code>&gt; documentjs -w
@@ -268,6 +327,13 @@ button, .button {
 </code></pre>
 <p><em>This only applies to Mac or a Linux machines</em></p>
 <p>Open up a browser and navigate to <strong>http://localhost:8000</strong> (if the number above is not 8000, use whatever number you see in your terminal instead). You should see the Live Style Guide with the documentation you just created!</p>
+<h3>Ignoring Generated Files</h3>
+<p>Because DocumentJS generates a whole directory based on source files, you'll probably want to mark those files to be ignored by git (or whichever code revision manager you're using).</p>
+<p>If you're using git, create a file named <code>.gitignore</code> at the root of your project (if it doesn't already exist.) Then add the following:</p>
+<pre><code> # DocumentJS generated files
+ styleguide
+</code></pre>
+<p>This will mark the whole folder as something to be ignored and your team can avoid merge conflicts on generated files.</p>
 <p>For in depth instructions, check out the <a href="/docs/lsg-quickstart.html">Standalone Live Style Guide</a>.</p>
 
 		</section>
@@ -291,7 +357,7 @@ button, .button {
 
 	
 		<script type="text/javascript">
-		var docObject = {"type":"page","name":"lsg.guides","src":"pages/livestyleguide.md","description":"<style>","title":"Guides","dest":"/Users/Jan/Workspace/documentjs/documentcss/docs","glob":{"pattern":"{./node_modules/documentjs/docs/livestyleguide/**/*.md,pages/livestyleguide.md}","ignore":"./node_modules/documentjs/docs/livestyleguide/livestyleguide.md","cwd":"/Users/Jan/Workspace/documentjs/documentcss"},"templates":"/Users/Jan/Workspace/documentjs/documentcss/theme/templates","static":"/Users/Jan/Workspace/documentjs/documentcss/theme/static","forceBuild":true,"generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+		var docObject = {"type":"page","name":"lsg.guides","src":"pages/livestyleguide.md","description":"<style>","title":"Guides","dest":"/Users/thelela/Documents/GitHub/documentcss/docs","glob":{"pattern":"{./node_modules/documentjs/docs/livestyleguide/**/*.md,pages/livestyleguide.md}","ignore":"./node_modules/documentjs/docs/livestyleguide/livestyleguide.md","cwd":"/Users/thelela/Documents/GitHub/documentcss"},"templates":"/Users/thelela/Documents/GitHub/documentcss/theme/templates","static":"/Users/thelela/Documents/GitHub/documentcss/theme/static","forceBuild":true,"generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
 	</script>
 	
 	

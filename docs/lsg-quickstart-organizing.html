@@ -382,17 +382,17 @@
 <h3>Example</h3>
 <p>The group tag is used on a parent page. In this case, you will want to specify groups in <code>stylesheet.md</code>:</p>
 <pre><code class="language-markdown">@page my-styleguide My Style Guide
-@group styleguide-theme Theme 0
-@group styleguide-baseline Baseline Elements 1
-@group styleguide-docs API 2
-@group styleguide-other Other 3
+@group styleguide-theme 0 Theme
+@group styleguide-baseline 1 Baseline Elements
+@group styleguide-docs 2 API
+@group styleguide-other 3 Other
 </code></pre>
 <h3>Arguments</h3>
-<pre><code class="language-markdown">@group NAME TITLE ORDER
+<pre><code class="language-markdown">@group NAME ORDER TITLE 
 </code></pre>
 <p>The <code>NAME</code> argument is the unique name. You'll use this as an argument for <code>@parent</code> in pages or stylesheets that belong in this group.</p>
-<p>The <code>TITLE</code> is displayed as a heading in the sidebar.</p>
 <p>The <code>ORDER</code> specifies the order in which groups should appear in the sidebar. By default, they will be organized alphabetically.</p>
+<p>The <code>TITLE</code> is displayed as a heading in the sidebar.</p>
 <h2>Putting Stylesheets into Groups</h2>
 <p>Once you've specified groups in <code>stylesheet.md</code>, you just need to make those groups the <code>@parent</code> of your stylesheets (instead of using the base page). If you want to make put your Typography stylesheet in the &quot;Baseline Elements&quot; group, put this in <code>typography.less</code></p>
 <pre><code>/**
@@ -426,7 +426,7 @@
 
 	
 		<script type="text/javascript">
-		var docObject = {"type":"page","name":"lsg-quickstart-organizing","src":"./node_modules/documentjs/docs/livestyleguide/guides/quickstart/organizing.md","description":"After you've documented your first stylesheet, if you [generate the site](/docs/lsg-quickstart-generate.html) you won't see your stylesheet page anywhere in the sidebar. Even though the page has been generated, it isn't linked up to the rest of the site because you need to tell DocumentJS where to put it.","title":"Organizing your Style Guide","parent":"lsg-quickstart-group-writing","order":1,"dest":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/docs","glob":{"pattern":"{./node_modules/documentjs/docs/livestyleguide/**/*.md,pages/livestyleguide.md}","ignore":"./node_modules/documentjs/docs/livestyleguide/livestyleguide.md","cwd":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss"},"templates":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/theme/templates","static":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/theme/static","forceBuild":true,"generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+		var docObject = {"type":"page","name":"lsg-quickstart-organizing","src":"node_modules/documentjs/docs/livestyleguide/guides/quickstart/organizing.md","description":"After you've documented your first stylesheet, if you [generate the site](/docs/lsg-quickstart-generate.html) you won't see your stylesheet page anywhere in the sidebar. Even though the page has been generated, it isn't linked up to the rest of the site because you need to tell DocumentJS where to put it.","title":"Organizing your Style Guide","parent":"lsg-quickstart-group-writing","order":1,"dest":"/Users/thelela/Documents/GitHub/documentcss/docs","glob":{"pattern":"{./node_modules/documentjs/docs/livestyleguide/**/*.md,pages/livestyleguide.md}","ignore":"./node_modules/documentjs/docs/livestyleguide/livestyleguide.md","cwd":"/Users/thelela/Documents/GitHub/documentcss"},"templates":"/Users/thelela/Documents/GitHub/documentcss/theme/templates","static":"/Users/thelela/Documents/GitHub/documentcss/theme/static","forceBuild":true,"generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
 	</script>
 	
 	

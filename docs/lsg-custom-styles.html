@@ -376,10 +376,10 @@
 <p>You'll need to tell DocumentJS to look for static resources in your theme folder.</p>
 <p>Updated <code>documentjs.json</code>:</p>
 <pre><code class="language-json">{
+    &quot;siteDefaults&quot;: {
+      &quot;static&quot;: &quot;style-guide-theme&quot;
+    },
     &quot;sites&quot;: {
-        &quot;siteDefaults&quot;: {
-            &quot;static&quot;: &quot;style-guide-theme&quot;
-        },
         &quot;styles&quot;: {
             &quot;glob&quot;: &quot;styles/**/*.{md,less,md}&quot;,
             &quot;parent&quot;: &quot;style-guide&quot;,
@@ -413,7 +413,7 @@
 
 	
 		<script type="text/javascript">
-		var docObject = {"type":"page","name":"lsg-custom-styles","src":"./node_modules/documentjs/docs/livestyleguide/guides/quickstart/custom-styles.md","description":"The default look and feel of your Live Style Guide is going to be similar to DocumentJS.com as it is using the default theme.","title":"Look and Feel","parent":"lsg-quickstart-group-customizing","order":0,"dest":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/docs","glob":{"pattern":"{./node_modules/documentjs/docs/livestyleguide/**/*.md,pages/livestyleguide.md}","ignore":"./node_modules/documentjs/docs/livestyleguide/livestyleguide.md","cwd":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss"},"templates":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/theme/templates","static":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/theme/static","forceBuild":true,"generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+		var docObject = {"type":"page","name":"lsg-custom-styles","src":"node_modules/documentjs/docs/livestyleguide/guides/quickstart/custom-styles.md","description":"The default look and feel of your Live Style Guide is going to be similar to DocumentJS.com as it is using the default theme.","title":"Look and Feel","parent":"lsg-quickstart-group-customizing","order":0,"dest":"/Users/thelela/Documents/GitHub/documentcss/docs","glob":{"pattern":"{./node_modules/documentjs/docs/livestyleguide/**/*.md,pages/livestyleguide.md}","ignore":"./node_modules/documentjs/docs/livestyleguide/livestyleguide.md","cwd":"/Users/thelela/Documents/GitHub/documentcss"},"templates":"/Users/thelela/Documents/GitHub/documentcss/theme/templates","static":"/Users/thelela/Documents/GitHub/documentcss/theme/static","forceBuild":true,"generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
 	</script>
 	
 	

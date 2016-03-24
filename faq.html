@@ -137,6 +137,7 @@
 <h3>Does DocumentCSS support .scss/.less/.whatever files?</h3>
 <p>Yes! DocumentCSS supports all styling languages (and most development languages, this is a sibling to <a href="http://documentjs.com">DocumentJS</a> after all).</p>
 <p>You can read more about how to tell it which languages you're using on the <a href="/docs/lsg-quickstart-configuration.html">configuration page</a> of the guides.</p>
+<hr />
 <h3>How do I tell DocumentCSS what files to look for?</h3>
 <p>DocumentCSS looks for the file types defined in your <code>documentjs.json</code> file. You'll want to edit the <code>&quot;glob&quot;</code> section with file paths and extensions:</p>
 <pre><code>{
@@ -149,16 +150,20 @@
   }
 }</code></pre>
 <p>You can read more about this on the <a href="/docs/lsg-quickstart-configuration.html">configuration page</a> of the guides.</p>
+<hr />
 <h3>Is there a simple project I can download that works out of the box?</h3>
 <p>There is! <a href="https://github.com/brandonreid">Brandon Reid</a> awesomely put a two-pagestyle guide together for people to play around with. You can find it on Github at: <a href="https://github.com/brandonreid/documentcss_starter-kit">DocumentCSS Starter Kit</a>.</p>
+<hr />
 <h2>Customization Questions</h2>
 <h3>How do I override DocumentCSS styles?</h3>
 <p>Here's a high-level overview of the process: You tell <code>documentjs.json</code> to look for your custom template/LESS files, and then these new files need to match the DocumentJS <a href="/docs/lsg-quickstart-file-organization.html">file structure</a>.</p>
 <p>The easiest way to go about this is to copy the <a href="https://github.com/bitovi/documentjs/tree/master/site/default">default DocumentJS theme</a> to your own project and modify it. We also have a few different themes you can use on our <a href="https://github.com/bitovi/bootdocs/tree/master/themes">Bootdocs</a> project.</p>
 <p>You can get a full breakdown of how to customize your version of DocumentCSS in the <a href="/docs/lsg-custom-styles.html">customizing look and feel</a> section of the guides.  We hope that future versions of DocumentJS will have an easier theming engine.</p>
+<hr />
 <h3>Can I restyle DocumentCSS in SCSS instead of LESS?</h3>
 <p>Short answer: not easily.</p>
 <p>DocumentCSS is built in LESS and stripping that out in favor of writing styles in another language would be a huge task. With enough time and patience, anything is possible though.</p>
+<hr />
 <h3>How do I update the menu?</h3>
 <p>The main navigation for your style guide is hardcoded into the theme files. To change the navigation menu items, you have to edit the theme file <code>layout.mustache</code></p>
 <p>There are two ways to do this:</p>
@@ -176,12 +181,14 @@
 <pre><code> > documentjs -f</code></pre></li>
 </ul></li>
 </ol>
+<hr />
 <h3>Why isn't my theme updating?</h3>
 <p>To save time, DocumentJS doesn’t re-build the theme every time the site is generated. In order to get the theme or main navigation to update you have to force the documentjs task. You can do this with the <code>-f</code> flag:</p>
 <pre><code>> documentjs -f</code></pre>
 <p>You can force and watch at the same time too:</p>
 <pre><code>> documentjs -f -w</code></pre>
 <p>Depending on the size of your documentation site, this can take a long time. So we recommend dropping the <code>-f</code> unless you're editing the template itself. Documentation comments and demos shouldn't need to be forced.</p>
+<hr />
 <h2>Troubleshooting Questions</h2>
 <h3>Why are demos returning 404s?</h3>
 <p>This is because of one of two issues:</p>
@@ -193,6 +200,7 @@
 <blockquote>
 <p><em>It’s important to know that DocumentJS does not move or copy your demos to the generated site folder. Using <code>@demo</code> only tells DocumentJS to create a link to that location. We hope that future versions of DocumentJS will handle this for us.</em></p>
 </blockquote>
+<hr />
 <h3>Why aren't demos pulling the right styles?</h3>
 <p>The demos are highly manual right now and embedded in iframes. What this means is that you'll need to manually link to the compiled stylesheet for your application. You can either use a relative path to the distribution folder your application compiles to, or if your css is hosted online, you can link to that.</p>
 <p>Example: For the demos in our DocumentCSS documentation of Bootstrap elements, <a href="https://github.com/bitovi/bootdocs">Bootdocs</a>, we linked to the Bootstrap CDN so our demos will always reflect any changes Bootstrap makes.</p>
@@ -204,12 +212,14 @@
 <p>So if you have:</p>
 <pre><code>@demo demos/forms.html</code></pre>
 <p>Then the <code>forms.html</code> file should have a reference to the CSS in the <code>&lt;head&gt;</code> of the HTML. We hope future versions of DocumentJS will automate the inclusion of CSS in demos to make this easier.</p>
+<hr />
 <h3>How do I get the '@' symbol to display in my documentation? I keep getting a warning!</h3>
 <p>If your style guide includes content with the <code>@</code>symbol, like a LESS variable name or media queries, DocumentJS returns a warning because this is the same character it uses to denote relationships and content within the style guide.</p>
 <p>So if you see:</p>
 <pre><code> WARNING!!
  There is no @foo tag. did you mean @add ? </code></pre>
 <p>Simply use two '@'s like so: <code>@@variable-name</code>.</p>
+<hr />
 
 		</section>
 		

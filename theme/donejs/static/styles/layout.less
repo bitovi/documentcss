@@ -1,0 +1,441 @@
+/**
+* @stylesheet layout.less Layout
+* @parent Styles.baseline-elements 3
+
+* @description
+* Layout classes are used to structure the main parts of a page.
+**/
+
+
+body:not(.home) {
+  /* @containerWidth @contentWidth defined in ./variables.less near the bottom */
+  iframe {
+    @media(max-width: @screen-xs){
+      max-width: 100%;
+    }
+  }
+  a.linkToHeader {
+    display: none;
+  }
+  @media(min-width: @screen-md) {
+    h2, h3, h4, h5 {
+      position: relative;
+
+      a.linkToHeader {
+        display: none;
+        position: absolute;
+        left: -25px;
+        height: 100%;
+        padding-left: 5px;
+        width: 50px;
+
+        img {
+          margin: 0px !important;
+          padding: 0px;
+          position: relative;
+          top: 50%;
+          -ms-transform: translateY( -50% );
+          -webkit-transform: translateY( -50% );
+          -moz-transform: translateY( -50% );
+          -o-transform: translateY( -50% );
+          transform: translateY( -50% );
+        }
+      }
+      &:hover a.linkToHeader {
+        display: initial;
+      }
+    }
+  }
+  > .container {
+    display: block;
+    margin: 0 auto 50px;
+    padding: 0 15px 50px 15px;
+    border-radius: 0;
+    border-bottom: 1px solid @fog;
+    @media(max-width: @screen-xs-max) {
+      width: 100%;
+    }
+    @media(min-width: @screen-sm-max){
+      width: 100%;
+      table-layout: fixed;
+    }
+    @media(min-width: @screen-lg){
+      width: 1000px;
+      table-layout: fixed;
+    }
+    .content.docs {
+      display: block!important;
+      margin: 0;
+      margin-left: ~"calc( ( 100% - " @containerWidth ~" ) / 2 + " @containerWidth - @contentWidth ~" )";
+      padding: 0px;
+      background-color: transparent;
+      border: none;
+      border-radius: 0px;
+      @media(min-width:@screen-lg){
+        width: @contentWidth;
+        position: static;
+      }
+      @media(max-width: @screen-md-max) {
+        margin-right: auto;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin:0;
+      }
+      @media(max-width: @screen-sm-max){
+        padding-top: 50px;
+      }
+      .description,
+      .comment {
+        a {
+          white-space: nowrap;
+        }
+        a[href*='//']:not([href*='donejs.com']) {
+          position: relative;
+          padding-right: 20px;
+          &:after {
+            content:'';
+            background-image: url(/static/img/icon-open-in-new.svg);
+            background-size: 12px 12px;
+            background-repeat: no-repeat;
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            right: 4px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          &.btn {
+            padding-right: 40px;
+            &:after {
+              display: none;
+            }
+          }
+        }
+        .popover {
+          a {
+            padding-right: 0 !important;
+          }
+          a:after {
+            display: none;
+          }
+        }
+        @media(min-width: @screen-sm){
+          margin-left: 0px
+        }
+        @media(min-width: @screen-md){
+          margin-left: ~"calc( ( 100% - " @containerWidth ~" ) / 2 + " @containerWidth - @contentWidth ~" )";
+        }
+        @media(min-width: @screen-lg){
+          margin-left: 0px
+        }
+        a {
+          font-weight: 900;
+          color: @logoColor;
+        }
+        ul li {
+          font-weight: 400;
+          color: #424a4e;
+        }
+        ul, ol {
+          line-height: 24px;
+          padding-right: 40px;
+          li {
+            margin-bottom: 10px;
+            &:last-child {
+              margin-bottom:0;
+            }
+          }
+        }
+        img {
+          margin-top: 20px;
+          margin-bottom: 20px;
+          &.img-with-caption {
+            margin-bottom: 0;
+          }
+        }
+        @media(min-width: @screen-sm) {
+          img {
+            .center-block;
+          }
+        }
+        .linkToHeader img  {
+          width: 16px;
+          height: 16px;
+        }
+        .btn {
+          color: #fff;
+          padding: 10px 40px 10px 20px;
+          margin-top: 20px;
+          display: inline-block;
+          height: auto;
+          width: auto;
+          background-color: rgba(59, 131, 163, 1);
+          span {
+            position: relative;
+            font-weight: 700;
+            &:after {
+              content:'';
+              background-image: url( "/static/img/icon-chevron-white.svg" );
+              background-size: 12px 12px;
+              background-position: 0 0;
+              background-repeat: no-repeat;
+              width: 12px;
+              height: 12px;
+              display: inline-block;
+              margin-left: 8px;
+              position: absolute;
+              top: 5px;
+              right: -20px;
+            }
+          }
+          &:hover {
+            text-decoration: none;
+            background-color: rgba(59, 131, 163, .9);
+            .fade-bg-hover;
+          }
+          + .btn {
+            margin-left:20px;
+          }
+          @media(max-width: @screen-xs){
+            width: 100%;
+            text-align: center;
+            + .btn {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .content.docs,
+  .container.api {
+    @media(max-width: @screen-md-max){
+      width: 100%;
+    }
+  }
+  .container.api>* {
+    @media(max-width: @screen-xs){
+      display: block !important;
+    }
+  }
+
+  /* main body of content */
+  section.comment {
+    &:before {
+      /* this prevents vertical margin collapsing */
+      content: "\007C\00a0\00a0";
+      font-size: 0px;
+    }
+    @media(max-width: @screen-xs-max) {
+      word-wrap: break-word;
+      overflow: hidden;
+    }
+    @h2height: 150px;
+    h2 {
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      padding-left: ~"calc( ( 100% - " @containerWidth ~" ) / 2 + " @containerWidth - @contentWidth ~" )";
+      padding-top: 53px;
+      display: block;
+      background-color: @darkSkies;
+      color: @clear;
+      font-size: 50px;
+      background-image: url( "/static/img/background.jpg" );
+      margin-top: 120px;
+      height: @h2height;
+      z-index: 1;
+      line-height: 44px;
+      @media(max-width: @screen-md){
+        line-height:1;
+        font-size: 25px;
+        max-height: 180px;
+        margin-top:40px;
+        padding: 60px 20px;
+      }
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+        z-index: -1;
+        background-color: rgba( 33, 38, 40, 0.75 );
+      }
+      &:after {
+        //this is avoiding a problem with document.elementFromPoint that sets what nav item is active
+        content: "";
+        display: block;
+        position: absolute;
+        top: -40px;
+        height: 41px;
+        right: 0px;
+        left: 0px;
+      }
+    }
+    h3 {
+      color: @logoColor;
+      font-size: 40px;
+      margin-top: 50px;
+      @media(max-width: @screen-md){
+        line-height: 1;
+        margin-bottom: 35px;
+        font-size: 23px;
+      }
+    }
+    h4, h5, h6 {
+      color: @logoColor;
+      margin-top: 2em;
+    }
+    h4 {
+      font-size: 25px;
+    }
+    h5 {
+      font-size: 20px;
+    }
+    h6 {
+      font-size: 18px;
+    }
+    h2 + * {
+      margin-top: @h2height + 180px!important; /* the px added here are the margin under the h2 */
+      @media(max-width: @screen-sm-max){
+        margin-top: 250px !important;
+      }
+
+    }
+    h2 + p,
+    h2 + p + p,
+    h2 + p + p + p {
+      font-weight: 400;
+      color: @gray;
+      font-size: 19px;
+    }
+
+    iframe {
+      max-width: 100%;
+    }
+    .mobile-graph {
+      height: 465px;
+      border: 20px solid #3B83A3;
+      img {
+        margin:0 !important; //shame
+      }
+      .graph-timeline {
+        width: 1700px;
+      }
+      @media (max-width: @screen-xs-max){
+        border-top: 20px solid #3B83A3;
+        border-bottom: 20px solid #3B83A3;
+        border-left:0;
+        border-right:0;
+      }
+    }
+    .maintainable.wrapper .background {
+      border: 0;
+      background: none;
+      &.video:after {
+        top: 45%;
+      }
+    }
+  }
+  @media(max-width: @screen-sm-max) {
+    .scroll-spy-title {
+      width: 100%;
+      position: fixed;
+      top: 55px;
+      background-color: @logoColor;
+      height: 50px;
+      z-index: 1079;
+      padding-top: 5px;
+
+      .menu-indicator {
+        position: absolute;
+        left: 15px;
+        color: #FFFFFF;
+        font-size: 20px;
+        top: 50%;
+        -webkit-transform: translateY( -50% );
+        transform: translateY( -50% );
+      }
+      .menus-closed:before {
+        background-image: url("/static/img/icon-guide-menu.svg");
+        width: 17px;
+        height: 11px;
+      }
+      .menus-open:before {
+        background-image: url("/static/img/icon-close.svg");
+        width: 14px;
+        height: 14px;
+        .fadeInUp;
+      }
+      .menus-closed:before,
+      .menus-open:before {
+        cursor: pointer;
+        display: inline-block;
+        content: " ";
+      }
+      #scrollSpyCurrentH2 {
+        color: #FFFFFF;
+        white-space: nowrap;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+        margin: 0 auto;
+        transition: margin-top 0.25s ease-out;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      #scrollSpyCurrentH2.h2Only {
+        margin-top: 10px;
+      }
+      #scrollSpyCurrentH3 {
+        color: #FFFFFF;
+        white-space: nowrap;
+        font-size: 14px;
+        font-weight: 300;
+        text-align: center;
+        margin-top: -6px;
+        opacity: 1;
+        text-indent: 0px;
+        transition: opacity 0.25s ease-out, text-indent 0.25s ease-out, font-size 0.075s ease-out;
+      }
+      .h2Only + #scrollSpyCurrentH3 {
+        opacity: 0;
+        text-indent: 250px;
+      }
+      .js-shrink-bounce {
+        font-size: 0.8 * 14px!important;
+        opacity: 0!important;
+      }
+    }
+  }
+  @media(max-width: 425px) {
+    .scroll-spy-title {
+      #scrollSpyCurrentH2 {
+        max-width: 235px;
+      }
+    }
+  }
+
+}
+
+aside,
+blockquote {
+  border-left: 10px solid #C8CECC;
+  background-color: #EAEFED;
+  color: #495154;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 30px;
+  max-width: 85%;
+  margin:30px auto;
+  .center-block;
+  p {
+    margin-bottom: 0;
+  }
+}

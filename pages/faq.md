@@ -1,9 +1,6 @@
 @page faq Frequently Asked Questions
 @parent lsg.guides 
 
-@hide sidebar
-
-
 ## Configuration Questions
 
 ### Does DocumentCSS support .scss/.less/.whatever files? 

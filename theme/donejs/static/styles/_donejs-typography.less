@@ -1,0 +1,48 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
+@import url(https://fonts.googleapis.com/css?family=Rock+Salt);
+
+  body {
+    font-family: @font-family-sans-serif;
+    color: @night;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    //font-family: @font-family-sans-serif;
+  }
+  p, ol, ul, li {
+    color: @night;
+  }
+  code, code *, pre, pre * {  
+    font-family: "Courier New", Courier, mono;
+    font-style: normal;
+    -webkit-font-smoothing: initial;  
+    font-size: @font-size-base;
+    @media(max-width: @screen-xs-max) {
+      font-size: (@font-size-base + 2px);
+    }
+    .highlight {
+      background-color: @cloud;
+      display: block;
+      padding: 3px 0;
+    }
+    .atv {
+      color: #A94442;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+  a, .bold {
+    font-weight: 700;
+  }
+  .thin {
+    font-weight: 100;
+  }
+  .light {
+    font-weight: 300;
+  }
+  .normal {
+    font-weight: 300;
+  }
+  .heavy {
+    font-weight: 900;
+  }

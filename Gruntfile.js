@@ -13,8 +13,8 @@ module.exports = function(grunt){
 						"pattern": "pages/*.md",
 						"ignore": "pages/{example,livestyleguide}.md"
 					},
-					"templates": "theme/templates",
-					"static": "theme/static"
+					"templates": "theme/donejs/templates",
+					"static": "theme/donejs/static"
 				},
 				"examples": {
 					"parent": "Styles",
@@ -23,8 +23,8 @@ module.exports = function(grunt){
 						"pattern": "{pages/example.md,./node_modules/documentjs/{styles,site/default/static/styles}/**/*.{less,css,md}}",
 						"ignore": "{./node_modules/documentjs/styles/styles.md,./node_modules/documentjs/styles/demos/**/*}"
 					},
-					"templates": "theme/templates",
-					"static": "theme/static"
+					"templates": "theme/donejs/templates",
+					"static": "theme/donejs/static"
 				},
 				"examples/demos": {
 					"parent": "demos",
@@ -33,7 +33,7 @@ module.exports = function(grunt){
 						"pattern": "./node_modules/documentjs/styles/demos/demos/**/*.md"
 					},
 					"templates": "./node_modules/documentjs/styles/demos/templates",
-					"static": "theme/static"
+					"static": "theme/donejs/static"
 				},
 				"guides": {
 					"parent": "lsg.guides",
@@ -42,8 +42,8 @@ module.exports = function(grunt){
 						"pattern": "{./node_modules/documentjs/docs/livestyleguide/**/*.md,pages/livestyleguide.md}",
 						"ignore": "./node_modules/documentjs/docs/livestyleguide/livestyleguide.md"
 					},
-					"templates": "theme/templates",
-					"static": "theme/static"
+					"templates": "theme/donejs/templates",
+					"static": "theme/donejs/static"
 				}
 			}
 		},

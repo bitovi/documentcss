@@ -1,0 +1,34 @@
+/**
+* @stylesheet buttons.less Buttons
+* @parent Styles.baseline-elements
+*
+* @description
+* All defined button styles and states belong here, including any "helper class" button style options, like `default`, `primary` etc. DocumentJS only has one defined button, which does not need any additional classes. 
+*
+* The same button styles have been applied to a button class, for use on other html elements emulating a button.
+*
+* @demo demos/buttons/demo.html
+**/
+
+.btn-gradient(@color) {
+  border-color: darken(@color, 4);
+  background: linear-gradient(to bottom, @color 87%, darken(@color, 3) 97%, darken(@color, 7) 100%);
+  &:hover {
+    background: darken(@color, 7);
+  }
+}
+
+button, .btn {
+	border-radius: 3px;
+  font-weight: @headings-font-weight;
+}
+
+.btn-primary {
+  .text-shadow(.3);
+  .btn-gradient(@puddle);
+}
+
+.btn-secondary {
+  .text-shadow-light;
+  .btn-gradient(@fog);
+}

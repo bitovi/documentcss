@@ -19,7 +19,7 @@
 </div>
 
 <div class="homepage-section">
-  <p>Using a combination of custom tags and markdown <strong>DocumentCSS</strong> parses coments on your CSS, LESS, or SASS and autogenerates a site with your documentation.</p>
+  <p>Using a combination of custom tags and markdown, DocumentCSS parses coments on your CSS, LESS, or SASS and autogenerates a site with your documentation.</p>
   <div class="left">
     <h2>How it Looks</h2>
     <img src="static/img/style-guide-demo.png"/>

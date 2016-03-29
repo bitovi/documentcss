@@ -38,28 +38,61 @@
 * @demo demos/title-section.html
 **/
 .docs {
-  .title {
-    display: block;
-    border-bottom: 1px solid @fog;
-    .heading {
-    	position: relative;
-    	margin: 0; 
-    	h1 {
-    	  margin: 0;
-    	  display: inline-block;
-        max-width: 550px;
-        word-wrap: break-word;
-    	}		  
-      .module {
-      	position: absolute;
-      	right: 0;
-      	display: inline-block;
-      	top: 10px;
+  .title .heading {
+    @h1height: 222px;
+    position: static;
+    height: @h1height;
+    @media(max-width: @screen-xs-max){
+      height: 160px;
+    }
+    h1 + ul.tags {
+      display: none;
+    }
+    h1 {
+      display: block;
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      padding-left: ~"calc( ( 100% - " @containerWidth ~" ) / 2 + " @containerWidth - @contentWidth ~" )";
+      padding-top: 25px;
+      height: @h1height;
+      background-color: #FFFFFF;
+      color: @night;
+      font-weight: 100;
+      font-size: 80px;
+      background-image: url( "/static/img/background.jpg" );
+      background-attachment: fixed;
+      margin-bottom: 40px;
+      max-width: none;
+      @media(min-width: @screen-md){
+        font-size: 70px;
       }
+      @media(max-width: @screen-xs-max){
+        text-align: center;
+        font-size: 40px;
+        height: auto;
+        padding: 40px 20px;
+        //word-wrap: normal;
+      }
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+        z-index: -1;
+        background-color: fade( @clear, 85% );
+      }
+    }
+  }
+  .title {
+    .heading {
       ul.tags {
-        	margin-bottom: 0 !important;
-      	  text-align: left;
-        	display: inline-block;
+      	margin-bottom: 0 !important;
+    	  text-align: left;
+      	display: inline-block;
       }
     }
     h2,h3 {
@@ -74,7 +107,10 @@
     		font-weight: bold;
     	}
     }
-    .sub-heading, ul.links {
+    .sub-heading {
+      display: none;
+    }
+    ul.links {
     	float: left;
     	display: block;
     	width: 50%;
@@ -133,35 +169,11 @@
 // Docs General Styles
 .docs {	
   .content.docs {
-    width: 662px;
-    margin-top: 20px;
     background-color: @clear;
-    border: 1px solid @haze;
-    padding: 20px;
-    border-left-style: none;
-    border-bottom-style: none;
-    font-family: Arial, Helvetica, Geneva, sans-serif;
-    border-radius: 0 5px 5px 0;
-    
-    ul, ol:not(.linenums) {
-    	margin-left: 0;
-    	.p;
-    	line-height: 18px;
-    }
-
     .iframe_wrapper iframe {
       width: 100%;
       border: 1px solid @haze;
     }
-  }
-  .contents li {
-    line-height: 24px;
-  }
-  .contents ul li {
-    list-style-type: square;
-  }
-  footer {
-    margin-top: 20px;
   }
 }
 
@@ -194,15 +206,15 @@
 
 // Styles the wrapper of the sidebar and content of the docs.
 .container.api {
-	display: table;
-	table-layout: fixed;
-  border-bottom: 1px solid @haze;
-	padding-top: 20px;
-  border-radius: 5px;
+	//display: table;
+	//table-layout: fixed;
+  //border-bottom: 1px solid @haze;
+	//padding-top: 20px;
+  //border-radius: 5px;
 }
 .container.api > * {
-	display: table-cell !important;
-	vertical-align: top;
+	//display: table-cell !important;
+	//vertical-align: top;
 }
 
 
@@ -214,13 +226,7 @@
 }
 .search {
   display: block;
-  border: 1px solid @haze;
   padding: 3px 3px 3px 30px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -moz-box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1);
   box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1);
   margin: 8px;
 
@@ -451,22 +457,6 @@
       border: 1px solid @haze;
       border-radius: 6px;
     }
-  }
-  body.style-demo {
-    background-color: @clear;
-    padding: 10px;
-  }
-}
-
-
-#low {
-	.container;
-	font-size: 12px;
-	margin-bottom: 15px;
-}
-.api {
-  .group_0 {
-    margin-bottom: 40px;
   }
 }
 

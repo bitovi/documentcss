@@ -96,7 +96,7 @@ steal(
                 $(this).get(0).pause();
                 $(this).parent('div').removeClass('playing');
             };
-            $('body.donejs video, div.video video').hover( enterEv, leaveEv ).focusin( enterEv ).focusout( leaveEv );
+            $('body.home video, div.video video').hover( enterEv, leaveEv ).focusin( enterEv ).focusout( leaveEv );
         })();
 
         (function () {
@@ -163,7 +163,7 @@ steal(
         windowResize();
         $( window ).resize( windowResize );
 
-        $( "section.contents" ).mousemove( function ( m ) {
+        $( ".sidebar" ).mousemove( function ( m ) {
             if ( !isMobileSize ) {
                 var $this = $( this );
                 var hoverScrollZoneSize = 50;
@@ -191,7 +191,7 @@ steal(
             if ( id.length === 0 ) {
                 return $();
             }
-            return $( "section.contents a[href*='" + id + "']" );
+            return $( ".sidebar a[href*='" + id + "']" );
         };
 
         $( "section.comment h3" ).each(function(){
@@ -234,7 +234,7 @@ steal(
         var doJQCollapsing = $( "body.Guide, body.place-my-order, body.Apis" ).length ? true : false;
 
         if ( doJQCollapsing ) {
-            $( "section.contents ol ol" ).hide();
+            $( ".sidebar ol ol" ).hide();
         }
 
         var disableBodyScroll = [];
@@ -254,7 +254,7 @@ steal(
 
         var scrollPosOnMenuOpen = -1;
         $( ".scroll-spy-title" ).on( "click", function () {
-            var menu = $( "section.contents" );
+            var menu = $( ".sidebar" );
             if ( menu.is( ".active" ) ) {
                 menu.removeClass( "active" );
                 setBodyScroll();
@@ -268,7 +268,7 @@ steal(
             }
         });
         disableBodyScroll.push( function () {
-            return $( "section.contents" ).is( ".active" );
+            return $( ".sidebar" ).is( ".active" );
         });
 
         $( function () {
@@ -284,7 +284,7 @@ steal(
         });
 
         $( "#greyOutUnderNav" ).click( function () {
-            if ( $( "section.contents" ).is( ".active" ) ) {
+            if ( $( ".sidebar" ).is( ".active" ) ) {
                 $( ".scroll-spy-title" ).click();
             }
             if ( $( "#bs-example-navbar-collapse-1" ).is( ".in" ) ) {
@@ -317,7 +317,7 @@ steal(
             }
 
             var navToH2 = getNavToHeaderEl( h2 ).closest( "li" );
-            var navToH3 = navToH2.find( "ol li" ).has( getNavToHeaderEl( h3 ) );
+            var navToH3 = navToH2.find( "ul li" ).has( getNavToHeaderEl( h3 ) );
 
             if ( navToH3.length ) {
                 scrollSpyCurrentH2.removeClass( "h2Only" );
@@ -337,7 +337,7 @@ steal(
                 //scrollSpyCurrentH3.html( "" );
             }
 
-            $( "section.contents ol ol li.active" ).not( navToH3 ).removeClass( "active" );
+            $( ".sidebar ol ol li.active" ).not( navToH3 ).removeClass( "active" );
             navToH3.addClass( "active" );
 
             var curH2Li = navToH2.closest( "li" );
@@ -352,7 +352,7 @@ steal(
             }
         });
 
-        $( "body:not(.donejs):not(.community)" ).find( "h3, h4, h5" ).each( function () {
+        $( "body:not(.home)" ).find( "h3, h4, h5" ).each( function () {
             if ( !this.id ) {
                 var tag = this.tagName.toLowerCase();
                 var prevTag = "h" + ( parseInt( tag.replace( /h(\d)/, "$1" ) ) - 1 );
@@ -371,12 +371,12 @@ steal(
         $( function () {
             var clickFn = function () {
                 var thisLi = $( this ).closest( "li" );
-                if ( $( "section.contents" ).is( ".active" ) && thisLi.is( "ol > li > ol > li" ) ) {
+                if ( $( ".sidebar" ).is( ".active" ) && thisLi.is( "ol > li > ol > li" ) ) {
                     $( ".scroll-spy-title" ).click();
                 }
             };
 
-            $( "section.contents a" ).each( function () {
+            $( ".sidebar a" ).each( function () {
                 this.href = this.href.replace( "#", "#section=" );
 
                 $( this ).on( "click", clickFn );
@@ -438,27 +438,27 @@ steal(
 
             if ( !curSect.length && $( window ).scrollTop() < ($( ".hero" ).height() - 50) ) {
                 //none are active and you're above usability.wrapper so un-fixed and un-condensed
-                $( "body.donejs .overview-nav, body.community .overview-nav" ).removeClass( "fixed" );
-                $( "body.donejs .overview-nav .overview-btn, body.community .overview-nav .overview-btn" ).removeClass( "condensed" ).removeClass( "active" );
+                $( "body.home .overview-nav, body.community .overview-nav" ).removeClass( "fixed" );
+                $( "body.home .overview-nav .overview-btn, body.community .overview-nav .overview-btn" ).removeClass( "condensed" ).removeClass( "active" );
             } else if ( curSect.is( ".usability.wrapper" ) ) {
                 //fixed, condensed, usability is active
-                $( "body.donejs .overview-nav, body.community .overview-nav" ).addClass( "fixed" );
-                $( "body.donejs .overview-nav .overview-btn, body.community .overview-nav .overview-btn" ).addClass( "condensed" ).removeClass( "active" );
-                $( "body.donejs .overview-nav .usability-btn, body.community .overview-nav .usability-btn" ).addClass( "active" );
+                $( "body.home .overview-nav, body.community .overview-nav" ).addClass( "fixed" );
+                $( "body.home .overview-nav .overview-btn, body.community .overview-nav .overview-btn" ).addClass( "condensed" ).removeClass( "active" );
+                $( "body.home .overview-nav .usability-btn, body.community .overview-nav .usability-btn" ).addClass( "active" );
             } else if ( curSect.is( ".performance.wrapper" ) ) {
                 //fixed, condensed, performance is active
-                $( "body.donejs .overview-nav, body.community .overview-nav" ).addClass( "fixed" );
-                $( "body.donejs .overview-nav .overview-btn, body.community .overview-nav .overview-btn" ).addClass( "condensed" ).removeClass( "active" );
-                $( "body.donejs .overview-nav .performance-btn, body.community .overview-nav .performance-btn" ).addClass( "active" );
+                $( "body.home .overview-nav, body.community .overview-nav" ).addClass( "fixed" );
+                $( "body.home .overview-nav .overview-btn, body.community .overview-nav .overview-btn" ).addClass( "condensed" ).removeClass( "active" );
+                $( "body.home .overview-nav .performance-btn, body.community .overview-nav .performance-btn" ).addClass( "active" );
             } else if ( curSect.is( ".maintainable.wrapper" ) ) {
                 //fixed, condensed, maintainable is active
-                $( "body.donejs .overview-nav, body.community .overview-nav" ).addClass( "fixed" );
-                $( "body.donejs .overview-nav .overview-btn, body.community .overview-nav .overview-btn" ).addClass( "condensed" ).removeClass( "active" );
-                $( "body.donejs .overview-nav .maintainable-btn, body.community .overview-nav .maintainable-btn" ).addClass( "active" );
+                $( "body.home .overview-nav, body.community .overview-nav" ).addClass( "fixed" );
+                $( "body.home .overview-nav .overview-btn, body.community .overview-nav .overview-btn" ).addClass( "condensed" ).removeClass( "active" );
+                $( "body.home .overview-nav .maintainable-btn, body.community .overview-nav .maintainable-btn" ).addClass( "active" );
             } else if ( curSect.is( ".community.wrapper" ) ) {
                 //none are active but still is fixed and condensed
-                $( "body.donejs .overview-nav, body.community .overview-nav" ).addClass( "fixed" );
-                $( "body.donejs .overview-nav .overview-btn, body.community .overview-nav .overview-btn" ).addClass( "condensed" ).removeClass( "active" );
+                $( "body.home .overview-nav, body.community .overview-nav" ).addClass( "fixed" );
+                $( "body.home .overview-nav .overview-btn, body.community .overview-nav .overview-btn" ).addClass( "condensed" ).removeClass( "active" );
             }
         });
         //hijack home page page jumps, animate scroll
@@ -563,11 +563,5 @@ steal(
                 });
             }
         })
-
-
-        $('#bithub-events-embed').bithubEmbed({
-            hubId: 5,
-            tenant_name: 'charming_volcano_7196_1'
-        });
 
     });

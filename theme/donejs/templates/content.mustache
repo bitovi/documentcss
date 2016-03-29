@@ -1,6 +1,5 @@
 {{#unless hideContainer}}
-<div class="container-fluid api">
-	<div class="row">
+<div class="container api">
 {{/unless}}
 	{{#unless hideSidebar}}
 	<nav class="sidebar">
@@ -14,22 +13,22 @@
 		{{> menu.mustache}}
 	</nav>
 	{{/unless}}
-
+	
 	{{#unless hideArticle}}
-	<article class="content docs col-xs-12 ">
+	<article class="content docs">
 	{{/unless}}
-
+	
 		{{#unless hideTitle}}
 		<section class="title">
 			{{> title.mustache}}
 		</section>
 		{{/unless}}
-
+		
 		{{#unless hideArticle}}
 		<section class="contents">
 		</section>
 		{{/unless}}
-
+		
 		{{#if deprecated.length}}
 			<section class='warnings'>
 				{{#deprecated}}
@@ -62,13 +61,13 @@
 			</section>
 			{{/if}}
 		{{/if}}
-
+		
 		{{#ifAny params returns}}
 			<section class="signature">
 				{{> signature.mustache}}
 			</section>
 		{{/ifAny}}
-
+		
 
 		{{#if body}}
 		<section class="comment">
@@ -82,7 +81,7 @@
 		{{#if showChildrenInPage}}
 			{{#eachOrderedChildren children}}
 				<h2>{{title}}</h2>
-
+				
 				{{#if description}}
 				<section class="description">
 					{{{chain "makeHtml" "makeLinks" description}}}
@@ -105,12 +104,14 @@
 			{{{makeApiSection}}}
 		</section>
 		{{/if}}
-
+	
 	{{#unless hideArticle}}
 	</article>
 	{{/unless}}
-
+	
 {{#unless hideContainer}}
-	</div>
 </div>
 {{/unless}}
+
+
+

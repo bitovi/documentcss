@@ -43,7 +43,7 @@
 		<script type="text/javascript" src="static/html5shiv.js"></script>
 	<!--<![endif]-->
 </head>
-<body class="docs lsg.guides">
+<body class="guides">
 		<div id="greyOutUnderNav" style="display:none;"></div>
 		<header>
 			<nav class="navbar navbar-default navbar-fixed-top">
@@ -75,7 +75,7 @@
 							<li class="guides-menu">
 									<a href="/docs/index.html">Guides</a>
 									<ul class="dropdown-menu">
-                      <li ><a href="/docs/lsg-quickstart.html">Standalone Live Style Guide</a></li>
+                      <li ><a href="/docs/standalone-lsg.html">Standalone Live Style Guide</a></li>
 											<li ><a href="/docs/lsg-adding.html">Adding to Existing JS Docs</a></li>
 											<li><a  href="/docs/publishing.html">Publishing Your Style Guide</a></li>
 									</ul>
@@ -102,38 +102,6 @@
 								</ul>
 							</li>
 						</ul>
-<!-- 						<ul class="menu-lib-logos hidden-sm hidden-md hidden-lg">
-							<li>
-								<a href="#">
-									<img class="logo-canjs" src="/static/img/lib-logos/canjs_logo.svg" />
-									<span class="logo-label">CanJS</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img class="logo-stealjs" src="/static/img/lib-logos/stealjs-logo.svg" />
-									<span class="logo-label">StealJS</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img class="logo-jqueryplus" src="/static/img/lib-logos/jquery-plusplus-logo.svg" />
-									<span class="logo-label">kQuery++</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img class="logo-funcunit" src="/static/img/lib-logos/funcunit-logo.svg" />
-									<span class="logo-label">FuncUnit</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img class="logo-docjs" src="/static/img/lib-logos/documentjs-logo.svg" />
-									<span class="logo-label">DocumentJS</span>
-								</a>
-							</li>
-						</ul> -->
 
 					</div>
 				</div>
@@ -145,41 +113,28 @@
 		<div id="scrollSpyCurrentH2" class="h2Only">Table of Contents</div>
 		<div id="scrollSpyCurrentH3"></div>
 	</div>
+
 	
-<div class="container api">
+<div class="main-content">
 
 	
 	<nav class="sidebar">
 		
-		<ul class="api cascading primary-grouping"> 
+		<ul class="sidebar-wrapper">
 	
-		
-		
+	   <li class="sidebar-section">
+	   		<span class="sidebar-section-title" href="howTo.html" data-search="How-To Guides">
+				How-To Guides
+			</span>
+
 			
-			<li class="search-container active">
-			<a class="sidebar-title" href="index.html" data-search="Guides">
-				Guides
-			</a>
-			
-	<ul>
+	<ul class="active-menu">
 		
 			
 				
 				
-				<li class="search-container">
-					<a class="page" href="lsg-quickstart.html" data-search="Standalone Live Style Guide">
-						Standalone Live Style Guide
-					</a>
-				</li>
-				
-			
-			
-		
-			
-				
-				
-				<li class="search-container">
-					<a class="page" href="lsg-adding.html" data-search="Adding to Existing JS Docs">
+				<li class="page-title ">
+					<a class="page-link" href="lsg-adding.html" data-search="Adding to Existing JS Docs">
 						Adding to Existing JS Docs
 					</a>
 				</li>
@@ -190,9 +145,21 @@
 			
 				
 				
-				<li class="search-container">
-					<a class="page" href="publishing.html" data-search="Publishing Your Style Guide">
+				<li class="page-title ">
+					<a class="page-link" href="publishing.html" data-search="Publishing Your Style Guide">
 						Publishing Your Style Guide
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="page-title ">
+					<a class="page-link" href="standalone-lsg.html" data-search="Standalone Live Style Guide">
+						Standalone Live Style Guide
 					</a>
 				</li>
 				
@@ -201,18 +168,16 @@
 		
 	</ul>
 
-		</li>
-			
-		
+
+	   </li>
 	
 </ul>
+
 	</nav>
 	
 	
-	
-	<article class="content docs">
-	
-	
+
+
 		
 		<section class="title">
 			<div class="heading">
@@ -227,7 +192,7 @@
 <div class="sub-heading">
 	
 	
-		<span class="module">lsg.guides</span>
+		<span class="module">guides</span>
 	
 	
 	
@@ -245,17 +210,13 @@
 		
 		
 		
-		<section class="contents">
+		<p class="overview-of-contents-title">Topics Covered Below:</p>
+		<section class="overview-of-contents">
 		</section>
 		
 		
 		
 
-		
-		<section class="description">
-			<style>
-
-		</section>
 		
 
 		
@@ -267,13 +228,8 @@
 
 		
 		<section class="comment">
-			<p>section.contents {
-display: none;
-}</p>
-</style>
-<p>For in depth instructions, check out the <a href="/docs/lsg-quickstart.html">Standalone Live Style Guide</a>.</p>
-<h2>Get Started</h2>
-<h3>Install</h3>
+			<p><em>This is the quick getting started guide. For in depth instructions, check out the <a href="/docs/standalone-lsg.html">Standalone Live Style Guide</a>.</em></p>
+<h2>Install</h2>
 <p>Install <a href="https://nodejs.org/">Node.js</a> on your computer and create a <code>package.json</code> file in your project's root directory with something like:</p>
 <pre><code>{
   &quot;name&quot;: &quot;style-guide&quot;,
@@ -289,7 +245,7 @@ display: none;
 &gt; npm install documentjs --save-dev
 </code></pre>
 <p><em>The --sav-dev flag saves DocumentJS in your <code>package.json</code> so other people who are working on your project can also use DocumentJS.</em></p>
-<h3>File Structure</h3>
+<h2>File Structure</h2>
 <p>Create the files and folders that DocumentCSS will use to generate the docs.</p>
 <ul>
 <li>Create a folder called <code>styles</code> which will hold all of your CSS or Less files.</li>
@@ -300,7 +256,7 @@ display: none;
 
 This is my style guide
 </code></pre>
-<h3>Configure</h3>
+<h2>Configure</h2>
 <p>To generate a Live Style Guide, create a file called <code>documentjs.json</code> in the top level of your project like this:</p>
 <pre><code>{
     &quot;sites&quot;: {
@@ -327,7 +283,7 @@ This is my style guide
         styles.md
     documentjs.json
 </code></pre>
-<h3>Document</h3>
+<h2>Document</h2>
 <p>To document your CSS use the following <a href="http://documentjs.com/docs/documentjs.tags.html">tags</a> inside your CSS, Scss, Less, or Markdown files:</p>
 <ul>
 <li><code>@stylesheet</code> to create a page for each stylesheet documented</li>
@@ -383,7 +339,7 @@ This is my style guide
       buttons.html
     documentjs.json
 </code></pre>
-<h3>Run</h3>
+<h2>Run</h2>
 <p>To generate the Style Guide using a simple command like <code>documentjs</code>, you'll want to install DocumentJS globally using:</p>
 <pre><code>&gt; npm install -g documentjs
 </code></pre>
@@ -417,9 +373,7 @@ This is my style guide
 
 		
 	
-	
-	</article>
-	
+
 	
 
 </div>
@@ -485,7 +439,7 @@ This is my style guide
 	
 
 	<script type="text/javascript">
-		var docObject = {"type":"page","name":"lsg.guides","src":"pages/livestyleguide.md","description":"<style>","title":"Guides","dest":"/Users/thelela/Documents/GitHub/documentcss/docs","glob":{"pattern":"{./node_modules/documentjs/docs/livestyleguide/**/*.md,pages/livestyleguide.md}","ignore":"./node_modules/documentjs/docs/livestyleguide/livestyleguide.md","cwd":"/Users/thelela/Documents/GitHub/documentcss"},"templates":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/templates","static":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/static","forceBuild":true,"generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+		var docObject = {"type":"page","name":"guides","src":"pages/guides/guides.md","description":"","title":"Guides","dest":"/Users/thelela/Documents/GitHub/documentcss/docs","glob":{"pattern":"{pages/guides/*.md,pages/guides/**/*.md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/thelela/Documents/GitHub/documentcss"},"templates":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/templates","static":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/static","forceBuild":true,"generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
 	</script>
 
 	

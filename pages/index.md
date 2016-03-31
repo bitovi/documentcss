@@ -14,12 +14,10 @@
     <a href="docs/index.html">
       <button class="btn btn-primary btn-lg">Get Started</button>
     </a>
-    <!-- <button href="examples/styles/variables.less.html" class="btn btn-secondary">View Example</button> -->
   </div>
 </div>
 
 <div class="homepage-section">
-  <p>Using a combination of custom tags and markdown, DocumentCSS parses coments on your CSS, LESS, or SASS and autogenerates a site with your documentation.</p>
   <div class="left">
     <h2>How it Looks</h2>
     <img src="static/img/style-guide-demo.png"/>
@@ -48,18 +46,17 @@
 
 </code></pre>
   </div>
-</div>  
 
+</div>    
 <section class="homepage-closing">
-<h2 class="lead-in">DocumentCSS makes it easy to incorporate style documentation as part of your design workflow.</h2>
-
-<div class="hero-cta">
-  <a href="docs/index.html">
-    <button class="btn btn-primary btn-lg">Get Started</button>
-  </a>
-  <a href="/examples/styles/variables.less.html">
-    <button class="btn btn-secondary btn-lg">View Live Example</button>
-  </a>
-</div>
+  <p class="explanation">DocumentCSS makes it easy to incorporate style documentation as part of your design workflow. Using a combination of custom tags and markdown, DocumentCSS parses coments on your CSS, LESS, or SASS and autogenerates a site with your documentation.</p>
+  <div class="hero-cta">
+    <a href="docs/index.html">
+      <button class="btn btn-primary btn-lg">Get Started</button>
+    </a>
+    <a href="/examples/styles/variables.less.html">
+      <button class="btn btn-secondary btn-lg">View Live Example</button>
+    </a>
+  </div>
 </section>
 

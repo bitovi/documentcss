@@ -23,8 +23,8 @@ steal(
         prettyPrint();
         Highlighter();
 
-        new ContentList(".contents");
-        new FrameHelper(".docs");
+        new ContentList(".overview-of-contents");
+        new FrameHelper("body");
         new Versions($("#versions, .sidebar-title:first"));
 
 
@@ -231,7 +231,7 @@ steal(
         var scrollSpyCurrentH2 = $( "#scrollSpyCurrentH2" );
         var scrollSpyCurrentH3 = $( "#scrollSpyCurrentH3" );
         var activeH2Li = $();
-        var doJQCollapsing = $( "body.Guide, body.place-my-order, body.Apis" ).length ? true : false;
+        var doJQCollapsing = $( "body" ).length ? true : false;
 
         if ( doJQCollapsing ) {
             $( ".sidebar ol ol" ).hide();

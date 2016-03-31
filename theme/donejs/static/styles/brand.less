@@ -1,14 +1,15 @@
 /**
 * @stylesheet brand.less Brand
 * @parent Styles.theme
-*
+* @hide article
 * @description
 * Logo treatments, watermarks etc. to represent the brand.
 
-* @iframe demos/brand.html
+* @demo demos/brand.html
 **/
 
 .brand {
+  background-image: url('/static/img/logo-full-doc-css.svg');
   display: block;
   line-height: @headerHeight;
   text-indent: -9999px;
@@ -23,11 +24,5 @@ footer .brand {
   background-image: url(@logoFooter);
   margin-top: 13px;
   line-height: @footerHeight/2+7;
-}
-
-.home,
-.docs {
-  .brand {
-   background-image: url('/static/img/logo-full-doc-css.svg');
- }
+  text-align: left;
 }

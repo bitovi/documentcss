@@ -43,7 +43,7 @@
 		<script type="text/javascript" src="static/html5shiv.js"></script>
 	<!--<![endif]-->
 </head>
-<body class="docs publishing">
+<body class="publishing">
 		<div id="greyOutUnderNav" style="display:none;"></div>
 		<header>
 			<nav class="navbar navbar-default navbar-fixed-top">
@@ -75,7 +75,7 @@
 							<li class="guides-menu">
 									<a href="/docs/index.html">Guides</a>
 									<ul class="dropdown-menu">
-                      <li ><a href="/docs/lsg-quickstart.html">Standalone Live Style Guide</a></li>
+                      <li ><a href="/docs/standalone-lsg.html">Standalone Live Style Guide</a></li>
 											<li ><a href="/docs/lsg-adding.html">Adding to Existing JS Docs</a></li>
 											<li><a  href="/docs/publishing.html">Publishing Your Style Guide</a></li>
 									</ul>
@@ -102,38 +102,6 @@
 								</ul>
 							</li>
 						</ul>
-<!-- 						<ul class="menu-lib-logos hidden-sm hidden-md hidden-lg">
-							<li>
-								<a href="#">
-									<img class="logo-canjs" src="/static/img/lib-logos/canjs_logo.svg" />
-									<span class="logo-label">CanJS</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img class="logo-stealjs" src="/static/img/lib-logos/stealjs-logo.svg" />
-									<span class="logo-label">StealJS</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img class="logo-jqueryplus" src="/static/img/lib-logos/jquery-plusplus-logo.svg" />
-									<span class="logo-label">kQuery++</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img class="logo-funcunit" src="/static/img/lib-logos/funcunit-logo.svg" />
-									<span class="logo-label">FuncUnit</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img class="logo-docjs" src="/static/img/lib-logos/documentjs-logo.svg" />
-									<span class="logo-label">DocumentJS</span>
-								</a>
-							</li>
-						</ul> -->
 
 					</div>
 				</div>
@@ -145,41 +113,28 @@
 		<div id="scrollSpyCurrentH2" class="h2Only">Table of Contents</div>
 		<div id="scrollSpyCurrentH3"></div>
 	</div>
+
 	
-<div class="container api">
+<div class="main-content">
 
 	
 	<nav class="sidebar">
 		
-		<ul class="api cascading primary-grouping"> 
+		<ul class="sidebar-wrapper">
 	
-		
-		
+	   <li class="sidebar-section active">
+	   		<span class="sidebar-section-title" href="howTo.html" data-search="How-To Guides">
+				How-To Guides
+			</span>
+
 			
-			<li class="search-container active">
-			<a class="sidebar-title" href="index.html" data-search="Guides">
-				Guides
-			</a>
-			
-	<ul>
+	<ul class="active-menu">
 		
 			
 				
 				
-				<li class="search-container">
-					<a class="page" href="lsg-quickstart.html" data-search="Standalone Live Style Guide">
-						Standalone Live Style Guide
-					</a>
-				</li>
-				
-			
-			
-		
-			
-				
-				
-				<li class="search-container">
-					<a class="page" href="lsg-adding.html" data-search="Adding to Existing JS Docs">
+				<li class="page-title ">
+					<a class="page-link" href="lsg-adding.html" data-search="Adding to Existing JS Docs">
 						Adding to Existing JS Docs
 					</a>
 				</li>
@@ -190,9 +145,21 @@
 			
 				
 				
-				<li class="search-container active ">
-					<a class="page" href="publishing.html" data-search="Publishing Your Style Guide">
+				<li class="page-title  active ">
+					<a class="page-link" href="publishing.html" data-search="Publishing Your Style Guide">
 						Publishing Your Style Guide
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="page-title ">
+					<a class="page-link" href="standalone-lsg.html" data-search="Standalone Live Style Guide">
+						Standalone Live Style Guide
 					</a>
 				</li>
 				
@@ -201,18 +168,16 @@
 		
 	</ul>
 
-		</li>
-			
-		
+
+	   </li>
 	
 </ul>
+
 	</nav>
 	
 	
-	
-	<article class="content docs">
-	
-	
+
+
 		
 		<section class="title">
 			<div class="heading">
@@ -245,7 +210,8 @@
 		
 		
 		
-		<section class="contents">
+		<p class="overview-of-contents-title">Topics Covered Below:</p>
+		<section class="overview-of-contents">
 		</section>
 		
 		
@@ -284,9 +250,7 @@
 
 		
 	
-	
-	</article>
-	
+
 	
 
 </div>
@@ -352,7 +316,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"type":"page","name":"publishing","src":"node_modules/documentjs/docs/livestyleguide/guides/publishing.md","description":"Once you've created the Live Style Guide, you may want to be able to publish it to share it with stakeholders.","title":"Publishing Your Style Guide","parent":"lsg.guides","order":99,"dest":"/Users/thelela/Documents/GitHub/documentcss/docs","glob":{"pattern":"{./node_modules/documentjs/docs/livestyleguide/**/*.md,pages/livestyleguide.md}","ignore":"./node_modules/documentjs/docs/livestyleguide/livestyleguide.md","cwd":"/Users/thelela/Documents/GitHub/documentcss"},"templates":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/templates","static":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/static","forceBuild":true,"generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+		var docObject = {"type":"page","name":"publishing","src":"pages/guides/publishing.md","description":"Once you've created the Live Style Guide, you may want to be able to publish it to share it with stakeholders.","title":"Publishing Your Style Guide","parent":"howTo","dest":"/Users/thelela/Documents/GitHub/documentcss/docs","glob":{"pattern":"{pages/guides/*.md,pages/guides/**/*.md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/thelela/Documents/GitHub/documentcss"},"templates":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/templates","static":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/static","forceBuild":true,"generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
 	</script>
 
 	

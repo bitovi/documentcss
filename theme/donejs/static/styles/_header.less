@@ -1,7 +1,7 @@
 /**
 * @stylesheet _header.less Header
 * @parent Styles.baseline-elements 
-*
+* @hide article
 * @description 
 * The header holds menus for this app, other Bitovi Open-Source products, and other Bitovi related links. At 768px, it collapses to a mobile-style view, putting the main menu under a "Menu" button and removing the menu under the logo altogether.
 *
@@ -9,12 +9,9 @@
 **/
 header {
   display: block;
-  background-color: @puddle;
-  color: @clear;
+  //background-color: @puddle;
+  ///color: @clear;
   position: relative;
-}
-
-header {
   .container {
     position: relative;
   }
@@ -52,8 +49,9 @@ header {
       }
       &.collapsed {
         border: 1px solid #ddd;
-        .mobile-menu-label{
+        .mobile-menu-label {
           display: block;
+          font-weight: 300;
         }
         .mobile-menu-close {
           display: none;
@@ -75,6 +73,7 @@ header {
   }
   .navbar {
     border:0;
+    margin-bottom: 0;
     .brand {
       @media(max-width: @screen-xs){
         background-size: 140px;
@@ -89,7 +88,6 @@ header {
       padding-top:10px;
       .bitovi-menu {
         border-top: 1px solid @cloud;
-        border-bottom: 1px solid @cloud;
         a {
           font-size: 12px;
           text-transform: uppercase;
@@ -135,6 +133,7 @@ header {
   .nav {
     list-style-type: none;
     padding: 0;
+    margin: 0;
     margin: 0 0 0 15px;
     display: inline-block;
     position: relative;
@@ -276,6 +275,7 @@ header {
   .logo-menu {
     position: relative;
     display: inline-block;
+    margin-left: 15px;
     .dropdown-menu {
       a:hover:after {
         content: "\e000";

@@ -36,11 +36,10 @@ module.exports = function(grunt){
 					"static": "theme/donejs/static"
 				},
 				"guides": {
-					"parent": "lsg.guides",
+					"parent": "Guides",
 					"dest": "docs",
 					"glob": {
-						"pattern": "{./node_modules/documentjs/docs/livestyleguide/**/*.md,pages/livestyleguide.md}",
-						"ignore": "./node_modules/documentjs/docs/livestyleguide/livestyleguide.md"
+						"pattern": "{pages/livestyleguide/**/*.md,pages/livestyleguide.md}"
 					},
 					"templates": "theme/donejs/templates",
 					"static": "theme/donejs/static"

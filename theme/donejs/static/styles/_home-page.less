@@ -3,6 +3,9 @@
   .scroll-spy-title {
     display: none;
   }
+  .comment {
+    margin-bottom: 0;
+  }
 }
 .hero {
   color: @clear;
@@ -28,6 +31,7 @@
 
   .lead {
     font-weight: 900;
+    margin: 0 auto;
    @media(min-width:@screen-sm) {
     max-width: 1060px;
     font-size: 3em;
@@ -39,6 +43,7 @@
 
   .hero-cta {
     padding-bottom: 30px;
+    padding-top: 30px;
     .btn {
       padding: 10px 40px;
     }
@@ -56,8 +61,6 @@
 }
 
 .homepage-section {
-  background-color: @fog;
-  border-top: 10px solid @haze;
   .left, .right {
     display: inline-block;
     vertical-align: top;
@@ -76,6 +79,13 @@
 }
 
 .homepage-closing {
+  background-color: @thunderStorm;
+  margin-bottom: 0;
+  padding-bottom: 60px;
+  padding-top: 60px;
+  h2 {
+    color: @clear;
+  }
   .btn-primary {
     @media(max-width:@screen-sm-max) {
       margin-bottom: 15px;

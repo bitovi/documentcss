@@ -80,7 +80,7 @@
 											<li><a {{#ifCurrentFromConfig "/docs/publishing.html"}}class="active"{{/ifCurrentFromConfig}} href="/docs/publishing.html">Publishing Your Style Guide</a></li>
 									</ul>
 							</li>
-							<li {{#ifCurrentFromConfig "/examples/styles/index.html"}}class="active"{{/ifCurrentFromConfig}}>
+							<li {{#ifCurrentFromConfig "/examples/"}}class="active"{{/ifCurrentFromConfig}}>
 								<a href="/examples/styles/index.html">Live Example</a>
 							</li>
 							<li {{#ifCurrentFromConfig "faq.html"}}class="active"{{/ifCurrentFromConfig}}>
@@ -139,12 +139,13 @@
 				</div>
 			</nav>
 		</header>
-
+{{#unless hideSidebar}}
 	<div class="scroll-spy-title hidden-md hidden-lg">
 		<span class="menu-indicator menus-closed"></span>
 		<div id="scrollSpyCurrentH2" class="h2Only">Table of Contents</div>
 		<div id="scrollSpyCurrentH3"></div>
 	</div>
+{{/unless}}
 	{{{content}}}
 	{{^hideFooter}}
 	<footer>

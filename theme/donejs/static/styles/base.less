@@ -54,19 +54,19 @@ table {
 	margin-bottom:21px;
 	width:100%;
 	border-collapse:separate;
-	border-top: 1px solid @haze;
-	border-left: 1px solid @haze;
+	border-top: 1px solid @fog;
+	border-left: 1px solid @fog;
 	background: @clear;
 	border-radius: 2px;
 }
 td,th{
 	padding:3px 6px;
-	border-bottom:1px solid @haze;
-	border-right:1px solid @haze;
-	.text-shadow-light;
+	border-bottom:1px solid @fog;
+	border-right:1px solid @fog;
 }
 th{
-	background: @fog;
+	background: lighten(@fog, 5);
+	font-weight: 500;
 }
 
 iframe {

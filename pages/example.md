@@ -4,4 +4,4 @@
 @group Styles.docs 3 Docs
 @group Styles.other 4 Other
 
-***This is the Live Style Guide for DocumentJS.com. If you're using DocumentJS to generate your own Live Style Guide, check out the [Live Style Guide documentation](/docs/index.html).***
+This is the Live Style Guide for DocumentCSS.com. If you'd like to use DocumentCSS to generate your own Live Style Guide, check out the [Live Style Guide documentation](/docs/index.html).

@@ -9,16 +9,26 @@
 
 // Sidebar structure
 .sidebar {
-  width:  255px;
   background-color: @sidebarBackground;
   position: fixed;
   margin-bottom: 15px;
   z-index: @zindex-navbar-fixed;
-  padding: 10px 10px 20px;
+  padding: 10px 15px 20px;
+  top: 100px;
+  left: ~"calc( ( 100% - " @containerWidth ~" ) / 2 )";
+  width: 250px;
+  max-height: ~"calc( 100% - 100px )";
+  overflow: hidden;
+  @media(max-width: @screen-sm-max){
+    left:0;
+  }
   ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0;      
+    > li a {
+      display: block;
+    }
   }
   a {
     color: @clear;
@@ -40,10 +50,6 @@
     position: absolute;
     right: 5px;
     top: 7px;
-    font-size: 15px;
-    option {
-      font-size: 15px;
-    }
   }
 }
 
@@ -65,18 +71,19 @@
   }
   .api {
     li {
-      font-size: 15px;
+      font-size: 18px;
       position: relative;
       &.active {
       position: relative;
         > a {
           background-color: @fog;
-          font-weight: 900;
+          //font-weight: 900;
           &:before {
             content: ">";
             position: absolute;
-            font-size: 12px;
+            font-size: 14px;
             left: -10px;
+            top: 2px;
           }
         }
       }
@@ -112,13 +119,11 @@
     }
 
     li li li { 
+      font-size: 14px;
       text-indent: 15px;
     }
     li li li li {
       text-indent: 30px;
-    }
-    ul.projects {
-      //padding-top: 10px;
     }
 
     li li.active > a, 
@@ -126,8 +131,8 @@
       position: relative;
       height:25px;
     }
-  } // api ends
-} // sidebar ends
+  }
+}
 
 
 /**
@@ -152,29 +157,6 @@
   }
 } 
 
-/// copies from layout
-
-  .sidebar { //this was me
-    position: fixed;
-    z-index: 5;
-    top: 100px;
-    left: ~"calc( ( 100% - " @containerWidth ~" ) / 2 )";
-    width: 250px;
-    background-color: @logoColor;
-    max-height: ~"calc( 100% - 100px )";
-    overflow: hidden;
-    @media(max-width: @screen-sm-max){
-      left:0;
-    }
-
-    > ol, 
-    > ul {
-      > li a {
-        font-size: 13px;
-        display: block;
-      }
-    }
-  }
   
   //Mobile Table of contents
   @media(max-width: @screen-sm-max) {

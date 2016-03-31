@@ -1,12 +1,7 @@
-<style>
-  section.contents {
-    display: none;
-  }
-</style>
+@page Guides Guides
+@group Guides.howTo How-To Guides
 
-@page lsg.guides Guides
-
-For in depth instructions, check out the [Standalone Live Style Guide](/docs/lsg-quickstart.html).
+_This is the quick getting started guide. For in depth instructions, check out the [Standalone Live Style Guide](/docs/lsg-quickstart.html)._
 
 ## Get Started
 
@@ -187,3 +182,9 @@ This will mark the whole folder as something to be ignored and your team can avo
 
 
 For in depth instructions, check out the [Standalone Live Style Guide](/docs/lsg-quickstart.html).
+
+<style>
+  .contents { 
+    display: none; /* Hiding the single bullet anchor list */
+  }
+</style>

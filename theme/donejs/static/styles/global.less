@@ -4,13 +4,6 @@
 * http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height
 * http://stackoverflow.com/questions/20773342/bootstrap-3-100-height-of-custom-div-inside-column
 */
-
-.home,
-.docs {
-	.brand {
-	 background-image: url('/static/img/logo-full-doc-css.svg');
- }
-}
 .reset-padding {
 	padding:0;
 }
@@ -43,7 +36,7 @@
 	left: 0;
 	right: 0;
 	background-color: rgba( 0, 0, 0, 0.5 );
-	z-index: 1077;
+	z-index: @zindex-modal-background;
 }
 hr  {
 	margin: 40px 0;

@@ -43,7 +43,7 @@
 
   .hero-cta {
     padding-bottom: 30px;
-    padding-top: 30px;
+    //padding-top: 30px;
     .btn {
       padding: 10px 40px;
     }
@@ -53,7 +53,7 @@
 .hero .lead,
 .homepage-section,
 .homepage-closing {
-  padding: 30px 10px;
+  padding: 30px 10px 0;
   @media(min-width:@screen-sm) {
     padding-left: 60px;
     padding-right: 60px;
@@ -61,37 +61,43 @@
 }
 
 .homepage-section {
-  .left, .right {
-    display: inline-block;
-    vertical-align: top;
-    @media(max-width:@screen-sm-max) {
-      width: 100%;
-      padding-right: 5px;
-    }
-    @media(min-width:@screen-sm) {
-      width: 49.5%;
-    }
+  display: inline-flex;
+  @media(max-width:@screen-sm-max) {
+    flex-direction: column;
   }
-  .left img {
-    max-height: 441px;
-    margin-bottom: 30px;
+  h2 {
+    color: @puddle;
+  }
+  .left, .right {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    // vertical-align: top;
+    // @media(max-width:@screen-sm-max) {
+    //   width: 100%;
+    //   padding-right: 5px;
+    // }
+    // @media(min-width:@screen-sm) {
+    //   width: 49.5%;
+    // }
+  }
+  .left {
+    padding-right: 15px;
+    @media(max-width:@screen-sm-max) {
+      margin-bottom: 30px;
+    }
   }
 }
-
+.explanation {
+  color: @thunderStorm;  
+  font-weight: 400;
+  font-size: 19px;
+  max-width: 90%;
+  margin: auto;  
+}
 .homepage-closing {
-  background-color: @thunderStorm;
-  margin-bottom: 0;
-  padding-bottom: 60px;
-  padding-top: 60px;
-  h2 {
-    color: @clear;
-  }
-  .btn-primary {
-    @media(max-width:@screen-sm-max) {
-      margin-bottom: 15px;
-    }
-    @media(min-width:@screen-sm) {
-      margin-right: 15px;
-    }
+  padding-bottom: 40px;
+  .hero-cta {
+    padding-top: 30px;
   }
 }

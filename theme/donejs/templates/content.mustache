@@ -1,5 +1,5 @@
 {{#unless hideContainer}}
-<div class="container api">
+<div class="main-content">
 {{/unless}}
 	{{#unless hideSidebar}}
 	<nav class="sidebar">
@@ -14,10 +14,8 @@
 	</nav>
 	{{/unless}}
 	
-	{{#unless hideArticle}}
-	<article class="content docs">
-	{{/unless}}
-	
+
+
 		{{#unless hideTitle}}
 		<section class="title">
 			{{> title.mustache}}
@@ -25,7 +23,7 @@
 		{{/unless}}
 		
 		{{#unless hideArticle}}
-		<section class="contents">
+		<section class="overview-of-contents">
 		</section>
 		{{/unless}}
 		
@@ -105,9 +103,7 @@
 		</section>
 		{{/if}}
 	
-	{{#unless hideArticle}}
-	</article>
-	{{/unless}}
+
 	
 {{#unless hideContainer}}
 </div>

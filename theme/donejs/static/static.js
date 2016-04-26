@@ -23,7 +23,7 @@ steal(
         prettyPrint();
         Highlighter();
 
-        new ContentList(".contents");
+        new ContentList(".overview-of-contents");
         new FrameHelper(".docs");
         new Versions($("#versions, .sidebar-title:first"));
 

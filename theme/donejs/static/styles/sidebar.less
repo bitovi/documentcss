@@ -22,19 +22,27 @@
   @media(max-width: @screen-sm-max){
     left:0;
   }
-  ul {
+  .menu-wrapper,
+  .active-menu {
     list-style-type: none;
     margin: 0;
     padding: 0;      
-    > li a {
+    .sidebar-title-link,
+    .page-link,
+    .stylesheet-link {
       display: block;
     }
-  }
+  }  
   a {
-    color: @clear;
+    color: @darkSkies;
+    padding: 3px 0;  
     font-weight: normal;
+    &:hover {
+      background-color: @fog;
+    }
   }
 }
+ 
 
 /**
 * @styles sidebar-versions Versions
@@ -61,79 +69,37 @@
 * Styles the groups of lists shown on the sidebar.
 *
 * @demo demos/lists.html
-**/
-.sidebar {    
-  .heading span {
-    color: @darkSkies;
-    display: block;
-    font-weight: bold;
-    margin-top: 10px;
-  }
-  .api {
-    li {
-      font-size: 18px;
-      position: relative;
-      &.active {
-      position: relative;
-        > a {
-          background-color: @fog;
-          //font-weight: 900;
-          &:before {
-            content: ">";
-            position: absolute;
-            font-size: 14px;
-            left: -10px;
-            top: 2px;
-          }
-        }
-      }
-      &.active:hover {
-        > a {
-          background-color: none;
-        }
-      }
-      &.active.collapsed {
-        > :not(a) {
-          display: none;
-        }
-      }
-    }  
-    li.active > a:before,
-    li:hover > a:before {
+**/  
+.group-heading {
+  color: @darkSkies;
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}   
+
+.page-title, { 
+  font-size: 14px;
+  text-indent: 15px;
+  &.active, &:hover {
+    background-color: @fog;
+    position: relative;
+    &:before {
       content: ">";
       position: absolute;
       font-size: 12px;
       left: -10px;
-    }
-
-    a, a:hover {
-      text-decoration: none;
-      color: @darkSkies;
-      font-style: normal;
-    }
-    a {
-      padding: 3px 0;
-    }
-    a:hover {
-      background-color: @fog;
-    }
-
-    li li li { 
-      font-size: 14px;
-      text-indent: 15px;
-    }
-    li li li li {
-      text-indent: 30px;
-    }
-
-    li li.active > a, 
-    .sidebar .api li li.active > a:hover {
-      position: relative;
-      height:25px;
+      top: 4px;
     }
   }
+  &.collapsed {
+    > :not(a) {
+      display: none;
+    }
+  }
+  li {
+    text-indent: 30px;
+  }
 }
-
 
 /**
 * @styles cascading-list Cascading List
@@ -142,20 +108,10 @@
 * Styles `.sidebar-title` as a child of the `.api` list, and up to 5 levels before inheriting the styles of level 1.
 *
 * @demo demos/cascading-list.html
-**/
-.sidebar {    
-  .sidebar-title  {
-      display: none;
-    }
-  .api {
-    &.cascading {
-      > .active > a,
-      > .parent  {
-        display: none;
-      }             
-    } 
-  }
-} 
+**/ 
+.sidebar-title  {
+  display: none;
+}
 
   
   //Mobile Table of contents
@@ -166,7 +122,7 @@
       max-height: ~"calc( 100% - 100px )";
       overflow-y: scroll; /* has to be scroll, not auto */
       -webkit-overflow-scrolling: touch;
-      z-index: 1078;
+      z-index: @zindex-mobile-menu;
       &.active {
         display: block;
         width: 100%;
@@ -174,68 +130,20 @@
       a {
         display: block;
       }
-      > ol, > ul{
-        padding:0;
-        &:not(.linenums) {
-          margin:5px 0 0 0 !important;
-        }
-        > li > a {
-          font-size: 16px;
-          padding: 0 50px 0 15px;
-        }
-        > li ol, > li ul {
-          > li {
-            border-bottom: 1px solid #9fc2d0;
-            margin: 0 10px;
-            padding:0;
-            &:first-child {
-              margin-top: 10px;
-            }
-            &:last-child {
-              margin-bottom: 10px;
-              border-bottom: 0;
-            }
-            > a {
-              padding: 7px 20px;
-              color: #fff;
-            }
-            &.active  {
-              border:0;
-            }
-          }
-        }
+      .group-heading {
+        color: @clear;
       }
-      > ol > li, > ul > li {
-        position: relative;
-        background-color: #3b6b7f;
-        margin-bottom:0;
-        padding: 10px 0;
-        border-top:1px solid #fff;
-        background-image: url("/static/img/icon-plus.svg");
-        background-size: 11px 11px;
-        background-position: 97% 50%;
-        background-repeat: no-repeat;
-
-        &.active {
-          background-image: url("/static/img/icon-collapse.svg");
-          background-size: 11px 11px;
-          background-position: 97% 14px;
-          background-repeat: no-repeat;
-        }
-        &.active {
-          border-bottom:0;
-        }
+      .page-title {
+        text-indent: 0;
+        border-bottom: 1px solid @clear;
       }
-      > ol > li > ol, > ul > li > ul {
-        max-height: 0px;
-        overflow: hidden;
-        transition: max-height 0.25s ease-out;
-        &:not(.linenums) {
-          margin:0 !important;
+      .page-link,
+      .stylesheet-link {
+        color: @clear;
+        padding: 7px 20px;
+        &:hover, :active {
+          color: darken(@puddle, 10);
         }
-      }
-      > ol > li.active > ol, > ul > li.active > ul {
-        max-height: 750px;
       }
     }
   }

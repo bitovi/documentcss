@@ -35,7 +35,6 @@
 *
 * @demo demos/docs-warning.html
 **/
-.docs {
   .warning {
     background-color: fade(@sunset, 10%);
     h3 {
@@ -53,22 +52,6 @@
       padding: 3px 15px;
     }
   }
-}
-
-
-// Styles the wrapper of the sidebar and content of the docs.
-.container.api {
-	//display: table;
-	//table-layout: fixed;
-  //border-bottom: 1px solid @haze;
-	//padding-top: 20px;
-  //border-radius: 5px;
-}
-.container.api > * {
-	//display: table-cell !important;
-	//vertical-align: top;
-}
-
 
 // Search Styles. Currently search is not being shown.
 .search-wrapper {
@@ -113,7 +96,7 @@
 *
 * @demo demos/signature.html
 **/
-.docs .signature-wrapper {
+.signature-wrapper {
   padding: 10px 15px 0;
   border: 1px solid @darkSkies;
   border-radius: 0 0 5px 5px;
@@ -121,7 +104,7 @@
     margin-bottom: 0;
   }
 }
-.docs {
+
   .signature.collapsed :not(h2) {
     display: none;
   }
@@ -154,7 +137,7 @@
       color: @clear;
     }
   }
-}
+
 
 /**
 * @styles small-signature Small Signature
@@ -203,7 +186,7 @@
 *
 * @demo demos/parameters-returns.html
 **/
-.docs {
+
   .parameters, .returns {
     list-style-type: none;
     margin: 0 0 15px;
@@ -260,27 +243,26 @@
     font-size: 8pt;
     line-height: 20px;
   }
-}
-.docs .parameters ul.options:last-child,
-.docs .returns ul.options:last-child {
+
+.parameters ul.options:last-child,
+.returns ul.options:last-child {
   margin-bottom: 0;
 }
-.docs .parameters .description,
-.docs .returns .description {
+.parameters .description,
+.returns .description {
   padding-bottom: 15px; 
 }
-.docs .returns .description {
+.returns .description {
   margin-top: 15px;
 }
-.docs .parameters :last-child .description,
-.docs .returns :last-child .description {
+.parameters :last-child .description,
+.returns :last-child .description {
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
 
 
 // demo
-.docs {
   .demo {
     ul {
       list-style: none;
@@ -308,6 +290,6 @@
       border: 1px solid @haze;
     }
   }
-}
+
 
 

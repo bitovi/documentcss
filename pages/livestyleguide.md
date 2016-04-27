@@ -184,7 +184,7 @@ This will mark the whole folder as something to be ignored and your team can avo
 For in depth instructions, check out the [Standalone Live Style Guide](/docs/lsg-quickstart.html).
 
 <style>
-  .contents { 
-    display: none; /* Hiding the single bullet anchor list */
+  .overview-of-contents { 
+    display: none;  Hiding the single bullet anchor list 
   }
 </style>

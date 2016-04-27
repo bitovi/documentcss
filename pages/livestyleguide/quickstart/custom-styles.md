@@ -1,5 +1,5 @@
-@page lsg-custom-styles Look and Feel
-@parent lsg-quickstart-group-customizing 0
+@page lsg-custom-styles Customizing Look & Feel
+@parent lsg-quickstart-steps 3
 
 The default look and feel of your Live Style Guide is going to be similar to DocumentJS.com as it is using the default theme.
 

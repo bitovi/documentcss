@@ -139,7 +139,7 @@
 			
 				
 					<li class="group-wrapper">
-						<span class="group-heading">Intro</span>
+						<span class="group-heading">Adding to Existing Docs</span>
 						
 	<ul class="active-menu">
 		
@@ -147,91 +147,13 @@
 				
 				
 				<li class="page-title ">
-					<a class="page-link" href="lsg-adding-disclaimer.html" data-search="A Brief Disclaimer">
-						A Brief Disclaimer
+					<a class="page-link" href="lsg-adding-setup.html" data-search="Setup">
+						Setup
 					</a>
 				</li>
 				
 			
 			
-		
-			
-				
-				
-				<li class="page-title ">
-					<a class="page-link" href="lsg-adding-designers.html" data-search="DocumentJS for Designers">
-						DocumentJS for Designers
-					</a>
-				</li>
-				
-			
-			
-		
-	</ul>
-
-					</li>
-				
-				
-			
-			
-		
-			
-				
-					<li class="group-wrapper">
-						<span class="group-heading">Setup</span>
-						
-	<ul class="active-menu">
-		
-			
-				
-				
-				<li class="page-title ">
-					<a class="page-link" href="lsg-adding-installation.html" data-search="Installation">
-						Installation
-					</a>
-				</li>
-				
-			
-			
-		
-			
-				
-				
-				<li class="page-title ">
-					<a class="page-link" href="lsg-adding-configuration.html" data-search="Configuration">
-						Configuration
-					</a>
-				</li>
-				
-			
-			
-		
-			
-				
-				
-				<li class="page-title ">
-					<a class="page-link" href="lsg-adding-file-organization.html" data-search="File Organization">
-						File Organization
-					</a>
-				</li>
-				
-			
-			
-		
-	</ul>
-
-					</li>
-				
-				
-			
-			
-		
-			
-				
-					<li class="group-wrapper">
-						<span class="group-heading">Next Steps</span>
-						
-	<ul class="active-menu">
 		
 			
 				
@@ -298,6 +220,7 @@
 		
 		
 		<section class="overview-of-contents">
+			<p class="overview-of-contents-title">Topics Covered Below:</p>
 		</section>
 		
 		
@@ -331,7 +254,39 @@
 <li>You still need to set up DocumentJS for <a href="http://documentjs.com/docs/index.html">API documentation</a></li>
 <li>You're just <a href="https://www.youtube.com/watch?v=6EneCIPJsog">trying to kill time</a></li>
 </ul>
-<p>First, <a href="/docs/lsg-adding-disclaimer.html">a brief disclaimer</a></p>
+<h2>A Brief Disclaimer</h2>
+<p>The <a href="/docs/lsg-quickstart.html">Standalone Guide</a> is likely more precise when it comes to step-by-step instructions. Unfortunately, since we don't know exactly how your project looks we'll be making a number of assumptions for this guide:</p>
+<ul>
+<li>Your project uses npm</li>
+<li>The API docs are configured in a <code>documentjs.json</code> file</li>
+<li>Other general assumptions about your project's setup and configuration</li>
+</ul>
+<p>There are a few ways to compensate for the ways this guide may differ from your specific project setup:</p>
+<ul>
+<li>Go through this guide with a developer who understands how the API Documentation is set up in your project</li>
+<li>Ask questions on <a href="https://gitter.im/bitovi/documentcss">Gitter</a></li>
+<li>Open <a href="https://github.com/bitovi/documentcss/issues/new">an issue</a> to let us know when something isn't clear</li>
+</ul>
+<h2>DocumentJS for Designers</h2>
+<p>If you're working on a project that is already using DocumentJS, it is being used to generate JavaScript API docs. Since it's already being used, with only a little configuration you should be able to:</p>
+<ul>
+<li>Generate a living site that automatically updates as your project's design evolves</li>
+<li>Write a style guide with inline comments in stylesheets or with individual markdown files</li>
+<li>Include demos to display examples alongside sample markup</li>
+<li>Organize pages into navigation groups like &quot;Elements,&quot; &quot;Themes,&quot; and &quot;Components&quot;</li>
+</ul>
+<p>To see an example of this in action, check out the <a href="/examples/styles/index.html">example Live Style Guide</a>.</p>
+<h3>What DocumentJS Does</h3>
+<p>DocumentJS is a <a href="https://staticsitegenerators.net/"><em>static site generator</em></a>. This means it scans specially formatted input files and creates a website that remains unchanged until the generator runs again. Whereas in a content management system changes happen somewhat automatically, a static site generator usually needs to be <strong>run manually</strong> and then the generated files must be <strong>uploaded</strong>.</p>
+<p>While this may seem more complicated than a CMS, static site generation works especially well for a Live Style Guide. Since your stylesheets are also the source files for your style guide, <strong>changes to your stylesheets are also changes to your Live Style Guide</strong>.</p>
+<p>To build your Live Style Guide, DocumentJS does the following:</p>
+<ol>
+<li>Reads through files specified in its configuration</li>
+<li>Looks in your commments for tags like <code>@page</code>, <code>@group</code>, and <code>@parent</code> to determine site layout</li>
+<li>Looks in your comments for tags like <code>@stylesheet</code>, <code>@styles</code>, and <code>@demo</code> to create the individual parts of your style guide</li>
+<li>Automatically generates <code>html</code> files</li>
+</ol>
+<p><a href="/docs/lsg-adding-installation.html">Next Page</a></p>
 
 		</section>
 		
@@ -407,7 +362,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"type":"page","name":"lsg-adding","src":"pages/livestyleguide/adding.md","description":"This guide will:","title":"Adding to Existing JS Docs","parent":"Guides.howTo","order":1,"dest":"/Users/thelela/Documents/GitHub/documentcss/docs","glob":{"pattern":"{pages/livestyleguide/**/*.md,pages/livestyleguide.md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/thelela/Documents/GitHub/documentcss"},"templates":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/templates","static":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/static","forceBuild":true,"generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+		var docObject = {"type":"page","name":"lsg-adding","src":"pages/livestyleguide/adding.md","description":"This guide will:","title":"Adding to Existing JS Docs","parent":"Guides.howTo","order":1,"dest":"/Users/thelela/Documents/GitHub/documentcss/docs","glob":{"pattern":"{pages/livestyleguide/**/*.md,pages/livestyleguide.md}","ignore":"{pages/livestyleguide/demos/**/*,pages/livestyleguide/styles.md}","cwd":"/Users/thelela/Documents/GitHub/documentcss"},"templates":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/templates","static":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/static","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
 	</script>
 
 	

@@ -9,13 +9,6 @@
 
 body:not(.home) {
   /* @containerWidth @contentWidth defined in ./variables.less near the bottom */
-  iframe {
-    width: 100%;
-    border: 1px solid @haze;
-    @media(max-width: @screen-xs){
-      max-width: 100%;
-    }
-  }
   a.linkToHeader {
     display: none;
   }
@@ -81,7 +74,7 @@ body:not(.home) {
       a {
         white-space: nowrap;
       }
-      a[href*='//']:not([href*='donejs.com']) {
+      a[href*='//']:not([href*='documentcss.com']) {
         position: relative;
         padding-right: 20px;
         &:after {
@@ -184,18 +177,13 @@ body:not(.home) {
     }
   }
   .sidebar ~ .description,
-  .sidebar ~ .comment { //keeps @hide sidebar pages centered
+  .sidebar ~ .comment,
+  .sidebar ~ .overview-of-contents { //keeps @hide sidebar pages centered
     margin-left: ~"calc( ( 100% - " @containerWidth ~" ) / 2 + " @containerWidth - @contentWidth ~" )";
     @media(max-width: @screen-sm-max) {
       margin-left: 0;
     }
-    .heading, 
-    .comment h2 {
-      // @media(min-width: @screen-md) {
-      //   text-align: left;
-      //   padding-left: ~"calc( ( 100% - " @containerWidth ~" ) / 2 + " @containerWidth ~" )";
-      // }
-    }
+
   }
   .scroll-spy-title + .main-content {
     @media(max-width: @screen-sm-max) {
@@ -215,23 +203,23 @@ body:not(.home) {
 **/
 
 .title {     
-    text-align: center;
-    line-height: 1.;
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0px;
-      right: 0px;
-      height: 222px;
-      padding-top: 25px;
-      background-image: url( "/static/img/background.jpg" );
-      background-attachment: fixed;
-      opacity: .2;
-      z-index: -1;
-      @media(max-width: @screen-xs-max){
-        height: 160px;
-      }
+  text-align: center;
+  line-height: 1.;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    height: 222px;
+    padding-top: 25px;
+    background-image: url( "/static/img/background.jpg" );
+    background-attachment: fixed;
+    opacity: .2;
+    z-index: -1;
+    @media(max-width: @screen-xs-max){
+      height: 160px;
     }
+  }
 }
 .heading {
   height: 222px;
@@ -282,25 +270,24 @@ body:not(.home) {
 
 
   /* main body of content */
-  .description {
-    p {
-      font-weight: 400;
-      color: @gray;
-      font-size: 19px;
-    }
-  }
   .comment {
     &:before {
       /* this prevents vertical margin collapsing */
       content: "\007C\00a0\00a0";
       font-size: 0px;
     }
+    &:last-of-type {
+      margin-bottom: 60px;
+    }
     @media(max-width: @screen-xs-max) {
       word-wrap: break-word;
       overflow: hidden;
     }
+  }
+  .description, 
+  .comment {
     @h2height: 150px;
-    h2 {
+    h2, + h2 {
       position: absolute;
       left: 0px;
       right: 0px;
@@ -336,7 +323,7 @@ body:not(.home) {
         font-size: 1em;
       }
     }
-    h3 {
+    h3, + h3{
       color: @logoColor;
       font-size: 40px;
       margin-top: 50px;
@@ -359,18 +346,15 @@ body:not(.home) {
     h6 {
       font-size: 18px;
     }
-    h2 + * {
+    h2 + *, + h2 + * {
       margin-top: @h2height + 20px; /* the px added here are the margin under the h2 */
       @media(min-width: @screen-md) {
         margin-top: @h2height + 60px; /* the px added here are the margin under the h2 */
       }
     }
-
-    iframe {
-      max-width: 100%;
-    }
   }
-  .sidebar ~ .comment {
+  .sidebar ~ .comment,
+  .sidebar ~ .description {
     h2 {
       @media(min-width: @screen-md) {
         padding-left: ~"calc( ( 100% - " @containerWidth ~" ) / 2 + (" @containerWidth - @contentWidth ~") )";

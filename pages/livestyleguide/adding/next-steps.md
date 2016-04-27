@@ -1,5 +1,5 @@
 @page lsg-adding-next-steps Writing and Customizing
-@parent lsg-adding-group-next-steps 0
+@parent lsg-adding-steps 1
 
 Now that you've finished with installation and configuration, the rest of the the process (creating pages, documenting, and customizing your site) will follow the same steps as the [Standalone Style Guide](/docs/lsg-quickstart.html):
 

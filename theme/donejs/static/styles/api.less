@@ -6,6 +6,17 @@
 * Styles the docs and overwrites some of the theme default styles.
 **/
 
+.overview-of-contents {
+/*  &:before {
+    content: 'Topics Covered Below:';
+    font-weight: bold;
+    font-size: 19px;
+  }*/
+  ul {
+    margin: 0;
+  }
+}
+
 
 /**
 * @styles simple-tag Simple Tag
@@ -271,25 +282,38 @@
       margin-bottom: -5px;
       margin-left: 0; 
     }
-    li.tab {
+    .tab {
       display: block;
       float: left;
       padding: 6px 15px;
       border-radius: 2px 2px 0 0;
       font-weight: bold;
+      cursor: pointer;
+      &.active {
+        color: @clear;
+        background-color: @puddle;
+      }
     }
-    li.tab.active {
-      color: @clear;
-      background-color: @puddle;
-    }
-    div.tab-content {
+    .tab-content {
       clear: both;
     }
     iframe {
       width: 100%;
       border: 1px solid @haze;
+      border-radius: 3px;
     }
   }
+.style-demo {
+  padding: 10px;
+}
+.iframe_wrapper {
+  iframe {
+    width: 100%;
+    border: 1px solid @haze;
+    border-radius: 3px;
+  }
+}
+
 
 
 

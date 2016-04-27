@@ -11,35 +11,35 @@ module.exports = function(grunt){
 					"dest": "./",
 					"glob": {
 						"pattern": "pages/*.md",
-						"ignore": "pages/{example,livestyleguide}.md"
+						"ignore": "{pages/livestyleguide.md,pages/livestyleguide/**/*}"
 					},
 					"templates": "theme/donejs/templates",
 					"static": "theme/donejs/static"
 				},
-				"examples": {
+				"examples/styles": {
 					"parent": "Styles",
 					"dest": "examples/styles",
 					"glob": {
-						"pattern": "{pages/example.md,./node_modules/documentjs/{styles,site/default/static/styles}/**/*.{less,css,md}}",
-						"ignore": "{./node_modules/documentjs/styles/styles.md,./node_modules/documentjs/styles/demos/**/*}"
-					},
+						"pattern": "{pages/livestyleguide/styles.md,theme/donejs/static/styles/**/*.{less,css,md}}",
+					},					
 					"templates": "theme/donejs/templates",
 					"static": "theme/donejs/static"
-				},
+				},				
 				"examples/demos": {
 					"parent": "demos",
 					"dest": "examples/demos",
 					"glob": {
-						"pattern": "./node_modules/documentjs/styles/demos/demos/**/*.md"
+						"pattern": "{pages/livestyleguide/demos/index.md,pages/livestyleguide/demos/**/*.md}"
 					},
-					"templates": "./node_modules/documentjs/styles/demos/templates",
+					"templates": "pages/livestyleguide/demos/templates",
 					"static": "theme/donejs/static"
 				},
 				"guides": {
 					"parent": "Guides",
 					"dest": "docs",
 					"glob": {
-						"pattern": "{pages/livestyleguide/**/*.md,pages/livestyleguide.md}"
+						"pattern": "{pages/livestyleguide/**/*.md,pages/livestyleguide.md}",
+						"ignore": "{pages/livestyleguide/demos/**/*,pages/livestyleguide/styles.md}"
 					},
 					"templates": "theme/donejs/templates",
 					"static": "theme/donejs/static"

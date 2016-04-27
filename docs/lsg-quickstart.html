@@ -139,7 +139,7 @@
 			
 				
 					<li class="group-wrapper">
-						<span class="group-heading">Intro</span>
+						<span class="group-heading">Build a Standalone LSG</span>
 						
 	<ul class="active-menu">
 		
@@ -147,35 +147,8 @@
 				
 				
 				<li class="page-title ">
-					<a class="page-link" href="lsg-quickstart-designers.html" data-search="DocumentJS for Designers">
-						DocumentJS for Designers
-					</a>
-				</li>
-				
-			
-			
-		
-	</ul>
-
-					</li>
-				
-				
-			
-			
-		
-			
-				
-					<li class="group-wrapper">
-						<span class="group-heading">Setup</span>
-						
-	<ul class="active-menu">
-		
-			
-				
-				
-				<li class="page-title ">
-					<a class="page-link" href="lsg-quickstart-installation.html" data-search="Installation">
-						Installation
+					<a class="page-link" href="lsg-quickstart-setup.html" data-search="Setup">
+						Setup
 					</a>
 				</li>
 				
@@ -186,8 +159,8 @@
 				
 				
 				<li class="page-title ">
-					<a class="page-link" href="lsg-quickstart-configuration.html" data-search="Configuration">
-						Configuration
+					<a class="page-link" href="lsg-quickstart-first-page.html" data-search="Your First Page">
+						Your First Page
 					</a>
 				</li>
 				
@@ -198,35 +171,8 @@
 				
 				
 				<li class="page-title ">
-					<a class="page-link" href="lsg-quickstart-file-organization.html" data-search="File Organization">
-						File Organization
-					</a>
-				</li>
-				
-			
-			
-		
-	</ul>
-
-					</li>
-				
-				
-			
-			
-		
-			
-				
-					<li class="group-wrapper">
-						<span class="group-heading">Your First Page</span>
-						
-	<ul class="active-menu">
-		
-			
-				
-				
-				<li class="page-title ">
-					<a class="page-link" href="lsg-quickstart-creating-page.html" data-search="Creating a Page">
-						Creating a Page
+					<a class="page-link" href="lsg-quickstart-writing.html" data-search="Writing">
+						Writing
 					</a>
 				</li>
 				
@@ -237,86 +183,8 @@
 				
 				
 				<li class="page-title ">
-					<a class="page-link" href="lsg-quickstart-generate.html" data-search="Generating the Site">
-						Generating the Site
-					</a>
-				</li>
-				
-			
-			
-		
-	</ul>
-
-					</li>
-				
-				
-			
-			
-		
-			
-				
-					<li class="group-wrapper">
-						<span class="group-heading">Writing</span>
-						
-	<ul class="active-menu">
-		
-			
-				
-				
-				<li class="page-title ">
-					<a class="page-link" href="lsg-quickstart-stylesheet.html" data-search="Documenting a Stylesheet">
-						Documenting a Stylesheet
-					</a>
-				</li>
-				
-			
-			
-		
-			
-				
-				
-				<li class="page-title ">
-					<a class="page-link" href="lsg-quickstart-organizing.html" data-search="Organizing your Style Guide">
-						Organizing your Style Guide
-					</a>
-				</li>
-				
-			
-			
-		
-			
-				
-				
-				<li class="page-title ">
-					<a class="page-link" href="lsg-quickstart-demos.html" data-search="Live Demos">
-						Live Demos
-					</a>
-				</li>
-				
-			
-			
-		
-	</ul>
-
-					</li>
-				
-				
-			
-			
-		
-			
-				
-					<li class="group-wrapper">
-						<span class="group-heading">Customizing</span>
-						
-	<ul class="active-menu">
-		
-			
-				
-				
-				<li class="page-title ">
-					<a class="page-link" href="lsg-custom-styles.html" data-search="Look and Feel">
-						Look and Feel
+					<a class="page-link" href="lsg-custom-styles.html" data-search="Customizing Look &amp; Feel">
+						Customizing Look &amp; Feel
 					</a>
 				</li>
 				
@@ -376,6 +244,7 @@
 		
 		
 		<section class="overview-of-contents">
+			<p class="overview-of-contents-title">Topics Covered Below:</p>
 		</section>
 		
 		
@@ -410,7 +279,32 @@
 <li>You want to set up DocumentJS for <a href="http://documentjs.com/docs/index.html">API documentation</a>, then <a href="/docs/lsg-adding.html">add a Live Style Guide</a></li>
 <li>You <a href="https://www.youtube.com/watch?v=I0Pow7Gi7Xw">are totally lost</a></li>
 </ul>
-<p><a href="/docs/lsg-quickstart-designers.html">Next Page</a></p>
+<h2>For Designers</h2>
+<p>Though you're documenting your styles, the tool you'll be using is DocumentJS. As long as your project is using <a href="http://npmjs.org">npm</a>, you will be able to:</p>
+<ul>
+<li>Generate a living site that automatically updates as your project's design evolves</li>
+<li>Write a style guide with inline comments in stylesheets or with individual markdown files</li>
+<li>Include demos to display examples alongside sample markup</li>
+<li>Organize pages into navigation groups like &quot;Elements,&quot; &quot;Themes,&quot; and &quot;Components&quot;</li>
+</ul>
+<p>To see an example of this, check out this site's example <a href="/examples/styles/index.html">Live Style Guide</a>.</p>
+<h3>What DocumentJS Does</h3>
+<p><sup><em><a href="/docs/lsg-quickstart-installation.html">Skip this section</a> if you're comfortable with magic and don't care how DocumentJS works.</em></sup></p>
+<p>DocumentJS is a <a href="https://staticsitegenerators.net/"><em>static site generator</em></a>. This means it scans specially formatted input files and creates a website that remains unchanged until the generator runs again. Whereas in a content management system changes happen somewhat automatically, a static site generator usually needs to be <strong>run manually</strong> and then the generated files must be <strong>uploaded</strong>.</p>
+<p>While this may seem more complicated than a CMS, static site generation works especially well for a Live Style Guide. Since your stylesheets are also the source files for your style guide, <strong>changes to your stylesheets are also changes to your Live Style Guide</strong>.</p>
+<p>To build your Live Style Guide, DocumentJS does the following:</p>
+<ol>
+<li>Reads through files specified in its configuration</li>
+<li>Looks in your commments for tags like <code>@page</code>, <code>@group</code>, and <code>@parent</code> to determine site layout</li>
+<li>Looks in your comments for tags like <code>@stylesheet</code>, <code>@styles</code>, and <code>@demo</code> to create the individual parts of your style guide</li>
+<li>Automatically generates <code>html</code> files</li>
+</ol>
+<p><a href="/docs/lsg-quickstart-installation.html">Next Page</a></p>
+<style>
+  .overview-of-contents { 
+    display: none;  Hiding the single bullet anchor list 
+  }
+</style>
 
 		</section>
 		
@@ -486,7 +380,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"type":"page","name":"lsg-quickstart","src":"pages/livestyleguide/quickstart.md","description":"This guide will:","title":"Standalone Live Style Guide","parent":"Guides.howTo","order":0,"dest":"/Users/thelela/Documents/GitHub/documentcss/docs","glob":{"pattern":"{pages/livestyleguide/**/*.md,pages/livestyleguide.md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/thelela/Documents/GitHub/documentcss"},"templates":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/templates","static":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/static","forceBuild":true,"generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+		var docObject = {"type":"page","name":"lsg-quickstart","src":"pages/livestyleguide/quickstart.md","description":"This guide will:","title":"Standalone Live Style Guide","parent":"Guides.howTo","order":0,"dest":"/Users/thelela/Documents/GitHub/documentcss/docs","glob":{"pattern":"{pages/livestyleguide/**/*.md,pages/livestyleguide.md}","ignore":"{pages/livestyleguide/demos/**/*,pages/livestyleguide/styles.md}","cwd":"/Users/thelela/Documents/GitHub/documentcss"},"templates":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/templates","static":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/static","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
 	</script>
 
 	

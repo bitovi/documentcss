@@ -17,7 +17,7 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Guides - How-To Guides </title>
+	<title>Guides - Adding to Existing Docs </title>
 	<meta name="description" content="DocumentCSS is an open source Live Style Guide creation tool, and sister to DocumentJS">
 	<meta name="author" content="Bitovi - DocumentCSS">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,7 +43,7 @@
 		<script type="text/javascript" src="static/html5shiv.js"></script>
 	<!--<![endif]-->
 </head>
-<body class="howTo">
+<body class="lsg-adding-steps">
 		<div id="greyOutUnderNav" style="display:none;"></div>
 		<header>
 			<nav class="navbar navbar-default navbar-fixed-top">
@@ -75,13 +75,7 @@
 							<li class="guides-menu">
 									<a href="/docs/index.html">Guides</a>
 									<ul class="dropdown-menu">
-                      <li ><a href="/docs/standalone-lsg.html">Standalone Live Style Guide</a></li>
-<<<<<<< HEAD
-=======
 											<li ><a href="/docs/lsg-quickstart.html">Standalone Live Style Guide</a></li>
->>>>>>> bd2c36e... making navigation correctly pick which menu item should be highlighted.  This is a hack, but works:docs/Guides.howTo.html
-=======
->>>>>>> 13fe680... Fixing the generated pages
 											<li ><a href="/docs/lsg-adding.html">Adding to Existing JS Docs</a></li>
 											<li><a  href="/docs/publishing.html">Publishing Your Style Guide</a></li>
 									</ul>
@@ -126,13 +120,26 @@
 	
 	<nav class="sidebar">
 		
-		<ul class="sidebar-wrapper">
+		<ul class="menu-wrapper"> 
 	
-	   <li class="sidebar-section active">
-	   		<span class="sidebar-section-title" href="howTo.html" data-search="How-To Guides">
-				How-To Guides
-			</span>
-
+		
+		<li class="sidebar-title active">
+			<a class="sidebar-title-link" href="index.html" data-search="Guides">
+				Guides
+			</a>
+			
+		</li>
+		
+		<li class="sidebar-title active">
+			<a class="sidebar-title-link" href="lsg-adding.html" data-search="Adding to Existing JS Docs">
+				Adding to Existing JS Docs
+			</a>
+			
+		</li>
+		
+		<li class="sidebar-menu">
+		
+			
 			
 	<ul class="active-menu">
 		
@@ -140,8 +147,8 @@
 				
 				
 				<li class="page-title ">
-					<a class="page-link" href="lsg-adding.html" data-search="Adding to Existing JS Docs">
-						Adding to Existing JS Docs
+					<a class="page-link" href="lsg-adding-setup.html" data-search="Setup">
+						Setup
 					</a>
 				</li>
 				
@@ -152,20 +159,8 @@
 				
 				
 				<li class="page-title ">
-					<a class="page-link" href="publishing.html" data-search="Publishing Your Style Guide">
-						Publishing Your Style Guide
-					</a>
-				</li>
-				
-			
-			
-		
-			
-				
-				
-				<li class="page-title ">
-					<a class="page-link" href="standalone-lsg.html" data-search="Standalone Live Style Guide">
-						Standalone Live Style Guide
+					<a class="page-link" href="lsg-adding-next-steps.html" data-search="Writing and Customizing">
+						Writing and Customizing
 					</a>
 				</li>
 				
@@ -174,11 +169,11 @@
 		
 	</ul>
 
-
-	   </li>
+			
+		
+		</li>
 	
 </ul>
-
 	</nav>
 	
 	
@@ -187,7 +182,7 @@
 		
 		<section class="title">
 			<div class="heading">
-<h1>How-To Guides</h1>
+<h1>Adding to Existing Docs</h1>
 	<ul class="tags">
 		<li>group</li>
 	</ul>
@@ -198,7 +193,7 @@
 <div class="sub-heading">
 	
 	
-		<span class="module">howTo</span>
+		<span class="module">lsg-adding-steps</span>
 	
 	
 	
@@ -216,8 +211,8 @@
 		
 		
 		
-		<p class="overview-of-contents-title">Topics Covered Below:</p>
 		<section class="overview-of-contents">
+			<p class="overview-of-contents-title">Topics Covered Below:</p>
 		</section>
 		
 		
@@ -305,13 +300,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"name":"howTo","title":"How-To Guides","type":"group","parent":"guides","description":"","order":0,"dest":"/Users/thelela/Documents/GitHub/documentcss/docs","glob":{"pattern":"{pages/guides/*.md,pages/guides/**/*.md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/thelela/Documents/GitHub/documentcss"},"templates":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/templates","static":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/static","forceBuild":true,"generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
-<<<<<<< HEAD
-=======
-		var docObject = {"name":"Guides.howTo","title":"How-To Guides","type":"group","parent":"Guides","description":"","order":0,"dest":"/Users/justin/dev/documentcss/docs","glob":{"pattern":"{pages/livestyleguide/**/*.md,pages/livestyleguide.md}","ignore":"{pages/livestyleguide/demos/**/*,pages/livestyleguide/styles.md}","cwd":"/Users/justin/dev/documentcss"},"templates":"/Users/justin/dev/documentcss/theme/donejs/templates","static":"/Users/justin/dev/documentcss/theme/donejs/static","forceBuild":true,"generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
->>>>>>> bd2c36e... making navigation correctly pick which menu item should be highlighted.  This is a hack, but works:docs/Guides.howTo.html
-=======
->>>>>>> 13fe680... Fixing the generated pages
+		var docObject = {"name":"lsg-adding-steps","title":"Adding to Existing Docs","type":"group","parent":"lsg-adding","description":"","order":0,"dest":"/Users/justin/dev/documentcss/docs","glob":{"pattern":"{pages/livestyleguide/**/*.md,pages/livestyleguide.md}","ignore":"{pages/livestyleguide/demos/**/*,pages/livestyleguide/styles.md}","cwd":"/Users/justin/dev/documentcss"},"templates":"/Users/justin/dev/documentcss/theme/donejs/templates","static":"/Users/justin/dev/documentcss/theme/donejs/static","forceBuild":true,"generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
 	</script>
 
 	

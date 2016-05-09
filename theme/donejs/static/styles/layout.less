@@ -291,7 +291,7 @@ body:not(.home) {
       position: absolute;
       left: 0px;
       right: 0px;
-      padding-left: ~"calc( ( 100% - " @containerWidth ~" ) / 2 + (" @containerWidth - @contentWidth ~") /2 )";
+      padding-left: ~"calc( ( 100% - " @containerWidth ~" ) / 2 + (" @containerWidth - @contentWidth ~")  )";
       padding-top: 50px;
       padding-bottom: 50px;
       display: block;
@@ -304,9 +304,9 @@ body:not(.home) {
       line-height: 44px;
       @media(max-width: @screen-md){
         line-height:1;
-        font-size: 25px;
+        font-size: 30px;
         max-height: 180px;
-        padding: 40px 35px;
+        padding: 30px 18px;
       }
       &:before {
         content: "";

@@ -80,17 +80,20 @@
 .page-title, { 
   font-size: 14px;
   text-indent: 15px;
-  &.active, &:hover {
-    background-color: @fog;
-    position: relative;
-    &:before {
-      content: ">";
-      position: absolute;
-      font-size: 12px;
-      left: -10px;
-      top: 4px;
+  @media(min-width: @screen-md) {
+    &.active, &:hover {
+      background-color: @fog;
+      position: relative;
+      &:before {
+        content: ">";
+        position: absolute;
+        font-size: 12px;
+        left: -10px;
+        top: 4px;
+      }
     }
   }
+
   &.collapsed {
     > :not(a) {
       display: none;
@@ -120,7 +123,7 @@
       display: none;
       left: 0px;
       max-height: ~"calc( 100% - 100px )";
-      overflow-y: scroll; /* has to be scroll, not auto */
+      //overflow-y: scroll; /* has to be scroll, not auto */
       -webkit-overflow-scrolling: touch;
       z-index: @zindex-mobile-menu;
       &.active {

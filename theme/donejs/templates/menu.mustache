@@ -1,21 +1,12 @@
-<ul class="menu-wrapper"> 
-	{{#getActiveAndParents}}
-		{{#each parents}}
-		<li class="sidebar-title active">
-			<a class="sidebar-title-link" href="{{urlTo name}}" data-search="{{#if title}}{{title}}{{else}}{{{name}}}{{/if}}">
+<ul class="menu-wrapper">
+	{{#eachFirstLevelChildren}}
+	   <li class="sidebar-title{{#ifHasOrIsActive}} active{{/ifHasOrIsActive}}">
+	   		<a class="sidebar-title-link" href="{{urlTo name}}" data-search="{{#if title}}{{title}}{{else}}{{{name}}}{{/if}}">
 				{{makeTitle}}
 			</a>
-			{{#if ../active.hideChildrenInMenu}}
-				{{> active-menu.mustache}}
-			{{/if}}
-		</li>
-		{{/each}}
-		<li class="sidebar-menu">
-		{{#active}}
-			{{^if hideChildrenInMenu}}
+
 			{{> active-menu.mustache}}
-			{{/if}}
-		{{/active}}
-		</li>
-	{{/getActiveAndParents}}
+
+	   </li>
+	{{/eachFirstLevelChildren}}
 </ul>

@@ -115,7 +115,12 @@ steal(
 
         //set Guides as active in main navigation if nothing else is active
         if ( $( ".navbar-nav:first > .active" ).length === 0 ) {
-            $( ".guides-menu" ).addClass( "active" );
+            if(window.location.href.indexOf("/docs/") !== -1) {
+                $( ".guides-menu" ).addClass( "active" );
+            } else if(window.location.href.indexOf("/examples/")){
+                $( ".examples-menu" ).addClass( "active" );
+            }
+
         }
 
 

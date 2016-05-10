@@ -75,9 +75,9 @@
 							<li class="guides-menu">
 									<a href="/docs/index.html">Guides</a>
 									<ul class="dropdown-menu">
+                      <li {{#ifCurrentFromConfig "/docs/lsg-adding.html"}}class="active"{{/ifCurrentFromConfig}}><a href="/docs/lsg-adding.html">Adding to Existing JS Docs</a></li>
+                      <li><a {{#ifCurrentFromConfig "/docs/publishing.html"}}class="active"{{/ifCurrentFromConfig}} href="/docs/publishing.html">Publishing Your Style Guide</a></li>
                       <li {{#ifCurrentFromConfig "/docs/standalone-lsg.html"}}class="active"{{/ifCurrentFromConfig}}><a href="/docs/standalone-lsg.html">Standalone Live Style Guide</a></li>
-											<li {{#ifCurrentFromConfig "/docs/lsg-adding.html"}}class="active"{{/ifCurrentFromConfig}}><a href="/docs/lsg-adding.html">Adding to Existing JS Docs</a></li>
-											<li><a {{#ifCurrentFromConfig "/docs/publishing.html"}}class="active"{{/ifCurrentFromConfig}} href="/docs/publishing.html">Publishing Your Style Guide</a></li>
 									</ul>
 							</li>
 							<li class="examples-menu">

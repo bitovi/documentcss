@@ -2,13 +2,6 @@
 if(!System.bundlesPath) {
 	System.paths["bundles/*.css"] ="../../../../../../../../../../../../node_modules/documentjs/site/static/build/a9f80cd7c6632ad30a4cac27cf56da52/bundles/*css";
 	System.paths["bundles/*"] = "../../../../../../../../../../../../node_modules/documentjs/site/static/build/a9f80cd7c6632ad30a4cac27cf56da52/bundles/*.js";
-<<<<<<< HEAD
-=======
-	System.paths["bundles/*.css"] ="../../../../../../../../../../../node_modules/documentjs/site/static/build/ebd6bed705d08058a14186b73e7a54db/bundles/*css";
-	System.paths["bundles/*"] = "../../../../../../../../../../../node_modules/documentjs/site/static/build/ebd6bed705d08058a14186b73e7a54db/bundles/*.js";
->>>>>>> bd2c36e... making navigation correctly pick which menu item should be highlighted.  This is a hack, but works
-=======
->>>>>>> 13fe680... Fixing the generated pages
 }
 System.bundles = {"bundles/static.css!":["styles/styles.less!$less"]};
 /*config.js*/

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>Bootdocs - Clearfix </title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+  	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+</head>
+
+<body>
+	<header>
+		<nav>
+			<h1>Bootdocs</h1>
+        <a href="index.html">Home</a> • <a href="accessibility.html">Design</a> • <a href="Overview.html">CSS</a> • <a href="glyphicons.less.html">Components</a>
+		</nav>
+	</header>
+  <hr />
+	
+<div class="container-fluid api">
+
+	
+	<nav class="sidebar">
+		
+		<ul class="api cascading primary-grouping"> 
+	
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="index.html" data-search="Bootdocs">
+				Bootdocs
+			</a>
+			
+				
+			
+		</li>
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="css.html" data-search="CSS">
+				CSS
+			</a>
+			
+				
+	<ul>
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="overview.html" data-search="Overview">
+						Overview
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="grid.html" data-search="Grid System">
+						Grid System
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="typography.less.html" data-search="Typography">
+						Typography
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="code.less.html" data-search="Code">
+						Code
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="forms.less.html" data-search="Forms">
+						Forms
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="buttons.less.html" data-search="Buttons">
+						Buttons
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="images.less.html" data-search="Images">
+						Images
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="helper-classes.less.html" data-search="Helper Classes">
+						Helper Classes
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="using-less.html" data-search="Using Less">
+						Using Less
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="using-sass.html" data-search="Using Sass">
+						Using Sass
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="tables.less.html" data-search="Tables">
+						Tables
+					</a>
+				</li>
+				
+			
+			
+		
+	</ul>
+
+			
+		</li>
+		
+		
+			
+		
+	
+</ul>
+	</nav>
+	
+	
+	
+	<article class="content docs">
+	
+	
+		
+		<section class="title">
+			<div class="heading">
+<h1>Clearfix</h1>
+	<ul class="tags">
+		<li>styles</li>
+	</ul>
+	
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+		<span class="module">clearfix</span>
+	
+	
+	
+	<span class="inherits">&nbsp;</span>
+</div>
+
+<ul class="links">
+	
+	
+	
+	
+</ul>
+<br />
+		</section>
+		
+		
+		
+		<section class="contents">
+		</section>
+		
+		
+		
+
+		
+		<section class="description">
+			<p>Easily clear <code>float</code>s by adding <code>.clearfix</code> to the parent element. Utilizes
+<a href="http://nicolasgallagher.com/micro-clearfix-hack/">the micro clearfix</a> as popularized by
+Nicolas Gallagher. Can also be used as a mixin.</p>
+<pre><code>&lt;!-- Usage as a class --&gt;
+&lt;div class=&quot;clearfix&quot;&gt;...&lt;/div&gt;
+</code></pre>
+<pre><code>// Mixin itself
+.clearfix() {
+  &amp;:before,
+  &amp;:after {
+    content: &quot; &quot;;
+    display: table;
+  }
+  &amp;:after {
+    clear: both;
+  }
+}
+
+// Usage as a mixin
+.element {
+  .clearfix();
+}
+</code></pre>
+
+		</section>
+		
+
+		
+			
+		
+		
+		
+		
+
+		
+		
+
+		
+
+		
+	
+	
+	</article>
+	
+	
+
+</div>
+
+
+
+
+
+	
+	<footer>
+	  <hr />
+	  <p>Built by <a href="http://bitovi.com/">Bitovi</a> using <a href="http://documentjs.com/">DocumentJS</a>.
+	</footer>
+	
+	<script type="text/javascript">
+		var docObject = {"description":"Easily clear `float`s by adding `.clearfix` to the parent element. Utilizes \n [the micro clearfix](http://nicolasgallagher.com/micro-clearfix-hack/) as popularized by \n Nicolas Gallagher. Can also be used as a mixin.\n\n```\n<!-- Usage as a class -->\n<div class=\"clearfix\">...</div>\n```\n\n```\n// Mixin itself\n.clearfix() {\n  &:before,\n  &:after {\n    content: \" \";\n    display: table;\n  }\n  &:after {\n    clear: both;\n  }\n}\n\n// Usage as a mixin\n.element {\n  .clearfix();\n}\n```","name":"clearfix","title":"Clearfix","type":"styles","parent":"helper-classes.less","hideInParentMenu":true,"order":6,"src":"less/bootstrap-custom/helper-classes.less","templates":"/server/bootdocs/themes/blankslate/templates","static":"/server/bootdocs/themes/blankslate/static","glob":{"pattern":"{less,markdown}/**/*.{css,less,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/server/bootdocs"},"dest":"/server/bootdocs/styleguide","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+	</script>
+	
+	
+
+		<script type='text/javascript' 
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal.production.js"
+	    		bundles-path="bundles"></script>
+	
+</body>
+
+</html>

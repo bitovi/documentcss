@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>Bootdocs - Showing and hiding content </title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+  	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+</head>
+
+<body>
+	<header>
+		<nav>
+			<h1>Bootdocs</h1>
+        <a href="index.html">Home</a> • <a href="accessibility.html">Design</a> • <a href="Overview.html">CSS</a> • <a href="glyphicons.less.html">Components</a>
+		</nav>
+	</header>
+  <hr />
+	
+<div class="container-fluid api">
+
+	
+	<nav class="sidebar">
+		
+		<ul class="api cascading primary-grouping"> 
+	
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="index.html" data-search="Bootdocs">
+				Bootdocs
+			</a>
+			
+				
+			
+		</li>
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="css.html" data-search="CSS">
+				CSS
+			</a>
+			
+				
+	<ul>
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="overview.html" data-search="Overview">
+						Overview
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="grid.html" data-search="Grid System">
+						Grid System
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="typography.less.html" data-search="Typography">
+						Typography
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="code.less.html" data-search="Code">
+						Code
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="forms.less.html" data-search="Forms">
+						Forms
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="buttons.less.html" data-search="Buttons">
+						Buttons
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="images.less.html" data-search="Images">
+						Images
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="helper-classes.less.html" data-search="Helper Classes">
+						Helper Classes
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="using-less.html" data-search="Using Less">
+						Using Less
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="using-sass.html" data-search="Using Sass">
+						Using Sass
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="tables.less.html" data-search="Tables">
+						Tables
+					</a>
+				</li>
+				
+			
+			
+		
+	</ul>
+
+			
+		</li>
+		
+		
+			
+		
+	
+</ul>
+	</nav>
+	
+	
+	
+	<article class="content docs">
+	
+	
+		
+		<section class="title">
+			<div class="heading">
+<h1>Showing and hiding content</h1>
+	<ul class="tags">
+		<li>styles</li>
+	</ul>
+	
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+		<span class="module">showing-and-hiding-content</span>
+	
+	
+	
+	<span class="inherits">&nbsp;</span>
+</div>
+
+<ul class="links">
+	
+	
+	
+	
+</ul>
+<br />
+		</section>
+		
+		
+		
+		<section class="contents">
+		</section>
+		
+		
+		
+
+		
+		<section class="description">
+			<p>Force an element to be shown or hidden (including for screen readers) with the use of <code>.show</code> and <code>.hidden</code> classes.
+These classes use <code>!important</code> to avoid specificity conflicts, just like the [quick floats](\quick-floats). They are only available
+for block level toggling. They can also be used as mixins.</p>
+<p><code>.hide</code> is available, but it does not always affect screen readers and is deprecated as of v3.0.1. Use <code>.hidden</code> or
+<code>.sr-only</code> instead.</p>
+<p>Furthermore, <code>.invisible</code> can be used to toggle only the visibility of an element, meaning its <code>display</code> is not
+modified and the element can still affect the flow of the document.</p>
+<pre><code>&lt;div class=&quot;show&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;hidden&quot;&gt;...&lt;/div&gt;
+</code></pre>
+<pre><code>// Classes
+.show {
+  display: block !important;
+}
+.hidden {
+  display: none !important;
+}
+.invisible {
+  visibility: hidden;
+}
+
+// Usage as mixins
+.element {
+  .show();
+}
+.another-element {
+  .hidden();
+}
+</code></pre>
+
+		</section>
+		
+
+		
+			
+		
+		
+		
+		
+
+		
+		
+
+		
+
+		
+	
+	
+	</article>
+	
+	
+
+</div>
+
+
+
+
+
+	
+	<footer>
+	  <hr />
+	  <p>Built by <a href="http://bitovi.com/">Bitovi</a> using <a href="http://documentjs.com/">DocumentJS</a>.
+	</footer>
+	
+	<script type="text/javascript">
+		var docObject = {"description":"Force an element to be shown or hidden (including for screen readers) with the use of `.show` and `.hidden` classes. \n These classes use `!important` to avoid specificity conflicts, just like the [quick floats](\\quick-floats). They are only available \n for block level toggling. They can also be used as mixins.\n\n`.hide` is available, but it does not always affect screen readers and is deprecated as of v3.0.1. Use `.hidden` or \n`.sr-only` instead.\n\n Furthermore, `.invisible` can be used to toggle only the visibility of an element, meaning its `display` is not \n modified and the element can still affect the flow of the document.\n\n```\n<div class=\"show\">...</div>\n<div class=\"hidden\">...</div>\n```\n\n```\n// Classes\n.show {\n  display: block !important;\n}\n.hidden {\n  display: none !important;\n}\n.invisible {\n  visibility: hidden;\n}\n\n// Usage as mixins\n.element {\n  .show();\n}\n.another-element {\n  .hidden();\n}\n```","name":"showing-and-hiding-content","title":"Showing and hiding content","type":"styles","parent":"helper-classes.less","hideInParentMenu":true,"order":7,"src":"less/bootstrap-custom/helper-classes.less","templates":"/server/bootdocs/themes/blankslate/templates","static":"/server/bootdocs/themes/blankslate/static","glob":{"pattern":"{less,markdown}/**/*.{css,less,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/server/bootdocs"},"dest":"/server/bootdocs/styleguide","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+	</script>
+	
+	
+
+		<script type='text/javascript' 
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal.production.js"
+	    		bundles-path="bundles"></script>
+	
+</body>
+
+</html>

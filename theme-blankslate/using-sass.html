@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>Bootdocs - Using Sass </title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+  	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+</head>
+
+<body>
+	<header>
+		<nav>
+			<h1>Bootdocs</h1>
+        <a href="index.html">Home</a> • <a href="accessibility.html">Design</a> • <a href="Overview.html">CSS</a> • <a href="glyphicons.less.html">Components</a>
+		</nav>
+	</header>
+  <hr />
+	
+<div class="container-fluid api">
+
+	
+	<nav class="sidebar">
+		
+		<ul class="api cascading primary-grouping"> 
+	
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="index.html" data-search="Bootdocs">
+				Bootdocs
+			</a>
+			
+		</li>
+		
+		
+			
+			<li class="search-container active">
+			<a class="sidebar-title" href="css.html" data-search="CSS">
+				CSS
+			</a>
+			
+	<ul>
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="overview.html" data-search="Overview">
+						Overview
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="grid.html" data-search="Grid System">
+						Grid System
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="typography.less.html" data-search="Typography">
+						Typography
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="code.less.html" data-search="Code">
+						Code
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="forms.less.html" data-search="Forms">
+						Forms
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="buttons.less.html" data-search="Buttons">
+						Buttons
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="images.less.html" data-search="Images">
+						Images
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="helper-classes.less.html" data-search="Helper Classes">
+						Helper Classes
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="using-less.html" data-search="Using Less">
+						Using Less
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container active ">
+					<a class="page" href="using-sass.html" data-search="Using Sass">
+						Using Sass
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="stylesheet" href="tables.less.html" data-search="Tables">
+						Tables
+					</a>
+				</li>
+				
+			
+			
+		
+	</ul>
+
+		</li>
+			
+		
+	
+</ul>
+	</nav>
+	
+	
+	
+	<article class="content docs">
+	
+	
+		
+		<section class="title">
+			<div class="heading">
+<h1>Using Sass</h1>
+	<ul class="tags">
+		<li>page</li>
+	</ul>
+	
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+		<span class="module">using-sass</span>
+	
+	
+	
+	<span class="inherits">&nbsp;</span>
+</div>
+
+<ul class="links">
+	
+	
+	
+	
+</ul>
+<br />
+		</section>
+		
+		
+		
+		<section class="contents">
+		</section>
+		
+		
+		
+
+		
+		<section class="description">
+			<p>While Bootstrap is built on Less, it also has an <a href="https://github.com/twbs/bootstrap-sass">official Sass port</a>. We maintain it in a separate GitHub repository and handle updates with a conversion script.</p>
+
+		</section>
+		
+
+		
+			
+		
+		
+		
+		
+
+		
+		<section class="comment">
+			<h2>What's Included</h2>
+<p>Since the Sass port has a separate repo and serves a slightly different audience, the contents of the project differ greatly from the main Bootstrap project. This ensures the Sass port is as compatible with as many Sass-based systems as possible.</p>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Path</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><code>lib/</code></th>
+      <td>Ruby gem code (Sass configuration, Rails and Compass integrations)</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>tasks/</code></th>
+      <td>Converter scripts (turning upstream Less to Sass)</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>test/</code></th>
+      <td>Compilation tests</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>templates/</code></th>
+      <td>Compass package manifest</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>vendor/assets/</code></th>
+      <td>Sass, JavaScript, and font files</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>Rakefile</code></th>
+      <td>Internal tasks, such as rake and convert</td>
+    </tr>
+  </tbody>
+</table>
+<p>Visit the <a href="https://github.com/twbs/bootstrap-sass">Sass port's GitHub repository</a> to see these files in action.</p>
+<h2>Installation</h2>
+<p>For information on how to install and use Bootstrap for Sass, consult the <a href="https://github.com/twbs/bootstrap-sass">GitHub repository readme</a>. It's the most up to date source and includes information for use with Rails, Compass, and standard Sass projects.</p>
+<p><a href="https://github.com/twbs/bootstrap-sass">Boostrap for Sass</a></p>
+
+		</section>
+		
+		
+
+		
+
+		
+	
+	
+	</article>
+	
+	
+
+</div>
+
+
+
+
+
+	
+	<footer>
+	  <hr />
+	  <p>Built by <a href="http://bitovi.com/">Bitovi</a> using <a href="http://documentjs.com/">DocumentJS</a>.
+	</footer>
+	
+	<script type="text/javascript">
+		var docObject = {"type":"page","name":"using-sass","src":"markdown/css/using-sass.md","description":"While Bootstrap is built on Less, it also has an [official Sass port](https://github.com/twbs/bootstrap-sass). We maintain it in a separate GitHub repository and handle updates with a conversion script.","title":"Using Sass","parent":"css","order":12,"templates":"/server/bootdocs/themes/blankslate/templates","static":"/server/bootdocs/themes/blankslate/static","glob":{"pattern":"{less,markdown}/**/*.{css,less,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/server/bootdocs"},"dest":"/server/bootdocs/styleguide","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+	</script>
+	
+	
+
+		<script type='text/javascript' 
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal.production.js"
+	    		bundles-path="bundles"></script>
+	
+</body>
+
+</html>

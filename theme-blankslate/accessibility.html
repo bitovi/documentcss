@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>Bootdocs - Accessibility Guidelines </title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+  	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+</head>
+
+<body>
+	<header>
+		<nav>
+			<h1>Bootdocs</h1>
+        <a href="index.html">Home</a> • <a href="accessibility.html">Design</a> • <a href="Overview.html">CSS</a> • <a href="glyphicons.less.html">Components</a>
+		</nav>
+	</header>
+  <hr />
+	
+<div class="container-fluid api">
+
+	
+	<nav class="sidebar">
+		
+		<ul class="api cascading primary-grouping"> 
+	
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="index.html" data-search="Bootdocs">
+				Bootdocs
+			</a>
+			
+		</li>
+		
+		
+			
+			<li class="search-container active">
+			<a class="sidebar-title" href="design.html" data-search="Design">
+				Design
+			</a>
+			
+	<ul>
+		
+			
+				
+				
+				<li class="search-container active ">
+					<a class="page" href="accessibility.html" data-search="Accessibility Guidelines">
+						Accessibility Guidelines
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="file-structure.html" data-search="File Structure">
+						File Structure
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="coding-standards.html" data-search="Coding Standards">
+						Coding Standards
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="updating-icons.html" data-search="Updating Icons">
+						Updating Icons
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="updating-style-guide.html" data-search="Updating the Style Guide">
+						Updating the Style Guide
+					</a>
+				</li>
+				
+			
+			
+		
+	</ul>
+
+		</li>
+			
+		
+	
+</ul>
+	</nav>
+	
+	
+	
+	<article class="content docs">
+	
+	
+		
+		<section class="title">
+			<div class="heading">
+<h1>Accessibility Guidelines</h1>
+	<ul class="tags">
+		<li>page</li>
+	</ul>
+	
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+		<span class="module">accessibility</span>
+	
+	
+	
+	<span class="inherits">&nbsp;</span>
+</div>
+
+<ul class="links">
+	
+	
+	
+	
+</ul>
+<br />
+		</section>
+		
+		
+		
+		<section class="contents">
+		</section>
+		
+		
+		
+
+		
+		<section class="description">
+			<p>Designing and developing your application to reach AA+ standards is good for <strong>all</strong> users, not just disabled users. Thinking about less-than-perfect contexts in which a user may try to access your application will make things more clear and direct throughout. This page will get you on the right track for ensuring everyone can have the best experience possible accessing and interacting with your app.</p>
+
+		</section>
+		
+
+		
+			
+		
+		
+		
+		
+
+		
+		<section class="comment">
+			<h2>Accessible Design Overview</h2>
+<p>Step one to an easily accessible application is designing with accessibility in mind from the start. This includes foundational details like:</p>
+<ul>
+<li>Using a font size at least 12px large.</li>
+<li>Selecting color combinations that meet AA standards for luminosity of at least a 4.5 contrast ratio.</li>
+<li>Using more than one indicator when text is a link.</li>
+<li>Ensuring any interactive target (ex. buttons, tabs) is of sufficient size. Making targets roughly 40 screen-pixels large is a good rule-of-thumb for mobile devices, and also helps with the interactivity of any element on any device.</li>
+</ul>
+<h2>HTML Markup</h2>
+<p>One of the most direct ways to make your application accessible is to write proper, semantic code. Screen readers and other accessibility tools depend on markup tags to convey what kind of information or interaction the user has encountered.</p>
+<p>In addition to simply using the proper markup, a few other attributes on these tags will make your application even better, and are highly encouraged:</p>
+<ul>
+<li>Declaring an <code>alt</code> description within images, unless they are purely decorative.</li>
+</ul>
+<pre><code>&lt;img src=&quot;path/to/image&quot; alt=&quot;description of the image&quot; /&gt;
+</code></pre>
+<ul>
+<li>Adding a <code>summary</code> to tables.</li>
+</ul>
+<pre><code>&lt;table summary=&quot;What kind of information is inside this table&quot;&gt;&lt;/table&gt;
+</code></pre>
+<ul>
+<li>Combining the use of <code>id</code> on form inputs with a <code>for</code> attribute on the respective label to link them together.</li>
+</ul>
+<pre><code>&lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;Name&quot;&gt;
+</code></pre>
+<h2>Keyboard Accessibility</h2>
+<p>Not all users have the ability to use a mouse. To allow them to still use your application, all actions that are activated with a mouse click should also be fully accessible when only using a keyboard. Forms should keep a logical tab order, and the submit button should activate with the Return key.</p>
+<p>Another important thing to keep in mind is including visual queues on your interface for what is currently focused or selected.</p>
+<h2>Voice Accessibility</h2>
+<p>Blind or sight-impaired users will be listening to (rather than looking at) your application. When semantic markup is insufficient, <a href="http://en.wikipedia.org/wiki/WAI-ARIA">WAI-ARIA</a> attributes should be used to provide clarity.</p>
+<pre><code>&lt;nav class=&quot;navbar navbar-default&quot; role=&quot;navigation&quot; aria-label=&quot;Site Navigation&quot;&gt;&lt;/nav&gt;
+
+&lt;button class=&quot;btn btn-link&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#multi-search&quot;
+    aria-controls=&quot;multi-search&quot; aria-expanded=&quot;true&quot;&gt;Advanced Search&lt;/button&gt;
+</code></pre>
+<h2>Additional Resources</h2>
+<p>This guide is a high-level overview of accessibility best practices. More information about accessibile web practices can be found at W3C's <a href="https://www.w3.org/WAI/intro/accessibility.php">Web Accessibility Initiative</a>.</p>
+
+		</section>
+		
+		
+
+		
+
+		
+	
+	
+	</article>
+	
+	
+
+</div>
+
+
+
+
+
+	
+	<footer>
+	  <hr />
+	  <p>Built by <a href="http://bitovi.com/">Bitovi</a> using <a href="http://documentjs.com/">DocumentJS</a>.
+	</footer>
+	
+	<script type="text/javascript">
+		var docObject = {"type":"page","name":"accessibility","src":"markdown/design/accessibility.md","description":"Designing and developing your application to reach AA+ standards is good for **all** users, not just disabled users. Thinking about less-than-perfect contexts in which a user may try to access your application will make things more clear and direct throughout. This page will get you on the right track for ensuring everyone can have the best experience possible accessing and interacting with your app.","title":"Accessibility Guidelines","parent":"design","order":0,"templates":"/server/bootdocs/themes/blankslate/templates","static":"/server/bootdocs/themes/blankslate/static","glob":{"pattern":"{less,markdown}/**/*.{css,less,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/server/bootdocs"},"dest":"/server/bootdocs/styleguide","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+	</script>
+	
+	
+
+		<script type='text/javascript' 
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal.production.js"
+	    		bundles-path="bundles"></script>
+	
+</body>
+
+</html>

@@ -23,7 +23,7 @@ steal(
         prettyPrint();
         Highlighter();
 
-        new ContentList(".overview-of-contents");
+        new ContentList(".contents");
         new FrameHelper("body");
         new Versions($("#versions, .sidebar-title:first"));
 
@@ -31,86 +31,6 @@ steal(
         $('textarea').click(function(){
             this.select();
         });
-
-        if ($('.twitter-follow-button').length) {
-            // replace the "Follow @canjs!" link with a little wiget with follower count.
-            $('#twitter-wjs').remove();
-            !function(d, s, id){
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (!d.getElementById(id)) {
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = "//platform.twitter.com/widgets.js";
-                    fjs.parentNode.insertBefore(js, fjs);
-                }
-            }(document, "script", "twitter-wjs");
-        }
-
-        $('.triptych .box').hover(function(){
-            $(this).stop().animate({'background-position-y':'93%'}, 325);
-        }, function(){
-            $(this).stop().animate({'background-position-y':'90%'}, 325);
-        });
-        $('.triptych a').click(function(){
-            event.stopPropagation();
-        });
-
-
-        $('.performance-row .donejs').hover(
-            function(){
-                var row = $('.performance-row');
-                row.stop().animate({left: row.width() / 16}, 500);
-                $('.donejs-text').stop().animate({opacity: 1}, 500);
-                $('.naive-thumbs').stop().animate({opacity: 0.5}, 500);
-            },
-            function(){
-                var row = $('.performance-row');
-                row.stop().animate({left: 0}, 500);
-                $('.donejs-text').stop().animate({opacity: 0}, 500);
-                $('.naive-thumbs').stop().animate({opacity: 1}, 500);
-            }
-        );
-
-        $('.performance-row .naive').hover(
-            function(){
-                var row = $('.performance-row');
-                row.stop().animate({left: -(row.width() / 16)}, 500);
-                $('.naive-text').stop().animate({opacity: 1}, 500);
-                $('.donejs-thumbs').stop().animate({opacity: 0.5}, 500);
-
-            },
-            function(){
-                var row = $('.performance-row');
-                row.stop().animate({left: 0}, 500);
-                $('.naive-text').stop().animate({opacity: 0}, 500);
-                $('.donejs-thumbs').stop().animate({opacity: 1}, 500);
-            }
-        );
-
-        (function () {
-            var enterEv = function(el){
-                $(this).get(0).play();
-                $(this).parent('div').addClass('playing');
-            };
-            var leaveEv = function(el){
-                $(this).get(0).pause();
-                $(this).parent('div').removeClass('playing');
-            };
-            $('body.home video, div.video video').hover( enterEv, leaveEv ).focusin( enterEv ).focusout( leaveEv );
-        })();
-
-        (function () {
-            $('.youtube-player').lazyYoutube();
-        })();
-
-        $( ".usability-dl-options" ).hover(
-            function () {
-                $( this ).prev( ".btn" ).addClass( "active" );
-            },
-            function () {
-                $( this ).prev( ".btn" ).removeClass( "active" );
-            }
-        );
 
 
         //set Guides as active in main navigation if nothing else is active
@@ -122,39 +42,6 @@ steal(
             }
 
         }
-
-
-        $(function () {
-            // click drag to scroll homepage tablet timeline
-            // https://github.com/donejs/donejs/issues/151
-            var curDown = false;
-            var curXPos = 0;
-            var elScrollPos = 0;
-            var graphTimeline = $( ".graph-timeline-wrapper" );
-            if ( graphTimeline.length === 0 ) {
-                return;
-            }
-
-            $( window ).mousemove( function ( m ) {
-                if( curDown === true ) {
-                    graphTimeline.scrollLeft( elScrollPos + ( curXPos - m.pageX ) );
-                }
-            });
-
-            graphTimeline.mousedown( function ( m ) {
-                m.preventDefault();
-                curDown = true;
-                curXPos = m.pageX;
-                elScrollPos = graphTimeline.scrollLeft();
-            });
-
-            $( window ).mouseup( function () {
-                curDown = false;
-            });
-        });
-
-
-
 
         var isMobileSize = false;
         var windowResize = function () {
@@ -168,7 +55,7 @@ steal(
         windowResize();
         $( window ).resize( windowResize );
 
-        $( ".sidebar" ).mousemove( function ( m ) {
+        $( ".contents" ).mousemove( function ( m ) {
             if ( !isMobileSize ) {
                 var $this = $( this );
                 var hoverScrollZoneSize = 50;
@@ -196,7 +83,7 @@ steal(
             if ( id.length === 0 ) {
                 return $();
             }
-            return $( ".sidebar a[href*='" + id + "']" );
+            return $( ".contents a[href*='" + id + "']" );
         };
 
         $( "section.comment h3" ).each(function(){
@@ -236,10 +123,10 @@ steal(
         var scrollSpyCurrentH2 = $( "#scrollSpyCurrentH2" );
         var scrollSpyCurrentH3 = $( "#scrollSpyCurrentH3" );
         var activeH2Li = $();
-        var doJQCollapsing = $( "body" ).length ? true : false;
+        var doJQCollapsing = $( "body:not(.home)" ).length ? true : false;
 
         if ( doJQCollapsing ) {
-            $( ".sidebar ol ol" ).hide();
+            $( ".contents ul ul" ).hide();
         }
 
         var disableBodyScroll = [];
@@ -259,7 +146,7 @@ steal(
 
         var scrollPosOnMenuOpen = -1;
         $( ".scroll-spy-title" ).on( "click", function () {
-            var menu = $( ".sidebar" );
+            var menu = $( ".contents" );
             if ( menu.is( ".active" ) ) {
                 menu.removeClass( "active" );
                 setBodyScroll();
@@ -273,7 +160,7 @@ steal(
             }
         });
         disableBodyScroll.push( function () {
-            return $( ".sidebar" ).is( ".active" );
+            return $( ".contents" ).is( ".active" );
         });
 
         $( function () {
@@ -289,7 +176,7 @@ steal(
         });
 
         $( "#greyOutUnderNav" ).click( function () {
-            if ( $( ".sidebar" ).is( ".active" ) ) {
+            if ( $( ".contents" ).is( ".active" ) ) {
                 $( ".scroll-spy-title" ).click();
             }
             if ( $( "#bs-example-navbar-collapse-1" ).is( ".in" ) ) {
@@ -342,18 +229,18 @@ steal(
                 //scrollSpyCurrentH3.html( "" );
             }
 
-            $( ".sidebar ol ol li.active" ).not( navToH3 ).removeClass( "active" );
+            $( ".contents ul ul li.active" ).not( navToH3 ).removeClass( "active" );
             navToH3.addClass( "active" );
 
             var curH2Li = navToH2.closest( "li" );
             if ( activeH2Li[ 0 ] !== curH2Li[ 0 ] ) {
                 activeH2Li.removeClass( "active" );
-                if ( doJQCollapsing ) activeH2Li.find( "ol" ).hide( 250 );
+                if ( doJQCollapsing ) activeH2Li.find( "ul" ).hide( 250 );
 
                 activeH2Li = curH2Li;
 
                 activeH2Li.addClass( "active" );
-                if ( doJQCollapsing ) activeH2Li.find( "ol" ).show( 250 );
+                if ( doJQCollapsing ) activeH2Li.find( "ul" ).show( 250 );
             }
         });
 
@@ -376,12 +263,12 @@ steal(
         $( function () {
             var clickFn = function () {
                 var thisLi = $( this ).closest( "li" );
-                if ( $( ".sidebar" ).is( ".active" ) && thisLi.is( "ol > li > ol > li" ) ) {
+                if ( $( ".contents" ).is( ".active" ) && thisLi.is( "ul > li > ul > li" ) ) {
                     $( ".scroll-spy-title" ).click();
                 }
             };
 
-            $( ".sidebar a" ).each( function () {
+            $( ".contents a" ).each( function () {
                 this.href = this.href.replace( "#", "#section=" );
 
                 $( this ).on( "click", clickFn );

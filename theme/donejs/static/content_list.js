@@ -3,8 +3,8 @@ steal("can/control","jquery","can/observe",function(Control, $){
 	var contentList = function(sections, tag){
 		var element = $("<"+tag+">");
 		$.each(sections, function(i, section){
-			$li = $("<li>");
-			$a = $("<a>").attr("href","#"+section.id).text(section.text);
+			$li = $("<li class='page-title'>");
+			$a = $("<a class='page-link'>").attr("href","#"+section.id).text(section.text);
 			element.append( $li.append($a) );
 			
 			if(section.sections && section.sections.length) {

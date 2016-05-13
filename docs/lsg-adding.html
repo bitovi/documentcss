@@ -108,72 +108,9 @@
 			</nav>
 		</header>
 
-	<div class="scroll-spy-title hidden-md hidden-lg">
-		<span class="menu-indicator menus-closed"></span>
-		<div id="scrollSpyCurrentH2" class="h2Only">Table of Contents</div>
-		<div id="scrollSpyCurrentH3"></div>
-	</div>
-
 	
 <div class="main-content">
 
-	
-	<nav class="sidebar">
-		
-		<ul class="sidebar-wrapper">
-	
-	   <li class="sidebar-section active">
-	   		<span class="sidebar-section-title" href="howTo.html" data-search="How-To Guides">
-				How-To Guides
-			</span>
-
-			
-	<ul class="active-menu">
-		
-			
-				
-				
-				<li class="page-title  active ">
-					<a class="page-link" href="lsg-adding.html" data-search="Adding to Existing JS Docs">
-						Adding to Existing JS Docs
-					</a>
-				</li>
-				
-			
-			
-		
-			
-				
-				
-				<li class="page-title ">
-					<a class="page-link" href="publishing.html" data-search="Publishing Your Style Guide">
-						Publishing Your Style Guide
-					</a>
-				</li>
-				
-			
-			
-		
-			
-				
-				
-				<li class="page-title ">
-					<a class="page-link" href="standalone-lsg.html" data-search="Standalone Live Style Guide">
-						Standalone Live Style Guide
-					</a>
-				</li>
-				
-			
-			
-		
-	</ul>
-
-
-	   </li>
-	
-</ul>
-
-	</nav>
 	
 	
 
@@ -210,8 +147,10 @@
 		
 		
 		
-		<p class="overview-of-contents-title">Topics Covered Below:</p>
-		<section class="overview-of-contents">
+		<section class="contents-wrapper">
+			<span class="contents-title">Adding to Existing JS Docs</span>
+			<section class="contents">
+			</section>
 		</section>
 		
 		
@@ -267,16 +206,6 @@
 <li>Organize pages into navigation groups like &quot;Elements,&quot; &quot;Themes,&quot; and &quot;Components&quot;</li>
 </ul>
 <p>To see an example of this in action, check out the <a href="/examples/styles/index.html">example Live Style Guide</a>.</p>
-<h3>What DocumentJS Does</h3>
-<p>DocumentJS is a <a href="https://staticsitegenerators.net/"><em>static site generator</em></a>. This means it scans specially formatted input files and creates a website that remains unchanged until the generator runs again. Whereas in a content management system changes happen somewhat automatically, a static site generator usually needs to be <strong>run manually</strong> and then the generated files must be <strong>uploaded</strong>.</p>
-<p>While this may seem more complicated than a CMS, static site generation works especially well for a Live Style Guide. Since your stylesheets are also the source files for your style guide, <strong>changes to your stylesheets are also changes to your Live Style Guide</strong>.</p>
-<p>To build your Live Style Guide, DocumentJS does the following:</p>
-<ol>
-<li>Reads through files specified in its configuration</li>
-<li>Looks in your commments for tags like <code>@page</code>, <code>@group</code>, and <code>@parent</code> to determine site layout</li>
-<li>Looks in your comments for tags like <code>@stylesheet</code>, <code>@styles</code>, and <code>@demo</code> to create the individual parts of your style guide</li>
-<li>Automatically generates <code>html</code> files</li>
-</ol>
 <h2>Setup</h2>
 <p>Setup consists of two main steps: installation, and configuration (including file organization).</p>
 <h3>Installation</h3>
@@ -479,7 +408,7 @@ current configuration.</p>
 	
 
 	<script type="text/javascript">
-		var docObject = {"type":"page","name":"lsg-adding","src":"pages/guides/adding.md","description":"This guide will:\n* Give a designer-friendly explanation of what DocumentJS does\n* Make sure you have everything you need installed\n* Help you configure DocumentJS to add a Live Style Guide\n* Explain how to use [tags](http://documentjs.com/docs/documentjs.tags.html) to write your Live Style Guide","title":"Adding to Existing JS Docs","parent":"howTo","dest":"/Users/thelela/Documents/GitHub/documentcss/docs","glob":{"pattern":"{pages/guides/*.md,pages/guides/**/*.md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/thelela/Documents/GitHub/documentcss"},"templates":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/templates","static":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/static","forceBuild":true,"generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+		var docObject = {"type":"page","name":"lsg-adding","src":"pages/guides/adding.md","description":"This guide will:\n* Give a designer-friendly explanation of what DocumentJS does\n* Make sure you have everything you need installed\n* Help you configure DocumentJS to add a Live Style Guide\n* Explain how to use [tags](http://documentjs.com/docs/documentjs.tags.html) to write your Live Style Guide","title":"Adding to Existing JS Docs","parent":"howTo","hideSidebar":true,"outline":{"depth":2,"tag":"ul"},"dest":"/Users/thelela/Documents/GitHub/documentcss/docs","glob":{"pattern":"{pages/guides/*.md,pages/guides/**/*.md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/thelela/Documents/GitHub/documentcss"},"templates":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/templates","static":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/static","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
 	</script>
 
 	

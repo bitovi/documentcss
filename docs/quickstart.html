@@ -17,7 +17,7 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Guides - Customizing Look &amp; Feel </title>
+	<title>Guides - Quickstart Guide </title>
 	<meta name="description" content="DocumentCSS is an open source Live Style Guide creation tool, and sister to DocumentJS">
 	<meta name="author" content="Bitovi - DocumentCSS">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,7 +43,7 @@
 		<script type="text/javascript" src="static/html5shiv.js"></script>
 	<!--<![endif]-->
 </head>
-<body class="lsg-custom-styles">
+<body class="quickstart">
 		<div id="greyOutUnderNav" style="display:none;"></div>
 		<header>
 			<nav class="navbar navbar-default navbar-fixed-top">
@@ -108,71 +108,9 @@
 			</nav>
 		</header>
 
-	<div class="scroll-spy-title hidden-md hidden-lg">
-		<span class="menu-indicator menus-closed"></span>
-		<div id="scrollSpyCurrentH2" class="h2Only">Table of Contents</div>
-		<div id="scrollSpyCurrentH3"></div>
-	</div>
-
 	
 <div class="main-content">
 
-	
-	<nav class="sidebar">
-		
-		<ul class="sidebar-wrapper">
-	
-	   <li class="sidebar-section">
-	   	<a class="sidebar-section-title" href="howTo.html" data-search="How-To Guides">
-        How-To Guides
-      </a>
-
-			
-	<ul class="active-menu">
-		
-			
-				
-				
-				<li class="page-title ">
-					<a class="page-link" href="lsg-adding.html" data-search="Adding to Existing JS Docs">
-						Adding to Existing JS Docs
-					</a>
-				</li>
-				
-			
-			
-		
-			
-				
-				
-				<li class="page-title ">
-					<a class="page-link" href="publishing.html" data-search="Publishing Your Style Guide">
-						Publishing Your Style Guide
-					</a>
-				</li>
-				
-			
-			
-		
-			
-				
-				
-				<li class="page-title ">
-					<a class="page-link" href="standalone-lsg.html" data-search="Standalone Live Style Guide">
-						Standalone Live Style Guide
-					</a>
-				</li>
-				
-			
-			
-		
-	</ul>
-
-
-	   </li>
-	
-</ul>
-	</nav>
 	
 	
 
@@ -180,7 +118,7 @@
 		
 		<section class="title">
 			<div class="heading">
-<h1>Customizing Look &amp; Feel</h1>
+<h1>Quickstart Guide</h1>
 	<ul class="tags">
 		<li>page</li>
 	</ul>
@@ -191,7 +129,7 @@
 <div class="sub-heading">
 	
 	
-		<span class="module">lsg-custom-styles</span>
+		<span class="module">quickstart</span>
 	
 	
 	
@@ -209,17 +147,15 @@
 		
 		
 		
-		<section class="contents">
+		<section class="contents-wrapper">
+			<span class="contents-title">Quickstart Guide</span>
+			<section class="contents">
+			</section>
 		</section>
 		
 		
 		
 
-		
-		<section class="description">
-			<p>The default look and feel of your Live Style Guide is going to be similar to DocumentJS.com as it is using the default theme.</p>
-
-		</section>
 		
 
 		
@@ -231,38 +167,142 @@
 
 		
 		<section class="comment">
-			<h3>Additional Configuration</h3>
-<p>You'll need to make a <code>style-guide-theme</code> folder and point to it in <code>documentjs.json</code> before you can start changing anything. You should also make a <code>styles</code> folder in that <code>theme</code> folder.</p>
-<p>Updated directory structure:</p>
-<pre><code>project/
-    styles/
-        &lt;!-- PROJECT styles are already here--&gt;
-    style-guide-theme/
-        styles/
-            &lt;!-- LIVE STYLE GUIDE styles will go here --&gt;
-    demos/
-        &lt;!-- demos are here --&gt;
-    styleguide/
-        &lt;!-- Automatically generated directory --&gt;
+			<p><em>This is the quick getting started guide. For in depth instructions, check out the <a href="/docs/standalone-lsg.html">Standalone Live Style Guide</a>.</em></p>
+<h2>Install</h2>
+<p>Install <a href="https://nodejs.org/">Node.js</a> on your computer and create a <code>package.json</code> file in your project's root directory with something like:</p>
+<pre><code>{
+  &quot;name&quot;: &quot;style-guide&quot;,
+  &quot;version&quot;: &quot;0.0.1&quot;,
+  &quot;description&quot;: &quot;My style guide&quot;,
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;&quot;
+}
+
 </code></pre>
-<p>You'll need to tell DocumentJS to look for static resources in your theme folder.</p>
-<p>Updated <code>documentjs.json</code>:</p>
-<pre><code class="language-json">{
-    &quot;siteDefaults&quot;: {
-      &quot;static&quot;: &quot;style-guide-theme&quot;
-    },
+<p>From the console or terminal, go to your project folder and use <code>npm</code> to install DocumentJS:</p>
+<pre><code>&gt; cd path/to/myproject
+&gt; npm install documentjs --save-dev
+</code></pre>
+<p><em>The --sav-dev flag saves DocumentJS in your <code>package.json</code> so other people who are working on your project can also use DocumentJS.</em></p>
+<h2>File Structure</h2>
+<p>Create the files and folders that DocumentCSS will use to generate the docs.</p>
+<ul>
+<li>Create a folder called <code>styles</code> which will hold all of your CSS or Less files.</li>
+<li>Create a markdown file to define as the primary parent, like <code>styles.md</code>, inside the <code>styles</code> folder</li>
+</ul>
+<p>Inside the <code>styles.md</code> add:</p>
+<pre><code>@page styles Styles
+
+This is my style guide
+</code></pre>
+<h2>Configure</h2>
+<p>To generate a Live Style Guide, create a file called <code>documentjs.json</code> in the top level of your project like this:</p>
+<pre><code>{
     &quot;sites&quot;: {
         &quot;styles&quot;: {
-            &quot;glob&quot;: &quot;styles/**/*.{md,less,md}&quot;,
-            &quot;parent&quot;: &quot;style-guide&quot;,
-            &quot;dest&quot;: &quot;./styleguide&quot;
+            &quot;glob&quot;: &quot;styles/**/*.{css,less,scss,md}&quot;,
+            &quot;dest&quot;: &quot;styleguide&quot;,
+            &quot;parent&quot;: &quot;styles&quot; 
         }
     }
 }
 </code></pre>
-<h3>Changing the Styles</h3>
-<p>To see DocumentJS default styles, look in <code>node_modules/documentjs/site/default/static/styles</code>. See the documentation for these styles in the <a href="/examples/styles/variables.less.html">example Live Style Guide</a>. To change any of these styles for your style guide, simply copy one of the files over to <code>style-guide-theme/styles</code> and make your changes.</p>
-<p>If you'd like to add a new LESS file, simply copy over <code>styles.less</code> (which imports all the stylesheets) and <code>@import</code> your new file. DocumentJS will automatically resolve default file imports for any files you don't copy over so don't worry about fixing the file paths for the <code>@import</code> statement.</p>
+<ul>
+<li>&quot;glob&quot; tells DocumentCSS to look in the <code>styles</code> folder and read all files with a <code>css</code>, <code>less</code>, <code>scss</code> or <code>md</code> extension.
+<ul>
+<li><em>You can remove either less and/or scss depending on what you're writing styles with.</em></li>
+</ul></li>
+<li>&quot;dest&quot; tells DocumentCSS to automatically create a <code>styleguide</code> folder to host the generated HTML pages.</li>
+<li>&quot;parent&quot; tells DocumentCSS to use the parent declaration <code>styles</code> from <code>styles.md</code> as the main landing page.</li>
+</ul>
+<p>Your project's folder structure should look like this:</p>
+<pre><code>project/
+    package.json
+    styles/
+        styles.md
+    documentjs.json
+</code></pre>
+<h2>Document</h2>
+<p>To document your CSS use the following <a href="http://documentjs.com/docs/documentjs.tags.html">tags</a> inside your CSS, Scss, Less, or Markdown files:</p>
+<ul>
+<li><code>@stylesheet</code> to create a page for each stylesheet documented</li>
+<li><code>@styles</code> to document individual styles</li>
+<li><code>@parent</code> to organize how your styles get rendered on the Style Guide</li>
+<li><code>@iframe</code> to display an html live demonstration</li>
+<li><code>@demo</code> to display an html live demonstration that also renders a tab with the html used on the demo</li>
+</ul>
+<p>Create a <code>buttons.css</code> file inside the <code>styles</code> folder and add this:</p>
+<pre><code>/**
+  * @stylesheet buttons.css Buttons
+  * @parent styles
+  *
+  * @description
+  * This buttons page is being pulled from documentation in the`buttons.css` file.
+  *
+  * @demo demos/buttons.html
+**/
+   
+  button {
+     background-color: skyblue;
+     border: 1px solid skyblue;
+     color: white;
+     font-size: 18px;
+     padding: 10px 20px;
+  }
+  button:hover {
+    background-color: deepskyblue;
+    border-color: deepskyblue;
+    cursor: pointer;
+  }
+</code></pre>
+<p>Next, create a <code>demos</code> folder inside the 'styles' folder, and a file called <code>buttons.html</code></p>
+<p>Inside <code>buttons.html</code> add a link to the css file, and the HTML markup needed to demonstrate the styles for <code>buttons.css</code>.</p>
+<p><em>If you've got a master css file (especially if you're using a css pre-processor), you should link to that master file in the demos for your app.</em></p>
+<p>For example:</p>
+<pre><code>&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/styles/buttons.css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button&gt;Example Button 1&lt;/button&gt;
+  &lt;body&gt;
+&lt;html&gt;
+</code></pre>
+<p>Your project's folder structure should now look like this:</p>
+<pre><code>project/
+    package.json
+    styles/
+        buttons.css
+        styles.md
+    demos/
+      buttons.html
+    documentjs.json
+</code></pre>
+<h2>Run</h2>
+<p>To generate the Style Guide using a simple command like <code>documentjs</code>, you'll want to install DocumentJS globally using:</p>
+<pre><code>&gt; npm install -g documentjs
+</code></pre>
+<p>This might require admin privileges to install, so use sudo and enter your password when prompted:</p>
+<pre><code>&gt; sudo npm install -g documentjs
+</code></pre>
+<p>Then from your project directory run:</p>
+<pre><code>&gt; documentjs -w
+</code></pre>
+<p><em>-w is a flag that tell DocumentJS to watch changes and regenerate the style guide every time you make updates.</em></p>
+<p>To see the generated site, using terminal navigate to the styleguide directory and use python to start a server*:</p>
+<pre><code>&gt; cd styleguide
+&gt; python -m SimpleHTTPServer
+</code></pre>
+<p><em>This only applies to Mac or a Linux machines</em></p>
+<p>Open up a browser and navigate to <strong>http://localhost:8000</strong> (if the number above is not 8000, use whatever number you see in your terminal instead). You should see the Live Style Guide with the documentation you just created!</p>
+<h3>Ignoring Generated Files</h3>
+<p>Because DocumentJS generates a whole directory based on source files, you'll probably want to mark those files to be ignored by git (or whichever code revision manager you're using).</p>
+<p>If you're using git, create a file named <code>.gitignore</code> at the root of your project (if it doesn't already exist.) Then add the following:</p>
+<pre><code> # DocumentJS generated files
+ styleguide
+</code></pre>
+<p>This will mark the whole folder as something to be ignored and your team can avoid merge conflicts on generated files.</p>
+<p>For in depth instructions, check out the <a href="/docs/lsg-quickstart.html">Standalone Live Style Guide</a>.</p>
 
 		</section>
 		
@@ -338,7 +378,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"type":"page","name":"lsg-custom-styles","src":"pages/guides/standalone/custom-styles.md","description":"The default look and feel of your Live Style Guide is going to be similar to DocumentJS.com as it is using the default theme.","title":"Customizing Look & Feel","parent":"howTo.standalone-lsg","order":3,"dest":"/Users/thelela/Documents/GitHub/documentcss/docs","glob":{"pattern":"{pages/guides/*.md,pages/guides/**/*.md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/thelela/Documents/GitHub/documentcss"},"templates":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/templates","static":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/static","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+		var docObject = {"type":"page","name":"quickstart","src":"pages/guides/quickstart.md","description":"","title":"Quickstart Guide","parent":"howTo","order":0,"hideSidebar":true,"outline":{"depth":2,"tag":"ul"},"dest":"/Users/thelela/Documents/GitHub/documentcss/docs","glob":{"pattern":"{pages/guides/*.md,pages/guides/**/*.md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/thelela/Documents/GitHub/documentcss"},"templates":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/templates","static":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/static","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
 	</script>
 
 	

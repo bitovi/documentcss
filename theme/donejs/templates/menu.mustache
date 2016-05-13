@@ -1,9 +1,9 @@
-<ul class="sidebar-wrapper">
+<ul class="sidebar">
 	{{#eachFirstLevelChildren}}
 	   <li class="sidebar-section{{#ifHasOrIsActive}} active{{/ifHasOrIsActive}}">
-	   		<span class="sidebar-section-title" href="{{urlTo name}}" data-search="{{#if title}}{{title}}{{else}}{{{name}}}{{/if}}">
-				{{makeTitle}}
-			</span>
+	   	<span class="sidebar-section-title" href="{{urlTo name}}" data-search="{{#if title}}{{title}}{{else}}{{{name}}}{{/if}}">
+        {{makeTitle}}
+      </span>
 
 			{{> active-menu.mustache}}
 

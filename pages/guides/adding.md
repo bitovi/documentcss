@@ -1,5 +1,7 @@
 @page lsg-adding Adding to Existing JS Docs
 @parent howTo
+@hide sidebar
+@outline 2 ul
 
 This guide will:
 * Give a designer-friendly explanation of what DocumentJS does
@@ -38,19 +40,6 @@ If you're working on a project that is already using DocumentJS, it is being use
 * Organize pages into navigation groups like "Elements," "Themes," and "Components"
 
 To see an example of this in action, check out the [example Live Style Guide](/examples/styles/index.html).
-
-### What DocumentJS Does
-
-DocumentJS is a [*static site generator*](https://staticsitegenerators.net/). This means it scans specially formatted input files and creates a website that remains unchanged until the generator runs again. Whereas in a content management system changes happen somewhat automatically, a static site generator usually needs to be **run manually** and then the generated files must be **uploaded**.
-
-While this may seem more complicated than a CMS, static site generation works especially well for a Live Style Guide. Since your stylesheets are also the source files for your style guide, **changes to your stylesheets are also changes to your Live Style Guide**.
-
-To build your Live Style Guide, DocumentJS does the following:
-
-1. Reads through files specified in its configuration
-2. Looks in your commments for tags like `@page`, `@group`, and `@parent` to determine site layout
-3. Looks in your comments for tags like `@stylesheet`, `@styles`, and `@demo` to create the individual parts of your style guide
-4. Automatically generates `html` files
 
 ## Setup
 

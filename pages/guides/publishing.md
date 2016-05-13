@@ -1,5 +1,7 @@
 @page publishing Publishing Your Style Guide
 @parent howTo
+@hide sidebar
+@outline 2 ul
 
 Once you've created the Live Style Guide, you may want to be able to publish it to share it with stakeholders.
 

@@ -2,7 +2,7 @@
 <div class="main-content">
 {{/unless}}
 	{{#unless hideSidebar}}
-	<nav class="sidebar">
+	<nav class="sidebar-wrapper">
 		{{#if enableSearch}}
 		<div class="search-wrapper">
 			<div class="search">
@@ -23,8 +23,10 @@
 		{{/unless}}
 		
 		{{#unless hideArticle}}
-		<p class="overview-of-contents-title">Topics Covered Below:</p>
-		<section class="overview-of-contents">
+		<section class="contents-wrapper">
+			<span class="contents-title">{{title}}</span>
+			<section class="contents">
+			</section>
 		</section>
 		{{/unless}}
 		

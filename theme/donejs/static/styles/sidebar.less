@@ -8,7 +8,8 @@
 
 
 // Sidebar structure
-.sidebar {
+.sidebar-wrapper,
+.contents-wrapper {
   background-color: @sidebarBackground;
   position: fixed;
   margin-bottom: 15px;
@@ -21,27 +22,20 @@
   overflow: hidden;
   @media(max-width: @screen-sm-max){
     left:0;
-  }
-  .sidebar-wrapper,
-  .active-menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;      
-    .sidebar-title-link,
-    .page-link,
-    .stylesheet-link {
-      display: block;
-    }
-  }  
-  a {
-    color: @darkSkies;
-    padding: 3px 0;  
-    font-weight: normal;
-    &:hover {
-      background-color: @fog;
-    }
-  }
+  } 
 }
+.sidebar,
+.active-menu,
+.contents ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;      
+  .sidebar-title-link,
+  .page-link,
+  .stylesheet-link {
+    display: block;
+  }
+} 
  
 
 /**
@@ -52,7 +46,8 @@
 *
 * @demo demos/versions.html
 **/
-.sidebar {
+.sidebar-wrapper,
+.contents-wrapper {
    .versions, 
    #versions {
     position: absolute;
@@ -69,31 +64,25 @@
 * Styles the groups of lists shown on the sidebar.
 *
 * @demo demos/lists.html
-**/  
-.group-heading {
-  color: @darkSkies;
-  display: block;
-  font-weight: bold;
-  margin-top: 10px;
-}   
-
-.page-title, { 
+**/    
+.page-title { 
   font-size: 14px;
   text-indent: 15px;
-  @media(min-width: @screen-md) {
-    &.active, &:hover {
-      background-color: @fog;
-      position: relative;
+    &.active, &:hover { 
+      position: relative;  
       &:before {
         content: ">";
         position: absolute;
         font-size: 12px;
         left: -10px;
         top: 4px;
+        z-index: 1000;
       }
+      .page-link {
+        color: @darkSkies;
+        background-color: @fog;  
+      } 
     }
-  }
-
   &.collapsed {
     > :not(a) {
       display: none;
@@ -101,6 +90,15 @@
   }
   li {
     text-indent: 30px;
+  }
+}
+.page-link {
+  color: @clear;
+  padding: 3px 0;
+  font-weight: normal;
+  &:visited {
+    color: @clear;
+    text-decoration: none;
   }
 }
 
@@ -112,14 +110,24 @@
 *
 * @demo demos/cascading-list.html
 **/ 
-.sidebar-section-title  {
+.sidebar-section-title,
+.contents-title {
   font-weight: bold;
+  color: @clear;
+  line-height: 2em;
 }
 
+.group-heading {
+  color: @clear;
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+} 
   
   //Mobile Table of contents
   @media(max-width: @screen-sm-max) {
-    .sidebar {
+    .sidebar-wrapper,
+    .contents-wrapper {
       display: none;
       left: 0px;
       max-height: ~"calc( 100% - 100px )";
@@ -146,11 +154,7 @@
       }
       .page-link,
       .stylesheet-link {
-        color: @clear;
         padding: 7px 20px;
-        &:hover, :active {
-          color: darken(@puddle, 10);
-        }
       }
     }
   }

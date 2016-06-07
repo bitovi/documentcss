@@ -23,7 +23,13 @@
   @media(max-width: @screen-sm-max){
     left:0;
   } 
+}  
+.sidebar {
+  @media min-width(@screen-md) {
+    width: 255px;
+  }
 }
+
 .sidebar,
 .active-menu,
 .contents ul {
@@ -67,21 +73,32 @@
 **/    
 .page-title { 
   font-size: 14px;
-  text-indent: 15px;
+  padding-left: 15px;
     &.active, &:hover { 
       position: relative;  
       &:before {
         content: ">";
         position: absolute;
         font-size: 12px;
-        left: -10px;
+        left: 3px;
         top: 4px;
         z-index: 1000;
       }
       .page-link {
         color: @darkSkies;
-        background-color: @fog;  
       } 
+    }
+    &.active {
+        background-color: lighten(@sidebarBackground, 35%); 
+        &:hover {
+          background-color: lighten(@sidebarBackground, 35%);
+        }
+        ul { //this doesn't work atm because child page-titles are always marked as active, even when the parent page-title isn't.
+          //background-color: @sidebarBackground;
+        }
+    }
+    &:hover {
+        background-color: lighten(@sidebarBackground, 20%); 
     }
   &.collapsed {
     > :not(a) {
@@ -89,14 +106,19 @@
     }
   }
   li {
-    text-indent: 30px;
+    padding-left: 15px;
+  }
+  a:hover {
+    text-decoration: none;
   }
 }
 .page-link {
   color: @clear;
   padding: 3px 0;
   font-weight: normal;
-  &:visited {
+  overflow-wrap: break-word;
+  white-space: normal;
+  &:visited, &:focus {
     color: @clear;
     text-decoration: none;
   }
@@ -152,8 +174,7 @@
         text-indent: 0;
         border-bottom: 1px solid @clear;
       }
-      .page-link,
-      .stylesheet-link {
+      .page-link{
         padding: 7px 20px;
       }
     }

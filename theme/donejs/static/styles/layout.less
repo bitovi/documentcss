@@ -25,28 +25,6 @@ body:not(.home) {
       padding-right: 20px;
       margin:0;
     }      
-    a[href*='//']:not([href*='documentcss.com']) {
-        position: relative;
-        padding-right: 20px;
-        &:after {
-          content:'';
-          background-image: url(/static/img/icon-open-in-new.svg);
-          background-size: 12px 12px;
-          background-repeat: no-repeat;
-          width: 12px;
-          height: 12px;
-          position: absolute;
-          right: 4px;
-          top: 50%;
-          transform: translateY(-50%);
-        }
-        &.btn {
-          padding-right: 40px;
-          &:after {
-            display: none;
-          }
-        }
-      }
   }
   .scroll-spy-title + .main-content {
     @media(max-width: @screen-sm-max) {
@@ -215,9 +193,11 @@ body:not(.home) {
       }
     }
     h3, + h3{
-      color: @logoColor;
+      color: @gray;
+      font-weight: 300;
       font-size: 40px;
       margin-top: 50px;
+      line-height: normal;
       @media(max-width: @screen-md){
         line-height: 1;
         margin-bottom: 35px;
@@ -229,8 +209,9 @@ body:not(.home) {
       }
     }
     h4, h5, h6 {
-      color: @logoColor;
+      color: @gray-darker;
       margin-top: 2em;
+      font-weight: 400;
     }
     h4 {
       font-size: 25px;

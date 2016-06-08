@@ -73,13 +73,44 @@ project/
 
 ## Document
 
-To document your CSS use the following [tags](http://documentjs.com/docs/documentjs.tags.html) inside your CSS, Scss, Less, or Markdown files:
+To document your CSS use the following inside your CSS, SCSS, LESS, or Markdown files:
 
-- `@@stylesheet` to create a page for each stylesheet documented
-- `@@styles` to document individual styles
-- `@@parent` to organize how your styles get rendered on the Style Guide
-- `@@iframe` to display an html live demonstration 
-- `@@demo` to display an html live demonstration that also renders a tab with the html used on the demo
+<table>
+  <tr>
+      <th>Tag</th>
+      <th>Use To</th>
+  </tr>
+  <tr>
+      <td>@page</td>
+      <td>Declare a markdown file as a page in your site.</td>
+  </tr>
+  <tr>
+      <td>@parent</td>
+      <td>Specify the parent of a page or stylesheet.</td>
+  </tr>
+  <tr>
+      <td>@stylesheet</td>
+      <td>Declare a stylesheet file as page in your site.</td>
+  </tr>
+  <tr>
+      <td>@style</td>
+      <td>Declare a comment as a style inside of a stylesheet.</td>
+  </tr>
+  <tr>
+      <td>@description</td>
+      <td>Declare a comment as description of a style.</td>
+  </tr>
+  <tr>
+      <td>@demo</td>
+      <td>Display a live code demonstration that also renders a tab with the html used.</td>
+  </tr>
+  <tr>
+      <td>@iframe</td>
+      <td>Display a live code demonstration.</td>
+  </tr>
+</table>
+
+Learn more about using [tags](using.html#section=section_Tags/).
 
 Create a `buttons.css` file inside the `styles` folder and add this:
 ```

@@ -6,6 +6,5 @@ Though you're documenting your styles, the tool you'll be using is DocumentJS. [
 
 There are four guides, each written for specific cases:
 1. [Quickstart Guide](/docs/quickstart.html)
-2. [Adding to Existing JS Docs](/docs/lsg-adding.html)
-3. [Creating a Standalone Live Style Guide](/docs/standalone-lsg.html)
-4. [Publishing Your Styleguide](/docs/publishing.html)
+2. [How to Use DocumentCSS](docs/using.html)
+3. [How to Customize the Documentation]()

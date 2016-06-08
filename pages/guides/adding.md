@@ -3,7 +3,7 @@
 @hide sidebar
 @outline 2 ul
 
-This guide will:
+This guide will :
 * Give a designer-friendly explanation of what DocumentJS does
 * Make sure you have everything you need installed
 * Help you configure DocumentJS to add a Live Style Guide

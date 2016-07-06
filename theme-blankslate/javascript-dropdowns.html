@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>Bootdocs - Dropdowns </title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+  	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+</head>
+
+<body>
+	<header>
+		<nav>
+			<h1>Bootdocs</h1>
+        <a href="index.html">Home</a> • <a href="accessibility.html">Design</a> • <a href="Overview.html">CSS</a> • <a href="glyphicons.less.html">Components</a>
+		</nav>
+	</header>
+  <hr />
+	
+<div class="container-fluid api">
+
+	
+	<nav class="sidebar">
+		
+		<ul class="api cascading primary-grouping"> 
+	
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="index.html" data-search="Bootdocs">
+				Bootdocs
+			</a>
+			
+		</li>
+		
+		
+			
+			<li class="search-container active">
+			<a class="sidebar-title" href="javascript.html" data-search="Javascript">
+				Javascript
+			</a>
+			
+	<ul>
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="javascript-overview.html" data-search="Overview">
+						Overview
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="javascript-modals.html" data-search="Modals">
+						Modals
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="javascript-transitions.html" data-search="Transitions">
+						Transitions
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container active ">
+					<a class="page" href="javascript-dropdowns.html" data-search="Dropdowns">
+						Dropdowns
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="javascript-scrollspy.html" data-search="Scrollspy">
+						Scrollspy
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="javascript-tabs.html" data-search="Togglable tabs">
+						Togglable tabs
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="javascript-tooltips.html" data-search="Tooltips">
+						Tooltips
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="javascript-popovers.html" data-search="PopOvers">
+						PopOvers
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="javascript-alerts.html" data-search="Alerts">
+						Alerts
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="javascript-buttons.html" data-search="Buttons">
+						Buttons
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="javascript-collapse.html" data-search="Collapse">
+						Collapse
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="javascript-carousel.html" data-search="Carousel">
+						Carousel
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="javascript-affix.html" data-search="Affix">
+						Affix
+					</a>
+				</li>
+				
+			
+			
+		
+	</ul>
+
+		</li>
+			
+		
+	
+</ul>
+	</nav>
+	
+	
+	
+	<article class="content docs">
+	
+	
+		
+		<section class="title">
+			<div class="heading">
+<h1>Dropdowns</h1>
+	<ul class="tags">
+		<li>page</li>
+	</ul>
+	
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+		<span class="module">javascript-dropdowns</span>
+	
+	
+	
+	<span class="inherits">&nbsp;</span>
+</div>
+
+<ul class="links">
+	
+	
+	
+	
+</ul>
+<br />
+		</section>
+		
+		
+		
+		<section class="contents">
+		</section>
+		
+		
+		
+
+		
+		<section class="description">
+			<h2>Examples</h2>
+<p>Add dropdown menus to nearly anything with this simple plugin, including the navbar, tabs, and pills.</p>
+
+		</section>
+		
+
+		
+			
+		
+		
+		
+		
+
+		
+		<section class="comment">
+			<h3>Within a navbar</h3>
+<div class='demo_wrapper' data-demo-src='demos/js-dropdown-navbar/demo.html'></div>
+<h3>Within pills</h3>
+<div class='demo_wrapper' data-demo-src='demos/js-dropdown-pills/demo.html'></div>
+<h2>Usage</h2>
+<p>Via data attributes or JavaScript, the dropdown plugin toggles hidden content (dropdown menus) by toggling the <code>.open</code>class on the parent list item.</p>
+<p>On mobile devices, opening a dropdown adds a <code>.dropdown-backdrop</code> as a tap area for closing dropdown menus when tapping outside the menu, a requirement for proper iOS support. This means that switching from an open dropdown menu to a different dropdown menu requires an extra tap on mobile.</p>
+<p>Note: The <code>data-toggle=&quot;dropdown&quot;</code> attribute is relied on for closing dropdown menus at an application level, so it's a good idea to always use it.</p>
+<h3>Via data attributes</h3>
+<p>Add <code>data-toggle=&quot;dropdown&quot;</code> to a link or button to toggle a dropdown.</p>
+<pre><code>&lt;div class=&quot;dropdown&quot;&gt;
+  &lt;button id=&quot;dLabel&quot; type=&quot;button&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;
+    Dropdown trigger
+    &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dLabel&quot;&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<p>To keep URLs intact with link buttons, use the <code>data-target</code> attribute instead of <code>href=&quot;#&quot;</code>.</p>
+<pre><code>&lt;div class=&quot;dropdown&quot;&gt;
+  &lt;a id=&quot;dLabel&quot; data-target=&quot;#&quot; href=&quot;http://example.com&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;
+    Dropdown trigger
+    &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+  &lt;/a&gt;
+
+  &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dLabel&quot;&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<h3>Via JavaScript</h3>
+<p>Call the dropdowns via JavaScript:</p>
+<pre><code>$('.dropdown-toggle').dropdown()
+</code></pre>
+<h4><code>data-toggle=&quot;dropdown&quot;</code> still required</h4>
+<p>Regardless of whether you call your dropdown via JavaScript or instead use the data-api, <code>data-toggle=&quot;dropdown&quot;</code> is always required to be present on the dropdown's trigger element.</p>
+<h3>Options</h3>
+<p>none</p>
+<h3>Methods</h3>
+<p><code>$().dropdown('toggle')</code>
+Toggles the dropdown menu of a given navbar or tabbed navigation.</p>
+<h3>Events</h3>
+<p>All dropdown events are fired at the <code>.dropdown-menu</code>'s parent element.</p>
+<p>All dropdown events have a <code>relatedTarget</code> property, whose value is the toggling anchor element.</p>
+<table class="table table-bordered table-striped bs-events-table">
+<thead>
+  <tr>
+    <th>Event Type</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>show.bs.dropdown</td>
+    <td>This event fires immediately when the show instance method is called.</td>
+  </tr>
+  <tr>
+    <td>shown.bs.dropdown</td>
+    <td>This event is fired when the dropdown has been made visible to the user (will wait for CSS transitions, to complete).</td>
+  </tr>
+  <tr>
+    <td>hide.bs.dropdown</td>
+    <td>This event is fired immediately when the hide instance method has been called.</td>
+  </tr>
+  <tr>
+    <td>hidden.bs.dropdown</td>
+    <td>This event is fired when the dropdown has finished being hidden from the user (will wait for CSS transitions, to complete).</td>
+  </tr>
+</tbody>
+</table>
+<pre><code>$('#myDropdown').on('show.bs.dropdown', function () {
+  // do something…
+})
+</code></pre>
+
+		</section>
+		
+		
+
+		
+
+		
+	
+	
+	</article>
+	
+	
+
+</div>
+
+
+
+
+
+	
+	<footer>
+	  <hr />
+	  <p>Built by <a href="http://bitovi.com/">Bitovi</a> using <a href="http://documentjs.com/">DocumentJS</a>.
+	</footer>
+	
+	<script type="text/javascript">
+		var docObject = {"type":"page","name":"javascript-dropdowns","src":"markdown/JS/dropdowns.md","description":"## Examples\nAdd dropdown menus to nearly anything with this simple plugin, including the navbar, tabs, and pills.","title":"Dropdowns","parent":"javascript","order":4,"templates":"/server/bootdocs/themes/blankslate/templates","static":"/server/bootdocs/themes/blankslate/static","glob":{"pattern":"{less,markdown}/**/*.{css,less,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/server/bootdocs"},"dest":"/server/bootdocs/styleguide","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+	</script>
+	
+	
+
+		<script type='text/javascript' 
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal.production.js"
+	    		bundles-path="bundles"></script>
+	
+</body>
+
+</html>

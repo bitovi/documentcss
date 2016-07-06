@@ -24,27 +24,7 @@
   </div>
   <div class="right">
     <h2>How it Works</h2>
-<pre><code class="language-css">
-/**
- * @@styles color-palette Color Palette
- * 
- * @@description
- * Variables used to define the site's color palette.
- * @@iframe demos/variables/color-palette/demo.html 630
- **/
-@@night: #000000; 
-@@darkSkies: #484848; 
-@@thunderStorm: #706f70;  
-@@cloud: #999999; 
-@@haze: #cccccc;  
-@@fog: #eae9e9;
-@@clear: #ffffff; 
-@@nightRain: #165489;
-@@rain: #1f54c6; 
-@@sunrise: #f7f8c3; 
-@@sunset: #d9534f;
-
-</code></pre>
+    <img src="static/img/style-guide-demo-code.png"/>
   </div>
 
 </div>    

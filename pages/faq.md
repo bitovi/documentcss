@@ -1,8 +1,6 @@
 @page faq Frequently Asked Questions
-@parent lsg.guides 
 
 @hide sidebar
-
 
 ## Configuration Questions
 
@@ -11,7 +9,6 @@ Yes! DocumentCSS supports all styling languages (and most development languages,
 
 You can read more about how to tell it which languages you're using on the <a href="/docs/lsg-quickstart-configuration.html">configuration page</a> of the guides.
 
-****
 
 ### How do I tell DocumentCSS what files to look for?
 
@@ -28,12 +25,10 @@ DocumentCSS looks for the file types defined in your `documentjs.json` file. You
 
 You can read more about this on the <a href="/docs/lsg-quickstart-configuration.html">configuration page</a> of the guides.
 
-****
 
 ### Is there a simple project I can download that works out of the box?
 There is! <a href="https://github.com/brandonreid">Brandon Reid</a> awesomely put a two-pagestyle guide together for people to play around with. You can find it on Github at: <a href="https://github.com/brandonreid/documentcss_starter-kit">DocumentCSS Starter Kit</a>.
 
-****
 
 ## Customization Questions
 
@@ -44,14 +39,12 @@ The easiest way to go about this is to copy the <a href="https://github.com/bito
 
 You can get a full breakdown of how to customize your version of DocumentCSS in the <a href="/docs/lsg-custom-styles.html">customizing look and feel</a> section of the guides.  We hope that future versions of DocumentJS will have an easier theming engine. 
 
-****
 
 ### Can I restyle DocumentCSS in SCSS instead of LESS?
 Short answer: not easily. 
 
 DocumentCSS is built in LESS and stripping that out in favor of writing styles in another language would be a huge task. With enough time and patience, anything is possible though.
 
-****
 
 ### How do I update the menu?
 The main navigation for your style guide is hardcoded into the theme files. To change the navigation menu items, you have to edit the theme file `layout.mustache`
@@ -68,7 +61,6 @@ There are two ways to do this:
     - When you generate the site, be sure to use the `-f` flag to force DocumentJS to re-generate the theme files: 
       <pre><code> > documentjs -f</code></pre>
 
-****
 
 ### Why isn't my theme updating?
 To save time, DocumentJS doesn’t re-build the theme every time the site is generated. In order to get the theme or main navigation to update you have to force the documentjs task. You can do this with the `-f` flag:
@@ -79,7 +71,6 @@ You can force and watch at the same time too:
 
 Depending on the size of your documentation site, this can take a long time. So we recommend dropping the `-f` unless you're editing the template itself. Documentation comments and demos shouldn't need to be forced.
 
-****
 
 ## Troubleshooting Questions
 
@@ -93,7 +84,6 @@ This is because of one of two issues:
 
 > _It’s important to know that DocumentJS does not move or copy your demos to the generated site folder. Using `@demo` only tells DocumentJS to create a link to that location. We hope that future versions of DocumentJS will handle this for us._
 
-****
 
 ### Why aren't demos pulling the right styles?
 The demos are highly manual right now and embedded in iframes. What this means is that you'll need to manually link to the compiled stylesheet for your application. You can either use a relative path to the distribution folder your application compiles to, or if your css is hosted online, you can link to that.
@@ -111,7 +101,6 @@ So if you have:
 
 Then the `forms.html` file should have a reference to the CSS in the `<head>` of the HTML. We hope future versions of DocumentJS will automate the inclusion of CSS in demos to make this easier. 
 
-****
 
 ### How do I get the '@' symbol to display in my documentation? I keep getting a warning!
 
@@ -122,5 +111,3 @@ So if you see:
  There is no @foo tag. did you mean @add ? </code></pre>
 
 Simply use two '@'s like so: `@@@variable-name`.
-
-***

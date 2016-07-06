@@ -1,0 +1,321 @@
+/**
+* @stylesheet layout.less Layout
+* @parent Styles.baseline-elements 3
+* @hide article
+* @description
+* Layout classes are used to structure the main parts of a page.
+**/
+
+
+body:not(.home) {
+  /* @containerWidth @contentWidth defined in ./variables.less near the bottom */
+  .main-content {
+    display: block!important;
+    margin: 0 auto;
+    padding: 0px;
+    min-height: 500px;
+    @media(min-width:@screen-lg){
+      width: @contentWidth;
+      position: static;
+    }
+    @media(max-width: @screen-md-max) {
+      margin-right: auto;
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin:0;
+    }      
+  }
+  .scroll-spy-title + .main-content {
+    @media(max-width: @screen-sm-max) {
+      padding-top: 50px;
+    }
+  }
+  .linkToHeader {
+    display: none;
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  @media(min-width: @screen-md) {
+    h2, h3, h4, h5 {
+      position: relative;
+
+      a.linkToHeader {
+        display: none;
+        position: absolute;
+        left: -25px;
+        padding-left: 5px;
+        width: 50px;
+
+        img {
+          margin: 0px !important;
+          padding: 0px;
+          position: relative;
+          top: 50%;
+          -ms-transform: translateY( -50% );
+          -webkit-transform: translateY( -50% );
+          -moz-transform: translateY( -50% );
+          -o-transform: translateY( -50% );
+          transform: translateY( -50% );
+        }
+      }
+      &:hover a.linkToHeader {
+        display: initial;
+      }
+    }
+  }
+
+/**
+* @styles docs-title Title Section
+
+* @description
+* Styles the title section that shows as the top of each document. It is composed by
+* a `.heading`, `tags`, a `subheading`, and a list of `links`.
+*
+* @demo demos/title-section.html
+**/
+
+.title {     
+  text-align: center;
+  line-height: 1.;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    height: 222px;
+    padding-top: 25px;
+    background-image: url( "/static/img/background.jpg" );
+    background-attachment: fixed;
+    opacity: .2;
+    z-index: -1;
+    @media(max-width: @screen-xs-max){
+      height: 160px;
+    }
+  }
+}
+.heading {
+  height: 222px;
+  text-align: left;
+  @media(max-width: @screen-xs-max){
+    height: 160px;
+  }
+  h1 {
+    font-weight: 100;
+    font-size: 80px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    @media(min-width: @screen-md){
+      font-size: 70px;
+      margin-left: ~"calc( ( 100% - " @containerWidth ~" ) / 2 + " @containerWidth - @contentWidth ~" )";
+    }
+    @media(max-width: @screen-sm-max){
+      font-size: 60px;
+      text-align: center;
+      height: auto;
+    }
+    @media(max-width: @screen-xs-max){
+      font-size: 50px;
+    }
+  }
+}
+
+  .module,  .inherits,  .title .links li {
+    font-size: 14px;
+    color: @cloud;
+    font-weight: normal;
+    font-style: normal;
+  }
+  .inherits {
+    display: block;
+  }
+
+
+
+  /* main body of content */
+  .comment {
+    &:before {
+      /* this prevents vertical margin collapsing */
+      content: "\007C\00a0\00a0";
+      font-size: 0px;
+    }
+    &:last-of-type {
+      margin-bottom: 60px;
+    }
+    @media(max-width: @screen-xs-max) {
+      word-wrap: break-word;
+      overflow: hidden;
+    }
+  }
+  .description, 
+  .comment {
+    margin-left: ~"calc( ( 100% - " @containerWidth ~" ) / 2 + " @containerWidth - @contentWidth ~" )";
+    @media(max-width: @screen-sm-max) {
+      margin-left: 0;
+    }
+    @h2height: 150px;
+    h2, + h2 {
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      display: block;
+      background-color: @darkSkies;
+      color: @clear;
+      font-size: 50px;
+      background-image: url( "/static/img/background.jpg" );
+      margin-top: 30px;
+      z-index: 1;
+      line-height: 44px;
+      padding-left: ~"calc( ( 100% - " @containerWidth ~" ) / 2 + (" @containerWidth - @contentWidth ~") )";
+      @media(max-width: @screen-sm-max) {
+        padding-left: 20px;
+      }
+      @media(max-width: @screen-md){
+        line-height:1;
+        font-size: 30px;
+        max-height: 180px;
+        padding: 30px 18px;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+        z-index: -1;
+        background-color: rgba( 33, 38, 40, 0.75 );
+      }
+    }
+    h3, + h3{
+      color: @gray;
+      font-weight: 300;
+      font-size: 40px;
+      margin-top: 50px;
+      line-height: normal;
+      @media(max-width: @screen-md){
+        line-height: 1;
+        margin-bottom: 35px;
+        font-size: 23px;
+      }
+      code {
+        background-color: transparent;
+        font-size: 1em;
+      }
+    }
+    h4, h5, h6 {
+      color: @gray-darker;
+      margin-top: 2em;
+      font-weight: 400;
+    }
+    h4 {
+      font-size: 25px;
+    }
+    h5 {
+      font-size: 20px;
+    }
+    h6 {
+      font-size: 18px;
+    }
+    h2 + *, + h2 + * {
+      margin-top: @h2height + 20px; /* the px added here are the margin under the h2 */
+      @media(min-width: @screen-md) {
+        margin-top: @h2height + 60px; /* the px added here are the margin under the h2 */
+      }
+    }
+    a {
+      font-weight: 900;
+      color: @logoColor;
+    }
+  }
+
+  @media(max-width: @screen-sm-max) {
+    .scroll-spy-title {
+      width: 100%;
+      position: fixed;
+      top: 55px;
+      background-color: @logoColor;
+      height: 50px;
+      z-index: 1079;
+      padding-top: 5px;
+
+      .menu-indicator {
+        position: absolute;
+        left: 15px;
+        color: #FFFFFF;
+        font-size: 20px;
+        top: 50%;
+        -webkit-transform: translateY( -50% );
+        transform: translateY( -50% );
+      }
+      .menus-closed:before {
+        background-image: url("/static/img/icon-guide-menu.svg");
+        width: 17px;
+        height: 11px;
+      }
+      .menus-open:before {
+        background-image: url("/static/img/icon-close.svg");
+        width: 14px;
+        height: 14px;
+        .fadeInUp;
+      }
+      .menus-closed:before,
+      .menus-open:before {
+        cursor: pointer;
+        display: inline-block;
+        content: " ";
+      }
+      #scrollSpyCurrentH2 {
+        color: #FFFFFF;
+        white-space: nowrap;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+        margin: 0 auto;
+        transition: margin-top 0.25s ease-out;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      #scrollSpyCurrentH2.h2Only {
+        margin-top: 10px;
+      }
+      #scrollSpyCurrentH3 {
+        color: #FFFFFF;
+        white-space: nowrap;
+        font-size: 14px;
+        font-weight: 300;
+        text-align: center;
+        margin-top: -6px;
+        opacity: 1;
+        text-indent: 0px;
+        transition: opacity 0.25s ease-out, text-indent 0.25s ease-out, font-size 0.075s ease-out;
+      }
+      .h2Only + #scrollSpyCurrentH3 {
+        opacity: 0;
+        text-indent: 250px;
+      }
+      .js-shrink-bounce {
+        font-size: 0.8 * 14px!important;
+        opacity: 0!important;
+      }
+    }
+  }
+  @media(max-width: 425px) {
+    .scroll-spy-title {
+      #scrollSpyCurrentH2 {
+        max-width: 235px;
+      }
+    }
+  }
+  .tags,
+  .sub-heading,
+  .links {
+    display: none;
+  }
+}

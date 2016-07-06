@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie lt-ie9" lang="en">
+<![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Guides - Writing </title>
+	<meta name="description" content="DocumentCSS is an open source Live Style Guide creation tool, and sister to DocumentJS">
+	<meta name="author" content="Bitovi - DocumentCSS">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" sizes="57x57" href="/static/img/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/static/img/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/static/img/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/static/img/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/static/img/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/static/img/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/static/img/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/static/img/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/static/img/favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="/static/img/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/static/img/favicons/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="/static/img/favicons/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="/static/img/favicons/favicon-16x16.png" sizes="16x16">
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="static/html5shiv.js"></script>
+	<!--<![endif]-->
+</head>
+<body class="lsg-quickstart-writing">
+		<div id="greyOutUnderNav" style="display:none;"></div>
+		<header>
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="mobile-menu-label">MENU</span>
+							<span class="mobile-menu-close"></span>
+						</button>
+						<div class="logo-menu">
+							<a class="brand" href="/index.html">DocumentCSS</a>
+							<ul class="dropdown-menu hidden-xs">
+								<li><a href="http://documentjs.com">DocumentJS</a></li>
+								<li><a href="http://donejs.com">DoneJS</a></li>
+								<li><a href="http://canjs.com">CanJS</a></li>
+								<li><a href="http://stealjs.com">StealJS</a></li>
+								<li><a href="http://jquerypp.com">jQuery++</a></li>
+								<li><a href="http://funcunit.com">FuncUnit</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li >
+								<a href="/index.html">Home</a>
+							</li>
+							<li class="guides-menu">
+									<a href="/docs/index.html">Guides</a>
+									<ul class="dropdown-menu">
+                      <li ><a href="/docs/lsg-adding.html">Adding to Existing JS Docs</a></li>
+                      <li><a  href="/docs/publishing.html">Publishing Your Style Guide</a></li>
+                      <li ><a href="/docs/standalone-lsg.html">Standalone Live Style Guide</a></li>
+									</ul>
+							</li>
+							<li class="examples-menu">
+								<a href="/examples/styles/index.html">Live Example</a>
+							</li>
+							<li >
+								<a href="/faq.html">FAQs</a>
+							</li>
+						</ul>
+
+						<ul class="nav navbar-nav navbar-right bitovi-menu">
+							<li class="dropdown">
+								<a href="http://bitovi.com" class="bitovi icon-bits">Bitovi</a>
+								<ul class="dropdown-menu">
+									<li><a href="http://bitovi.com">Bitovi.com</a></li>
+									<li><a href="http://bitovi.com/blog/">Blog</a></li>
+									<li><a href="http://bitovi.com/consulting/">Consulting</a></li>
+									<li><a href="http://bitovi.com/training/">Training</a></li>
+									<li><a href="http://bitovi.com/open-source/">Open Source</a></li>
+									<li><a href="http://bitovi.com/people/">People</a></li>
+									<li><a href="http://bitovi.com/contact/">Contact Us</a></li>
+								</ul>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+			</nav>
+		</header>
+
+	<div class="scroll-spy-title hidden-md hidden-lg">
+		<span class="menu-indicator menus-closed"></span>
+		<div id="scrollSpyCurrentH2" class="h2Only">Table of Contents</div>
+		<div id="scrollSpyCurrentH3"></div>
+	</div>
+
+	
+<div class="main-content">
+
+	
+	<nav class="sidebar">
+		
+		<ul class="sidebar-wrapper">
+	
+	   <li class="sidebar-section">
+	   	<a class="sidebar-section-title" href="howTo.html" data-search="How-To Guides">
+        How-To Guides
+      </a>
+
+			
+	<ul class="active-menu">
+		
+			
+				
+				
+				<li class="page-title ">
+					<a class="page-link" href="lsg-adding.html" data-search="Adding to Existing JS Docs">
+						Adding to Existing JS Docs
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="page-title ">
+					<a class="page-link" href="publishing.html" data-search="Publishing Your Style Guide">
+						Publishing Your Style Guide
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="page-title ">
+					<a class="page-link" href="standalone-lsg.html" data-search="Standalone Live Style Guide">
+						Standalone Live Style Guide
+					</a>
+				</li>
+				
+			
+			
+		
+	</ul>
+
+
+	   </li>
+	
+</ul>
+	</nav>
+	
+	
+
+
+		
+		<section class="title">
+			<div class="heading">
+<h1>Writing</h1>
+	<ul class="tags">
+		<li>page</li>
+	</ul>
+	
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+		<span class="module">lsg-quickstart-writing</span>
+	
+	
+	
+	<span class="inherits">&nbsp;</span>
+</div>
+
+<ul class="links">
+	
+	
+	
+	
+</ul>
+<br />
+		</section>
+		
+		
+		
+		<section class="contents">
+		</section>
+		
+		
+		
+
+		
+		<section class="description">
+			<h2>Documenting a Stylesheet</h2>
+
+		</section>
+		
+
+		
+			
+		
+		
+		
+		
+
+		
+		<section class="comment">
+			<p><em>The next few pages will be very information-dense. If you're the kind of person who takes breaks, now would be a good time a good time.</em></p>
+<p>To document a stylesheet, we're going to need to use two more tags:</p>
+<ul>
+<li><code>@stylesheet</code> to create a page for each stylesheet documented</li>
+<li><code>@styles</code> to document individual styles</li>
+</ul>
+<p>When all of these are put together, a documented stylesheet file (<code>css</code>, <code>less</code>, or <code>scss</code>) will look something like this:</p>
+<pre><code class="language-css">/**
+ *  @stylesheet typeography.less Typography
+ *  
+ *  Global style definitions for all typographic elements 
+ *  including headings, paragraphs, lists, and blockquotes.
+ */
+
+/**
+ * @styles headings Headings
+ *
+ * H tags defining a typographical heirarchy
+ */
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+</code></pre>
+<p>As a result our styleguide will start to look like <a href="/examples/styles/typography.less.html">this page</a>. Don't worry about the live demos just yet--we'll get to that soon.</p>
+<h2>New Tag: <code>@stylesheet</code></h2>
+<p>The <code>@stylesheet</code> tag creates an individual page to document a stylesheet. Instead of creating a separate file, you'll use this tag.</p>
+<h3>Example</h3>
+<p>In a file like <code>typography.less</code>:</p>
+<pre><code class="language-css">/**
+ *  @stylesheet typeography.less Typography
+ *  
+ *  Global style definitions for all typographic elements 
+ *  including headings, paragraphs, lists, and blockquotes.
+ */
+</code></pre>
+<p>This will create a page in the <code>stylesheet</code> directory called <code>typography.less.html</code>. Like with the <code>@page</code> tag, anything you write below the tag will be used as a description in the page.</p>
+<h3>Arguments</h3>
+<p>The @stylesheet tag behaves similarly to the @page tag, so it has the same arguments.</p>
+<pre><code class="language-markdown">@stylesheet NAME TITLE
+</code></pre>
+<p><code>NAME</code> is the unique name of the page for reference purposes (and will determine the name of the <code>html</code> file). It is often going to make sense to just make <code>NAME</code> the name of the file (on the <a href="/examples/styles/typography.less.html">example Live Style Guide</a> you will see file names listed under the titles for this reason).</p>
+<p><code>TITLE</code> is the title that will be displayed on the page.</p>
+<h2>New Tag: <code>@styles</code></h2>
+<p>The <code>@styles</code> tag allows you to define an individual set of styles.</p>
+<blockquote>
+<p><strong>Whenever you use this tag in a stylesheet that already used the @stylesheet tag, your <code>@styles</code> documentation will be included in that stylesheet. When using this tag, the comments you may already have been writing will automatically become a part of your live style guide.</strong></p>
+</blockquote>
+<h3>Example</h3>
+<p>In a file like <code>typography.less</code> (that already has a <code>@stylesheet</code> tag at the start of the file):</p>
+<pre><code class="language-css">/**
+ * @styles headings Headings
+ * 
+ * H tags defining a typographical heirarchy
+ */
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    margin-bottom: 10px;
+}
+</code></pre>
+<p><em>Note: the actual styles declared below the comments will not be included in the styleguide. They are only shown for context.</em></p>
+<h3>Arguments</h3>
+<pre><code class="language-markdown">@styles NAME TITLE
+</code></pre>
+<p><code>NAME</code> is the unique name of the page for reference purposes (but is less important in this case). <code>TITLE</code> is the title of the heading that will be displayed on the generated stylesheet page.</p>
+<h2>Organizing Your Styleguide</h2>
+<p>After you've documented your first stylesheet, if you <a href="/docs/lsg-quickstart-generate.html">generate the site</a> you won't see your stylesheet page anywhere in the sidebar. Even though the page has been generated, it isn't linked up to the rest of the site because you need to tell DocumentJS where to put it.</p>
+<p>We have two more tags so you can organize your style guide:</p>
+<ul>
+<li><code>@parent</code> to tell DocumentJS where to put links to your pages and stylesheets</li>
+<li><code>@group</code> to organize links in the sidebar</li>
+</ul>
+<h2>New Tag: <code>@parent</code></h2>
+<p>The <code>@parent</code> tag organizes your site by telling DocumentJS where to put a link to your page or stylesheet.</p>
+<h3>Example</h3>
+<p>The following tells DocumentJS that the parent page of <code>Typography</code> is our main page, <code>styleguide</code>. After using this tag, the <code>Typography</code> page will show up in the sidebar in the first position.</p>
+<pre><code class="language-less">/**
+ * @stylesheet typography.less Typography
+ * @parent styleguide 0
+ */
+</code></pre>
+<h3>Arguments</h3>
+<pre><code class="language-markdown">@parent NAME ORDER
+</code></pre>
+<p>The <code>NAME</code> argument is the unique name <em>of the parent</em>. The <code>ORDER</code> argument allows you to specify the order in which this child shows up in the sidebar. By default, children will be ordered alphabetically.</p>
+<h2>New Tag: <code>@group</code></h2>
+<p>The <code>@group</code> tag organizes pages with headings in the sidebar. On the left of this page, the groups are &quot;INTRO,&quot; &quot;SETUP&quot;, &quot;YOUR FIRST PAGE&quot;, &quot;WRITING&quot;, and &quot;CUSTOMIZING&quot;.</p>
+<h3>Example</h3>
+<p>The group tag is used on a parent page. In this case, you will want to specify groups in <code>stylesheet.md</code>:</p>
+<pre><code class="language-markdown">@page my-styleguide My Style Guide
+@group styleguide-theme 0 Theme
+@group styleguide-baseline 1 Baseline Elements
+@group styleguide-docs 2 API
+@group styleguide-other 3 Other
+</code></pre>
+<h3>Arguments</h3>
+<pre><code class="language-markdown">@group NAME ORDER TITLE 
+</code></pre>
+<p>The <code>NAME</code> argument is the unique name. You'll use this as an argument for <code>@parent</code> in pages or stylesheets that belong in this group.</p>
+<p>The <code>ORDER</code> specifies the order in which groups should appear in the sidebar. By default, they will be organized alphabetically.</p>
+<p>The <code>TITLE</code> is displayed as a heading in the sidebar.</p>
+<h2>Putting Stylesheets into Groups</h2>
+<p>Once you've specified groups in <code>stylesheet.md</code>, you just need to make those groups the <code>@parent</code> of your stylesheets (instead of using the base page). If you want to make put your Typography stylesheet in the &quot;Baseline Elements&quot; group, put this in <code>typography.less</code></p>
+<pre><code>/**
+ * @stylesheet typography.less Typography
+ * @parent styleguide-baseline 0
+ * 
+ * Global style definitions for all typographic elements including headings, paragraphs, lists, and blockquotes.
+ **/
+</code></pre>
+<p>Notice that we are using the name we declared as a <code>@group</code> as the parent.</p>
+<h2>Live Demos</h2>
+<p>The last thing you'll need in your Live Style Guide is the Live Demos. There are two more tags you'll use for this:</p>
+<ul>
+<li><code>@demo</code> to show a live demo as well as sample HTML for that demo</li>
+<li><code>@iframe</code> to show a live demo on its own</li>
+</ul>
+<h3>Creating Demos</h3>
+<p>Before you link to your demos, you'll need to create an individual page for each of them. In your <code>demos</code> directory, create an HTML file for any demo you want to show and link to your project's relevant stylesheet(s). <strong>Since your demos and your overall project use the same source styles, your live demos will change whenever your design changes</strong>.</p>
+<p>These demo pages are not generated or changed by DocumentJS, so you need to put them together manually as you would any web page and you need to be able to link to them from your project. As long as you followed the instructions for <a href="/docs/lsg-quickstart-file-organization.html">file organization</a> and <a href="/docs/lsg-quickstart-generate.html">site generation</a> so far, you should be able to follow along with the examples below if you put your demo files in the <code>demos</code> directory. Otherwise, you may need to figure some things out on your own.</p>
+<h2>New Tag: <code>@demo</code></h2>
+<p>The <code>@demo</code> tag displays a live demo and the markup for that demo.</p>
+<h3>Example</h3>
+<p>In the following example, the demo page must be located at <code>demos/forms.html</code>.</p>
+<p>In <code>base.less</code>:</p>
+<pre><code class="language-css">/**
+ * @stylesheet base-styles Base Styles
+ * @parent styleguide-baseline 0
+ */
+
+/**
+ * @styles forms Forms 
+ * 
+ * @demo demos/forms.html
+ */
+</code></pre>
+<p>On the &quot;Base Styles&quot; stylesheet page generated from <code>base.less</code>, there will now be a demo showing whatever page is at <code>demos/forms.html</code>. In the <a href="/examples/styles/base.less.html">Example Style Guide</a>, that looks like this:</p>
+<div class='demo_wrapper' data-demo-src='examples/demos/forms.html'></div>
+<h3>Arguments</h3>
+<pre><code class="language-markdown">@demo FILEPATH
+</code></pre>
+<p>The <code>FILEPATH</code> argument is a link to the location of the demo page.</p>
+<h2>New Tag: <code>@iframe</code></h2>
+<p>Sometimes you'll want a live demo without displaying any markup. To do this, just use the <code>@iframe</code> tag instead.</p>
+<h3>Example</h3>
+<p>In the following example, the live demo must be located located at <code>demos/headings.html</code>.</p>
+<p>In <code>typography.less</code>:</p>
+<pre><code class="language-css">/**
+ * @stylesheet typography.less Typography
+ * @parent styleguide-baseline 1
+ */
+
+/**
+ * @styles headings Headings
+ *
+ * @demo demos/headings.html
+ */
+</code></pre>
+<p>Similar to above, but without the &quot;HTML&quot; tab, there will be a demo. In the <a href="/examples/styles/typography.less.html">Example Style Guide</a>, that looks like this:</p>
+<div class='iframe_wrapper' data-iframe-src='examples/demos/headings.html' data-iframe-height='320'></div>
+<h3>Arguments</h3>
+<pre><code class="language-markdown">@iframe FILEPATH
+</code></pre>
+<p>Just like with the <code>@demo</code> tag, the <code>FILEPATH</code> argument is a link to the location of the demo page.</p>
+<p><a href="/docs/lsg-custom-styles.html">Next Page</a></p>
+
+		</section>
+		
+		
+
+		
+
+		
+	
+
+	
+
+</div>
+
+
+
+
+
+	
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-8">
+					<div class="col-xs-1 footer-brand">
+						<a href="/"><img src="/static/img/logo-doc-css-white.svg"></a>
+					</div>
+
+					<ul class="footer-nav-main list-stacked">
+						<li>
+							<a href="/">HOME</a>
+						</li>
+						<li>
+							<a href="/Guides.html">GUIDES</a>
+						</li>
+						<li>
+							<a href="/examples/styles/index.html">EXAMPLE</a>
+						</li>
+						<li>
+							<a href="/faq.html">FAQS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<ul class="footer-nav-social list-stacked">
+						<li>
+							<a href="https://github.com/bitovi/documentcss">
+								<img class="footer-social-icon" src="/static/img/icon-github-white.svg">
+							</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/documentjs">
+								<img class="footer-social-icon" src="/static/img/icon-twitter-white.svg">
+							</a>
+						</li>
+						<li>
+							<a href="https://plus.google.com/+Bitovi/posts">
+								<img class="footer-social-icon" src="/static/img/icon-googleplus-white.svg">
+							</a>
+						</li>
+<!-- 						<li>
+							<a href="https://www.youtube.com/channel/UC_HPFLeKzJNLOUnLc_3311Q/videos">
+								<img class="footer-social-icon" src="/static/img/icon-youtube-white.svg">
+							</a>
+						</li> -->
+					</ul>
+				</div>
+				<div class="footer-copyright col-sm-12">
+					&copy; <a href="http://www.bitovi.com">2016 Bitovi, Inc.</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+
+	<script type="text/javascript">
+		var docObject = {"type":"page","name":"lsg-quickstart-writing","src":"pages/guides/standalone/writing.md","description":"## Documenting a Stylesheet","title":"Writing","parent":"howTo.standalone-lsg-steps","order":2,"dest":"/Users/thelela/Documents/GitHub/documentcss/docs","glob":{"pattern":"{pages/guides/*.md,pages/guides/**/*.md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/thelela/Documents/GitHub/documentcss"},"templates":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/templates","static":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/static","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+	</script>
+
+	
+		<script>
+			steal = {
+			instantiated: {
+				"bundles/static.css!$css" : null
+			}
+			}
+		</script>
+		<script type='text/javascript'
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal.production.js"
+				bundles-path="bundles"></script>
+	
+</body>
+</html>

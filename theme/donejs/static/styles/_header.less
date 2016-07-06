@@ -1,0 +1,362 @@
+/**
+* @stylesheet _header.less Header
+* @parent Styles.baseline-elements 
+* @hide article
+* @description 
+* The header holds menus for this app, other Bitovi Open-Source products, and other Bitovi related links. At 768px, it collapses to a mobile-style view, putting the main menu under a "Menu" button and removing the menu under the logo altogether.
+*
+* @demo demos/header.html
+**/
+header {
+  display: block;
+  //background-color: @puddle;
+  ///color: @clear;
+  position: relative;
+  .container {
+    position: relative;
+  }
+}
+  
+
+/**
+* @styles header-nav Header Nav
+*
+* @demo demos/header-nav.html
+**/
+header {
+  .navbar-default{
+    background-color: rgba( 255, 255, 255, 0.87 );
+    box-shadow: 0px 3px 5px fade(@gray-light, 50% );
+    .navbar-toggle {
+      color: black;
+      text-shadow: none;
+      border:0;
+      &:focus,
+      &:hover {
+        background: none;
+      }
+      .mobile-menu-label{
+        display: none;
+      }
+      .mobile-menu-close {
+        display: block;
+        animation: fadeIn 1s 1;
+        background-image: url("/static/img/icon-close--blue.svg");
+        width: 14px;
+        height: 14px;
+        top: 3px;
+        position: relative;
+      }
+      &.collapsed {
+        border: 1px solid #ddd;
+        .mobile-menu-label {
+          display: block;
+          font-weight: 300;
+        }
+        .mobile-menu-close {
+          display: none;
+        }
+      }
+    }
+    .navbar-nav {
+      >.active > a {
+        background-color: @puddle;
+        border-radius: 2px;
+        color: @clear;
+        &:hover {
+          background-color: @puddle;
+          border-color: transparent;
+          color: @clear;
+        }
+      }
+    }
+  }
+  .navbar {
+    border:0;
+    margin-bottom: 0;
+    .brand {
+      @media(max-width: @screen-xs){
+        background-size: 140px;
+      }
+    }
+  }
+  .navbar-collapse {
+    &.in {
+      background: rgba(255,255,255,0.9);
+    }
+    @media(max-width: @screen-xs-max) {
+      padding-top:10px;
+      .bitovi-menu {
+        border-top: 1px solid @cloud;
+        a {
+          font-size: 12px;
+          text-transform: uppercase;
+          padding-left: 10px;
+        }
+        .icon-bits {
+          display: none;
+        }
+        .dropdown-menu {
+          display: block;
+          visibility: visible;
+          position: relative;
+          top:auto;
+          left: auto;
+          background-color: transparent;
+          border: 0;
+          box-shadow: none;
+          width: 100%;
+          li {
+            &:last-child {
+              a {
+                border-bottom:0;
+              }
+            }
+          }
+          li, a {
+            width: 100%;
+            display: block;
+          }
+          a {
+            color: @night;
+          }
+        }
+      }
+    }
+    @media (min-width: @screen-sm) {
+      padding-top:0;
+    }
+  }
+  .navbar-fixed-top {
+    z-index: 1080;
+  }
+  .nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin: 0 0 0 15px;
+    display: inline-block;
+    position: relative;
+    top: 13px;
+    @media(max-width: @screen-xs-max) {
+      width: 100%;
+      top:-2px;
+      margin:0;
+    }
+    > li {
+      display: block;
+      line-height: @headerHeight;
+      position: relative;
+      width: 100%;
+      @media(min-width: @screen-sm) {
+        margin-right: 5px;
+        width: auto;
+      }
+      > a {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 12px;
+        color: @night;
+        display: block;
+        width: 100%;
+        padding: 5px 10px;
+        border: 1px solid transparent;
+        @media(min-width: @screen-sm) {
+          width: auto;
+        }
+      }
+      &:hover > a {
+        background-color: transparent;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-radius: 2px;
+      }
+    }
+  } 
+} 
+
+
+/**
+* @styles header-dropdown Header Dropdown Menu
+
+* @description
+* This dropdown shows when hovering the logo.
+*
+* @demo demos/header-dropdown.html
+**/
+header {
+  .dropdown-menu {
+    display: none;
+    visibility: collapse;
+    position: absolute;
+    left: 0;
+    background-color: @clear;
+    border: 1px solid @haze;
+    border-top: none;
+    border-radius: 0;
+    z-index: 5;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    top: @headerHeight;
+    width: 240px;
+    li a {
+      display: block;
+      text-decoration: none;
+      border-bottom: 1px solid @fog;
+      color: @darkSkies;
+      font-size: 14px;
+      line-height: 32px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  .dropdown-menu li a:hover, 
+  .dropdown-menu li.active a {
+    background-color: @fog;
+    color: @gray-base;
+  }
+}
+
+
+/**
+* @styles header-bitovi-menu Bitovi Menu
+*
+* @description
+* This dropdown menu shows when hovering the Bitovi bits icon.
+* Links placed on this menu link out the external Bitovi sites.
+*
+* @demo demos/header-bitovi-menu.html
+**/
+header {
+  .bitovi-menu {
+    display: inline-block;
+    top: 0px;
+    .dropdown-menu {
+      top: 53px;
+      right: 0;
+      left: auto;
+      a:hover:after {
+        content: "\e000";
+        color: @haze;
+        font: 20px/27px Bitstrap;
+        position: absolute;
+        right: 10px;
+      }
+    }
+  }
+  .bitovi.icon-bits {
+    display: block;
+    font-size: 26px;
+    text-align: center;
+    width: 50px;
+    height: 54px;
+    text-decoration: none;
+    overflow: hidden;
+    color: @night;
+    line-height: 46px;
+    text-shadow: none;
+    @media(max-width:@screen-xs-max){
+      display: none;
+    }
+    &:before {
+      position: absolute;
+      left: 13px;
+    }
+  }
+  .bitovi-menu:hover .bitovi.icon-bits {
+    background-color: @clear;
+    border-left: 1px solid @haze;
+    border-right: 1px solid @haze;
+    color: @colorHeader;
+    text-shadow: none;
+    opacity: 1;
+  }
+  .logo-menu {
+    position: relative;
+    display: inline-block;
+    margin-left: 15px;
+    .dropdown-menu {
+      a:hover:after {
+        content: "\e000";
+        color: @haze;
+        font: 20px/27px Bitstrap;
+        position: absolute;
+        right: 10px;
+      }
+    }
+  }
+  .menu-container {
+    position: relative;
+  }
+
+  .bitovi-menu:hover .dropdown-menu, 
+  .logo-menu:hover .dropdown-menu,
+  .menu-container:hover .dropdown-menu {
+    display: block;
+    visibility: visible;
+  }
+  .pull-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+
+header {
+  .guides-menu, .examples-menu {
+    .clearfix;
+    &:hover {
+      .dropdown-menu {
+        display: block;
+        visibility: visible;
+      }
+    }
+    .dropdown-menu {
+      top: 41px;
+      &:before {
+        content:'';
+        display: block;
+        width: 100px;
+        height:20px;
+        background: transparent;
+        top:-20px;
+        left:0;
+        position: absolute;
+      }
+    }
+    @media(max-width: @screen-xs-max){
+      .dropdown-menu {
+        display: block;
+        visibility: visible;
+        border:0;
+        background: none;
+        position: relative;
+        box-shadow: none;
+        top:0;
+        width: 100%;
+        &:before{
+          display: none;
+        }
+        li, a {
+          width: 100%;
+          display: block;
+        }
+        li {
+          &:last-child {
+            a {
+              border:0;
+            }
+          }
+        }
+        a {
+          color: @gray;
+          padding: 0 20px;
+        }
+      }
+    }
+  }
+}
+
+

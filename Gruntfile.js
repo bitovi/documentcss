@@ -11,39 +11,37 @@ module.exports = function(grunt){
 					"dest": "./",
 					"glob": {
 						"pattern": "pages/*.md",
-						"ignore": "pages/{example,livestyleguide}.md"
+						"ignore": "{pages/guides.md,pages/guides/**/*,pages/styles.md}"
 					},
-					"templates": "theme/templates",
-					"static": "theme/static"
+					"templates": "theme/donejs/templates",
+					"static": "theme/donejs/static"
 				},
-				"examples": {
+				"examples/styles": {
 					"parent": "Styles",
 					"dest": "examples/styles",
 					"glob": {
-						"pattern": "{pages/example.md,./node_modules/documentjs/{styles,site/default/static/styles}/**/*.{less,css,md}}",
-						"ignore": "{./node_modules/documentjs/styles/styles.md,./node_modules/documentjs/styles/demos/**/*}"
-					},
-					"templates": "theme/templates",
-					"static": "theme/static"
-				},
+						"pattern": "{pages/styles.md,theme/donejs/static/styles/**/*.{less,css,md}}",
+					},					
+					"templates": "theme/donejs/templates",
+					"static": "theme/donejs/static"
+				},				
 				"examples/demos": {
 					"parent": "demos",
 					"dest": "examples/demos",
 					"glob": {
-						"pattern": "./node_modules/documentjs/styles/demos/demos/**/*.md"
+						"pattern": "{pages/demos/index.md,pages/demos/**/*.md}"
 					},
-					"templates": "./node_modules/documentjs/styles/demos/templates",
-					"static": "theme/static"
+					"templates": "pages/demos/templates",
+					"static": "theme/donejs/static"
 				},
 				"guides": {
-					"parent": "lsg.guides",
+					"parent": "guides",
 					"dest": "docs",
 					"glob": {
-						"pattern": "{./node_modules/documentjs/docs/livestyleguide/**/*.md,pages/livestyleguide.md}",
-						"ignore": "./node_modules/documentjs/docs/livestyleguide/livestyleguide.md"
+						"pattern": "{pages/guides/*.md,pages/guides/**/*.md}"
 					},
-					"templates": "theme/templates",
-					"static": "theme/static"
+					"templates": "theme/donejs/templates",
+					"static": "theme/donejs/static"
 				}
 			}
 		},

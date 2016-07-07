@@ -1,4 +1,4 @@
-@page quickstart Quickstart Guide
+@page quickstart Quick Start
 @parent howTo 0
 @hide sidebar
 @outline 2 ul
@@ -213,4 +213,6 @@ If you're using git, create a file named `.gitignore` at the root of your projec
 This will mark the whole folder as something to be ignored and your team can avoid merge conflicts on generated files.
 
 
-For in depth instructions, check out the [Standalone Live Style Guide](/docs/lsg-quickstart.html).
+----
+Continue to the next guide: <br >
+[&#62; Setting Up DocumentCSS (In-dept Guide)](/docs/setup.html).

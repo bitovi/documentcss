@@ -1,5 +1,4 @@
 @page standalone-lsg Standalone Live Style Guide
-@parent howTo
 @hide sidebar
 @outline 2 ul
 

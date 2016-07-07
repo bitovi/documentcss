@@ -1,5 +1,5 @@
-@page using Using DocumentCSS
-@parent howTo
+@page use Use
+@parent howTo 2
 @hide sidebar
 @outline 2 ul
 
@@ -232,12 +232,12 @@ You can use this tag inside of a markdown file or stylesheet to specify its pare
 Example:
 ```
 /**
-* @@stylesheet buttons.css Buttons
-* @@parent styles
+* @@stylesheet checkboxes.css Checkboxes
+* @@parent forms 2
 /**
 
 ```
-With this configuration the page **Logo Standards** will show under the **Design** section as the 3rd item in the list.
+With this configuration the stylesheet **Checkboxes** will show under the **Forms** section as the 3rd item in the list.
 
 ### @@group
 
@@ -457,14 +457,104 @@ Will render in your LSG page as:
 
 ## Organizing the Docs
 
-DocumentCSS allows you to organize your documentation, independently of how your styles are organized. This is very powerful as you can create a custom information achitecture that is agnostic of how is your code organized.
+DocumentCSS allows you to organize your documentation independently of how your styles are organized. This is very powerful as you can create a custom information achitecture that fit better your particular needs of presenting your Living Style Guide.
 
 
 
-### Declaring parent-child relations
+### Parent-child Relations
 
-something
+To create a hierarchy in your documentation your can use the tag [@@parent](use.html#section=section__parent). This tag tells DocumentCSS that your `@@page` or `@@stylesheet` has a "parent", and will make it display under that "parent" on the sidebar. For example:
 
-### Updating the Global Nav
+```
+/**
+* @@stylesheet checkboxes.css Checkboxes
+* @@parent forms 2
+/**
 
-something
+```
+
+In this example the **Checkboxes** page will show up in the sidebar under the **Forms* section in the 3rd position.
+
+
+### Creating Groups
+
+You can also group pages with headings in the sidebar. For this select the parent page where you want to create the group. Then add the tag [@@group](use.html#section=section__group) followed by:
+- The unique `NAME` of the group that will be used as reference for other tags,  
+- The `ORDER` in which you want your group to show on.
+- The `TITLE` or heading of your group that will be visible on the page.
+
+Example:
+```
+@@page styles Styles
+@@group styles.branding 0 Branding
+@@group styles.baseline 1 Baseline Elements
+@@group styles.assets 2 Designs Assets 
+
+```
+This will create the groups: **Brainding**, **Base Elements**, and **Design Assets** under the sidebar shown for the **Styles** section.
+
+### Updating the Top Menu
+
+While the sidebar is generated via the `@@parent` and `@@group` tags, the top menu on your Living Style Guide is hardcoded in the theme files. To change the navigation menu items, you have to edit the theme file `layout.mustache`.
+
+There are two ways to do this: 
+1. Create an entirely new theme by copying the default theme and editing it. This is useful if you want to make a lot of changes to the theme. 
+2. Copy and edit only the `layout.mustache` template file. This is useful if you’re not going to make any other changes to the theme. To do this: 
+    - Copy `layout.mustache` to a folder called `templates` in your project (like `theme/templates`).
+    - Make any modifications you have to the `layout.mustache` file.
+    - Tell DocumentJS to look for this new theme in your `documentjs.json` like this: 
+      <pre><code>"siteDefaults": {
+        "templates": "theme/templates",
+        },</code></pre>
+    - When you generate the site, be sure to use the `-f` flag to force DocumentJS to re-generate the theme files: 
+      <pre><code> > documentjs -f</code></pre>
+
+## Generating the Site
+
+To generate your Living Style Guide site open up a terminal in your project's directory and run:
+
+```
+> ./node_modules/.bin/documentjs
+```
+
+This will generate your site in the `styleguide` directory.
+
+### Simple Command
+
+If you want an easier way to run this command, first install DocumentJS globally (so it can be run anywhere on your computer):
+
+```
+> npm install -g documentjs
+```
+
+Now you can just run this command in any directory with a `documentjs.json` file:
+```
+> documentjs
+```
+
+### Viewing Your Site
+
+Now you just need a way to host your generated site from `styleguide`. If you're not sure how to do this and are on a Windows computer, you'll need to research it on your own. If you are using a Mac or a Linux machine, use a terminal navigate to the `styleguide` directory and use python to start a server:
+```
+> cd styleguide
+> python -m SimpleHTTPServer
+```
+
+You should see something like the following:
+```
+Serving HTTP on 0.0.0.0 port 8000 ...
+```
+
+Open up a browser and navigate to `http://localhost:8000` (if the number above is not 8000, use whatever number you see in your terminal instead). You should see any pages that you have created so far!
+
+### Automatically Detecting Changes
+
+If you'd like DocumentJS to rebuild the site every time you make changes, you can use the `-w` (watch) flag while you're working on the site so you don't have to run the `documentjs` command every time:
+
+```
+> documentjs -w
+```
+
+----
+Continue to the next guide: <br >
+[&#62; Customizing DocumentCSS](/docs/customize.html).

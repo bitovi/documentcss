@@ -1,5 +1,4 @@
 @page lsg-adding Adding to Existing JS Docs
-@parent howTo
 @hide sidebar
 @outline 2 ul
 

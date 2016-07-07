@@ -17,7 +17,7 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>DocumentCSS - Frequently Asked Questions </title>
+	<title>Guides - Publish </title>
 	<meta name="description" content="DocumentCSS is an open source Live Style Guide creation tool, and sister to DocumentJS">
 	<meta name="author" content="Bitovi - DocumentCSS">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,7 +43,7 @@
 		<script type="text/javascript" src="static/html5shiv.js"></script>
 	<!--<![endif]-->
 </head>
-<body class="faq">
+<body class="publish">
 		<div id="greyOutUnderNav" style="display:none;"></div>
 		<header>
 			<nav class="navbar navbar-default navbar-fixed-top">
@@ -83,7 +83,7 @@
 							<li class="examples-menu">
 								<a href="/examples/styles/index.html">Live Example</a>
 							</li>
-							<li class="active">
+							<li >
 								<a href="/faq.html">FAQs</a>
 							</li>
 						</ul>
@@ -118,7 +118,7 @@
 		
 		<section class="title">
 			<div class="heading">
-<h1>Frequently Asked Questions</h1>
+<h1>Publish</h1>
 	<ul class="tags">
 		<li>page</li>
 	</ul>
@@ -129,7 +129,7 @@
 <div class="sub-heading">
 	
 	
-		<span class="module">faq</span>
+		<span class="module">publish</span>
 	
 	
 	
@@ -148,7 +148,7 @@
 		
 		
 		<section class="contents-wrapper">
-			<span class="contents-title">Frequently Asked Questions</span>
+			<span class="contents-title">Publish</span>
 			<section class="contents">
 			</section>
 		</section>
@@ -156,6 +156,11 @@
 		
 		
 
+		
+		<section class="description">
+			<p>Once you've created the Live Style Guide, you may want to be able to publish it to share it with stakeholders.</p>
+
+		</section>
 		
 
 		
@@ -167,68 +172,14 @@
 
 		
 		<section class="comment">
-			<h2>Configuration Questions</h2>
-<h3>Does DocumentCSS support .scss/.less/.whatever files?</h3>
-<p>Yes! DocumentCSS supports all styling languages (and most development languages, this is a sibling to <a href="http://documentjs.com">DocumentJS</a> after all).</p>
-<p>You can read more about how to tell it which languages you're using on the <a href="/docs/lsg-quickstart-configuration.html">configuration page</a> of the guides.</p>
-<h3>How do I tell DocumentCSS what files to look for?</h3>
-<p>DocumentCSS looks for the file types defined in your <code>documentjs.json</code> file. You'll want to edit the <code>&quot;glob&quot;</code> section with file paths and extensions:</p>
-<pre><code>{
-  "sites": {
-    "styles": {
-      "glob": "styles/**/*.{less,md}", //<-Looking for LESS and Markdown files in folders inside the styles folder.
-      "dest": "styleguide",
-      "parent": "styles" 
-    }
-  }
-}</code></pre>
-<p>You can read more about this on the <a href="/docs/lsg-quickstart-configuration.html">configuration page</a> of the guides.</p>
-<h3>Is there a simple project I can download that works out of the box?</h3>
-<p>There is! <a href="https://github.com/brandonreid">Brandon Reid</a> awesomely put a two-pagestyle guide together for people to play around with. You can find it on Github at: <a href="https://github.com/brandonreid/documentcss_starter-kit">DocumentCSS Starter Kit</a>.</p>
-<h2>Customization Questions</h2>
-<h3>How do I override DocumentCSS styles?</h3>
-<p>Here's a high-level overview of the process: You tell <code>documentjs.json</code> to look for your custom template/LESS files, and then these new files need to match the DocumentJS <a href="/docs/lsg-quickstart-file-organization.html">file structure</a>.</p>
-<p>The easiest way to go about this is to copy the <a href="https://github.com/bitovi/documentjs/tree/master/site/default">default DocumentJS theme</a> to your own project and modify it. We also have a few different themes you can use on our <a href="https://github.com/bitovi/bootdocs/tree/master/themes">Bootdocs</a> project.</p>
-<p>You can get a full breakdown of how to customize your version of DocumentCSS in the <a href="/docs/lsg-custom-styles.html">customizing look and feel</a> section of the guides.  We hope that future versions of DocumentJS will have an easier theming engine.</p>
-<h3>Can I restyle DocumentCSS in SCSS instead of LESS?</h3>
-<p>Short answer: not easily.</p>
-<p>DocumentCSS is built in LESS and stripping that out in favor of writing styles in another language would be a huge task. With enough time and patience, anything is possible though.</p>
-<h3>How do I update the menu?</h3>
-<p>The top menu is of your Living Style Guide is hardcoded into the theme files. You can learn how to update by following <a href="/docs/use.html#section=section_UpdatingtheTopMenu">this guide</a>.</p>
-<h3>Why isn't my theme updating?</h3>
-<p>To save time, DocumentJS doesn’t re-build the theme every time the site is generated. In order to get the theme or main navigation to update you have to force the documentjs task. You can do this with the <code>-f</code> flag:</p>
-<pre><code>> documentjs -f</code></pre>
-<p>You can force and watch at the same time too:</p>
-<pre><code>> documentjs -f -w</code></pre>
-<p>Depending on the size of your documentation site, this can take a long time. So we recommend dropping the <code>-f</code> unless you're editing the template itself. Documentation comments and demos shouldn't need to be forced.</p>
-<h2>Troubleshooting Questions</h2>
-<h3>Why are demos returning 404s?</h3>
-<p>This is because of one of two issues:</p>
-<ol>
-<li><p>The path is wrong/there's a typo. Double-check the location of your demo files in relation to the compiled documentation files. If you follow our <a href="/docs/lsg-quickstart-file-organization.html">file structure</a> in the guides, you demos should be accessible by using this path:</p>
- <pre><code>@demo demos/forms.html</code></pre></li>
-<li><p>The demo doesn't exist yet. I pre-link to demos in documentation comments and then forget to actually create the demo all the time.</p></li>
-</ol>
-<blockquote>
-<p><em>It’s important to know that DocumentJS does not move or copy your demos to the generated site folder. Using <code>@demo</code> only tells DocumentJS to create a link to that location. We hope that future versions of DocumentJS will handle this for us.</em></p>
-</blockquote>
-<h3>Why aren't demos pulling the right styles?</h3>
-<p>The demos are highly manual right now and embedded in iframes. What this means is that you'll need to manually link to the compiled stylesheet for your application. You can either use a relative path to the distribution folder your application compiles to, or if your css is hosted online, you can link to that.</p>
-<p>Example: For the demos in our DocumentCSS documentation of Bootstrap elements, <a href="https://github.com/bitovi/bootdocs">Bootdocs</a>, we linked to the Bootstrap CDN so our demos will always reflect any changes Bootstrap makes.</p>
-<pre><code>&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" /&gt;
-</code></pre>
-<p>For the demos on this website, <a href="/examples/styles/index.html">documenting the styles these guides are using</a>, we used a relative path.</p>
-<pre><code>&lt;link rel="stylesheet" href="./static/bundles/static.css" /&gt;
-</code></pre>
-<p>So if you have:</p>
-<pre><code>@demo demos/forms.html</code></pre>
-<p>Then the <code>forms.html</code> file should have a reference to the CSS in the <code>&lt;head&gt;</code> of the HTML. We hope future versions of DocumentJS will automate the inclusion of CSS in demos to make this easier.</p>
-<h3>How do I get the '@' symbol to display in my documentation? I keep getting a warning!</h3>
-<p>If your style guide includes content with the <code>@</code>symbol, like a LESS variable name or media queries, DocumentJS returns a warning because this is the same character it uses to denote relationships and content within the style guide.</p>
-<p>So if you see:</p>
-<pre><code> WARNING!!
- There is no @foo tag. did you mean @add ? </code></pre>
-<p>Simply use two '@'s like so: <code>@@variable-name</code>.</p>
+			<h2>The Generated Site</h2>
+<p>However you decide to publish your Live Style Guide, everything you need has been generated in the output directory defined in your <code>document.json</code> configuration file. In our guides, this directory is <code>styleguide</code>. Simply publish this entire folder and you'll have a self-contained site.</p>
+<h2>Live Hosting</h2>
+<p>Your Live Style Guide will automatically change and evolve along with your project. However, if you'd like your published guide to change as well, you'll need to do some additional setup based on how you're hosting the site.</p>
+<h3>GitHub Pages</h3>
+<p>If your project is using <a href="https://pages.github.com/">GitHub Pages</a>, the publised version will automatically update whenever you push changes to the gh-pages branch. It is important to note that you <strong><em>must run the documentjs command to build the site locally, then push the generated files to GitHub</em></strong>.</p>
+<h3>Advanced Setup</h3>
+<p>For other situations, you may need a developer's help with hosting the Live Style Guide. If you need help with a specific project, you can also ask in <a href="gitter.im/bitovi/documentjs">Gitter</a>.</p>
 
 		</section>
 		
@@ -304,7 +255,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"type":"page","name":"faq","src":"pages/faq.md","description":"","title":"Frequently Asked Questions","hideSidebar":true,"dest":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/","glob":{"pattern":"pages/*.md","ignore":"{pages/guides.md,pages/guides/**/*,pages/styles.md}","cwd":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss"},"templates":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/theme/donejs/templates","static":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/theme/donejs/static","generators":["html"],"docConfigDest":"documentjs.json","project":{}};
+		var docObject = {"type":"page","name":"publish","src":"pages/guides/publish.md","description":"Once you've created the Live Style Guide, you may want to be able to publish it to share it with stakeholders.","title":"Publish","parent":"howTo","order":4,"hideSidebar":true,"outline":{"depth":2,"tag":"ul"},"dest":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/docs","glob":{"pattern":"{pages/guides/*.md,pages/guides/**/*.md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss"},"templates":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/theme/donejs/templates","static":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/theme/donejs/static","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
 	</script>
 
 	

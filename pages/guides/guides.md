@@ -2,9 +2,12 @@
 @group howTo How-To Guides
 @hide article
 
-Though you're documenting your styles, the tool you'll be using is DocumentJS. [Documentjs.com](https://documentjs.com) is developer focused though, and can be hard to read and use as a designer. These guides are intended to help clear those issues and introduce design-focused features.
+Get using DocumentCSS by following these guides:
 
-There are four guides, each written for specific cases:
-1. [Quickstart Guide](/docs/quickstart.html)
-2. [How to Use DocumentCSS](docs/using.html)
-3. [How to Customize the Documentation]()
+1. [Quick Start](/docs/quickstart.html) - A quick run through setting up DocumentCSS and generating a simple page.
+2. [Setup](/docs/setup.html) - An in-depth guide to setting up DocumentCSS with all of the bells and whisels.
+3. [Use](/docs/using.html) - Learn how to create pages, documents styles and add interactive demos.
+4. [Customize](/docs/customize.html) - Align the way the docs look like to your specific brand.
+5. [Publish](/docs/publish.html) - Make your Living Style Guide available to everybody on your team!
+
+

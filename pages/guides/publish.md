@@ -1,5 +1,5 @@
-@page publishing Publishing Your Style Guide
-@parent howTo
+@page publish Publish
+@parent howTo 4
 @hide sidebar
 @outline 2 ul
 

@@ -47,19 +47,7 @@ DocumentCSS is built in LESS and stripping that out in favor of writing styles i
 
 
 ### How do I update the menu?
-The main navigation for your style guide is hardcoded into the theme files. To change the navigation menu items, you have to edit the theme file `layout.mustache`
-
-There are two ways to do this: 
-1. Create an entirely new theme by copying the default theme and editing it. This is useful if you want to make a lot of changes to the theme. 
-2. Copy and edit only the `layout.mustache` template file. This is useful if you’re not going to make any other changes to the theme. To do this: 
-    - Copy `layout.mustache` to a folder called `templates` in your project (like `theme/templates`).
-    - Make any modifications you have to the `layout.mustache` file.
-    - Tell DocumentJS to look for this new theme in your `documentjs.json` like this: 
-      <pre><code>"siteDefaults": {
-        "templates": "theme/templates",
-        },</code></pre>
-    - When you generate the site, be sure to use the `-f` flag to force DocumentJS to re-generate the theme files: 
-      <pre><code> > documentjs -f</code></pre>
+The top menu is of your Living Style Guide is hardcoded into the theme files. You can learn how to update by following [this guide](/docs/use.html#section=section_UpdatingtheTopMenu).
 
 
 ### Why isn't my theme updating?

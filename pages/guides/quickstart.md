@@ -27,7 +27,7 @@ From the console or terminal, go to your project folder and use `npm` to install
 > npm install documentjs --save-dev
 ```
 
-*The --sav-dev flag saves DocumentJS in your `package.json` so other people who are working on your project can also use DocumentJS.*
+The --save-dev flag saves DocumentJS in your `package.json` so other people who are working on your project can also use DocumentJS.
 
 ## File Structure
 
@@ -65,6 +65,7 @@ To generate a Live Style Guide, create a file called `documentjs.json` in the to
 Your project's folder structure should look like this:
 ```
 project/
+    node_modules
     package.json
     styles/
         styles.md
@@ -163,7 +164,7 @@ project/
         buttons.css
         styles.md
     demos/
-      buttons.html
+        buttons.html
     documentjs.json
 ```
 

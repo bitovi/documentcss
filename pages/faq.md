@@ -33,7 +33,7 @@ There is! <a href="https://github.com/brandonreid">Brandon Reid</a> awesomely pu
 ## Customization Questions
 
 ### How do I override DocumentCSS styles?
-Here's a high-level overview of the process: You tell `documentjs.json` to look for your custom template/LESS files, and then these new files need to match the DocumentJS <a href="/docs/lsg-quickstart-file-organization.html">file structure</a>. 
+Here's a high-level overview of the process: You tell `documentjs.json` to look for your custom template/LESS files, and then these new files need to match the DocumentJS <a href="docs/setup.html#section=section_FileOrganization">file structure</a>. 
 
 The easiest way to go about this is to copy the <a href="https://github.com/bitovi/documentjs/tree/master/site/default">default DocumentJS theme</a> to your own project and modify it. We also have a few different themes you can use on our <a href="https://github.com/bitovi/bootdocs/tree/master/themes">Bootdocs</a> project.
 

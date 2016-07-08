@@ -34,18 +34,19 @@ Create a `documentjs.json` file in the top level of your project like this:
     }
 }
 ```
+Now let's break down this configuration:
 
-### Site Name
+#### Site Name
 
 From `documentjs.json`:
 ```json
         "styles" : {
 ```
 
-This name doesn't really matter unless you're configuring more than one site, which isn't covered in this guide.
+This name can be anything unless you're configuring more than one site, which isn't covered in this guide.
 
 
-### Source Files
+#### Source Files
 
 This is how DocumentJS knows where to look for comments and markdown files that it will use to generate the site. `glob` specifies a pattern for this.
 
@@ -88,7 +89,7 @@ Altogether, `styles/**/*.{css,less,md}` means "look in all folders and subfolder
             "glob": "{styles,static/themes/css}/**/*.{css,scss,md}"
 ```
 
-### Destination Directory
+#### Destination Directory
 
 From `documentjs.json`:
 ```json

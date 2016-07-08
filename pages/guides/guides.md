@@ -4,10 +4,31 @@
 
 Get using DocumentCSS by following these guides:
 
-1. [Quick Start](/docs/quickstart.html) - A quick run through setting up DocumentCSS and generating a simple page.
-2. [Setup](/docs/setup.html) - An in-depth guide to setting up DocumentCSS with all of the bells and whisels.
-3. [Use](/docs/using.html) - Learn how to create pages, documents styles and add interactive demos.
-4. [Customize](/docs/customize.html) - Align the way the docs look like to your specific brand.
-5. [Publish](/docs/publish.html) - Make your Living Style Guide available to everybody on your team!
+<ul class="list-group">
+  <li class="list-group-item">
+    <div class="list-group-item-heading"><a href="/docs/quickstart.html">Quick Start</a></div>
+    <p class="list-group-item-text">A quick run through setting up DocumentCSS and generating a simple page.</p>
+  </li>
+  <li class="list-group-item">
+    <div class="list-group-item-heading"><a href="/docs/setup.html">Setup</a></div>
+    <p class="list-group-item-text">An in-depth guide to setting up DocumentCSS with all of the bells and whisels.</p>
+  </li>
+  <li class="list-group-item">
+    <div class="list-group-item-heading"><a href="/docs/using.html">Use</a></div>
+    <p class="list-group-item-text">Learn how to create pages, documents styles and add interactive demos.</p>
+  </li>
+  <li class="list-group-item">
+    <div class="list-group-item-heading"><a href="/docs/customize.html">Customize</a></div>
+    <p class="list-group-item-text">Align the way the docs look like to your specific brand.</p>
+  </li>
+  <li class="list-group-item">
+    <div class="list-group-item-heading"><a href="/docs/publish.html">Publish</a></div>
+    <p class="list-group-item-text">Make your Living Style Guide available to everybody on your team!</p>
+  </li>
+</ul>
 
+#### Need Help?
 
+- Visit our [FAQ page](faq.html)
+- Ask questions on [Gitter](https://gitter.im/bitovi/documentcss)
+- Open an issue on [Github](https://github.com/bitovi/documentcss/issues/new)

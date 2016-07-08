@@ -183,7 +183,7 @@
 <pre><code>&gt; cd path/to/myproject
 &gt; npm install documentjs --save-dev
 </code></pre>
-<p><em>The --sav-dev flag saves DocumentJS in your <code>package.json</code> so other people who are working on your project can also use DocumentJS.</em></p>
+<p>The --save-dev flag saves DocumentJS in your <code>package.json</code> so other people who are working on your project can also use DocumentJS.</p>
 <h2>File Structure</h2>
 <p>Create the files and folders that DocumentCSS will use to generate the docs.</p>
 <ul>
@@ -217,6 +217,7 @@ This is my style guide
 </ul>
 <p>Your project's folder structure should look like this:</p>
 <pre><code>project/
+    node_modules
     package.json
     styles/
         styles.md
@@ -303,7 +304,7 @@ This is my style guide
         buttons.css
         styles.md
     demos/
-      buttons.html
+        buttons.html
     documentjs.json
 </code></pre>
 <h2>Run</h2>

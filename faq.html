@@ -83,7 +83,16 @@
 									</ul>
 							</li>
 							<li class="examples-menu">
-								<a href="/examples/styles/index.html">Live Example</a>
+								<a href="/examples/styles/index.html">Live Examples</a>
+								
+								<ul class="dropdown-menu">
+								  <li><a href="/examples/styles/index.html">DocumentCSS Style Guide</a></li>
+                  <li><a href="/theme-default/index.html">Theme: Default</a></li>
+                  <li><a href="/theme-classic/index.html">Theme: Classic</a></li>
+                  <li><a href="/theme-bootstrap3/index.html">Theme: Bootstrap 3</a></li>
+                  <li><a href="/theme-blankslate/index.html">Theme: Blank Slate</a></li>
+								</ul>
+									
 							</li>
 							<li class="active">
 								<a href="/faq.html">FAQs</a>
@@ -207,12 +216,12 @@
 <h3>Why are demos returning 404s?</h3>
 <p>This is because of one of two issues:</p>
 <ol>
-<li><p>The path is wrong/there's a typo. Double-check the location of your demo files in relation to the compiled documentation files. If you follow our <a href="/docs/lsg-quickstart-file-organization.html">file structure</a> in the guides, you demos should be accessible by using this path:</p>
+<li><p>The path is wrong/there's a typo. Double-check the location of your demo files in relation to the compiled documentation files. If you follow our <a href="/docs/setup.html#section=section_FileOrganization">file structure</a> in the guides, you demos should be accessible by using this path:</p>
  <pre><code>@demo demos/forms.html</code></pre></li>
 <li><p>The demo doesn't exist yet. I pre-link to demos in documentation comments and then forget to actually create the demo all the time.</p></li>
 </ol>
 <blockquote>
-<p><em>It’s important to know that DocumentJS does not move or copy your demos to the generated site folder. Using <code>@demo</code> only tells DocumentJS to create a link to that location. We hope that future versions of DocumentJS will handle this for us.</em></p>
+<p><strong>It’s important to know that DocumentJS does not move or copy your demos to the generated site folder. Using <code>@demo</code> only tells DocumentJS to create a link to that location. We hope that future versions of DocumentJS will handle this for us.</strong></p>
 </blockquote>
 <h3>Why aren't demos pulling the right styles?</h3>
 <p>The demos are highly manual right now and embedded in iframes. What this means is that you'll need to manually link to the compiled stylesheet for your application. You can either use a relative path to the distribution folder your application compiles to, or if your css is hosted online, you can link to that.</p>
@@ -266,7 +275,7 @@
 							<a href="/Guides.html">GUIDES</a>
 						</li>
 						<li>
-							<a href="/examples/styles/index.html">EXAMPLE</a>
+							<a href="/examples/styles/index.html">LIVE EXAMPLE</a>
 						</li>
 						<li>
 							<a href="/faq.html">FAQS</a>
@@ -285,16 +294,6 @@
 								<img class="footer-social-icon" src="/static/img/icon-twitter-white.svg">
 							</a>
 						</li>
-						<li>
-							<a href="https://plus.google.com/+Bitovi/posts">
-								<img class="footer-social-icon" src="/static/img/icon-googleplus-white.svg">
-							</a>
-						</li>
-<!-- 						<li>
-							<a href="https://www.youtube.com/channel/UC_HPFLeKzJNLOUnLc_3311Q/videos">
-								<img class="footer-social-icon" src="/static/img/icon-youtube-white.svg">
-							</a>
-						</li> -->
 					</ul>
 				</div>
 				<div class="footer-copyright col-sm-12">
@@ -323,5 +322,15 @@
 				src="./static/steal.production.js"
 				bundles-path="bundles"></script>
 	
+	<!-- Start of Async HubSpot Analytics Code -->
+  <script type="text/javascript">
+    (function(d,s,i,r) {
+      if (d.getElementById(i)){return;}
+      var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+      n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/2171535.js';
+      e.parentNode.insertBefore(n, e);
+    })(document,"script","hs-analytics",300000);
+  </script>
+<!-- End of Async HubSpot Analytics Code -->
 </body>
 </html>

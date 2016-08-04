@@ -65,12 +65,12 @@ Depending on the size of your documentation site, this can take a long time. So 
 ### Why are demos returning 404s?
 This is because of one of two issues:
 
-1. The path is wrong/there's a typo. Double-check the location of your demo files in relation to the compiled documentation files. If you follow our <a href="/docs/lsg-quickstart-file-organization.html">file structure</a> in the guides, you demos should be accessible by using this path:
+1. The path is wrong/there's a typo. Double-check the location of your demo files in relation to the compiled documentation files. If you follow our <a href="/docs/setup.html#section=section_FileOrganization">file structure</a> in the guides, you demos should be accessible by using this path:
     <pre><code>@demo demos/forms.html</code></pre>
 
 2. The demo doesn't exist yet. I pre-link to demos in documentation comments and then forget to actually create the demo all the time.
 
-> _It’s important to know that DocumentJS does not move or copy your demos to the generated site folder. Using `@demo` only tells DocumentJS to create a link to that location. We hope that future versions of DocumentJS will handle this for us._
+> **It’s important to know that DocumentJS does not move or copy your demos to the generated site folder. Using `@demo` only tells DocumentJS to create a link to that location. We hope that future versions of DocumentJS will handle this for us.**
 
 
 ### Why aren't demos pulling the right styles?

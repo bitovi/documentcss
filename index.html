@@ -83,7 +83,16 @@
 									</ul>
 							</li>
 							<li class="examples-menu">
-								<a href="/examples/styles/index.html">Live Example</a>
+								<a href="/examples/styles/index.html">Live Examples</a>
+								
+								<ul class="dropdown-menu">
+								  <li><a href="/examples/styles/index.html">DocumentCSS Style Guide</a></li>
+                  <li><a href="/theme-default/index.html">Theme: Default</a></li>
+                  <li><a href="/theme-classic/index.html">Theme: Classic</a></li>
+                  <li><a href="/theme-bootstrap3/index.html">Theme: Bootstrap 3</a></li>
+                  <li><a href="/theme-blankslate/index.html">Theme: Blank Slate</a></li>
+								</ul>
+									
 							</li>
 							<li >
 								<a href="/faq.html">FAQs</a>
@@ -148,30 +157,11 @@
   </div>
   <div class="right">
     <h2>How it Works</h2>
-<pre><code class="language-css">
-/**
- * @styles color-palette Color Palette
- * 
- * @description
- * Variables used to define the site's color palette.
- * @iframe demos/variables/color-palette/demo.html 630
- **/
-@night: #000000; 
-@darkSkies: #484848; 
-@thunderStorm: #706f70;  
-@cloud: #999999; 
-@haze: #cccccc;  
-@fog: #eae9e9;
-@clear: #ffffff; 
-@nightRain: #165489;
-@rain: #1f54c6; 
-@sunrise: #f7f8c3; 
-@sunset: #d9534f;
-<p></code></pre></p>
+    <img src="static/img/style-guide-demo-code.png"/>
   </div>
 </div>    
 <section class="homepage-closing">
-  <p class="explanation">DocumentCSS makes it easy to incorporate style documentation as part of your design workflow. Using a combination of custom tags and markdown, DocumentCSS parses coments on your CSS, LESS, or SASS and autogenerates a site with your documentation.</p>
+  <p class="explanation">DocumentCSS makes it easy to incorporate style documentation as part of your design workflow. Using a combination of custom tags and markdown, DocumentCSS parses coments on your CSS, Less, or SASS and autogenerates a site with your documentation.</p>
   <div class="hero-cta">
     <a href="docs/index.html">
       <button class="btn btn-primary btn-lg">Get Started</button>
@@ -214,7 +204,7 @@
 							<a href="/Guides.html">GUIDES</a>
 						</li>
 						<li>
-							<a href="/examples/styles/index.html">EXAMPLE</a>
+							<a href="/examples/styles/index.html">LIVE EXAMPLE</a>
 						</li>
 						<li>
 							<a href="/faq.html">FAQS</a>
@@ -233,16 +223,6 @@
 								<img class="footer-social-icon" src="/static/img/icon-twitter-white.svg">
 							</a>
 						</li>
-						<li>
-							<a href="https://plus.google.com/+Bitovi/posts">
-								<img class="footer-social-icon" src="/static/img/icon-googleplus-white.svg">
-							</a>
-						</li>
-<!-- 						<li>
-							<a href="https://www.youtube.com/channel/UC_HPFLeKzJNLOUnLc_3311Q/videos">
-								<img class="footer-social-icon" src="/static/img/icon-youtube-white.svg">
-							</a>
-						</li> -->
 					</ul>
 				</div>
 				<div class="footer-copyright col-sm-12">
@@ -271,5 +251,15 @@
 				src="./static/steal.production.js"
 				bundles-path="bundles"></script>
 	
+	<!-- Start of Async HubSpot Analytics Code -->
+  <script type="text/javascript">
+    (function(d,s,i,r) {
+      if (d.getElementById(i)){return;}
+      var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+      n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/2171535.js';
+      e.parentNode.insertBefore(n, e);
+    })(document,"script","hs-analytics",300000);
+  </script>
+<!-- End of Async HubSpot Analytics Code -->
 </body>
 </html>

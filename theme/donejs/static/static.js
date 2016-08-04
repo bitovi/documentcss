@@ -55,7 +55,7 @@ steal(
         windowResize();
         $( window ).resize( windowResize );
 
-        $( ".contents" ).mousemove( function ( m ) {
+        $( ".sidebar-wrapper" ).mousemove( function ( m ) {
             if ( !isMobileSize ) {
                 var $this = $( this );
                 var hoverScrollZoneSize = 50;
@@ -146,7 +146,7 @@ steal(
 
         var scrollPosOnMenuOpen = -1;
         $( ".scroll-spy-title" ).on( "click", function () {
-            var menu = $( ".contents" );
+            var menu = $( ".sidebar-wrapper" );
             if ( menu.is( ".active" ) ) {
                 menu.removeClass( "active" );
                 setBodyScroll();
@@ -160,7 +160,7 @@ steal(
             }
         });
         disableBodyScroll.push( function () {
-            return $( ".contents" ).is( ".active" );
+            return $( ".sidebar-wrapper" ).is( ".active" );
         });
 
         $( function () {
@@ -176,7 +176,7 @@ steal(
         });
 
         $( "#greyOutUnderNav" ).click( function () {
-            if ( $( ".contents" ).is( ".active" ) ) {
+            if ( $( ".sidebar-wrapper" ).is( ".active" ) ) {
                 $( ".scroll-spy-title" ).click();
             }
             if ( $( "#bs-example-navbar-collapse-1" ).is( ".in" ) ) {
@@ -229,7 +229,7 @@ steal(
                 //scrollSpyCurrentH3.html( "" );
             }
 
-            $( ".contents ul ul li.active" ).not( navToH3 ).removeClass( "active" );
+            $( ".sidebar ul ul li.active" ).not( navToH3 ).removeClass( "active" );
             navToH3.addClass( "active" );
 
             var curH2Li = navToH2.closest( "li" );
@@ -263,7 +263,7 @@ steal(
         $( function () {
             var clickFn = function () {
                 var thisLi = $( this ).closest( "li" );
-                if ( $( ".contents" ).is( ".active" ) && thisLi.is( "ul > li > ul > li" ) ) {
+                if ( $( ".sidebar-wrapper" ).is( ".active" ) && thisLi.is( "ul > li > ul > li" ) ) {
                     $( ".scroll-spy-title" ).click();
                 }
             };

@@ -3,7 +3,7 @@
 @group Styles.baseline-elements 2 Baseline Elements
 @group Styles.docs 3 Docs
 
-@hide sidebar
+@hide article
 @outline 2 ul
 
-***This is the Live Style Guide for DocumentCSS.com. If you're using DocumentCSS to generate your own Live Style Guide, check out the [Live Style Guide documentation](/docs/live-style-guide.html).***
+**This is the Living Style Guide for DocumentCSS.com. If you'd like to use DocumentCSS to generate your own Living Style Guide, check out our [Guides](/docs/index.html).**

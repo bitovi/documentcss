@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>Bootdocs - Scrollspy </title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+  	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+</head>
+
+<body>
+	<header>
+		<nav>
+			<h1>Bootdocs</h1>
+        <a href="index.html">Home</a> • <a href="accessibility.html">Design</a> • <a href="Overview.html">CSS</a> • <a href="glyphicons.less.html">Components</a>
+		</nav>
+	</header>
+  <hr />
+	
+<div class="container-fluid api">
+
+	
+	<nav class="sidebar">
+		
+		<ul class="api cascading primary-grouping"> 
+	
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="index.html" data-search="Bootdocs">
+				Bootdocs
+			</a>
+			
+		</li>
+		
+		
+			
+			<li class="search-container active">
+			<a class="sidebar-title" href="javascript.html" data-search="Javascript">
+				Javascript
+			</a>
+			
+	<ul>
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="javascript-overview.html" data-search="Overview">
+						Overview
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="javascript-modals.html" data-search="Modals">
+						Modals
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="javascript-transitions.html" data-search="Transitions">
+						Transitions
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="javascript-dropdowns.html" data-search="Dropdowns">
+						Dropdowns
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container active ">
+					<a class="page" href="javascript-scrollspy.html" data-search="Scrollspy">
+						Scrollspy
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="javascript-tabs.html" data-search="Togglable tabs">
+						Togglable tabs
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="javascript-tooltips.html" data-search="Tooltips">
+						Tooltips
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="javascript-popovers.html" data-search="PopOvers">
+						PopOvers
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="javascript-alerts.html" data-search="Alerts">
+						Alerts
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="javascript-buttons.html" data-search="Buttons">
+						Buttons
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="javascript-collapse.html" data-search="Collapse">
+						Collapse
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="javascript-carousel.html" data-search="Carousel">
+						Carousel
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="javascript-affix.html" data-search="Affix">
+						Affix
+					</a>
+				</li>
+				
+			
+			
+		
+	</ul>
+
+		</li>
+			
+		
+	
+</ul>
+	</nav>
+	
+	
+	
+	<article class="content docs">
+	
+	
+		
+		<section class="title">
+			<div class="heading">
+<h1>Scrollspy</h1>
+	<ul class="tags">
+		<li>page</li>
+	</ul>
+	
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+		<span class="module">javascript-scrollspy</span>
+	
+	
+	
+	<span class="inherits">&nbsp;</span>
+</div>
+
+<ul class="links">
+	
+	
+	
+	
+</ul>
+<br />
+		</section>
+		
+		
+		
+		<section class="contents">
+		</section>
+		
+		
+		
+
+		
+		<section class="description">
+			<h2>Example in navbar</h2>
+<p>The ScrollSpy plugin is for automatically updating nav targets based on scroll position. Scroll the area below the navbar and watch the active class change. The dropdown sub items will be highlighted as well.</p>
+
+		</section>
+		
+
+		
+			
+		
+		
+		
+		
+
+		
+		<section class="comment">
+			<h3>Within a navbar</h3>
+<div class='demo_wrapper' data-demo-src='demos/js-scrollspy/demo.html'></div>
+<h2>Usage</h2>
+<h4>Requires Bootstrap nav</h4>
+<p>Scrollspy currently requires the use of a Bootstrap nav component for proper highlighting of active links.</p>
+<h4>Resolvable ID targets required</h4>
+<p>Navbar links must have resolvable id targets. For example, a <code>&lt;a href=&quot;#home&quot;&gt;home&lt;/a&gt;</code> must correspond to something in the DOM like <code>&lt;div id=&quot;home&quot;&gt;&lt;/div&gt;</code>.</p>
+<h4>Non-:visible target elements ignored</h4>
+<p>Target elements that are not <code>:visible</code> according to jQuery will be ignored and their corresponding nav items will never be highlighted.</p>
+<h2>Requires relative positioning</h2>
+<p>No matter the implementation method, scrollspy requires the use of position: relative; on the element you're spying on. In most cases this is the <code>&lt;body&gt;</code>. When scrollspying on elements other than the <code>&lt;body&gt;</code>, be sure to have a height set and <code>overflow-y: scroll</code>; applied.</p>
+<h2>Via data attributes</h2>
+<p>To easily add scrollspy behavior to your topbar navigation, add <code>data-spy=&quot;scroll&quot;</code> to the element you want to spy on (most typically this would be the <code>&lt;body&gt;</code>). Then add the <code>data-target</code> attribute with the ID or class of the parent element of any Bootstrap <code>.nav</code> component.</p>
+<pre><code>body {
+  position: relative;
+}
+</code></pre>
+<pre><code>&lt;body data-spy=&quot;scroll&quot; data-target=&quot;#navbar-example&quot;&gt;
+  ...
+  &lt;div id=&quot;navbar-example&quot;&gt;
+    &lt;ul class=&quot;nav nav-tabs&quot; role=&quot;tablist&quot;&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  ...
+&lt;/body&gt;
+</code></pre>
+<h2>Via JavaScript</h2>
+<p>After adding <code>position: relative;</code> in your CSS, call the scrollspy via JavaScript:</p>
+<pre><code>$('body').scrollspy({ target: '#navbar-example' })
+</code></pre>
+<h2>Methods</h2>
+<p><code>.scrollspy('refresh')</code></p>
+<p>When using scrollspy in conjunction with adding or removing of elements from the DOM, you'll need to call the refresh method like so:</p>
+<pre><code>$('[data-spy=&quot;scroll&quot;]').each(function () {
+  var $spy = $(this).scrollspy('refresh')
+})
+</code></pre>
+<h2>Options</h2>
+<p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-offset=&quot;&quot;</code>.</p>
+<table class="table table-bordered table-striped js-options-table">
+<thead>
+ <tr>
+   <th>Name</th>
+   <th>type</th>
+   <th>default</th>
+   <th>description</th>
+ </tr>
+</thead>
+<tbody>
+ <tr>
+   <td>offset</td>
+   <td>number</td>
+   <td>10</td>
+   <td>Pixels to offset from top when calculating position of scroll.</td>
+ </tr>
+</tbody>
+</table>
+<h2>Events</h2>
+<table class="table table-bordered table-striped bs-events-table">
+<thead>
+ <tr>
+   <th>Event Type</th>
+   <th>Description</th>
+ </tr>
+</thead>
+<tbody>
+ <tr>
+   <td>activate.bs.scrollspy</td>
+   <td>This event fires whenever a new item becomes activated by the scrollspy.</td>
+</tr>
+</tbody>
+</table>
+<pre><code>$('#myScrollspy').on('activate.bs.scrollspy', function () {
+  // do something…
+})
+</code></pre>
+
+		</section>
+		
+		
+
+		
+
+		
+	
+	
+	</article>
+	
+	
+
+</div>
+
+
+
+
+
+	
+	<footer>
+	  <hr />
+	  <p>Built by <a href="http://bitovi.com/">Bitovi</a> using <a href="http://documentjs.com/">DocumentJS</a>.
+	</footer>
+	
+	<script type="text/javascript">
+		var docObject = {"type":"page","name":"javascript-scrollspy","src":"markdown/JS/scrollspy.md","description":"## Example in navbar\nThe ScrollSpy plugin is for automatically updating nav targets based on scroll position. Scroll the area below the navbar and watch the active class change. The dropdown sub items will be highlighted as well.","title":"Scrollspy","parent":"javascript","order":5,"templates":"/server/bootdocs/themes/blankslate/templates","static":"/server/bootdocs/themes/blankslate/static","glob":{"pattern":"{less,markdown}/**/*.{css,less,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/server/bootdocs"},"dest":"/server/bootdocs/styleguide","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+	</script>
+	
+	
+
+		<script type='text/javascript' 
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal.production.js"
+	    		bundles-path="bundles"></script>
+	
+</body>
+
+</html>

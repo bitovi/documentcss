@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie lt-ie9" lang="en">
+<![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Bootdocs - Updating Icons </title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+	<!--[if lt IE 9]>
+   <script type="text/javascript" src="static/html5shiv.js"></script>
+    <!--<![endif]-->
+</head>
+
+<body class="docs">
+	<header>
+		<nav class="container">
+
+			<div class="logo-menu">
+				<h1>Bootdocs</h1>
+			</div>
+
+			<ul class="main-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="accessibility.html">Design</a></li>
+        <li><a href="Overview.html">CSS</a></li>
+        <li><a href="glyphicons.less.html">Components</a></li>
+        <li><a href="javascript.html">Javascript</a></li>
+      </ul>
+
+			<div class="bitovi-menu pull-right">
+				<a href="http://bitovi.com" class="bitovi icon-bits">Bitovi</a>
+				<ul class="dropdown-menu">
+					<li><a href="http://bitovi.com">Bitovi.com</a></li>
+					<li><a href="http://bitovi.com/blog/">Blog</a></li>
+					<li><a href="http://bitovi.com/design/">Design</a></li>
+					<li><a href="http://bitovi.com/development/">Development</a></li>
+					<li><a href="http://bitovi.com/training/">Training</a></li>
+					<li><a href="http://bitovi.com/open-source/">Open Source</a></li>
+					<li><a href="http://bitovi.com/about/">About</a></li>
+					<li><a href="http://bitovi.com/contact/">Contact Us</a></li>
+				</ul>
+			</div>
+
+		</nav>
+	</header>
+
+	
+<div class="container api">
+
+	
+	<nav class="sidebar">
+		
+		<ul class="api cascading primary-grouping"> 
+	
+		
+		<li class="search-container active parent">
+			<a class="sidebar-title" href="index.html" data-search="Bootdocs">
+				Bootdocs
+			</a>
+			
+		</li>
+		
+		
+			
+			<li class="search-container active">
+			<a class="sidebar-title" href="design.html" data-search="Design">
+				Design
+			</a>
+			
+	<ul>
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="accessibility.html" data-search="Accessibility Guidelines">
+						Accessibility Guidelines
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="file-structure.html" data-search="File Structure">
+						File Structure
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="coding-standards.html" data-search="Coding Standards">
+						Coding Standards
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container active ">
+					<a class="page" href="updating-icons.html" data-search="Updating Icons">
+						Updating Icons
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="search-container">
+					<a class="page" href="updating-style-guide.html" data-search="Updating the Style Guide">
+						Updating the Style Guide
+					</a>
+				</li>
+				
+			
+			
+		
+	</ul>
+
+		</li>
+			
+		
+	
+</ul>
+	</nav>
+	
+	
+	
+	<article class="content docs">
+	
+	
+		
+		<section class="title">
+			<div class="heading">
+<h1>Updating Icons</h1>
+	<ul class="tags">
+		<li>page</li>
+	</ul>
+	
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+		<span class="module">updating-icons</span>
+	
+	
+	
+	<span class="inherits">&nbsp;</span>
+</div>
+
+<ul class="links">
+	
+	
+	
+	
+</ul>
+<br />
+		</section>
+		
+		
+		
+		<section class="contents">
+		</section>
+		
+		
+		
+
+		
+		<section class="description">
+			<h2>Adding New Icons</h2>
+
+		</section>
+		
+
+		
+			
+		
+		
+		
+		
+
+		
+		<section class="comment">
+			<h3>Creating an Icon</h3>
+<ul>
+<li>Use one of the existing svg icons as a template</li>
+<li>Follow the linear and light weight style</li>
+<li>Save icon as an .svg and store a copy under the <a href="https://storegit.apple.com/projects/CS/repos/publishing-ui/browse/docs/guides/icon-svg">publishing-ui</a> repo</li>
+</ul>
+<h2>Adding the Icon to the Icon Font</h2>
+<ul>
+<li>Upload the <a href="https://storegit.apple.com/projects/CS/repos/publishing-ui/browse/docs/guides/pui-icons.json">pui-icons.json</a> file to <a href="https://icomoon.io/app/">icomoon.io</a>.</li>
+<li>Add new icon to the library</li>
+<li>Generate Font</li>
+<li>Under &quot;Preferences&quot; make sure the setting <strong>Encode and Embed Font in CSS</strong> is selected.</li>
+<li>Update generated json file</li>
+<li>Update pui-icons.less with new icons and embeded font</li>
+<li>Commit changes</li>
+</ul>
+
+		</section>
+		
+		
+
+		
+
+		
+	
+	
+	</article>
+	
+	
+
+</div>
+
+
+
+
+
+
+	<footer>
+	  <p class="center">Built by <a href="http://bitovi.com/">Bitovi</a> using <a href="http://documentjs.com/">DocumentJS</a>.
+	</footer>
+	<script type="text/javascript">
+		var docObject = {"type":"page","name":"updating-icons","src":"markdown/design/updating-icons.md","description":"## Adding New Icons","title":"Updating Icons","parent":"design","order":3,"templates":"/server/bootdocs/themes/default/templates","static":"/server/bootdocs/themes/default/static","glob":{"pattern":"{less,markdown}/**/*.{css,less,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/server/bootdocs"},"dest":"/server/bootdocs/styleguide","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+	</script>
+
+	
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript'
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal.production.js"
+	    		bundles-path="bundles"></script>
+	
+</body>
+
+</html>

@@ -167,7 +167,7 @@
 
 		
 		<section class="comment">
-			<p><em>This is the quick getting started guide. For in depth instructions, check out the <a href="/docs/standalone-lsg.html">Standalone Live Style Guide</a>.</em></p>
+			<p><em>This is the quick getting started guide. For in depth instructions, check out the <a href="/docs/standalone-lsg.html">Standalone Living Style Guide</a>.</em></p>
 <h2>Install</h2>
 <p>Install <a href="https://nodejs.org/">Node.js</a> on your computer and create a <code>package.json</code> file in your project's root directory with something like:</p>
 <pre><code>{
@@ -181,22 +181,37 @@
 </code></pre>
 <p>From the console or terminal, go to your project folder and use <code>npm</code> to install DocumentJS:</p>
 <pre><code>&gt; cd path/to/myproject
-&gt; npm install documentjs --save-dev
+&gt; npm install documentjs
 </code></pre>
-<p>The --save-dev flag saves DocumentJS in your <code>package.json</code> so other people who are working on your project can also use DocumentJS.</p>
 <h2>File Structure</h2>
 <p>Create the files and folders that DocumentCSS will use to generate the docs.</p>
 <ul>
 <li>Create a folder called <code>styles</code> which will hold all of your CSS or Less files.</li>
-<li>Create a markdown file to define as the primary parent, like <code>styles.md</code>, inside the <code>styles</code> folder</li>
+<li>Create a markdown file to define as the primary parent, like <code>styles.md</code>.</li>
 </ul>
+<p>Your file structure should look like this:</p>
+<pre><code>project
+├──node_modules
+├──package.json
+├──styles
+   └──styles.md
+</code></pre>
 <p>Inside the <code>styles.md</code> add:</p>
 <pre><code>@page styles Styles
 
 This is my style guide
 </code></pre>
 <h2>Configure</h2>
-<p>To generate a Live Style Guide, create a file called <code>documentjs.json</code> in the top level of your project like this:</p>
+<p>To generate a Living Style Guide, create a file called <code>documentjs.json</code> in the top level of your project.</p>
+<p>Your file structure should now look like this:</p>
+<pre><code>project
+├──documentjs.json
+├──node_modules
+├──package.json
+├──styles
+   └──styles.md
+</code></pre>
+<p>Inside of <code>documentjs.json</code> add:</p>
 <pre><code>{
     &quot;sites&quot;: {
         &quot;styles&quot;: {
@@ -208,122 +223,22 @@ This is my style guide
 }
 </code></pre>
 <ul>
-<li>&quot;glob&quot; tells DocumentCSS to look in the <code>styles</code> folder and read all files with a <code>css</code>, <code>less</code>, <code>scss</code> or <code>md</code> extension.
-<ul>
-<li><em>You can remove either less and/or scss depending on what you're writing styles with.</em></li>
-</ul></li>
-<li>&quot;dest&quot; tells DocumentCSS to automatically create a <code>styleguide</code> folder to host the generated HTML pages.</li>
-<li>&quot;parent&quot; tells DocumentCSS to use the parent declaration <code>styles</code> from <code>styles.md</code> as the main landing page.</li>
+<li><strong>glob</strong> — tells DocumentCSS to look in the <code>styles</code> folder and read all files with a <code>css</code>, <code>less</code>, <code>scss</code> or <code>md</code> extension. <em>You can remove either less and/or scss depending on what you're writing styles with.</em></li>
+<li><strong>dest</strong> — tells DocumentCSS to automatically create a <code>styleguide</code> folder to host the generated HTML pages.</li>
+<li><strong>parent</strong> — tells DocumentCSS to use the parent declaration <code>styles</code> from <code>styles.md</code> as the main landing page.</li>
 </ul>
-<p>Your project's folder structure should look like this:</p>
-<pre><code>project/
-    node_modules
-    package.json
-    styles/
-        styles.md
-    documentjs.json
-</code></pre>
-<h2>Document</h2>
-<p>To document your CSS use the following inside your CSS, SCSS, LESS, or Markdown files:</p>
-<table>
-  <tr>
-      <th>Tag</th>
-      <th>Use To</th>
-  </tr>
-  <tr>
-      <td>@page</td>
-      <td>Declare a markdown file as a page in your site.</td>
-  </tr>
-  <tr>
-      <td>@parent</td>
-      <td>Specify the parent of a page or stylesheet.</td>
-  </tr>
-  <tr>
-      <td>@stylesheet</td>
-      <td>Declare a stylesheet file as page in your site.</td>
-  </tr>
-  <tr>
-      <td>@style</td>
-      <td>Declare a comment as a style inside of a stylesheet.</td>
-  </tr>
-  <tr>
-      <td>@description</td>
-      <td>Declare a comment as description of a style.</td>
-  </tr>
-  <tr>
-      <td>@demo</td>
-      <td>Display a live code demonstration that also renders a tab with the html used.</td>
-  </tr>
-  <tr>
-      <td>@iframe</td>
-      <td>Display a live code demonstration.</td>
-  </tr>
-</table>
-<p>Learn more about using <a href="using.html#section=section_Tags/">tags</a>.</p>
-<p>Create a <code>buttons.css</code> file inside the <code>styles</code> folder and add this:</p>
-<pre><code>/**
-  * @stylesheet buttons.css Buttons
-  * @parent styles
-  *
-  * @description
-  * This buttons page is being pulled from documentation in the`buttons.css` file.
-  *
-  * @demo demos/buttons.html
-**/
-   
-  button {
-     background-color: skyblue;
-     border: 1px solid skyblue;
-     color: white;
-     font-size: 18px;
-     padding: 10px 20px;
-  }
-  button:hover {
-    background-color: deepskyblue;
-    border-color: deepskyblue;
-    cursor: pointer;
-  }
-</code></pre>
-<p>Next, create a <code>demos</code> folder inside the 'styles' folder, and a file called <code>buttons.html</code></p>
-<p>Inside <code>buttons.html</code> add a link to the css file, and the HTML markup needed to demonstrate the styles for <code>buttons.css</code>.</p>
-<p><em>If you've got a master css file (especially if you're using a css pre-processor), you should link to that master file in the demos for your app.</em></p>
-<p>For example:</p>
-<pre><code>&lt;html&gt;
-  &lt;head&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;/styles/buttons.css&quot; /&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;button&gt;Example Button 1&lt;/button&gt;
-  &lt;body&gt;
-&lt;html&gt;
-</code></pre>
-<p>Your project's folder structure should now look like this:</p>
-<pre><code>project/
-    package.json
-    styles/
-        buttons.css
-        styles.md
-    demos/
-        buttons.html
-    documentjs.json
-</code></pre>
 <h2>Run</h2>
-<p>To generate the Style Guide using a simple command like <code>documentjs</code>, you'll want to install DocumentJS globally using:</p>
-<pre><code>&gt; npm install -g documentjs
+<p>To generate the Style Guide use open up the terminal and inside of your project's directory run:</p>
+<pre><code>&gt; ./node_modules/.bin/documentjs
 </code></pre>
-<p>This might require admin privileges to install, so use sudo and enter your password when prompted:</p>
-<pre><code>&gt; sudo npm install -g documentjs
-</code></pre>
-<p>Then from your project directory run:</p>
-<pre><code>&gt; documentjs -w
-</code></pre>
-<p><em>-w is a flag that tell DocumentJS to watch changes and regenerate the style guide every time you make updates.</em></p>
-<p>To see the generated site, using terminal navigate to the styleguide directory and use python to start a server*:</p>
+<p>To view the generated site, using terminal navigate to the styleguide directory and use python to start a server:</p>
 <pre><code>&gt; cd styleguide
 &gt; python -m SimpleHTTPServer
 </code></pre>
 <p><em>This only applies to Mac or a Linux machines</em></p>
-<p>Open up a browser and navigate to <strong>http://localhost:8000</strong> (if the number above is not 8000, use whatever number you see in your terminal instead). You should see the Live Style Guide with the documentation you just created!</p>
+<p>Open up a browser and navigate to <strong>http://localhost:8000</strong> (if the number above is not 8000, use whatever number you see in your terminal instead). You should see the Living Style Guide with the documentation you just created!</p>
+<p>Your generated Living Style Guide should look like this:</p>
+<p><img src="static/img/style-guide-home.png"/></p>
 <h3>Ignoring Generated Files</h3>
 <p>Because DocumentJS generates a whole directory based on source files, you'll probably want to mark those files to be ignored by git (or whichever code revision manager you're using).</p>
 <p>If you're using git, create a file named <code>.gitignore</code> at the root of your project (if it doesn't already exist.) Then add the following:</p>

@@ -3,7 +3,7 @@
 @hide sidebar
 @outline 2 ul
 
-This guide covers how to create, organize and generate a Living Style Guide (LSG) with DocumentCSS.
+This guide covers how to create, organize and generate a Living Style Guide with DocumentCSS.
 
 ## Tags Reference
 
@@ -11,7 +11,7 @@ DocumentCSS uses comments in your stylesheets to generate your style guide docum
 
 Prefixed with the `@@` symbol, tags tell DocumentCSS that there is additional information about the code. For example the tag `@@description` is used to indicate where the description of a style begins.
 
-Use the following tags to structure your LSG:
+Use the following tags to structure your Living Style Guide:
 
 <table>
   <tr>
@@ -75,14 +75,16 @@ Example:
 ```
 @@page logo-standards Logo Standards
 
-The following guidelines will help you...
+The following guidelines will show your how to use the logo.
 
 ```
-With this configuration a page will be created called **logo-standards.html**. The `h2` on the page will be **Logo Standards**.
+With this configuration a page will be created called **logo-standards.html**. The `h1` on the page will be **Logo Standards**:
+
+<img src="static/img/style-guide-tag-page.png"/>  
 
 ### @@stylesheet
 
-Use this tag inside of a stylesheet (CSS, LESS, or SCSS) to declare a stylesheet that you want to document in your LSG. Anything that you write below this tag will appear as the description of the page.
+Use this tag inside of a stylesheet (CSS, Less, or SCSS) to declare a stylesheet that you want to document in your Living Style Guide. Anything that you write below this tag will appear as the description of the page.
 
 <table>
   <tr>
@@ -105,10 +107,16 @@ Example:
 /**
 * @@stylesheet buttons.css Buttons
 *
-* There are different button styles that can be...
+* There are different button styles that you can use.
 **/
 ```
-This will create a page in the **stylesheet** directory called **buttons.css.html**. Like with the `@@page` tag, anything you write below the tag will be used as a description in the page. Note that because you are adding this content inside of a code file you will need to wrap it in a code comment.
+This will create a page in the **styleguide** directory called **buttons.css.html**:
+
+<img src="static/img/style-guide-tag-stylesheet.png"/>  
+
+Like with the `@@page` tag, anything you write below the tag will be used as a description in the page. Note that because you are adding this content inside of a code file you will need to wrap it in a code comment.
+
+
 
 ### @@styles
 
@@ -135,20 +143,22 @@ Example:
 /**
 * @@stylesheet buttons.css Buttons
 *
-* There are different button styles that can be...
+* There are different button styles that can be used:
 **/
 
 /**
 * @@styles buttons-sizes Button Sizes
 *
-* Use button sizes to define the hierarhy between...
+* Use button sizes to define the hierarhy between the actions in your page.
 **/
 ```
-This will create the section **Button Sizes** on the page **buttons.css.html**.
+This will create the section **Button Sizes** on the page **buttons.css.html**:
+
+<img src="static/img/style-guide-tag-styles.png"/>  
 
 ### @@demo
 
-Use this tag to add a demonstration of and html file that shows your styles in action. The demo will
+Use this tag to add a demonstration of an html file that shows your styles in action. The demo will
 render as well an html tab with the markup used for the demo.
 
 <table>
@@ -170,13 +180,18 @@ Example:
 
 ```
 /**
-* @@styles forms Forms 300
-*
-* @@demo demos/forms.html
+  * @@stylesheet buttons.css Buttons
+  *
+  * Here's an example of our default button:
+  *
+  * @@demo demos/buttons/demo.html
 **/
 ```
 
-This will show the contents of the **forms.html** right below the section *Forms* with a height of 300px. The html markup will also be rendered on a separate tab.
+This will show the contents of the **demo.html** under the **Buttons** section. The html markup will also be rendered on a separate tab:
+
+<img src="static/img/style-guide-buttons.png"/> 
+
 
 ### @@iframe
 
@@ -201,13 +216,17 @@ Example:
 
 ```
 /**
-* @@styles forms Forms 300
+* @@stylesheet buttons.css Buttons
 *
-* @@iframe demos/forms.html
+* Here's an example of our default button:
+*
+* @@iframe demos/buttons/demo.html 160
 **/
 ```
 
-This will show the contents of the **forms.html** right below the section *Forms* with a height of 300px. The html markup won't be rendered on a separate tab.
+This will show the contents of the **demo.html** right below the section **Forms** with a height of 160px. The html markup won't be rendered on a separate tab.
+
+<img src="static/img/style-guide-iframe.png"/> 
 
 
 ### @@parent
@@ -232,16 +251,22 @@ You can use this tag inside of a markdown file or stylesheet to specify its pare
 Example:
 ```
 /**
-* @@stylesheet checkboxes.css Checkboxes
-* @@parent forms 2
-/**
+  * @@stylesheet buttons.css Buttons
+  * @@parent styles
+  *
+  * Here's an example of our default button:
+  *
+  * @@iframe demos/buttons.html
+**/
 
 ```
-With this configuration the stylesheet **Checkboxes** will show under the **Forms** section as the 3rd item in the list.
+With this configuration the stylesheet **buttons.css** will show under the **Styles** section:
+
+<img src="static/img/style-guide-tag-parent.png"/> 
 
 ### @@group
 
-You can use this tag to group pages or stylesheets in the sidenav of your LSG.
+You can use this tag to group pages or stylesheets in the sidenav of your Living Style Guide.
 
 <table>
   <tr>
@@ -265,23 +290,28 @@ You can use this tag to group pages or stylesheets in the sidenav of your LSG.
 Example:
 ```
 @@page styles Styles
-@@group styles.branding 0 Branding
-@@group styles.baseline 1 Baseline Elements
-@@group styles.assets 2 Designs Assets 
+@@group styles.colors 0 Colors
+@@group styles.typography 1 Typography
+@@group styles.forms-elements 2 Form Elements
+
+
+This is my style guide.
 
 ```
-This will create the groups: **Brainding**, **Base Elements**, and **Design Assets** under the sidebar shown for the **Styles** section.
+This will create the groups: **Colors**, **Typography**, and **Form Elements** under the sidebar shown for the **Styles** section:
+
+<img src="static/img/style-guide-tag-group.png"/> 
 
 ## Creating a Page
 
 Now that you have a grasp on what tags are used for, let's dive into how to create your Living Style Guide. 
 
-The first step is to create a **page** which will be used as the index of your styleguide. To create this page you can create a file in the `styles` directory called `styleguide.md`, and inside add the tag [@@page](using.html#section=section__page). Your code should look something like this:
+The first step is to create a **page** which will be used as the index of your styleguide. To create this page you can create a file in the `styles` directory called `styles.md`, and inside add the tag [@@page](use.html#section=section__page). Your code should look something like this:
 
 ```
-@@page styleguide My Style Guide
+@@page styles Styles
 
-Welcome to the kingdom of consistent styles and carefully crafted code!
+This is my style guide.
 
 ```
 
@@ -313,18 +343,18 @@ Reference this [markdown cheatsheet](https://github.com/adam-p/markdown-here/wik
 
 ### Hyperlinking
 
-To create links within your documentation simply use the `NAME` of the page or stylesheet that has been documented using the tags `@@page` or `@stylesheet` and wrap it in `[]`. For example:
+To create links within your documentation simply use the `NAME` of the page or stylesheet that has been documented using the tags `@@page` or `@@stylesheet` and wrap it in `[]`. For example:
 
 The following page
 ```
-@@page accesibility-guidelines Accesibility Guidelines
+@@page accesibility Accesibility
 
 ```
 
 Can be hyperlinked like this:
 
 ```
-...referece [accesibility-guidelines] for further details...
+Referece [accesibility] for more details.
 
 ```
 
@@ -338,13 +368,13 @@ From time to time you may want to add an image to your style guide. For this use
 
 ## Documenting a Stylesheet
 
-To document a stylesheet, open an existing stylesheet or create a new one. You can use .CSS, .LESS, or .SCSS extensions. Then, at the top of your document add the [@@stylesheet](using.html#section=section__page) tag inside of a css comment. As with the page tag, you can add a description right below it. For example:
+To document a stylesheet, open an existing stylesheet or create a new one. You can use .CSS, .Less, or .SCSS extensions. Then, at the top of your document add the [@@stylesheet](use.html#section=section__page) tag inside of a css comment. As with the page tag, you can add a description right below it. For example:
 
 ```css
 /**
  *  @@stylesheet buttons.less Buttons
  *  
- *  Global style definitions for all... 
+ *  Global style definitions for all button elements. 
  */
 
 ```
@@ -353,7 +383,7 @@ This will create a page called `buttons.less.html` in the directory that you cho
 
 ### Documenting Styles
 
-The next step is to use the [@@styles](using.html#section=section__styles) tag to organize the styles inside of your stylesheet. For example, inside of your stylesheet for buttons, you may have styles for colors, sizes, and variations. You can use the `@@styles` tag to create sections and document them separately. Besides adding structure to your document, doing this will also allow you to hiperlink directly to that section as well as to show it as part of the summary of links at the top of the documentation for that stylesheet. 
+The next step is to use the [@@styles](use.html#section=section__styles) tag to organize the styles inside of your stylesheet. For example, inside of your stylesheet for buttons, you may have styles for colors, sizes, and variations. You can use the `@@styles` tag to create sections and document them separately. Besides adding structure to your document, doing this will also allow you to hyperlink directly to that section, as well as to show it on the summary of links at the top of the documentation for that stylesheet. 
 
 Here's an example of how this tag can be used:
 
@@ -361,14 +391,14 @@ Here's an example of how this tag can be used:
 /**
  *  @@stylesheet buttons.less Buttons
  *  
- *  Global style definitions for all... 
+ *  Global style definitions for all button elements. 
  *
  */
 
  /**
  *  @@styles buttons-sizes Button Sizes 1
  *
- *  There are 3 button sizes that can...
+ *  There are 3 button sizes that can be used:
  */
 
   btn-small {
@@ -379,7 +409,7 @@ Here's an example of how this tag can be used:
   /**
  *  @@styles buttons-colors Button Colors 0
  *
- *  Use the color variations to denote...
+ *  Use the color variations to denote importance of each action type :
  */
 
   btn-success {
@@ -391,7 +421,7 @@ Here's an example of how this tag can be used:
 
 ### Creating Demos
 
-Creating demos allows you to include markup and css in your LSG to demonstrate your styles in action. For this, create and HTML file inside of your `demos` directory as it was indicated under the [File Organization]() section.
+Creating demos allows you to include markup and css in your Living Style Guide to demonstrate your styles in action. For this, create and HTML file inside of your `demos` directory as it was indicated under the [File Organization](setup.html#section=section_FileOrganization ) section.
 
 Inside of this HTML file add the necessary markup and css classes needed for your demo and link your project stylesheet. For example:
 
@@ -415,7 +445,7 @@ Inside of this HTML file add the necessary markup and css classes needed for you
 </html>
 
 ```
-Then, link this demo to your documentation using the [@@demo](using.html#section=section__demo) tag:
+Then, link this demo to your documentation using the [@@demo](use.html#section=section__demo) tag:
 
 ```
  /**
@@ -429,11 +459,11 @@ Then, link this demo to your documentation using the [@@demo](using.html#section
   }
 
 ```
-This will render in your LSG page as:
+This will render in your Living Style Guide page as:
 
 @demo examples/demos/forms.html
 
-Note that next to the "demo" tab there is an "HTML". This tab shows any markup inside of your demo, so it's a really nice way of showing your styles in action and how is the markup setup. But if for some reason you don't want to show the markup, you can use instead the tag [@@iframe](using.html#section=section__iframe) which will not render the HTML and the tabs at all. For example:
+Note that next to the "demo" tab there is an "HTML". This tab shows any markup inside of your demo, so it's a really nice way of showing your styles in action and how is the markup setup. But if for some reason you don't want to show the markup, you can use instead the tag [@@iframe](use.html#section=section__iframe) which will not render the HTML and the tabs at all. For example:
 
 ```
  /**
@@ -447,9 +477,11 @@ Note that next to the "demo" tab there is an "HTML". This tab shows any markup i
   }
 
 ```
-Will render in your LSG page as:
+Will render in your Living Style Guide page as:
 
 @iframe examples/demos/forms.html
+
+Have in mind that before your demos can be visible on your Living Style Guide, you will need to copy them into the directory that you chose to generate your documentation in (<code>styleguide</code> in our example). You can do this by simply copying the <code>demo</code> directory inside of it. To automate this task you can use a task manager like <a href="http://gruntjs.com/">grunt</a>.
 
 
 > **Since your demos and your overall project will be using the same source styles, your live demos will change whenever your design changes.**
@@ -473,7 +505,7 @@ To create a hierarchy in your documentation your can use the tag [@@parent](use.
 
 ```
 
-In this example the **Checkboxes** page will show up in the sidebar under the **Forms* section in the 3rd position.
+In this example the **Checkboxes** page will show up in the sidebar under the **Forms** section in the 3rd position.
 
 
 ### Creating Groups

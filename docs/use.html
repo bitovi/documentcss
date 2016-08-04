@@ -158,7 +158,7 @@
 
 		
 		<section class="description">
-			<p>This guide covers how to create, organize and generate a Living Style Guide (LSG) with DocumentCSS.</p>
+			<p>This guide covers how to create, organize and generate a Living Style Guide with DocumentCSS.</p>
 
 		</section>
 		
@@ -175,7 +175,7 @@
 			<h2>Tags Reference</h2>
 <p>DocumentCSS uses comments in your stylesheets to generate your style guide documentation. Tags are used in conjunction to add structure to it.</p>
 <p>Prefixed with the <code>@</code> symbol, tags tell DocumentCSS that there is additional information about the code. For example the tag <code>@description</code> is used to indicate where the description of a style begins.</p>
-<p>Use the following tags to structure your LSG:</p>
+<p>Use the following tags to structure your Living Style Guide:</p>
 <table>
   <tr>
       <th>Tag</th>
@@ -230,12 +230,13 @@
 <p>Example:</p>
 <pre><code>@page logo-standards Logo Standards
 
-The following guidelines will help you...
+The following guidelines will show your how to use the logo.
 
 </code></pre>
-<p>With this configuration a page will be created called <strong>logo-standards.html</strong>. The <code>h2</code> on the page will be <strong>Logo Standards</strong>.</p>
+<p>With this configuration a page will be created called <strong>logo-standards.html</strong>. The <code>h1</code> on the page will be <strong>Logo Standards</strong>:</p>
+<p><img src="static/img/style-guide-tag-page.png"/></p>
 <h3>@stylesheet</h3>
-<p>Use this tag inside of a stylesheet (CSS, LESS, or SCSS) to declare a stylesheet that you want to document in your LSG. Anything that you write below this tag will appear as the description of the page.</p>
+<p>Use this tag inside of a stylesheet (CSS, Less, or SCSS) to declare a stylesheet that you want to document in your Living Style Guide. Anything that you write below this tag will appear as the description of the page.</p>
 <table>
   <tr>
       <th>Arguments</th>
@@ -254,10 +255,12 @@ The following guidelines will help you...
 <pre><code>/**
 * @stylesheet buttons.css Buttons
 *
-* There are different button styles that can be...
+* There are different button styles that you can use.
 **/
 </code></pre>
-<p>This will create a page in the <strong>stylesheet</strong> directory called <strong>buttons.css.html</strong>. Like with the <code>@page</code> tag, anything you write below the tag will be used as a description in the page. Note that because you are adding this content inside of a code file you will need to wrap it in a code comment.</p>
+<p>This will create a page in the <strong>styleguide</strong> directory called <strong>buttons.css.html</strong>:</p>
+<p><img src="static/img/style-guide-tag-stylesheet.png"/></p>
+<p>Like with the <code>@page</code> tag, anything you write below the tag will be used as a description in the page. Note that because you are adding this content inside of a code file you will need to wrap it in a code comment.</p>
 <h3>@styles</h3>
 <p>Use this tag inside of a stylesheet that is already using the <code>@stylesheet</code> tag to create a subsection inside of the page and document a set of styles.</p>
 <table>
@@ -278,18 +281,19 @@ The following guidelines will help you...
 <pre><code>/**
 * @stylesheet buttons.css Buttons
 *
-* There are different button styles that can be...
+* There are different button styles that can be used:
 **/
 
 /**
 * @styles buttons-sizes Button Sizes
 *
-* Use button sizes to define the hierarhy between...
+* Use button sizes to define the hierarhy between the actions in your page.
 **/
 </code></pre>
-<p>This will create the section <strong>Button Sizes</strong> on the page <strong>buttons.css.html</strong>.</p>
+<p>This will create the section <strong>Button Sizes</strong> on the page <strong>buttons.css.html</strong>:</p>
+<p><img src="static/img/style-guide-tag-styles.png"/></p>
 <h3>@demo</h3>
-<p>Use this tag to add a demonstration of and html file that shows your styles in action. The demo will
+<p>Use this tag to add a demonstration of an html file that shows your styles in action. The demo will
 render as well an html tab with the markup used for the demo.</p>
 <table>
   <tr>
@@ -307,12 +311,15 @@ render as well an html tab with the markup used for the demo.</p>
 </table>
 <p>Example:</p>
 <pre><code>/**
-* @styles forms Forms 300
-*
-* @demo demos/forms.html
+  * @stylesheet buttons.css Buttons
+  *
+  * Here's an example of our default button:
+  *
+  * @demo demos/buttons/demo.html
 **/
 </code></pre>
-<p>This will show the contents of the <strong>forms.html</strong> right below the section <em>Forms</em> with a height of 300px. The html markup will also be rendered on a separate tab.</p>
+<p>This will show the contents of the <strong>demo.html</strong> under the <strong>Buttons</strong> section. The html markup will also be rendered on a separate tab:</p>
+<p><img src="static/img/style-guide-buttons.png"/></p>
 <h3>@iframe</h3>
 <p>Use this tag to add a demonstration of and html file without showing the markup used for it.</p>
 <table>
@@ -331,12 +338,15 @@ render as well an html tab with the markup used for the demo.</p>
 </table>
 <p>Example:</p>
 <pre><code>/**
-* @styles forms Forms 300
+* @stylesheet buttons.css Buttons
 *
-* @iframe demos/forms.html
+* Here's an example of our default button:
+*
+* @iframe demos/buttons/demo.html 160
 **/
 </code></pre>
-<p>This will show the contents of the <strong>forms.html</strong> right below the section <em>Forms</em> with a height of 300px. The html markup won't be rendered on a separate tab.</p>
+<p>This will show the contents of the <strong>demo.html</strong> right below the section <strong>Forms</strong> with a height of 160px. The html markup won't be rendered on a separate tab.</p>
+<p><img src="static/img/style-guide-iframe.png"/></p>
 <h3>@parent</h3>
 <p>You can use this tag inside of a markdown file or stylesheet to specify its parent.</p>
 <table>
@@ -355,14 +365,19 @@ render as well an html tab with the markup used for the demo.</p>
 </table>
 <p>Example:</p>
 <pre><code>/**
-* @stylesheet checkboxes.css Checkboxes
-* @parent forms 2
-/**
+  * @stylesheet buttons.css Buttons
+  * @parent styles
+  *
+  * Here's an example of our default button:
+  *
+  * @iframe demos/buttons.html
+**/
 
 </code></pre>
-<p>With this configuration the stylesheet <strong>Checkboxes</strong> will show under the <strong>Forms</strong> section as the 3rd item in the list.</p>
+<p>With this configuration the stylesheet <strong>buttons.css</strong> will show under the <strong>Styles</strong> section:</p>
+<p><img src="static/img/style-guide-tag-parent.png"/></p>
 <h3>@group</h3>
-<p>You can use this tag to group pages or stylesheets in the sidenav of your LSG.</p>
+<p>You can use this tag to group pages or stylesheets in the sidenav of your Living Style Guide.</p>
 <table>
   <tr>
       <th>Arguments</th>
@@ -383,18 +398,22 @@ render as well an html tab with the markup used for the demo.</p>
 </table>
 <p>Example:</p>
 <pre><code>@page styles Styles
-@group styles.branding 0 Branding
-@group styles.baseline 1 Baseline Elements
-@group styles.assets 2 Designs Assets 
+@group styles.colors 0 Colors
+@group styles.typography 1 Typography
+@group styles.forms-elements 2 Form Elements
+
+
+This is my style guide.
 
 </code></pre>
-<p>This will create the groups: <strong>Brainding</strong>, <strong>Base Elements</strong>, and <strong>Design Assets</strong> under the sidebar shown for the <strong>Styles</strong> section.</p>
+<p>This will create the groups: <strong>Colors</strong>, <strong>Typography</strong>, and <strong>Form Elements</strong> under the sidebar shown for the <strong>Styles</strong> section:</p>
+<p><img src="static/img/style-guide-tag-group.png"/></p>
 <h2>Creating a Page</h2>
 <p>Now that you have a grasp on what tags are used for, let's dive into how to create your Living Style Guide.</p>
-<p>The first step is to create a <strong>page</strong> which will be used as the index of your styleguide. To create this page you can create a file in the <code>styles</code> directory called <code>styleguide.md</code>, and inside add the tag <a href="using.html#section=section__page">@page</a>. Your code should look something like this:</p>
-<pre><code>@page styleguide My Style Guide
+<p>The first step is to create a <strong>page</strong> which will be used as the index of your styleguide. To create this page you can create a file in the <code>styles</code> directory called <code>styles.md</code>, and inside add the tag <a href="use.html#section=section__page">@page</a>. Your code should look something like this:</p>
+<pre><code>@page styles Styles
 
-Welcome to the kingdom of consistent styles and carefully crafted code!
+This is my style guide.
 
 </code></pre>
 <p>Anything after the line with the tag will be used as text on your page.</p>
@@ -418,40 +437,40 @@ Welcome to the kingdom of consistent styles and carefully crafted code!
 <h3>Hyperlinking</h3>
 <p>To create links within your documentation simply use the <code>NAME</code> of the page or stylesheet that has been documented using the tags <code>@page</code> or <code>@stylesheet</code> and wrap it in <code>[]</code>. For example:</p>
 <p>The following page</p>
-<pre><code>@page accesibility-guidelines Accesibility Guidelines
+<pre><code>@page accesibility Accesibility
 
 </code></pre>
 <p>Can be hyperlinked like this:</p>
-<pre><code>...referece [accesibility-guidelines] for further details...
+<pre><code>Referece [accesibility] for more details.
 
 </code></pre>
 <p>For links external to your style guide, use <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links">markdown</a>.</p>
 <h3>Adding images</h3>
 <p>From time to time you may want to add an image to your style guide. For this use as well <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#images">markdown</a>.</p>
 <h2>Documenting a Stylesheet</h2>
-<p>To document a stylesheet, open an existing stylesheet or create a new one. You can use .CSS, .LESS, or .SCSS extensions. Then, at the top of your document add the <a href="using.html#section=section__page">@stylesheet</a> tag inside of a css comment. As with the page tag, you can add a description right below it. For example:</p>
+<p>To document a stylesheet, open an existing stylesheet or create a new one. You can use .CSS, .Less, or .SCSS extensions. Then, at the top of your document add the <a href="use.html#section=section__page">@stylesheet</a> tag inside of a css comment. As with the page tag, you can add a description right below it. For example:</p>
 <pre><code class="language-css">/**
  *  @stylesheet buttons.less Buttons
  *  
- *  Global style definitions for all... 
+ *  Global style definitions for all button elements. 
  */
 
 </code></pre>
 <p>This will create a page called <code>buttons.less.html</code> in the directory that you chose to generate your documentation in.</p>
 <h3>Documenting Styles</h3>
-<p>The next step is to use the <a href="using.html#section=section__styles">@styles</a> tag to organize the styles inside of your stylesheet. For example, inside of your stylesheet for buttons, you may have styles for colors, sizes, and variations. You can use the <code>@styles</code> tag to create sections and document them separately. Besides adding structure to your document, doing this will also allow you to hiperlink directly to that section as well as to show it as part of the summary of links at the top of the documentation for that stylesheet.</p>
+<p>The next step is to use the <a href="use.html#section=section__styles">@styles</a> tag to organize the styles inside of your stylesheet. For example, inside of your stylesheet for buttons, you may have styles for colors, sizes, and variations. You can use the <code>@styles</code> tag to create sections and document them separately. Besides adding structure to your document, doing this will also allow you to hyperlink directly to that section, as well as to show it on the summary of links at the top of the documentation for that stylesheet.</p>
 <p>Here's an example of how this tag can be used:</p>
 <pre><code class="language-css">/**
  *  @stylesheet buttons.less Buttons
  *  
- *  Global style definitions for all... 
+ *  Global style definitions for all button elements. 
  *
  */
 
  /**
  *  @styles buttons-sizes Button Sizes 1
  *
- *  There are 3 button sizes that can...
+ *  There are 3 button sizes that can be used:
  */
 
   btn-small {
@@ -462,7 +481,7 @@ Welcome to the kingdom of consistent styles and carefully crafted code!
   /**
  *  @styles buttons-colors Button Colors 0
  *
- *  Use the color variations to denote...
+ *  Use the color variations to denote importance of each action type :
  */
 
   btn-success {
@@ -472,7 +491,7 @@ Welcome to the kingdom of consistent styles and carefully crafted code!
 
 </code></pre>
 <h3>Creating Demos</h3>
-<p>Creating demos allows you to include markup and css in your LSG to demonstrate your styles in action. For this, create and HTML file inside of your <code>demos</code> directory as it was indicated under the <a href="">File Organization</a> section.</p>
+<p>Creating demos allows you to include markup and css in your Living Style Guide to demonstrate your styles in action. For this, create and HTML file inside of your <code>demos</code> directory as it was indicated under the <a href="setup.html#section=section_FileOrganization">File Organization</a> section.</p>
 <p>Inside of this HTML file add the necessary markup and css classes needed for your demo and link your project stylesheet. For example:</p>
 <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -493,7 +512,7 @@ Welcome to the kingdom of consistent styles and carefully crafted code!
 &lt;/html&gt;
 
 </code></pre>
-<p>Then, link this demo to your documentation using the <a href="using.html#section=section__demo">@demo</a> tag:</p>
+<p>Then, link this demo to your documentation using the <a href="use.html#section=section__demo">@demo</a> tag:</p>
 <pre><code> /**
  *  @styles form-controls Form Controls
  *
@@ -505,9 +524,9 @@ Welcome to the kingdom of consistent styles and carefully crafted code!
   }
 
 </code></pre>
-<p>This will render in your LSG page as:</p>
+<p>This will render in your Living Style Guide page as:</p>
 <div class='demo_wrapper' data-demo-src='examples/demos/forms.html'></div>
-<p>Note that next to the &quot;demo&quot; tab there is an &quot;HTML&quot;. This tab shows any markup inside of your demo, so it's a really nice way of showing your styles in action and how is the markup setup. But if for some reason you don't want to show the markup, you can use instead the tag <a href="using.html#section=section__iframe">@iframe</a> which will not render the HTML and the tabs at all. For example:</p>
+<p>Note that next to the &quot;demo&quot; tab there is an &quot;HTML&quot;. This tab shows any markup inside of your demo, so it's a really nice way of showing your styles in action and how is the markup setup. But if for some reason you don't want to show the markup, you can use instead the tag <a href="use.html#section=section__iframe">@iframe</a> which will not render the HTML and the tabs at all. For example:</p>
 <pre><code> /**
  *  @styles form-controls Form Controls
  *
@@ -519,8 +538,9 @@ Welcome to the kingdom of consistent styles and carefully crafted code!
   }
 
 </code></pre>
-<p>Will render in your LSG page as:</p>
+<p>Will render in your Living Style Guide page as:</p>
 <div class='iframe_wrapper' data-iframe-src='examples/demos/forms.html' data-iframe-height='320'></div>
+Have in mind that before your demos can be visible on your Living Style Guide, you will need to copy them into the directory that you chose to generate your documentation in (<code>styleguide</code> in our example). You can do this by simply copying the <code>demo</code> directory inside of it. To automate this task you can use a task manager like <a href="http://gruntjs.com/">grunt</a>.
 <blockquote>
 <p><strong>Since your demos and your overall project will be using the same source styles, your live demos will change whenever your design changes.</strong></p>
 </blockquote>
@@ -534,7 +554,7 @@ Welcome to the kingdom of consistent styles and carefully crafted code!
 /**
 
 </code></pre>
-<p>In this example the <strong>Checkboxes</strong> page will show up in the sidebar under the **Forms* section in the 3rd position.</p>
+<p>In this example the <strong>Checkboxes</strong> page will show up in the sidebar under the <strong>Forms</strong> section in the 3rd position.</p>
 <h3>Creating Groups</h3>
 <p>You can also group pages with headings in the sidebar. For this select the parent page where you want to create the group. Then add the tag <a href="use.html#section=section__group">@group</a> followed by:</p>
 <ul>
@@ -670,7 +690,7 @@ Welcome to the kingdom of consistent styles and carefully crafted code!
 	
 
 	<script type="text/javascript">
-		var docObject = {"type":"page","name":"use","src":"pages/guides/use.md","description":"This guide covers how to create, organize and generate a Living Style Guide (LSG) with DocumentCSS.","title":"Use","parent":"howTo","order":2,"hideSidebar":true,"outline":{"depth":2,"tag":"ul"},"dest":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/docs","glob":{"pattern":"{pages/guides/*.md,pages/guides/**/*.md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss"},"templates":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/theme/donejs/templates","static":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/theme/donejs/static","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+		var docObject = {"type":"page","name":"use","src":"pages/guides/use.md","description":"This guide covers how to create, organize and generate a Living Style Guide with DocumentCSS.","title":"Use","parent":"howTo","order":2,"hideSidebar":true,"outline":{"depth":2,"tag":"ul"},"dest":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/docs","glob":{"pattern":"{pages/guides/*.md,pages/guides/**/*.md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss"},"templates":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/theme/donejs/templates","static":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/theme/donejs/static","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
 	</script>
 
 	

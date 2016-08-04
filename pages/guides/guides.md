@@ -14,7 +14,7 @@ Get using DocumentCSS by following these guides:
     <p class="list-group-item-text">An in-depth guide to setting up DocumentCSS with all of the bells and whisels.</p>
   </li>
   <li class="list-group-item">
-    <div class="list-group-item-heading"><a href="/docs/using.html">Use</a></div>
+    <div class="list-group-item-heading"><a href="/docs/use.html">Use</a></div>
     <p class="list-group-item-text">Learn how to create pages, documents styles and add interactive demos.</p>
   </li>
   <li class="list-group-item">

@@ -167,7 +167,7 @@
 
 		
 		<section class="comment">
-			<p>This is an in-depth guide to setting up DocumentCSS with all of the bells and whisels. For this we will be setting up <a href="http://documentjs.com/">DocumentsJS</a> which powers DocumentCSS.</p>
+			<p>This is an in-depth guide to setting up DocumentCSS with all of the bells and whisels. For this we will be installing up <a href="http://documentjs.com/">DocumentsJS</a> which powers DocumentCSS.</p>
 <h2>Installation</h2>
 <p>First install <a href="http://nodejs.org/">Node.js</a> on your computer. Then, open the console and navigate to your project. Once in your project, use <a href="https://www.npmjs.org/">npm</a> to install DocumentJS:</p>
 <pre><code>&gt; cd path/to/myproject
@@ -193,13 +193,13 @@
 <p>Now let's break down this configuration:</p>
 <h4>Site Name</h4>
 <p>From <code>documentjs.json</code>:</p>
-<pre><code class="language-json">        &quot;styles&quot; : {
+<pre><code class="language-json">&quot;styles&quot; : {
 </code></pre>
 <p>This name can be anything unless you're configuring more than one site, which isn't covered in this guide.</p>
 <h4>Source Files</h4>
-<p>This is how DocumentJS knows where to look for comments and markdown files that it will use to generate the site. <code>glob</code> specifies a pattern for this.</p>
+<p>This is how DocumentJS knows where to look for comments and markdown files that it will used to generate the site. <code>glob</code> specifies a pattern for this.</p>
 <p>From <code>documentjs.json</code>:</p>
-<pre><code class="language-json">            &quot;glob&quot;: &quot;styles/**/*.{css,less,md}&quot;,
+<pre><code class="language-json">&quot;glob&quot;: &quot;styles/**/*.{css,less,md}&quot;,
 </code></pre>
 <p>This string uses a few different patterns to make sure everything important is included:</p>
 <table>
@@ -226,37 +226,37 @@
   <td>Since {} takes a list, this is shorthand to match all of  <code>*.css</code>, <code>*.less</code>, <code>*.md</code></td>
 </tr>
 </tbody></table>
-<p>Altogether, <code>styles/**/*.{css,less,md}</code> means &quot;look in all folders and subfolders of <code>styles</code> for any css, less, or markdown file&quot;. If you have additional directories or want to use different file types, this can be adapted accordingly like so:</p>
-<pre><code class="language-json">            &quot;glob&quot;: &quot;{styles,static/themes/css}/**/*.{css,scss,md}&quot;
+<p>Altogether, <code>styles/**/*.{css,less,md}</code> means &quot;look in all folders and subfolders of <code>styles</code> for any css, less, or markdown file&quot;. If you have additional directories or want to use different file types, this can be adapted accordingly:</p>
+<pre><code class="language-json">&quot;glob&quot;: &quot;{styles,static/themes/css}/**/*.{css,scss,md}&quot;
 </code></pre>
 <h4>Destination Directory</h4>
 <p>From <code>documentjs.json</code>:</p>
-<pre><code class="language-json">            &quot;dest&quot;: &quot;styleguide&quot;
+<pre><code class="language-json">&quot;dest&quot;: &quot;styleguide&quot;
 </code></pre>
 <p>This is just the name of the folder where your site will be generated. Where you want this to be located will depend on the structure of your project.</p>
 <h2>File Organization</h2>
-<p>You'll write most of your documentation inline in your <code>css</code> or <code>less</code> files. You should add one file, <code>styleguide.md</code>, to your <code>styles</code> folder to write your landing page (and set up navigation).</p>
+<p>You'll write most of your documentation inline in your <code>css</code> or <code>less</code> files. But you should add one file, <code>styleguide.md</code>, to your <code>styles</code> folder to write your landing page (and set up navigation).</p>
 <p>For demos and examples, you may want to create a separate folder to make it easy to link to them later. Make sure not to put anything into the <code>styleguide</code> directory as it is automatically generated.</p>
 <p>Your project's directory should will look something like this:</p>
-<pre><code>project/
-    styles/
-        base.less
-        buttons.less
-        variables.less
-        styleguide.md
-    demos/
-        base/
-            forms/
+<pre><code>project
+├──demos
+   └──base
+      └──forms
+          └──demo.html
+      └──buttons
+          └──demo.html
+      └──tables
+          └──demo.html
+      └──variables
+          └──color-palette/
                 demo.html
-            tables/
-                demo.html
-            buttons/
-                demo.html
-        variables/
-            color-palette/
-                demo.html
-    styleguide/
-        &lt;!-- Automatically generated directory --&gt;
+├──styleguide
+   &lt;!-- Automatically generated directory --&gt;
+├──styles
+   └──base.less
+   └──buttons.less
+   └──variables.less
+   └──styleguide.md
 </code></pre>
 <hr />
 <p>Continue to the next guide: <br >

@@ -4,7 +4,7 @@
 @outline 2 ul
 
 
-This is an in-depth guide to setting up DocumentCSS with all of the bells and whisels. For this we will be setting up [DocumentsJS](http://documentjs.com/) which powers DocumentCSS.
+This is an in-depth guide to setting up DocumentCSS with all of the bells and whisels. For this we will be installing up [DocumentsJS](http://documentjs.com/) which powers DocumentCSS.
 
 ## Installation
 
@@ -40,7 +40,7 @@ Now let's break down this configuration:
 
 From `documentjs.json`:
 ```json
-        "styles" : {
+"styles" : {
 ```
 
 This name can be anything unless you're configuring more than one site, which isn't covered in this guide.
@@ -48,11 +48,11 @@ This name can be anything unless you're configuring more than one site, which is
 
 #### Source Files
 
-This is how DocumentJS knows where to look for comments and markdown files that it will use to generate the site. `glob` specifies a pattern for this.
+This is how DocumentJS knows where to look for comments and markdown files that it will used to generate the site. `glob` specifies a pattern for this.
 
 From `documentjs.json`:
 ```json
-            "glob": "styles/**/*.{css,less,md}",
+"glob": "styles/**/*.{css,less,md}",
 ```
 
 This string uses a few different patterns to make sure everything important is included:
@@ -83,49 +83,49 @@ This string uses a few different patterns to make sure everything important is i
 </tbody></table>
 
 
-Altogether, `styles/**/*.{css,less,md}` means "look in all folders and subfolders of `styles` for any css, less, or markdown file". If you have additional directories or want to use different file types, this can be adapted accordingly like so:
+Altogether, `styles/**/*.{css,less,md}` means "look in all folders and subfolders of `styles` for any css, less, or markdown file". If you have additional directories or want to use different file types, this can be adapted accordingly:
 
 ```json
-            "glob": "{styles,static/themes/css}/**/*.{css,scss,md}"
+"glob": "{styles,static/themes/css}/**/*.{css,scss,md}"
 ```
 
 #### Destination Directory
 
 From `documentjs.json`:
 ```json
-            "dest": "styleguide"
+"dest": "styleguide"
 ```
 
 This is just the name of the folder where your site will be generated. Where you want this to be located will depend on the structure of your project.
 
 ## File Organization
 
-You'll write most of your documentation inline in your `css` or `less` files. You should add one file, `styleguide.md`, to your `styles` folder to write your landing page (and set up navigation).
+You'll write most of your documentation inline in your `css` or `less` files. But you should add one file, `styleguide.md`, to your `styles` folder to write your landing page (and set up navigation).
 
 For demos and examples, you may want to create a separate folder to make it easy to link to them later. Make sure not to put anything into the `styleguide` directory as it is automatically generated.
 
 Your project's directory should will look something like this:
 
 ```
-project/
-    styles/
-        base.less
-        buttons.less
-        variables.less
-        styleguide.md
-    demos/
-        base/
-            forms/
+project
+├──demos
+   └──base
+      └──forms
+          └──demo.html
+      └──buttons
+          └──demo.html
+      └──tables
+          └──demo.html
+      └──variables
+          └──color-palette/
                 demo.html
-            tables/
-                demo.html
-            buttons/
-                demo.html
-        variables/
-            color-palette/
-                demo.html
-    styleguide/
-        <!-- Automatically generated directory -->
+├──styleguide
+   <!-- Automatically generated directory -->
+├──styles
+   └──base.less
+   └──buttons.less
+   └──variables.less
+   └──styleguide.md
 ```
 
 ----

@@ -75,9 +75,11 @@
 							<li class="guides-menu">
 									<a href="/docs/index.html">Guides</a>
 									<ul class="dropdown-menu">
-                      <li ><a href="/docs/lsg-adding.html">Adding to Existing JS Docs</a></li>
-                      <li><a  href="/docs/publishing.html">Publishing Your Style Guide</a></li>
-                      <li ><a href="/docs/standalone-lsg.html">Standalone Live Style Guide</a></li>
+                      <li ><a href="/docs/quickstart.html">Quick Start</a></li>
+                      <li><a  href="/docs/setup.html">Setup</a></li>
+                      <li ><a href="/docs/use.html">Use</a></li>
+                      <li ><a href="/docs/customize.html">Customize</a></li>
+                      <li ><a href="/docs/publish.html">Publish</a></li>
 									</ul>
 							</li>
 							<li class="examples-menu">
@@ -174,11 +176,12 @@
 		<section class="comment">
 			<h2>Creating a Theme</h2>
 <p>To create a theme for your living style guide, first create the following folder structure in the root of your project:</p>
-<pre><code>project/
-    style-guide-theme/
-        static/
-          styles/
-            &lt;!-- The styles for your THEME will go here --&gt;
+<pre><code>project
+├──style-guide-theme
+   └── static
+       └──styles
+          └──styles.md
+           &lt;!-- Place your THEME styles here --&gt;
 </code></pre>
 <p><code>style-guide-theme</code> can be any name that you want to use for your theme. <code>static</code> and <code>styles</code> should be used for the other folders as this follows the directory structure of the default theme, making it easier to overwhite the styles.</p>
 <p>The next step is to update <code>documentjs.json</code> to indicate where the theme resources are located.</p>

@@ -7,7 +7,7 @@
 ### Does DocumentCSS support .scss/.less/.whatever files? 
 Yes! DocumentCSS supports all styling languages (and most development languages, this is a sibling to <a href="http://documentjs.com">DocumentJS</a> after all). 
 
-You can read more about how to tell it which languages you're using on the <a href="/docs/lsg-quickstart-configuration.html">configuration page</a> of the guides.
+You can read more about how to tell it which languages you're using on the <a href="docs/setup.html#section=section_Configuration">configuration page</a> of the guides.
 
 
 ### How do I tell DocumentCSS what files to look for?
@@ -23,7 +23,7 @@ DocumentCSS looks for the file types defined in your `documentjs.json` file. You
   }
 }</code></pre>
 
-You can read more about this on the <a href="/docs/lsg-quickstart-configuration.html">configuration page</a> of the guides.
+You can read more about this on the <a href="docs/setup.html#section=section_Configuration">configuration page</a> of the guides.
 
 
 ### Is there a simple project I can download that works out of the box?
@@ -37,7 +37,7 @@ Here's a high-level overview of the process: You tell `documentjs.json` to look 
 
 The easiest way to go about this is to copy the <a href="https://github.com/bitovi/documentjs/tree/master/site/default">default DocumentJS theme</a> to your own project and modify it. We also have a few different themes you can use on our <a href="https://github.com/bitovi/bootdocs/tree/master/themes">Bootdocs</a> project.
 
-You can get a full breakdown of how to customize your version of DocumentCSS in the <a href="/docs/lsg-custom-styles.html">customizing look and feel</a> section of the guides.  We hope that future versions of DocumentJS will have an easier theming engine. 
+You can get a full breakdown of how to customize your version of DocumentCSS in the <a href="/docs/customize.html">customizing look and feel</a> section of the guides.  We hope that future versions of DocumentJS will have an easier theming engine. 
 
 
 ### Can I restyle DocumentCSS in SCSS instead of LESS?

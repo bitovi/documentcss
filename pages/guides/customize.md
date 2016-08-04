@@ -11,11 +11,12 @@ This guide will cover how you can cuztomize the look and feel to align it to you
 To create a theme for your living style guide, first create the following folder structure in the root of your project:
 
 ```
-project/
-    style-guide-theme/
-        static/
-          styles/
-            <!-- The styles for your THEME will go here -->
+project
+├──style-guide-theme
+   └── static
+       └──styles
+          └──styles.md
+           <!-- Place your THEME styles here -->
 ```
 `style-guide-theme` can be any name that you want to use for your theme. `static` and `styles` should be used for the other folders as this follows the directory structure of the default theme, making it easier to overwhite the styles. 
 

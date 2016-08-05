@@ -4,7 +4,7 @@
 @outline 2 ul
 
 
-This is a quick run through setting DocumentCSS and generating a simple page. For in-depth set up instructions, check out the [Setup](/docs/setup.html) section.
+This is a quick run through setting DocumentCSS and generating a simple page. For in-depth instructions, check out the [Setup](/docs/setup.html) section.
 
 ## Install
 
@@ -124,4 +124,4 @@ This will mark the whole folder as something to be ignored and your team can avo
 
 ----
 Continue to the next guide: <br >
-[&#62; Setting Up DocumentCSS (In-dept Guide)](/docs/setup.html).
+[&#62; Setting Up DocumentCSS (In-depth Guide)](/docs/setup.html).

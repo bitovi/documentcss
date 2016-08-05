@@ -15,7 +15,7 @@ Your Living Style Guide will automatically change and evolve along with your pro
 
 ### GitHub Pages
 
-If your project is using [GitHub Pages](https://pages.github.com/), the publised version will automatically update whenever you push changes to the gh-pages branch. It is important to note that you ***must run the documentjs command to build the site locally, then push the generated files to GitHub***.
+If your project is using [GitHub Pages](https://pages.github.com/), the published version will automatically update whenever you push changes to the gh-pages branch. It is important to note that you ***must run the documentjs command to build the site locally, then push the generated files to GitHub***.
 
 ### Advanced Setup
 

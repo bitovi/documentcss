@@ -4,7 +4,7 @@
 @outline 2 ul
 
 
-_This is the quick getting started guide. For in depth instructions, check out the [Standalone Living Style Guide](/docs/standalone-lsg.html)._
+This is a quick run through setting DocumentCSS and generating a simple page. For in-depth set up instructions, check out the [Setup](/docs/setup.html) section.
 
 ## Install
 

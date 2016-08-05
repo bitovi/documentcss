@@ -320,7 +320,7 @@ Anything after the line with the tag will be used as text on your page.
 
 ### Using Markdown
 
-With DocumentCSS you can use [markdown](https://en.wikipedia.org/wiki/Markdown) to structure semantically your documention. Markdown is great becuase is a lightweight markup that won't clutter the comments inside of your style sheets. For example, if you want to call out a piece of text to be displayed as "code" in markdown you can simply wrap the text in "`". For example:
+With DocumentCSS you can use [markdown](https://en.wikipedia.org/wiki/Markdown) to semantically structure your documention. Markdown is great becuase is a lightweight markup that won't clutter the comments inside of your style sheets. For example, if you want to call out a piece of text to be displayed as `code` in markdown you can simply wrap the text in <code>`</code>. For example:
 
 
 <table>
@@ -363,7 +363,7 @@ For links external to your style guide, use [markdown](https://github.com/adam-p
 
 ### Adding images
 
-From time to time you may want to add an image to your style guide. For this use as well [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#images).
+You can use regular [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#images) to add images to your style guide.
 
 
 ## Documenting a Stylesheet
@@ -421,7 +421,7 @@ Here's an example of how this tag can be used:
 
 ### Creating Demos
 
-Creating demos allows you to include markup and css in your Living Style Guide to demonstrate your styles in action. For this, create and HTML file inside of your `demos` directory as it was indicated under the [File Organization](setup.html#section=section_FileOrganization ) section.
+Creating demos allows you to include markup and css in your Living Style Guide to demonstrate your styles in action. For this, create an HTML file inside of your `demos` directory as it was indicated under the [File Organization](setup.html#section=section_FileOrganization ) section.
 
 Inside of this HTML file add the necessary markup and css classes needed for your demo and link your project stylesheet. For example:
 
@@ -489,7 +489,7 @@ Have in mind that before your demos can be visible on your Living Style Guide, y
 
 ## Organizing the Docs
 
-DocumentCSS allows you to organize your documentation independently of how your styles are organized. This is very powerful as you can create a custom information achitecture that fit better your particular needs of presenting your Living Style Guide.
+DocumentCSS allows you to organize your documentation independently of how your styles are organized. This is very powerful as you can create a custom information achitecture that better fits your particular needs of presenting your Living Style Guide.
 
 
 
@@ -520,10 +520,10 @@ Example:
 @@page styles Styles
 @@group styles.branding 0 Branding
 @@group styles.baseline 1 Baseline Elements
-@@group styles.assets 2 Designs Assets 
+@@group styles.assets 2 Design Assets 
 
 ```
-This will create the groups: **Brainding**, **Base Elements**, and **Design Assets** under the sidebar shown for the **Styles** section.
+This will create the groups: **Branding**, **Baseline Elements**, and **Design Assets** under the sidebar shown for the **Styles** section.
 
 ### Updating the Top Menu
 

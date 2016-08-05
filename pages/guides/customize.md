@@ -3,7 +3,7 @@
 @hide sidebar
 @outline 2 ul
 
-This guide will cover how you can cuztomize the look and feel to align it to your specific brand, and how further configuration (like adding a style guide to an existing documentJS docs) can be done.
+This guide will cover how you can customize the look and feel to align it to your specific brand, and how further configuration (like adding a style guide to an existing documentJS docs) can be done.
 
 
 ## Creating a Theme
@@ -18,7 +18,7 @@ project
           └──styles.md
            <!-- Place your THEME styles here -->
 ```
-`style-guide-theme` can be any name that you want to use for your theme. `static` and `styles` should be used for the other folders as this follows the directory structure of the default theme, making it easier to overwhite the styles. 
+`style-guide-theme` can be any name that you want to use for your theme. `static` and `styles` should be used for the other folders as this follows the directory structure of the default theme, making it easier to overwrite the styles. 
 
 The next step is to update `documentjs.json` to indicate where the theme resources are located.
 

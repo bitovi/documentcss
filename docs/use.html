@@ -429,7 +429,7 @@ This is my style guide.
 </code></pre>
 <p>Anything after the line with the tag will be used as text on your page.</p>
 <h3>Using Markdown</h3>
-<p>With DocumentCSS you can use <a href="https://en.wikipedia.org/wiki/Markdown">markdown</a> to structure semantically your documention. Markdown is great becuase is a lightweight markup that won't clutter the comments inside of your style sheets. For example, if you want to call out a piece of text to be displayed as &quot;code&quot; in markdown you can simply wrap the text in &quot;`&quot;. For example:</p>
+<p>With DocumentCSS you can use <a href="https://en.wikipedia.org/wiki/Markdown">markdown</a> to semantically structure your documention. Markdown is great becuase is a lightweight markup that won't clutter the comments inside of your style sheets. For example, if you want to call out a piece of text to be displayed as <code>code</code> in markdown you can simply wrap the text in <code>`</code>. For example:</p>
 <table>
   <tr>
       <th style="text-align: right">This Markdown:</th>
@@ -457,7 +457,7 @@ This is my style guide.
 </code></pre>
 <p>For links external to your style guide, use <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links">markdown</a>.</p>
 <h3>Adding images</h3>
-<p>From time to time you may want to add an image to your style guide. For this use as well <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#images">markdown</a>.</p>
+<p>You can use regular <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#images">markdown</a> to add images to your style guide.</p>
 <h2>Documenting a Stylesheet</h2>
 <p>To document a stylesheet, open an existing stylesheet or create a new one. You can use .CSS, .Less, or .SCSS extensions. Then, at the top of your document add the <a href="use.html#section=section__page">@stylesheet</a> tag inside of a css comment. As with the page tag, you can add a description right below it. For example:</p>
 <pre><code class="language-css">/**
@@ -502,7 +502,7 @@ This is my style guide.
 
 </code></pre>
 <h3>Creating Demos</h3>
-<p>Creating demos allows you to include markup and css in your Living Style Guide to demonstrate your styles in action. For this, create and HTML file inside of your <code>demos</code> directory as it was indicated under the <a href="setup.html#section=section_FileOrganization">File Organization</a> section.</p>
+<p>Creating demos allows you to include markup and css in your Living Style Guide to demonstrate your styles in action. For this, create an HTML file inside of your <code>demos</code> directory as it was indicated under the <a href="setup.html#section=section_FileOrganization">File Organization</a> section.</p>
 <p>Inside of this HTML file add the necessary markup and css classes needed for your demo and link your project stylesheet. For example:</p>
 <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -556,7 +556,7 @@ Have in mind that before your demos can be visible on your Living Style Guide, y
 <p><strong>Since your demos and your overall project will be using the same source styles, your live demos will change whenever your design changes.</strong></p>
 </blockquote>
 <h2>Organizing the Docs</h2>
-<p>DocumentCSS allows you to organize your documentation independently of how your styles are organized. This is very powerful as you can create a custom information achitecture that fit better your particular needs of presenting your Living Style Guide.</p>
+<p>DocumentCSS allows you to organize your documentation independently of how your styles are organized. This is very powerful as you can create a custom information achitecture that better fits your particular needs of presenting your Living Style Guide.</p>
 <h3>Parent-child Relations</h3>
 <p>To create a hierarchy in your documentation your can use the tag <a href="use.html#section=section__parent">@parent</a>. This tag tells DocumentCSS that your <code>@page</code> or <code>@stylesheet</code> has a &quot;parent&quot;, and will make it display under that &quot;parent&quot; on the sidebar. For example:</p>
 <pre><code>/**
@@ -577,10 +577,10 @@ Have in mind that before your demos can be visible on your Living Style Guide, y
 <pre><code>@page styles Styles
 @group styles.branding 0 Branding
 @group styles.baseline 1 Baseline Elements
-@group styles.assets 2 Designs Assets 
+@group styles.assets 2 Design Assets 
 
 </code></pre>
-<p>This will create the groups: <strong>Brainding</strong>, <strong>Base Elements</strong>, and <strong>Design Assets</strong> under the sidebar shown for the <strong>Styles</strong> section.</p>
+<p>This will create the groups: <strong>Branding</strong>, <strong>Baseline Elements</strong>, and <strong>Design Assets</strong> under the sidebar shown for the <strong>Styles</strong> section.</p>
 <h3>Updating the Top Menu</h3>
 <p>While the sidebar is generated via the <code>@parent</code> and <code>@group</code> tags, the top menu on your Living Style Guide is hardcoded in the theme files. To change the navigation menu items, you have to edit the theme file <code>layout.mustache</code>.</p>
 <p>There are two ways to do this:</p>
@@ -691,7 +691,7 @@ Have in mind that before your demos can be visible on your Living Style Guide, y
 	
 
 	<script type="text/javascript">
-		var docObject = {"type":"page","name":"use","src":"pages/guides/use.md","description":"This guide covers how to create, organize and generate a Living Style Guide with DocumentCSS.","title":"Use","parent":"howTo","order":2,"hideSidebar":true,"outline":{"depth":2,"tag":"ul"},"dest":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/docs","glob":{"pattern":"{pages/guides/*.md,pages/guides/**/*.md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss"},"templates":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/theme/donejs/templates","static":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/theme/donejs/static","forceBuild":true,"generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+		var docObject = {"type":"page","name":"use","src":"pages/guides/use.md","description":"This guide covers how to create, organize and generate a Living Style Guide with DocumentCSS.","title":"Use","parent":"howTo","order":2,"hideSidebar":true,"outline":{"depth":2,"tag":"ul"},"dest":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/docs","glob":{"pattern":"{pages/guides/*.md,pages/guides/**/*.md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss"},"templates":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/theme/donejs/templates","static":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/theme/donejs/static","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
 	</script>
 
 	

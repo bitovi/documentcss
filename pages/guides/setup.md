@@ -4,7 +4,7 @@
 @outline 2 ul
 
 
-This is an in-depth guide to setting up DocumentCSS with all of the bells and whisels. For this we will be installing up [DocumentsJS](http://documentjs.com/) which powers DocumentCSS.
+This is an in-depth guide to setting up DocumentCSS with all of the bells and whistles. For this we will be installing [DocumentsJS](http://documentjs.com/) which powers DocumentCSS.
 
 ## Installation
 
@@ -13,7 +13,7 @@ First install [Node.js](http://nodejs.org/) on your computer. Then, open the con
     > cd path/to/myproject
     > npm install documentjs --save-dev
 
-*The `--sav-dev` flag saves DocumentJS in your `package.json` so other people who are working on your project can also use DocumentJS.*
+*The `--save-dev` flag saves DocumentJS in your `package.json` so other people who are working on your project can also use DocumentJS.*
 
 ## Configuration
 

@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie lt-ie9" lang="en">
+<![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Guides - Use </title>
+	<meta name="description" content="DocumentCSS is an open source Live Style Guide creation tool, and sister to DocumentJS">
+	<meta name="author" content="Bitovi - DocumentCSS">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" sizes="57x57" href="/static/img/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/static/img/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/static/img/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/static/img/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/static/img/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/static/img/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/static/img/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/static/img/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/static/img/favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="/static/img/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/static/img/favicons/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="/static/img/favicons/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="/static/img/favicons/favicon-16x16.png" sizes="16x16">
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="static/html5shiv.js"></script>
+	<!--<![endif]-->
+</head>
+<body class="use">
+		<div id="greyOutUnderNav" style="display:none;"></div>
+		<header>
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="mobile-menu-label">MENU</span>
+							<span class="mobile-menu-close"></span>
+						</button>
+						<div class="logo-menu">
+							<a class="brand" href="/index.html">DocumentCSS</a>
+							<ul class="dropdown-menu hidden-xs">
+								<li><a href="http://documentjs.com">DocumentJS</a></li>
+								<li><a href="http://donejs.com">DoneJS</a></li>
+								<li><a href="http://canjs.com">CanJS</a></li>
+								<li><a href="http://stealjs.com">StealJS</a></li>
+								<li><a href="http://jquerypp.com">jQuery++</a></li>
+								<li><a href="http://funcunit.com">FuncUnit</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li >
+								<a href="/index.html">Home</a>
+							</li>
+							<li class="guides-menu">
+									<a href="/docs/index.html">Guides</a>
+									<ul class="dropdown-menu">
+                      <li ><a href="/docs/quickstart.html">Quick Start</a></li>
+                      <li><a  href="/docs/setup.html">Setup</a></li>
+                      <li ><a href="/docs/use.html">Use</a></li>
+                      <li ><a href="/docs/customize.html">Customize</a></li>
+                      <li ><a href="/docs/publish.html">Publish</a></li>
+									</ul>
+							</li>
+							<li class="examples-menu">
+								<a href="/examples/styles/index.html">Live Examples</a>
+								
+								<ul class="dropdown-menu">
+								  <li><a href="/examples/styles/index.html">DocumentCSS Style Guide</a></li>
+                  <li><a href="/theme-default/index.html">Theme: Default</a></li>
+                  <li><a href="/theme-classic/index.html">Theme: Classic</a></li>
+                  <li><a href="/theme-bootstrap3/index.html">Theme: Bootstrap 3</a></li>
+                  <li><a href="/theme-blankslate/index.html">Theme: Blank Slate</a></li>
+								</ul>
+									
+							</li>
+							<li >
+								<a href="/faq.html">FAQs</a>
+							</li>
+						</ul>
+
+						<ul class="nav navbar-nav navbar-right bitovi-menu">
+							<li class="dropdown">
+								<a href="http://bitovi.com" class="bitovi icon-bits">Bitovi</a>
+								<ul class="dropdown-menu">
+									<li><a href="http://bitovi.com">Bitovi.com</a></li>
+									<li><a href="http://bitovi.com/blog/">Blog</a></li>
+									<li><a href="http://bitovi.com/consulting/">Consulting</a></li>
+									<li><a href="http://bitovi.com/training/">Training</a></li>
+									<li><a href="http://bitovi.com/open-source/">Open Source</a></li>
+									<li><a href="http://bitovi.com/people/">People</a></li>
+									<li><a href="http://bitovi.com/contact/">Contact Us</a></li>
+								</ul>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+			</nav>
+		</header>
+
+	
+<div class="main-content">
+
+	
+	
+
+
+		
+		<section class="title">
+			<div class="heading">
+<h1>Use</h1>
+	<ul class="tags">
+		<li>page</li>
+	</ul>
+	
+	
+</div>
+
+<div class="sub-heading">
+	
+	
+		<span class="module">use</span>
+	
+	
+	
+	<span class="inherits">&nbsp;</span>
+</div>
+
+<ul class="links">
+	
+	
+	
+	
+</ul>
+<br />
+		</section>
+		
+		
+		
+		<section class="contents-wrapper">
+			<span class="contents-title">Use</span>
+			<section class="contents">
+			</section>
+		</section>
+		
+		
+		
+
+		
+		<section class="description">
+			<p>This guide covers how to create, organize and generate a Living Style Guide with DocumentCSS.</p>
+
+		</section>
+		
+
+		
+			
+		
+		
+		
+		
+
+		
+		<section class="comment">
+			<h2>Tags Reference</h2>
+<p>DocumentCSS uses comments in your stylesheets to generate your style guide documentation. Tags are used in conjunction to add structure to it.</p>
+<p>Prefixed with the <code>@</code> symbol, tags tell DocumentCSS that there is additional information about the code. For example the tag <code>@description</code> is used to indicate where the description of a style begins.</p>
+<p>Use the following tags to structure your Living Style Guide:</p>
+<table>
+  <tr>
+      <th>Tag</th>
+      <th>Use To</th>
+  </tr>
+  <tr>
+      <td>@page</td>
+      <td>Declare a markdown file as a page in your site.</td>
+  </tr>
+  <tr>
+      <td>@stylesheet</td>
+      <td>Declare a stylesheet file as page in your site.</td>
+  </tr>
+  <tr>
+      <td>@style</td>
+      <td>Declare a comment as a style inside of a stylesheet.</td>
+  </tr>
+  <tr>
+      <td>@demo</td>
+      <td>Add an iframe with a demo and html views.</td>
+  </tr>
+  <tr>
+      <td>@iframe</td>
+      <td>Adds a simple iframe.</td>
+  </tr>
+  <tr>
+      <td>@parent</td>
+      <td>Specify the parent of a page or stylesheet.</td>
+  </tr>
+  <tr>
+      <td>@group</td>
+      <td>Specify groups of stylesheets or pages in the sidebar.</td>
+  </tr>
+</table>
+<p>For additional functionality consult the <a href="http://documentjs.com/docs/documentjs.Tag.html">tags full listing</a>.</p>
+<h3>@page</h3>
+<p>Use this tag inside of a markdown file to represent content that doesn't belong to part of the application structure. Anything that you write below this tag will appear as the description of the page.</p>
+<table>
+  <tr>
+      <th>Arguments</th>
+      <th></th>
+  </tr>
+  <tr>
+      <td><code>NAME</code></td>
+      <td>The unique name of the page. The name is used as a reference for other tags.</td>
+  </tr>
+  <tr>
+      <td><code>TITLE</code></td>
+      <td>The title of the page used for display purposes.</td>
+  </tr>
+</table>
+<p>Example:</p>
+<pre><code>@page logo-standards Logo Standards
+
+The following guidelines will show your how to use the logo.
+
+</code></pre>
+<p>With this configuration a page will be created called <strong>logo-standards.html</strong>. The <code>h1</code> on the page will be <strong>Logo Standards</strong>:</p>
+<p><img src="static/img/style-guide-tag-page.png"/></p>
+<h3>@stylesheet</h3>
+<p>Use this tag inside of a stylesheet (CSS, Less, or SCSS) to declare a stylesheet that you want to document in your Living Style Guide. Anything that you write below this tag will appear as the description of the page.</p>
+<table>
+  <tr>
+      <th>Arguments</th>
+      <th></th>
+  </tr>
+  <tr>
+      <td><code>NAME</code></td>
+      <td>The unique name of the stylesheet. The name is used as a reference for other tags.</td>
+  </tr>
+  <tr>
+      <td><code>TITLE</code></td>
+      <td>The title of the page used for display purposes.</td>
+  </tr>
+</table>
+<p>Example:</p>
+<pre><code>/**
+* @stylesheet buttons.css Buttons
+*
+* There are different button styles that you can use.
+**/
+</code></pre>
+<p>This will create a page in the <strong>styleguide</strong> directory called <strong>buttons.css.html</strong>:</p>
+<p><img src="static/img/style-guide-tag-stylesheet.png"/></p>
+<p>Like with the <code>@page</code> tag, anything you write below the tag will be used as a description in the page. Note that because you are adding this content inside of a code file you will need to wrap it in a code comment.</p>
+<h3>@styles</h3>
+<p>Use this tag inside of a stylesheet that is already using the <code>@stylesheet</code> tag to create a subsection inside of the page and document a set of styles.</p>
+<table>
+  <tr>
+      <th>Arguments</th>
+      <th></th>
+  </tr>
+  <tr>
+      <td><code>NAME</code></td>
+      <td>The unique name of the style. The name is used as a reference for other tags.</td>
+  </tr>
+  <tr>
+      <td><code>TITLE</code></td>
+      <td>The title of the style used for display purposes.</td>
+  </tr>
+</table>
+<p>Example:</p>
+<pre><code>/**
+* @stylesheet buttons.css Buttons
+*
+* There are different button styles that can be used:
+**/
+
+/**
+* @styles buttons-sizes Button Sizes
+*
+* Use button sizes to define the hierarhy between the actions in your page.
+**/
+</code></pre>
+<p>This will create the section <strong>Button Sizes</strong> on the page <strong>buttons.css.html</strong>:</p>
+<p><img src="static/img/style-guide-tag-styles.png"/></p>
+<h3>@demo</h3>
+<p>Use this tag to add a demonstration of an html file that shows your styles in action. The demo will
+render as well an html tab with the markup used for the demo.</p>
+<table>
+  <tr>
+      <th>Arguments</th>
+      <th></th>
+  </tr>
+  <tr>
+      <td><code>SRC</code></td>
+      <td>The source of the html file.</td>
+  </tr>
+  <tr>
+      <td><code>HEIGHT</code></td>
+      <td>The height of the html page. If a height is not provided, the height is determined as the content of the body.</td>
+  </tr>
+</table>
+<p>Example:</p>
+<pre><code>/**
+  * @stylesheet buttons.css Buttons
+  *
+  * Here's an example of our default button:
+  *
+  * @demo demos/buttons/demo.html
+**/
+</code></pre>
+<p>This will show the contents of the <strong>demo.html</strong> under the <strong>Buttons</strong> section. The html markup will also be rendered on a separate tab:</p>
+<p><img src="static/img/style-guide-buttons.png"/></p>
+<h3>@iframe</h3>
+<p>Use this tag to add a demonstration of and html file without showing the markup used for it.</p>
+<table>
+  <tr>
+      <th>Arguments</th>
+      <th></th>
+  </tr>
+  <tr>
+      <td><code>SRC</code></td>
+      <td>The source of the html file.</td>
+  </tr>
+  <tr>
+      <td><code>HEIGHT</code></td>
+      <td>The height of the html page. If a height is not provided, the height is determined as the content of the body.</td>
+  </tr>
+</table>
+<p>Example:</p>
+<pre><code>/**
+* @stylesheet buttons.css Buttons
+*
+* Here's an example of our default button:
+*
+* @iframe demos/buttons/demo.html 160
+**/
+</code></pre>
+<p>This will show the contents of the <strong>demo.html</strong> right below the section <strong>Forms</strong> with a height of 160px. The html markup won't be rendered on a separate tab.</p>
+<p><img src="static/img/style-guide-iframe.png"/></p>
+<h3>@parent</h3>
+<p>You can use this tag inside of a markdown file or stylesheet to specify its parent.</p>
+<table>
+  <tr>
+      <th>Arguments</th>
+      <th></th>
+  </tr>
+  <tr>
+      <td><code>NAME</code></td>
+      <td>The unique name of the parent. The name is used as a reference for other tags.</td>
+  </tr>
+  <tr>
+      <td><code>ORDER</code></td>
+      <td>The placement of the children in relation to their siblings. The order starts with 0 and defaults to alphabetical.</td>
+  </tr>
+</table>
+<p>Example:</p>
+<pre><code>/**
+  * @stylesheet buttons.css Buttons
+  * @parent styles
+  *
+  * Here's an example of our default button:
+  *
+  * @iframe demos/buttons.html
+**/
+
+</code></pre>
+<p>With this configuration the stylesheet <strong>buttons.css</strong> will show under the <strong>Styles</strong> section:</p>
+<p><img src="static/img/style-guide-tag-parent.png"/></p>
+<h3>@group</h3>
+<p>You can use this tag to group pages or stylesheets in the sidenav of your Living Style Guide.</p>
+<table>
+  <tr>
+      <th>Arguments</th>
+      <th></th>
+  </tr>
+  <tr>
+      <td><code>NAME</code></td>
+      <td>The unique name of the group. The name is used as a reference for other tags.</td>
+  </tr>
+  <tr>
+      <td><code>ORDER</code></td>
+      <td>The placement of the children in relation to their siblings. The order starts with 0 and defaults to alphabetical.</td>
+  </tr>
+  <tr>
+      <td><code>TITLE</code></td>
+      <td>The title that will be shown in the sidebar.</td>
+  </tr>
+</table>
+<p>Example:</p>
+<pre><code>@page styles Styles
+@group styles.colors 0 Colors
+@group styles.typography 1 Typography
+@group styles.forms-elements 2 Form Elements
+
+
+This is my style guide.
+
+</code></pre>
+<p>This will create the groups: <strong>Colors</strong>, <strong>Typography</strong>, and <strong>Form Elements</strong> under the sidebar shown for the <strong>Styles</strong> section:</p>
+<p><img src="static/img/style-guide-tag-group.png"/></p>
+<h2>Creating a Page</h2>
+<p>Now that you have a grasp on what tags are used for, let's dive into how to create your Living Style Guide.</p>
+<p>The first step is to create a <strong>page</strong> which will be used as the index of your styleguide. To create this page you can create a file in the <code>styles</code> directory called <code>styles.md</code>, and inside add the tag <a href="use.html#section=section__page">@page</a>. Your code should look something like this:</p>
+<pre><code>@page styles Styles
+
+This is my style guide.
+
+</code></pre>
+<p>Anything after the line with the tag will be used as text on your page.</p>
+<h3>Using Markdown</h3>
+<p>With DocumentCSS you can use <a href="https://en.wikipedia.org/wiki/Markdown">markdown</a> to semantically structure your documention. Markdown is great becuase is a lightweight markup that won't clutter the comments inside of your style sheets. For example, if you want to call out a piece of text to be displayed as <code>code</code> in markdown you can simply wrap the text in <code>`</code>. For example:</p>
+<table>
+  <tr>
+      <th style="text-align: right">This Markdown:</th>
+      <td>&#96;code&#96;</td>
+  </tr>
+  <tr>  
+      <th style="text-align: right">Will display in the generated HTML as:</th>
+      <td>&lt;code&gt;code&lt;/code&gt;</td>
+  </tr>
+  <tr>
+      <th style="text-align: right">Will display on the page as:</th>
+      <td><code>code</code></td>
+  </tr>
+</table> 
+<p>Reference this <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown cheatsheet</a> created by <strong>gitbub</strong> to learn more about how to use markdown in your docs.</p>
+<h3>Hyperlinking</h3>
+<p>To create links within your documentation simply use the <code>NAME</code> of the page or stylesheet that has been documented using the tags <code>@page</code> or <code>@stylesheet</code> and wrap it in <code>[]</code>. For example:</p>
+<p>The following page</p>
+<pre><code>@page accesibility Accesibility
+
+</code></pre>
+<p>Can be hyperlinked like this:</p>
+<pre><code>Referece [accesibility] for more details.
+
+</code></pre>
+<p>For links external to your style guide, use <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links">markdown</a>.</p>
+<h3>Adding images</h3>
+<p>You can use regular <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#images">markdown</a> to add images to your style guide.</p>
+<h2>Documenting a Stylesheet</h2>
+<p>To document a stylesheet, open an existing stylesheet or create a new one. You can use .CSS, .Less, or .SCSS extensions. Then, at the top of your document add the <a href="use.html#section=section__page">@stylesheet</a> tag inside of a css comment. As with the page tag, you can add a description right below it. For example:</p>
+<pre><code class="language-css">/**
+ *  @stylesheet buttons.less Buttons
+ *  
+ *  Global style definitions for all button elements. 
+ */
+
+</code></pre>
+<p>This will create a page called <code>buttons.less.html</code> in the directory that you chose to generate your documentation in.</p>
+<h3>Documenting Styles</h3>
+<p>The next step is to use the <a href="use.html#section=section__styles">@styles</a> tag to organize the styles inside of your stylesheet. For example, inside of your stylesheet for buttons, you may have styles for colors, sizes, and variations. You can use the <code>@styles</code> tag to create sections and document them separately. Besides adding structure to your document, doing this will also allow you to hyperlink directly to that section, as well as to show it on the summary of links at the top of the documentation for that stylesheet.</p>
+<p>Here's an example of how this tag can be used:</p>
+<pre><code class="language-css">/**
+ *  @stylesheet buttons.less Buttons
+ *  
+ *  Global style definitions for all button elements. 
+ *
+ */
+
+ /**
+ *  @styles buttons-sizes Button Sizes 1
+ *
+ *  There are 3 button sizes that can be used:
+ */
+
+  btn-small {
+  ...
+  }
+ 
+
+  /**
+ *  @styles buttons-colors Button Colors 0
+ *
+ *  Use the color variations to denote importance of each action type :
+ */
+
+  btn-success {
+  ...
+  }
+
+
+</code></pre>
+<h3>Creating Demos</h3>
+<p>Creating demos allows you to include markup and css in your Living Style Guide to demonstrate your styles in action. For this, create an HTML file inside of your <code>demos</code> directory as it was indicated under the <a href="setup.html#section=section_FileOrganization">File Organization</a> section.</p>
+<p>Inside of this HTML file add the necessary markup and css classes needed for your demo and link your project stylesheet. For example:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;title&gt;Form Controls&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; 
+          href=&quot;styles/myproject-min.css&quot; /&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;form&gt;
+    ...
+  &lt;/form&gt;
+&lt;body&gt;
+
+&lt;/html&gt;
+
+</code></pre>
+<p>Then, link this demo to your documentation using the <a href="use.html#section=section__demo">@demo</a> tag:</p>
+<pre><code> /**
+ *  @styles form-controls Form Controls
+ *
+ *  @demo demos/forms-controls.html
+ */
+
+  label {
+  ...
+  }
+
+</code></pre>
+<p>This will render in your Living Style Guide page as:</p>
+<div class='demo_wrapper' data-demo-src='examples/demos/forms.html'></div>
+<p>Note that next to the &quot;demo&quot; tab there is an &quot;HTML&quot;. This tab shows any markup inside of your demo, so it's a really nice way of showing your styles in action and how is the markup setup. But if for some reason you don't want to show the markup, you can use instead the tag <a href="use.html#section=section__iframe">@iframe</a> which will not render the HTML and the tabs at all. For example:</p>
+<pre><code> /**
+ *  @styles form-controls Form Controls
+ *
+ *  @iframe demos/forms-controls.html
+ */
+
+  label {
+  ...
+  }
+
+</code></pre>
+<p>Will render in your Living Style Guide page as:</p>
+<div class='iframe_wrapper' data-iframe-src='examples/demos/forms.html' data-iframe-height='320'></div>
+Have in mind that before your demos can be visible on your Living Style Guide, you will need to copy them into the directory that you chose to generate your documentation in (<code>styleguide</code> in our example). You can do this by simply copying the <code>demo</code> directory inside of it. To automate this task you can use a task manager like <a href="http://gruntjs.com/">grunt</a>.
+<blockquote>
+<p><strong>Since your demos and your overall project will be using the same source styles, your live demos will change whenever your design changes.</strong></p>
+</blockquote>
+<h2>Organizing the Docs</h2>
+<p>DocumentCSS allows you to organize your documentation independently of how your styles are organized. This is very powerful as you can create a custom information achitecture that better fits your particular needs of presenting your Living Style Guide.</p>
+<h3>Parent-child Relations</h3>
+<p>To create a hierarchy in your documentation your can use the tag <a href="use.html#section=section__parent">@parent</a>. This tag tells DocumentCSS that your <code>@page</code> or <code>@stylesheet</code> has a &quot;parent&quot;, and will make it display under that &quot;parent&quot; on the sidebar. For example:</p>
+<pre><code>/**
+* @stylesheet checkboxes.css Checkboxes
+* @parent forms 2
+/**
+
+</code></pre>
+<p>In this example the <strong>Checkboxes</strong> page will show up in the sidebar under the <strong>Forms</strong> section in the 3rd position.</p>
+<h3>Creating Groups</h3>
+<p>You can also group pages with headings in the sidebar. For this select the parent page where you want to create the group. Then add the tag <a href="use.html#section=section__group">@group</a> followed by:</p>
+<ul>
+<li>The unique <code>NAME</code> of the group that will be used as reference for other tags,</li>
+<li>The <code>ORDER</code> in which you want your group to show on.</li>
+<li>The <code>TITLE</code> or heading of your group that will be visible on the page.</li>
+</ul>
+<p>Example:</p>
+<pre><code>@page styles Styles
+@group styles.branding 0 Branding
+@group styles.baseline 1 Baseline Elements
+@group styles.assets 2 Design Assets 
+
+</code></pre>
+<p>This will create the groups: <strong>Branding</strong>, <strong>Baseline Elements</strong>, and <strong>Design Assets</strong> under the sidebar shown for the <strong>Styles</strong> section.</p>
+<h3>Updating the Top Menu</h3>
+<p>While the sidebar is generated via the <code>@parent</code> and <code>@group</code> tags, the top menu on your Living Style Guide is hardcoded in the theme files. To change the navigation menu items, you have to edit the theme file <code>layout.mustache</code>.</p>
+<p>There are two ways to do this:</p>
+<ol>
+<li>Create an entirely new theme by copying the default theme and editing it. This is useful if you want to make a lot of changes to the theme.</li>
+<li>Copy and edit only the <code>layout.mustache</code> template file. This is useful if you’re not going to make any other changes to the theme. To do this:
+<ul>
+<li>Copy <code>layout.mustache</code> to a folder called <code>templates</code> in your project (like <code>theme/templates</code>).</li>
+<li>Make any modifications you have to the <code>layout.mustache</code> file.</li>
+<li>Tell DocumentJS to look for this new theme in your <code>documentjs.json</code> like this:
+<pre><code>"siteDefaults": {
+  "templates": "theme/templates",
+  },</code></pre></li>
+<li>When you generate the site, be sure to use the <code>-f</code> flag to force DocumentJS to re-generate the theme files:
+<pre><code> > documentjs -f</code></pre></li>
+</ul></li>
+</ol>
+<h2>Generating the Site</h2>
+<p>To generate your Living Style Guide site open up a terminal in your project's directory and run:</p>
+<pre><code>&gt; ./node_modules/.bin/documentjs
+</code></pre>
+<p>This will generate your site in the <code>styleguide</code> directory.</p>
+<h3>Simple Command</h3>
+<p>If you want an easier way to run this command, first install DocumentJS globally (so it can be run anywhere on your computer):</p>
+<pre><code>&gt; npm install -g documentjs
+</code></pre>
+<p>Now you can just run this command in any directory with a <code>documentjs.json</code> file:</p>
+<pre><code>&gt; documentjs
+</code></pre>
+<h3>Viewing Your Site</h3>
+<p>Now you just need a way to host your generated site from <code>styleguide</code>. If you're not sure how to do this and are on a Windows computer, you'll need to research it on your own. If you are using a Mac or a Linux machine, use a terminal navigate to the <code>styleguide</code> directory and use python to start a server:</p>
+<pre><code>&gt; cd styleguide
+&gt; python -m SimpleHTTPServer
+</code></pre>
+<p>You should see something like the following:</p>
+<pre><code>Serving HTTP on 0.0.0.0 port 8000 ...
+</code></pre>
+<p>Open up a browser and navigate to <code>http://localhost:8000</code> (if the number above is not 8000, use whatever number you see in your terminal instead). You should see any pages that you have created so far!</p>
+<h3>Automatically Detecting Changes</h3>
+<p>If you'd like DocumentJS to rebuild the site every time you make changes, you can use the <code>-w</code> (watch) flag while you're working on the site so you don't have to run the <code>documentjs</code> command every time:</p>
+<pre><code>&gt; documentjs -w
+</code></pre>
+<hr />
+<p>Continue to the next guide: <br >
+<a href="/docs/customize.html">&#62; Customizing DocumentCSS</a>.</p>
+
+		</section>
+		
+		
+
+		
+
+		
+	
+
+	
+
+</div>
+
+
+
+
+
+	
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-8">
+					<div class="col-xs-1 footer-brand">
+						<a href="/"><img src="/static/img/logo-doc-css-white.svg"></a>
+					</div>
+
+					<ul class="footer-nav-main list-stacked">
+						<li>
+							<a href="/">HOME</a>
+						</li>
+						<li>
+							<a href="/Guides.html">GUIDES</a>
+						</li>
+						<li>
+							<a href="/examples/styles/index.html">LIVE EXAMPLE</a>
+						</li>
+						<li>
+							<a href="/faq.html">FAQS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<ul class="footer-nav-social list-stacked">
+						<li>
+							<a href="https://github.com/bitovi/documentcss">
+								<img class="footer-social-icon" src="/static/img/icon-github-white.svg">
+							</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/documentjs">
+								<img class="footer-social-icon" src="/static/img/icon-twitter-white.svg">
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-copyright col-sm-12">
+					&copy; <a href="http://www.bitovi.com">2016 Bitovi, Inc.</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+
+	<script type="text/javascript">
+		var docObject = {"type":"page","name":"use","src":"pages/guides/use.md","description":"This guide covers how to create, organize and generate a Living Style Guide with DocumentCSS.","title":"Use","parent":"howTo","order":2,"hideSidebar":true,"outline":{"depth":2,"tag":"ul"},"dest":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/docs","glob":{"pattern":"{pages/guides/*.md,pages/guides/**/*.md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss"},"templates":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/theme/donejs/templates","static":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/theme/donejs/static","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+	</script>
+
+	
+		<script>
+			steal = {
+			instantiated: {
+				"bundles/static.css!$css" : null
+			}
+			}
+		</script>
+		<script type='text/javascript'
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal.production.js"
+				bundles-path="bundles"></script>
+	
+	<!-- Start of Async HubSpot Analytics Code -->
+  <script type="text/javascript">
+    (function(d,s,i,r) {
+      if (d.getElementById(i)){return;}
+      var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+      n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/2171535.js';
+      e.parentNode.insertBefore(n, e);
+    })(document,"script","hs-analytics",300000);
+  </script>
+<!-- End of Async HubSpot Analytics Code -->
+</body>
+</html>

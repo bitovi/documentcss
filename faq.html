@@ -75,9 +75,11 @@
 							<li class="guides-menu">
 									<a href="/docs/index.html">Guides</a>
 									<ul class="dropdown-menu">
-                      <li ><a href="/docs/lsg-adding.html">Adding to Existing JS Docs</a></li>
-                      <li><a  href="/docs/publishing.html">Publishing Your Style Guide</a></li>
-                      <li ><a href="/docs/standalone-lsg.html">Standalone Live Style Guide</a></li>
+                      <li ><a href="/docs/quickstart.html">Quick Start</a></li>
+                      <li><a  href="/docs/setup.html">Setup</a></li>
+                      <li ><a href="/docs/use.html">Use</a></li>
+                      <li ><a href="/docs/customize.html">Customize</a></li>
+                      <li ><a href="/docs/publish.html">Publish</a></li>
 									</ul>
 							</li>
 							<li class="examples-menu">
@@ -179,7 +181,7 @@
 			<h2>Configuration Questions</h2>
 <h3>Does DocumentCSS support .scss/.less/.whatever files?</h3>
 <p>Yes! DocumentCSS supports all styling languages (and most development languages, this is a sibling to <a href="http://documentjs.com">DocumentJS</a> after all).</p>
-<p>You can read more about how to tell it which languages you're using on the <a href="/docs/lsg-quickstart-configuration.html">configuration page</a> of the guides.</p>
+<p>You can read more about how to tell it which languages you're using on the <a href="docs/setup.html#section=section_Configuration">configuration page</a> of the guides.</p>
 <h3>How do I tell DocumentCSS what files to look for?</h3>
 <p>DocumentCSS looks for the file types defined in your <code>documentjs.json</code> file. You'll want to edit the <code>&quot;glob&quot;</code> section with file paths and extensions:</p>
 <pre><code>{
@@ -191,34 +193,19 @@
     }
   }
 }</code></pre>
-<p>You can read more about this on the <a href="/docs/lsg-quickstart-configuration.html">configuration page</a> of the guides.</p>
+<p>You can read more about this on the <a href="docs/setup.html#section=section_Configuration">configuration page</a> of the guides.</p>
 <h3>Is there a simple project I can download that works out of the box?</h3>
 <p>There is! <a href="https://github.com/brandonreid">Brandon Reid</a> awesomely put a two-pagestyle guide together for people to play around with. You can find it on Github at: <a href="https://github.com/brandonreid/documentcss_starter-kit">DocumentCSS Starter Kit</a>.</p>
 <h2>Customization Questions</h2>
 <h3>How do I override DocumentCSS styles?</h3>
-<p>Here's a high-level overview of the process: You tell <code>documentjs.json</code> to look for your custom template/LESS files, and then these new files need to match the DocumentJS <a href="/docs/lsg-quickstart-file-organization.html">file structure</a>.</p>
+<p>Here's a high-level overview of the process: You tell <code>documentjs.json</code> to look for your custom template/LESS files, and then these new files need to match the DocumentJS <a href="docs/setup.html#section=section_FileOrganization">file structure</a>.</p>
 <p>The easiest way to go about this is to copy the <a href="https://github.com/bitovi/documentjs/tree/master/site/default">default DocumentJS theme</a> to your own project and modify it. We also have a few different themes you can use on our <a href="https://github.com/bitovi/bootdocs/tree/master/themes">Bootdocs</a> project.</p>
-<p>You can get a full breakdown of how to customize your version of DocumentCSS in the <a href="/docs/lsg-custom-styles.html">customizing look and feel</a> section of the guides.  We hope that future versions of DocumentJS will have an easier theming engine.</p>
+<p>You can get a full breakdown of how to customize your version of DocumentCSS in the <a href="/docs/customize.html">customizing look and feel</a> section of the guides.  We hope that future versions of DocumentJS will have an easier theming engine.</p>
 <h3>Can I restyle DocumentCSS in SCSS instead of LESS?</h3>
 <p>Short answer: not easily.</p>
 <p>DocumentCSS is built in LESS and stripping that out in favor of writing styles in another language would be a huge task. With enough time and patience, anything is possible though.</p>
 <h3>How do I update the menu?</h3>
-<p>The main navigation for your style guide is hardcoded into the theme files. To change the navigation menu items, you have to edit the theme file <code>layout.mustache</code></p>
-<p>There are two ways to do this:</p>
-<ol>
-<li>Create an entirely new theme by copying the default theme and editing it. This is useful if you want to make a lot of changes to the theme.</li>
-<li>Copy and edit only the <code>layout.mustache</code> template file. This is useful if you’re not going to make any other changes to the theme. To do this:
-<ul>
-<li>Copy <code>layout.mustache</code> to a folder called <code>templates</code> in your project (like <code>theme/templates</code>).</li>
-<li>Make any modifications you have to the <code>layout.mustache</code> file.</li>
-<li>Tell DocumentJS to look for this new theme in your <code>documentjs.json</code> like this:
-<pre><code>"siteDefaults": {
-  "templates": "theme/templates",
-  },</code></pre></li>
-<li>When you generate the site, be sure to use the <code>-f</code> flag to force DocumentJS to re-generate the theme files:
-<pre><code> > documentjs -f</code></pre></li>
-</ul></li>
-</ol>
+<p>The top menu is of your Living Style Guide is hardcoded into the theme files. You can learn how to update by following <a href="/docs/use.html#section=section_UpdatingtheTopMenu">this guide</a>.</p>
 <h3>Why isn't my theme updating?</h3>
 <p>To save time, DocumentJS doesn’t re-build the theme every time the site is generated. In order to get the theme or main navigation to update you have to force the documentjs task. You can do this with the <code>-f</code> flag:</p>
 <pre><code>> documentjs -f</code></pre>
@@ -229,12 +216,12 @@
 <h3>Why are demos returning 404s?</h3>
 <p>This is because of one of two issues:</p>
 <ol>
-<li><p>The path is wrong/there's a typo. Double-check the location of your demo files in relation to the compiled documentation files. If you follow our <a href="/docs/lsg-quickstart-file-organization.html">file structure</a> in the guides, you demos should be accessible by using this path:</p>
+<li><p>The path is wrong/there's a typo. Double-check the location of your demo files in relation to the compiled documentation files. If you follow our <a href="/docs/setup.html#section=section_FileOrganization">file structure</a> in the guides, you demos should be accessible by using this path:</p>
  <pre><code>@demo demos/forms.html</code></pre></li>
 <li><p>The demo doesn't exist yet. I pre-link to demos in documentation comments and then forget to actually create the demo all the time.</p></li>
 </ol>
 <blockquote>
-<p><em>It’s important to know that DocumentJS does not move or copy your demos to the generated site folder. Using <code>@demo</code> only tells DocumentJS to create a link to that location. We hope that future versions of DocumentJS will handle this for us.</em></p>
+<p><strong>It’s important to know that DocumentJS does not move or copy your demos to the generated site folder. Using <code>@demo</code> only tells DocumentJS to create a link to that location. We hope that future versions of DocumentJS will handle this for us.</strong></p>
 </blockquote>
 <h3>Why aren't demos pulling the right styles?</h3>
 <p>The demos are highly manual right now and embedded in iframes. What this means is that you'll need to manually link to the compiled stylesheet for your application. You can either use a relative path to the distribution folder your application compiles to, or if your css is hosted online, you can link to that.</p>
@@ -318,7 +305,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"type":"page","name":"faq","src":"pages/faq.md","description":"","title":"Frequently Asked Questions","hideSidebar":true,"dest":"/Users/thelela/Documents/GitHub/documentcss/","glob":{"pattern":"pages/*.md","ignore":"{pages/guides.md,pages/guides/**/*,pages/styles.md}","cwd":"/Users/thelela/Documents/GitHub/documentcss"},"templates":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/templates","static":"/Users/thelela/Documents/GitHub/documentcss/theme/donejs/static","forceBuild":true,"generators":["html"],"docConfigDest":"documentjs.json","project":{}};
+		var docObject = {"type":"page","name":"faq","src":"pages/faq.md","description":"","title":"Frequently Asked Questions","hideSidebar":true,"dest":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/","glob":{"pattern":"pages/*.md","ignore":"{pages/guides.md,pages/guides/**/*,pages/styles.md}","cwd":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss"},"templates":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/theme/donejs/templates","static":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/theme/donejs/static","forceBuild":true,"generators":["html"],"docConfigDest":"documentjs.json","project":{}};
 	</script>
 
 	
@@ -335,5 +322,15 @@
 				src="./static/steal.production.js"
 				bundles-path="bundles"></script>
 	
+	<!-- Start of Async HubSpot Analytics Code -->
+  <script type="text/javascript">
+    (function(d,s,i,r) {
+      if (d.getElementById(i)){return;}
+      var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+      n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/2171535.js';
+      e.parentNode.insertBefore(n, e);
+    })(document,"script","hs-analytics",300000);
+  </script>
+<!-- End of Async HubSpot Analytics Code -->
 </body>
 </html>

@@ -43,7 +43,7 @@
 		<script type="text/javascript" src="static/html5shiv.js"></script>
 	<!--<![endif]-->
 </head>
-<body class="lsg-adding-setup">
+<body class="setup">
 		<div id="greyOutUnderNav" style="display:none;"></div>
 		<header>
 			<nav class="navbar navbar-default navbar-fixed-top">
@@ -75,13 +75,24 @@
 							<li class="guides-menu">
 									<a href="/docs/index.html">Guides</a>
 									<ul class="dropdown-menu">
-											<li ><a href="/docs/lsg-quickstart.html">Standalone Live Style Guide</a></li>
-											<li ><a href="/docs/lsg-adding.html">Adding to Existing JS Docs</a></li>
-											<li><a  href="/docs/publishing.html">Publishing Your Style Guide</a></li>
+                      <li ><a href="/docs/quickstart.html">Quick Start</a></li>
+                      <li><a  href="/docs/setup.html">Setup</a></li>
+                      <li ><a href="/docs/use.html">Use</a></li>
+                      <li ><a href="/docs/customize.html">Customize</a></li>
+                      <li ><a href="/docs/publish.html">Publish</a></li>
 									</ul>
 							</li>
 							<li class="examples-menu">
-								<a href="/examples/styles/index.html">Live Example</a>
+								<a href="/examples/styles/index.html">Live Examples</a>
+								
+								<ul class="dropdown-menu">
+								  <li><a href="/examples/styles/index.html">DocumentCSS Style Guide</a></li>
+                  <li><a href="/theme-default/index.html">Theme: Default</a></li>
+                  <li><a href="/theme-classic/index.html">Theme: Classic</a></li>
+                  <li><a href="/theme-bootstrap3/index.html">Theme: Bootstrap 3</a></li>
+                  <li><a href="/theme-blankslate/index.html">Theme: Blank Slate</a></li>
+								</ul>
+									
 							</li>
 							<li >
 								<a href="/faq.html">FAQs</a>
@@ -108,81 +119,9 @@
 			</nav>
 		</header>
 
-	<div class="scroll-spy-title hidden-md hidden-lg">
-		<span class="menu-indicator menus-closed"></span>
-		<div id="scrollSpyCurrentH2" class="h2Only">Table of Contents</div>
-		<div id="scrollSpyCurrentH3"></div>
-	</div>
-
 	
 <div class="main-content">
 
-	
-	<nav class="sidebar">
-		
-		<ul class="menu-wrapper"> 
-	
-		
-		<li class="sidebar-title active">
-			<a class="sidebar-title-link" href="index.html" data-search="Guides">
-				Guides
-			</a>
-			
-		</li>
-		
-		<li class="sidebar-menu">
-		
-			
-			
-	<ul class="active-menu">
-		
-			
-				
-					<li class="group-wrapper">
-						<span class="group-heading">Adding to Existing Docs</span>
-						
-	<ul class="active-menu">
-		
-			
-				
-				
-				<li class="page-title  active ">
-					<a class="page-link" href="lsg-adding-setup.html" data-search="Setup">
-						Setup
-					</a>
-				</li>
-				
-			
-			
-		
-			
-				
-				
-				<li class="page-title ">
-					<a class="page-link" href="lsg-adding-next-steps.html" data-search="Writing and Customizing">
-						Writing and Customizing
-					</a>
-				</li>
-				
-			
-			
-		
-	</ul>
-
-					</li>
-				
-				
-			
-			
-		
-	</ul>
-
-			
-		
-		</li>
-	
-</ul>
-	</nav>
 	
 	
 
@@ -201,7 +140,7 @@
 <div class="sub-heading">
 	
 	
-		<span class="module">lsg-adding-setup</span>
+		<span class="module">setup</span>
 	
 	
 	
@@ -219,18 +158,15 @@
 		
 		
 		
-		<section class="overview-of-contents">
-			<p class="overview-of-contents-title">Topics Covered Below:</p>
+		<section class="contents-wrapper">
+			<span class="contents-title">Setup</span>
+			<section class="contents">
+			</section>
 		</section>
 		
 		
 		
 
-		
-		<section class="description">
-			<p>Setup consists of two main steps: installation, and configuration (including file organization).</p>
-
-		</section>
 		
 
 		
@@ -242,41 +178,22 @@
 
 		
 		<section class="comment">
-			<h2>Installation</h2>
-<p>Install <a href="http://nodejs.org/">Node.js</a> on your
-computer. Open a console to your project and install the project's dependencies automatically with npm.</p>
+			<p>This is an in-depth guide to setting up DocumentCSS with all of the bells and whistles. For this we will be installing <a href="http://documentjs.com/">DocumentsJS</a> which powers DocumentCSS.</p>
+<h2>Installation</h2>
+<p>First install <a href="http://nodejs.org/">Node.js</a> on your computer. Then, open the console and navigate to your project. Once in your project, use <a href="https://www.npmjs.org/">npm</a> to install DocumentJS:</p>
 <pre><code>&gt; cd path/to/myproject
-&gt; npm install
+&gt; npm install documentjs --save-dev
 </code></pre>
-<p>This should install DocumentJS if your project is already using it.</p>
-<p><a href="/docs/lsg-adding-configuration.html">Next Page</a></p>
+<p><em>The <code>--save-dev</code> flag saves DocumentJS in your <code>package.json</code> so other people who are working on your project can also use DocumentJS.</em></p>
 <h2>Configuration</h2>
-<p>To generate a Live Style Guide, <strong>you only need to configure two things</strong>.</p>
+<p>To generate a Living Style Guide, <strong>you only need to configure two things</strong>.</p>
 <ol>
 <li>What stylesheet files are being documented</li>
-<li>Where the Live Style Guide should be generated</li>
+<li>Where the documentation should be generated</li>
 </ol>
-<h3>Current Configuration</h3>
-<p>Your project should already have a <code>documentjs.json</code> file.
-Inside it, you'll probably see something like this:</p>
+<p>Create a <code>documentjs.json</code> file in the top level of your project like this:</p>
 <pre><code class="language-json">{
     &quot;sites&quot;: {
-        &quot;docs&quot;: {
-            &quot;glob&quot;: &quot;project/**/*.{js,md}&quot;
-            &quot;dest&quot;: &quot;api&quot;
-        }
-    }
-}
-</code></pre>
-<h3>Your Configuration</h3>
-<p>Add configuration for your Live Style Guide to the
-current configuration.</p>
-<pre><code class="language-json">{
-    &quot;sites&quot;: {
-        &quot;docs&quot;: {
-            &quot;glob&quot;: &quot;project/**/*.{js,md}&quot;
-            &quot;dest&quot;: &quot;api&quot;
-        },
         &quot;styles&quot;: {
             &quot;glob&quot;: &quot;styles/**/*.{css,less,md}&quot;,
             &quot;dest&quot;: &quot;styleguide&quot;
@@ -284,15 +201,16 @@ current configuration.</p>
     }
 }
 </code></pre>
+<p>Now let's break down this configuration:</p>
 <h4>Site Name</h4>
 <p>From <code>documentjs.json</code>:</p>
-<pre><code class="language-json">        &quot;styles&quot; : {
+<pre><code class="language-json">&quot;styles&quot; : {
 </code></pre>
-<p>This name is important because you're setting up a second documentation site alongside existing docs.</p>
+<p>This name can be anything unless you're configuring more than one site, which isn't covered in this guide.</p>
 <h4>Source Files</h4>
-<p>This is how DocumentJS knows where to look for comments and markdown files that it will use to generate the site. <code>glob</code> specifies a pattern for this.</p>
+<p>This is how DocumentJS knows where to look for comments and markdown files that it will used to generate the site. <code>glob</code> specifies a pattern for this.</p>
 <p>From <code>documentjs.json</code>:</p>
-<pre><code class="language-json">            &quot;glob&quot;: &quot;styles/**/*.{css,less,md}&quot;,
+<pre><code class="language-json">&quot;glob&quot;: &quot;styles/**/*.{css,less,md}&quot;,
 </code></pre>
 <p>This string uses a few different patterns to make sure everything important is included:</p>
 <table>
@@ -319,46 +237,41 @@ current configuration.</p>
   <td>Since {} takes a list, this is shorthand to match all of  <code>*.css</code>, <code>*.less</code>, <code>*.md</code></td>
 </tr>
 </tbody></table>
-<p>Altogether, <code>styles/**/*.{css,less,md}</code> means &quot;look in all folders and subfolders of <code>styles</code> for any css, less, or markdown file&quot;. If you have additional directories or want to use different file types, this can be adapted accordingly like so:</p>
-<pre><code class="language-json">            &quot;glob&quot;: &quot;{styles,static/themes/css}/**/*.{css,scss,md}&quot;
+<p>Altogether, <code>styles/**/*.{css,less,md}</code> means &quot;look in all folders and subfolders of <code>styles</code> for any css, less, or markdown file&quot;. If you have additional directories or want to use different file types, this can be adapted accordingly:</p>
+<pre><code class="language-json">&quot;glob&quot;: &quot;{styles,static/themes/css}/**/*.{css,scss,md}&quot;
 </code></pre>
 <h4>Destination Directory</h4>
 <p>From <code>documentjs.json</code>:</p>
-<pre><code class="language-json">            &quot;dest&quot;: &quot;styleguide&quot;
+<pre><code class="language-json">&quot;dest&quot;: &quot;styleguide&quot;
 </code></pre>
 <p>This is just the name of the folder where your site will be generated. Where you want this to be located will depend on the structure of your project.</p>
 <h2>File Organization</h2>
-<p>You'll write most of your documentation inline in your <code>css</code> or <code>less</code> files. You should add one file, <code>styleguide.md</code>, to your <code>styles</code> folder to write your landing page (and set up navigation).</p>
+<p>You'll write most of your documentation inline in your <code>css</code> or <code>less</code> files. But you should add one file, <code>styleguide.md</code>, to your <code>styles</code> folder to write your landing page (and set up navigation).</p>
 <p>For demos and examples, you may want to create a separate folder to make it easy to link to them later. Make sure not to put anything into the <code>styleguide</code> directory as it is automatically generated.</p>
-<p>Depending on your project and team, this is likely a good time to ask a developer for help (or just to double-check the changes you're making). For large applications, file organization becomes extremely important. Choices that seem insignificant (and may actually be insignificant) can still incur the wrath of (over-)opinionated engineers.</p>
-<p>Your project's directory will probably look something like this:</p>
-<pre><code>project/
-    &lt;!-- the project's already-existing file structure --&gt;
-    folder1/
-    folder2/
-    folder3/
-    &lt;!-- the directory containing the project's stylesheets --&gt;
-    styles/
-        base.less
-        buttons.less
-        variables.less
-        styleguide.md
-    &lt;!-- live demos that we'll get to later --&gt;
-    demos/
-        base/
-            forms/
+<p>Your project's directory should will look something like this:</p>
+<pre><code>project
+├──demos
+   └──base
+      └──forms
+          └──demo.html
+      └──buttons
+          └──demo.html
+      └──tables
+          └──demo.html
+      └──variables
+          └──color-palette/
                 demo.html
-            tables/
-                demo.html
-            buttons/
-                demo.html
-        variables/
-            color-palette/
-                demo.html
-    styleguide/
-        &lt;!-- Automatically generated directory --&gt;
+├──styleguide
+   &lt;!-- Automatically generated directory --&gt;
+├──styles
+   └──base.less
+   └──buttons.less
+   └──variables.less
+   └──styleguide.md
 </code></pre>
-<p><a href="/docs/lsg-adding-next-steps.html">Next Page</a></p>
+<hr />
+<p>Continue to the next guide: <br >
+<a href="/docs/use.html">&#62; Using DocumentCSS</a>.</p>
 
 		</section>
 		
@@ -394,7 +307,7 @@ current configuration.</p>
 							<a href="/Guides.html">GUIDES</a>
 						</li>
 						<li>
-							<a href="/examples/styles/index.html">EXAMPLE</a>
+							<a href="/examples/styles/index.html">LIVE EXAMPLE</a>
 						</li>
 						<li>
 							<a href="/faq.html">FAQS</a>
@@ -413,16 +326,6 @@ current configuration.</p>
 								<img class="footer-social-icon" src="/static/img/icon-twitter-white.svg">
 							</a>
 						</li>
-						<li>
-							<a href="https://plus.google.com/+Bitovi/posts">
-								<img class="footer-social-icon" src="/static/img/icon-googleplus-white.svg">
-							</a>
-						</li>
-<!-- 						<li>
-							<a href="https://www.youtube.com/channel/UC_HPFLeKzJNLOUnLc_3311Q/videos">
-								<img class="footer-social-icon" src="/static/img/icon-youtube-white.svg">
-							</a>
-						</li> -->
 					</ul>
 				</div>
 				<div class="footer-copyright col-sm-12">
@@ -434,7 +337,7 @@ current configuration.</p>
 	
 
 	<script type="text/javascript">
-		var docObject = {"type":"page","name":"lsg-adding-setup","src":"pages/livestyleguide/adding/setup.md","description":"Setup consists of two main steps: installation, and configuration (including file organization).","title":"Setup","parent":"lsg-adding-steps","order":0,"dest":"/Users/justin/dev/documentcss/docs","glob":{"pattern":"{pages/livestyleguide/**/*.md,pages/livestyleguide.md}","ignore":"{pages/livestyleguide/demos/**/*,pages/livestyleguide/styles.md}","cwd":"/Users/justin/dev/documentcss"},"templates":"/Users/justin/dev/documentcss/theme/donejs/templates","static":"/Users/justin/dev/documentcss/theme/donejs/static","forceBuild":true,"generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+		var docObject = {"type":"page","name":"setup","src":"pages/guides/setup.md","description":"","title":"Setup","parent":"howTo","order":1,"hideSidebar":true,"outline":{"depth":2,"tag":"ul"},"dest":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/docs","glob":{"pattern":"{pages/guides/*.md,pages/guides/**/*.md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss"},"templates":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/theme/donejs/templates","static":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/theme/donejs/static","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
 	</script>
 
 	
@@ -451,5 +354,15 @@ current configuration.</p>
 				src="./static/steal.production.js"
 				bundles-path="bundles"></script>
 	
+	<!-- Start of Async HubSpot Analytics Code -->
+  <script type="text/javascript">
+    (function(d,s,i,r) {
+      if (d.getElementById(i)){return;}
+      var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+      n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/2171535.js';
+      e.parentNode.insertBefore(n, e);
+    })(document,"script","hs-analytics",300000);
+  </script>
+<!-- End of Async HubSpot Analytics Code -->
 </body>
 </html>

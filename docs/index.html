@@ -17,88 +17,136 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>DocumentCSS - Guides </title>
-	<meta name="description" content="">
-	<meta name="author" content="">
-
-	<link rel="stylesheet" type="text/css" href='./static/bundles/static.css'/>
+	<title>Guides - Guides </title>
+	<meta name="description" content="DocumentCSS is an open source Live Style Guide creation tool, and sister to DocumentJS">
+	<meta name="author" content="Bitovi - DocumentCSS">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" sizes="57x57" href="/static/img/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/static/img/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/static/img/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/static/img/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/static/img/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/static/img/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/static/img/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/static/img/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/static/img/favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="/static/img/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/static/img/favicons/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="/static/img/favicons/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="/static/img/favicons/favicon-16x16.png" sizes="16x16">
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
 	<!--[if lt IE 9]>
-   <script type="text/javascript" src="./static/html5shiv.js"></script>
-    <!--<![endif]-->
+		<script type="text/javascript" src="static/html5shiv.js"></script>
+	<!--<![endif]-->
 </head>
+<body class="guides">
+		<div id="greyOutUnderNav" style="display:none;"></div>
+		<header>
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="mobile-menu-label">MENU</span>
+							<span class="mobile-menu-close"></span>
+						</button>
+						<div class="logo-menu">
+							<a class="brand" href="/index.html">DocumentCSS</a>
+							<ul class="dropdown-menu hidden-xs">
+								<li><a href="http://documentjs.com">DocumentJS</a></li>
+								<li><a href="http://donejs.com">DoneJS</a></li>
+								<li><a href="http://canjs.com">CanJS</a></li>
+								<li><a href="http://stealjs.com">StealJS</a></li>
+								<li><a href="http://jquerypp.com">jQuery++</a></li>
+								<li><a href="http://funcunit.com">FuncUnit</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li >
+								<a href="/index.html">Home</a>
+							</li>
+							<li class="guides-menu">
+									<a href="/docs/index.html">Guides</a>
+									<ul class="dropdown-menu">
+                      <li ><a href="/docs/quickstart.html">Quick Start</a></li>
+                      <li><a  href="/docs/setup.html">Setup</a></li>
+                      <li ><a href="/docs/use.html">Use</a></li>
+                      <li ><a href="/docs/customize.html">Customize</a></li>
+                      <li ><a href="/docs/publish.html">Publish</a></li>
+									</ul>
+							</li>
+							<li class="examples-menu">
+								<a href="/examples/styles/index.html">Live Examples</a>
+								
+								<ul class="dropdown-menu">
+								  <li><a href="/examples/styles/index.html">DocumentCSS Style Guide</a></li>
+                  <li><a href="/theme-default/index.html">Theme: Default</a></li>
+                  <li><a href="/theme-classic/index.html">Theme: Classic</a></li>
+                  <li><a href="/theme-bootstrap3/index.html">Theme: Bootstrap 3</a></li>
+                  <li><a href="/theme-blankslate/index.html">Theme: Blank Slate</a></li>
+								</ul>
+									
+							</li>
+							<li >
+								<a href="/faq.html">FAQs</a>
+							</li>
+						</ul>
 
-<body class="docs">
-	<header>
-		<nav class="container">
+						<ul class="nav navbar-nav navbar-right bitovi-menu">
+							<li class="dropdown">
+								<a href="http://bitovi.com" class="bitovi icon-bits">Bitovi</a>
+								<ul class="dropdown-menu">
+									<li><a href="http://bitovi.com">Bitovi.com</a></li>
+									<li><a href="http://bitovi.com/blog/">Blog</a></li>
+									<li><a href="http://bitovi.com/consulting/">Consulting</a></li>
+									<li><a href="http://bitovi.com/training/">Training</a></li>
+									<li><a href="http://bitovi.com/open-source/">Open Source</a></li>
+									<li><a href="http://bitovi.com/people/">People</a></li>
+									<li><a href="http://bitovi.com/contact/">Contact Us</a></li>
+								</ul>
+							</li>
+						</ul>
 
-			<div class="logo-menu">
-				<a class="brand" href="../index.html">DocumentJS</a>
-				<ul class="dropdown-menu">
-		          <li><a href="http://javascriptmvc.com">JavaScriptMVC</a></li>
-		          <li><a href="http://canjs.com">CanJS</a></li>
-		          <li><a href="http://jquerypp.com">jQuery++</a></li>
-		          <li><a href="http://stealjs.com">StealJS</a></li>
-		          <li><a href="http://funcunit.com">FuncUnit</a></li>
-		          <li><a href="http://documentjs.com" class="active">DocumentJS</a></li>
-		        </ul>
-			</div>
-			<ul class="nav">
-		  	<li >
-        	<a href="../index.html">Home</a>
-        </li>
-        <li >
-          <a href="/docs/index.html">Guides</a>
-        </li>
-        <li >
-          <a href="/faq.html">FAQs</a>
-        </li>
-        <li >
-          <a href="/examples/styles/index.html">Example</a>
-        </li>
-	      <li class=""><a href="http://documentjs.com">DocumentJS</a></li>
-	    </ul>
-			<div class="pull-right">
-				<div class="bitovi-menu">
-					<a href="http://bitovi.com" class="bitovi icon-bits">Bitovi</a>
-					<ul class="dropdown-menu">
-						<li><a href="http://bitovi.com">Bitovi.com</a></li>
-						<li><a href="http://bitovi.com/blog/">Blog</a></li>
-						<li><a href="http://bitovi.com/design/">Design</a></li>
-						<li><a href="http://bitovi.com/development/">Development</a></li>
-						<li><a href="http://bitovi.com/training/">Training</a></li>
-						<li><a href="http://bitovi.com/open-source/">Open Source</a></li>
-						<li><a href="http://bitovi.com/about/">About</a></li>
-						<li><a href="http://bitovi.com/contact/">Contact Us</a></li>
-					</ul>
+					</div>
 				</div>
-			</div>
-		</nav>
-	</header>
+			</nav>
+		</header>
+
+	<div class="scroll-spy-title hidden-md hidden-lg">
+		<span class="menu-indicator menus-closed"></span>
+		<div id="scrollSpyCurrentH2" class="h2Only">Table of Contents</div>
+		<div id="scrollSpyCurrentH3"></div>
+	</div>
 
 	
-<div class="container api">
+<div class="main-content">
 
 	
-	<nav class="sidebar">
+	<nav class="sidebar-wrapper">
 		
-		<ul class="api cascading primary-grouping"> 
+		<ul class="sidebar">
 	
-		
-		
+	   <li class="sidebar-section">
+	   	<span class="sidebar-section-title" href="howTo.html" data-search="How-To Guides">
+        How-To Guides
+      </span>
+
 			
-			<li class="search-container active">
-			<a class="sidebar-title" href="index.html" data-search="Guides">
-				Guides
-			</a>
-			
-	<ul>
+	<ul class="active-menu">
 		
 			
 				
 				
-				<li class="search-container">
-					<a class="page" href="lsg-quickstart.html" data-search="Standalone Live Style Guide">
-						Standalone Live Style Guide
+				<li class="page-title ">
+					<a class="page-link" href="quickstart.html" data-search="Quick Start">
+						Quick Start
 					</a>
 				</li>
 				
@@ -108,9 +156,9 @@
 			
 				
 				
-				<li class="search-container">
-					<a class="page" href="lsg-adding.html" data-search="Adding to Existing JS Docs">
-						Adding to Existing JS Docs
+				<li class="page-title ">
+					<a class="page-link" href="setup.html" data-search="Setup">
+						Setup
 					</a>
 				</li>
 				
@@ -120,9 +168,33 @@
 			
 				
 				
-				<li class="search-container">
-					<a class="page" href="publishing.html" data-search="Publishing Your Style Guide">
-						Publishing Your Style Guide
+				<li class="page-title ">
+					<a class="page-link" href="use.html" data-search="Use">
+						Use
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="page-title ">
+					<a class="page-link" href="customize.html" data-search="Customize">
+						Customize
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="page-title ">
+					<a class="page-link" href="publish.html" data-search="Publish">
+						Publish
 					</a>
 				</li>
 				
@@ -131,18 +203,15 @@
 		
 	</ul>
 
-		</li>
-			
-		
+
+	   </li>
 	
 </ul>
 	</nav>
 	
 	
-	
-	<article class="content docs">
-	
-	
+
+
 		
 		<section class="title">
 			<div class="heading">
@@ -157,7 +226,7 @@
 <div class="sub-heading">
 	
 	
-		<span class="module">lsg.guides</span>
+		<span class="module">guides</span>
 	
 	
 	
@@ -175,15 +244,12 @@
 		
 		
 		
-		<section class="contents">
-		</section>
-		
 		
 		
 
 		
 		<section class="description">
-			<style>
+			<p>Get using DocumentCSS by following these guides:</p>
 
 		</section>
 		
@@ -197,147 +263,34 @@
 
 		
 		<section class="comment">
-			<p>section.contents {
-display: none;
-}</p>
-</style>
-<p>For in depth instructions, check out the <a href="/docs/lsg-quickstart.html">Standalone Live Style Guide</a>.</p>
-<h2>Get Started</h2>
-<h3>Install</h3>
-<p>Install <a href="https://nodejs.org/">Node.js</a> on your computer and create a <code>package.json</code> file in your project's root directory with something like:</p>
-<pre><code>{
-  &quot;name&quot;: &quot;style-guide&quot;,
-  &quot;version&quot;: &quot;0.0.1&quot;,
-  &quot;description&quot;: &quot;My style guide&quot;,
-  &quot;author&quot;: &quot;&quot;,
-  &quot;license&quot;: &quot;&quot;
-}
-
-</code></pre>
-<p>From the console or terminal, go to your project folder and use <code>npm</code> to install DocumentJS:</p>
-<pre><code>&gt; cd path/to/myproject
-&gt; npm install documentjs --save-dev
-</code></pre>
-<p><em>The --sav-dev flag saves DocumentJS in your <code>package.json</code> so other people who are working on your project can also use DocumentJS.</em></p>
-<h3>File Structure</h3>
-<p>Create the files and folders that DocumentCSS will use to generate the docs.</p>
-<ul>
-<li>Create a folder called <code>styles</code> which will hold all of your CSS or Less files.</li>
-<li>Create a markdown file to define as the primary parent, like <code>styles.md</code>, inside the <code>styles</code> folder</li>
+			<ul class="list-group">
+  <li class="list-group-item">
+    <div class="list-group-item-heading"><a href="/docs/quickstart.html">Quick Start</a></div>
+    <p class="list-group-item-text">A quick run through setting up DocumentCSS and generating a simple page.</p>
+  </li>
+  <li class="list-group-item">
+    <div class="list-group-item-heading"><a href="/docs/setup.html">Setup</a></div>
+    <p class="list-group-item-text">An in-depth guide to setting up DocumentCSS with all of the bells and whistles.</p>
+  </li>
+  <li class="list-group-item">
+    <div class="list-group-item-heading"><a href="/docs/use.html">Use</a></div>
+    <p class="list-group-item-text">Learn how to create pages, document styles and add interactive demos.</p>
+  </li>
+  <li class="list-group-item">
+    <div class="list-group-item-heading"><a href="/docs/customize.html">Customize</a></div>
+    <p class="list-group-item-text">Align the way the docs look like to your specific brand.</p>
+  </li>
+  <li class="list-group-item">
+    <div class="list-group-item-heading"><a href="/docs/publish.html">Publish</a></div>
+    <p class="list-group-item-text">Make your Living Style Guide available to everybody on your team!</p>
+  </li>
 </ul>
-<p>Inside the <code>styles.md</code> add:</p>
-<pre><code>@page styles Styles
-
-This is my style guide
-</code></pre>
-<h3>Configure</h3>
-<p>To generate a Live Style Guide, create a file called <code>documentjs.json</code> in the top level of your project like this:</p>
-<pre><code>{
-    &quot;sites&quot;: {
-        &quot;styles&quot;: {
-            &quot;glob&quot;: &quot;styles/**/*.{css,less,scss,md}&quot;,
-            &quot;dest&quot;: &quot;styleguide&quot;,
-            &quot;parent&quot;: &quot;styles&quot; 
-        }
-    }
-}
-</code></pre>
+<h4>Need Help?</h4>
 <ul>
-<li>&quot;glob&quot; tells DocumentCSS to look in the <code>styles</code> folder and read all files with a <code>css</code>, <code>less</code>, <code>scss</code> or <code>md</code> extension.
-<ul>
-<li><em>You can remove either less and/or scss depending on what you're writing styles with.</em></li>
-</ul></li>
-<li>&quot;dest&quot; tells DocumentCSS to automatically create a <code>styleguide</code> folder to host the generated HTML pages.</li>
-<li>&quot;parent&quot; tells DocumentCSS to use the parent declaration <code>styles</code> from <code>styles.md</code> as the main landing page.</li>
+<li>Visit our <a href="faq.html">FAQ page</a></li>
+<li>Ask questions on <a href="https://gitter.im/bitovi/documentcss">Gitter</a></li>
+<li>Open an issue on <a href="https://github.com/bitovi/documentcss/issues/new">Github</a></li>
 </ul>
-<p>Your project's folder structure should look like this:</p>
-<pre><code>project/
-    package.json
-    styles/
-        styles.md
-    documentjs.json
-</code></pre>
-<h3>Document</h3>
-<p>To document your CSS use the following <a href="http://documentjs.com/docs/documentjs.tags.html">tags</a> inside your CSS, Scss, Less, or Markdown files:</p>
-<ul>
-<li><code>@stylesheet</code> to create a page for each stylesheet documented</li>
-<li><code>@styles</code> to document individual styles</li>
-<li><code>@parent</code> to organize how your styles get rendered on the Style Guide</li>
-<li><code>@iframe</code> to display an html live demonstration</li>
-<li><code>@demo</code> to display an html live demonstration that also renders a tab with the html used on the demo</li>
-</ul>
-<p>Create a <code>buttons.css</code> file inside the <code>styles</code> folder and add this:</p>
-<pre><code>/**
-  * @stylesheet buttons.css Buttons
-  * @parent styles
-  *
-  * @description
-  * This buttons page is being pulled from documentation in the`buttons.css` file.
-  *
-  * @demo demos/buttons.html
-**/
-   
-  button {
-     background-color: skyblue;
-     border: 1px solid skyblue;
-     color: white;
-     font-size: 18px;
-     padding: 10px 20px;
-  }
-  button:hover {
-    background-color: deepskyblue;
-    border-color: deepskyblue;
-    cursor: pointer;
-  }
-</code></pre>
-<p>Next, create a <code>demos</code> folder inside the 'styles' folder, and a file called <code>buttons.html</code></p>
-<p>Inside <code>buttons.html</code> add a link to the css file, and the HTML markup needed to demonstrate the styles for <code>buttons.css</code>.</p>
-<p><em>If you've got a master css file (especially if you're using a css pre-processor), you should link to that master file in the demos for your app.</em></p>
-<p>For example:</p>
-<pre><code>&lt;html&gt;
-  &lt;head&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;/styles/buttons.css&quot; /&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;button&gt;Example Button 1&lt;/button&gt;
-  &lt;body&gt;
-&lt;html&gt;
-</code></pre>
-<p>Your project's folder structure should now look like this:</p>
-<pre><code>project/
-    package.json
-    styles/
-        buttons.css
-        styles.md
-    demos/
-      buttons.html
-    documentjs.json
-</code></pre>
-<h3>Run</h3>
-<p>To generate the Style Guide using a simple command like <code>documentjs</code>, you'll want to install DocumentJS globally using:</p>
-<pre><code>&gt; npm install -g documentjs
-</code></pre>
-<p>This might require admin privileges to install, so use sudo and enter your password when prompted:</p>
-<pre><code>&gt; sudo npm install -g documentjs
-</code></pre>
-<p>Then from your project directory run:</p>
-<pre><code>&gt; documentjs -w
-</code></pre>
-<p><em>-w is a flag that tell DocumentJS to watch changes and regenerate the style guide every time you make updates.</em></p>
-<p>To see the generated site, using terminal navigate to the styleguide directory and use python to start a server*:</p>
-<pre><code>&gt; cd styleguide
-&gt; python -m SimpleHTTPServer
-</code></pre>
-<p><em>This only applies to Mac or a Linux machines</em></p>
-<p>Open up a browser and navigate to <strong>http://localhost:8000</strong> (if the number above is not 8000, use whatever number you see in your terminal instead). You should see the Live Style Guide with the documentation you just created!</p>
-<h3>Ignoring Generated Files</h3>
-<p>Because DocumentJS generates a whole directory based on source files, you'll probably want to mark those files to be ignored by git (or whichever code revision manager you're using).</p>
-<p>If you're using git, create a file named <code>.gitignore</code> at the root of your project (if it doesn't already exist.) Then add the following:</p>
-<pre><code> # DocumentJS generated files
- styleguide
-</code></pre>
-<p>This will mark the whole folder as something to be ignored and your team can avoid merge conflicts on generated files.</p>
-<p>For in depth instructions, check out the <a href="/docs/lsg-quickstart.html">Standalone Live Style Guide</a>.</p>
 
 		</section>
 		
@@ -347,9 +300,7 @@ This is my style guide
 
 		
 	
-	
-	</article>
-	
+
 	
 
 </div>
@@ -359,24 +310,78 @@ This is my style guide
 
 
 	
-		<script type="text/javascript">
-		var docObject = {"type":"page","name":"lsg.guides","src":"pages/livestyleguide.md","description":"<style>","title":"Guides","dest":"/Users/thelela/Documents/GitHub/documentcss/docs","glob":{"pattern":"{./node_modules/documentjs/docs/livestyleguide/**/*.md,pages/livestyleguide.md}","ignore":"./node_modules/documentjs/docs/livestyleguide/livestyleguide.md","cwd":"/Users/thelela/Documents/GitHub/documentcss"},"templates":"/Users/thelela/Documents/GitHub/documentcss/theme/templates","static":"/Users/thelela/Documents/GitHub/documentcss/theme/static","forceBuild":true,"generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
-	</script>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-8">
+					<div class="col-xs-1 footer-brand">
+						<a href="/"><img src="/static/img/logo-doc-css-white.svg"></a>
+					</div>
+
+					<ul class="footer-nav-main list-stacked">
+						<li>
+							<a href="/">HOME</a>
+						</li>
+						<li>
+							<a href="/Guides.html">GUIDES</a>
+						</li>
+						<li>
+							<a href="/examples/styles/index.html">LIVE EXAMPLE</a>
+						</li>
+						<li>
+							<a href="/faq.html">FAQS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<ul class="footer-nav-social list-stacked">
+						<li>
+							<a href="https://github.com/bitovi/documentcss">
+								<img class="footer-social-icon" src="/static/img/icon-github-white.svg">
+							</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/documentjs">
+								<img class="footer-social-icon" src="/static/img/icon-twitter-white.svg">
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-copyright col-sm-12">
+					&copy; <a href="http://www.bitovi.com">2016 Bitovi, Inc.</a>
+				</div>
+			</div>
+		</div>
+	</footer>
 	
+
+	<script type="text/javascript">
+		var docObject = {"type":"page","name":"guides","src":"pages/guides/guides.md","description":"Get using DocumentCSS by following these guides:","title":"Guides","hideArticle":true,"dest":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/docs","glob":{"pattern":"{pages/guides/*.md,pages/guides/**/*.md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss"},"templates":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/theme/donejs/templates","static":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/theme/donejs/static","generators":["html"],"docConfigDest":"../documentjs.json","project":{}};
+	</script>
+
 	
 		<script>
-		  steal = {
-		    instantiated: {
-		      "bundles/static.css!$css" : null
-		    }
-		  }
+			steal = {
+			instantiated: {
+				"bundles/static.css!$css" : null
+			}
+			}
 		</script>
-		<script type='text/javascript' 
+		<script type='text/javascript'
 				data-main="static"
 				data-config="./static/config.js"
 				src="./static/steal.production.js"
-		    		bundles-path="bundles"></script>
+				bundles-path="bundles"></script>
 	
+	<!-- Start of Async HubSpot Analytics Code -->
+  <script type="text/javascript">
+    (function(d,s,i,r) {
+      if (d.getElementById(i)){return;}
+      var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+      n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/2171535.js';
+      e.parentNode.insertBefore(n, e);
+    })(document,"script","hs-analytics",300000);
+  </script>
+<!-- End of Async HubSpot Analytics Code -->
 </body>
-
 </html>

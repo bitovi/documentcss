@@ -17,93 +17,135 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>DocumentCSS - Docs Warning </title>
-	<meta name="description" content="">
-	<meta name="author" content="">
-
-	<link rel="stylesheet" type="text/css" href='./static/bundles/static.css'/>
+	<title>Styles - Docs Warning </title>
+	<meta name="description" content="DocumentCSS is an open source Live Style Guide creation tool, and sister to DocumentJS">
+	<meta name="author" content="Bitovi - DocumentCSS">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" sizes="57x57" href="/static/img/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/static/img/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/static/img/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/static/img/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/static/img/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/static/img/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/static/img/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/static/img/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/static/img/favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="/static/img/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/static/img/favicons/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="/static/img/favicons/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="/static/img/favicons/favicon-16x16.png" sizes="16x16">
+	
+	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+	
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
 	<!--[if lt IE 9]>
-   <script type="text/javascript" src="./static/html5shiv.js"></script>
-    <!--<![endif]-->
+		<script type="text/javascript" src="static/html5shiv.js"></script>
+	<!--<![endif]-->
 </head>
+<body class="docs-warning">
+		<div id="greyOutUnderNav" style="display:none;"></div>
+		<header>
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="mobile-menu-label">MENU</span>
+							<span class="mobile-menu-close"></span>
+						</button>
+						<div class="logo-menu">
+							<a class="brand" href="/index.html">DocumentCSS</a>
+							<ul class="dropdown-menu hidden-xs">
+								<li><a href="http://documentjs.com">DocumentJS</a></li>
+								<li><a href="http://donejs.com">DoneJS</a></li>
+								<li><a href="http://canjs.com">CanJS</a></li>
+								<li><a href="http://stealjs.com">StealJS</a></li>
+								<li><a href="http://jquerypp.com">jQuery++</a></li>
+								<li><a href="http://funcunit.com">FuncUnit</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li >
+								<a href="/index.html">Home</a>
+							</li>
+							<li class="guides-menu">
+									<a href="/docs/index.html">Guides</a>
+									<ul class="dropdown-menu">
+                      <li ><a href="/docs/quickstart.html">Quick Start</a></li>
+                      <li><a  href="/docs/setup.html">Setup</a></li>
+                      <li ><a href="/docs/use.html">Use</a></li>
+                      <li ><a href="/docs/customize.html">Customize</a></li>
+                      <li ><a href="/docs/publish.html">Publish</a></li>
+									</ul>
+							</li>
+							<li class="examples-menu">
+								<a href="/examples/styles/index.html">Live Examples</a>
+								
+								<ul class="dropdown-menu">
+								  <li><a href="/examples/styles/index.html">DocumentCSS Style Guide</a></li>
+                  <li><a href="/theme-default/index.html">Theme: Default</a></li>
+                  <li><a href="/theme-classic/index.html">Theme: Classic</a></li>
+                  <li><a href="/theme-bootstrap3/index.html">Theme: Bootstrap 3</a></li>
+                  <li><a href="/theme-blankslate/index.html">Theme: Blank Slate</a></li>
+								</ul>
+									
+							</li>
+							<li >
+								<a href="/faq.html">FAQs</a>
+							</li>
+						</ul>
 
-<body class="docs">
-	<header>
-		<nav class="container">
+						<ul class="nav navbar-nav navbar-right bitovi-menu">
+							<li class="dropdown">
+								<a href="http://bitovi.com" class="bitovi icon-bits">Bitovi</a>
+								<ul class="dropdown-menu">
+									<li><a href="http://bitovi.com">Bitovi.com</a></li>
+									<li><a href="http://bitovi.com/blog/">Blog</a></li>
+									<li><a href="http://bitovi.com/consulting/">Consulting</a></li>
+									<li><a href="http://bitovi.com/training/">Training</a></li>
+									<li><a href="http://bitovi.com/open-source/">Open Source</a></li>
+									<li><a href="http://bitovi.com/people/">People</a></li>
+									<li><a href="http://bitovi.com/contact/">Contact Us</a></li>
+								</ul>
+							</li>
+						</ul>
 
-			<div class="logo-menu">
-				<a class="brand" href="../../index.html">DocumentJS</a>
-				<ul class="dropdown-menu">
-		          <li><a href="http://javascriptmvc.com">JavaScriptMVC</a></li>
-		          <li><a href="http://canjs.com">CanJS</a></li>
-		          <li><a href="http://jquerypp.com">jQuery++</a></li>
-		          <li><a href="http://stealjs.com">StealJS</a></li>
-		          <li><a href="http://funcunit.com">FuncUnit</a></li>
-		          <li><a href="http://documentjs.com" class="active">DocumentJS</a></li>
-		        </ul>
-			</div>
-			<ul class="nav">
-		  	<li >
-        	<a href="../../index.html">Home</a>
-        </li>
-        <li >
-          <a href="/docs/index.html">Guides</a>
-        </li>
-        <li >
-          <a href="/faq.html">FAQs</a>
-        </li>
-        <li >
-          <a href="/examples/styles/index.html">Example</a>
-        </li>
-	      <li class=""><a href="http://documentjs.com">DocumentJS</a></li>
-	    </ul>
-			<div class="pull-right">
-				<div class="bitovi-menu">
-					<a href="http://bitovi.com" class="bitovi icon-bits">Bitovi</a>
-					<ul class="dropdown-menu">
-						<li><a href="http://bitovi.com">Bitovi.com</a></li>
-						<li><a href="http://bitovi.com/blog/">Blog</a></li>
-						<li><a href="http://bitovi.com/design/">Design</a></li>
-						<li><a href="http://bitovi.com/development/">Development</a></li>
-						<li><a href="http://bitovi.com/training/">Training</a></li>
-						<li><a href="http://bitovi.com/open-source/">Open Source</a></li>
-						<li><a href="http://bitovi.com/about/">About</a></li>
-						<li><a href="http://bitovi.com/contact/">Contact Us</a></li>
-					</ul>
+					</div>
 				</div>
-			</div>
-		</nav>
-	</header>
+			</nav>
+		</header>
+
+	<div class="scroll-spy-title hidden-md hidden-lg">
+		<span class="menu-indicator menus-closed"></span>
+		<div id="scrollSpyCurrentH2" class="h2Only">Table of Contents</div>
+		<div id="scrollSpyCurrentH3"></div>
+	</div>
 
 	
-<div class="container api">
+<div class="main-content">
 
 	
-	<nav class="sidebar">
+	<nav class="sidebar-wrapper">
 		
-		<ul class="api cascading primary-grouping"> 
+		<ul class="sidebar">
 	
-		
-		<li class="search-container active parent">
-			<a class="sidebar-title" href="index.html" data-search="Styles">
-				Styles
-			</a>
+	   <li class="sidebar-section">
+	   	<span class="sidebar-section-title" href="Styles.theme.html" data-search="Theme">
+        Theme
+      </span>
+
 			
-				
-	<ul>
-		
-			
-				
-					<li class="heading search-container">
-						<span>Theme</span>
-						
-	<ul>
+	<ul class="active-menu">
 		
 			
 				
 				
-				<li class="search-container">
-					<a class="stylesheet" href="variables.less.html" data-search="Variables">
+				<li class="page-title ">
+					<a class="page-link" href="variables.less.html" data-search="Variables">
 						Variables
 					</a>
 				</li>
@@ -114,21 +156,9 @@
 			
 				
 				
-				<li class="search-container">
-					<a class="stylesheet" href="brand.less.html" data-search="Brand">
+				<li class="page-title ">
+					<a class="page-link" href="brand.less.html" data-search="Brand">
 						Brand
-					</a>
-				</li>
-				
-			
-			
-		
-			
-				
-				
-				<li class="search-container">
-					<a class="stylesheet" href="icons.less.html" data-search="Icons">
-						Icons
 					</a>
 				</li>
 				
@@ -137,24 +167,22 @@
 		
 	</ul>
 
-					</li>
-				
-				
+
+	   </li>
+	
+	   <li class="sidebar-section">
+	   	<span class="sidebar-section-title" href="Styles.baseline-elements.html" data-search="Baseline Elements">
+        Baseline Elements
+      </span>
+
 			
-			
+	<ul class="active-menu">
 		
 			
 				
-					<li class="heading search-container">
-						<span>Baseline Elements</span>
-						
-	<ul>
-		
-			
 				
-				
-				<li class="search-container">
-					<a class="stylesheet" href="base.less.html" data-search="Base Styles">
+				<li class="page-title ">
+					<a class="page-link" href="base.less.html" data-search="Base Styles">
 						Base Styles
 					</a>
 				</li>
@@ -165,32 +193,8 @@
 			
 				
 				
-				<li class="search-container">
-					<a class="stylesheet" href="typography.less.html" data-search="Typography">
-						Typography
-					</a>
-				</li>
-				
-			
-			
-		
-			
-				
-				
-				<li class="search-container">
-					<a class="stylesheet" href="helper.less.html" data-search="Helpers">
-						Helpers
-					</a>
-				</li>
-				
-			
-			
-		
-			
-				
-				
-				<li class="search-container">
-					<a class="stylesheet" href="layout.less.html" data-search="Layout">
+				<li class="page-title ">
+					<a class="page-link" href="layout.less.html" data-search="Layout">
 						Layout
 					</a>
 				</li>
@@ -201,8 +205,8 @@
 			
 				
 				
-				<li class="search-container">
-					<a class="stylesheet" href="sidebar.less.html" data-search="Sidebar">
+				<li class="page-title ">
+					<a class="page-link" href="sidebar.less.html" data-search="Sidebar">
 						Sidebar
 					</a>
 				</li>
@@ -213,8 +217,20 @@
 			
 				
 				
-				<li class="search-container">
-					<a class="stylesheet" href="buttons.less.html" data-search="Buttons">
+				<li class="page-title ">
+					<a class="page-link" href="_header.less.html" data-search="Header">
+						Header
+					</a>
+				</li>
+				
+			
+			
+		
+			
+				
+				
+				<li class="page-title ">
+					<a class="page-link" href="buttons.less.html" data-search="Buttons">
 						Buttons
 					</a>
 				</li>
@@ -225,8 +241,8 @@
 			
 				
 				
-				<li class="search-container">
-					<a class="stylesheet" href="code.less.html" data-search="Code Rendering">
+				<li class="page-title ">
+					<a class="page-link" href="code.less.html" data-search="Code Rendering">
 						Code Rendering
 					</a>
 				</li>
@@ -236,24 +252,22 @@
 		
 	</ul>
 
-					</li>
-				
-				
+
+	   </li>
+	
+	   <li class="sidebar-section active">
+	   	<span class="sidebar-section-title" href="Styles.docs.html" data-search="Docs">
+        Docs
+      </span>
+
 			
-			
+	<ul class="active-menu">
 		
 			
 				
-					<li class="heading search-container">
-						<span>Docs</span>
-						
-	<ul>
-		
-			
 				
-				
-				<li class="search-container">
-					<a class="stylesheet" href="api.less.html" data-search="API">
+				<li class="page-title ">
+					<a class="page-link" href="api.less.html" data-search="API">
 						API
 					</a>
 				</li>
@@ -263,68 +277,15 @@
 		
 	</ul>
 
-					</li>
-				
-				
-			
-			
-		
-			
-				
-					<li class="heading search-container">
-						<span>Other</span>
-						
-	<ul>
-		
-			
-				
-				
-				<li class="search-container">
-					<a class="stylesheet" href="reset.less.html" data-search="Browser Resets">
-						Browser Resets
-					</a>
-				</li>
-				
-			
-			
-		
-			
-				
-				
-				<li class="search-container">
-					<a class="stylesheet" href="ie.less.html" data-search="IE Corrections">
-						IE Corrections
-					</a>
-				</li>
-				
-			
-			
-		
-	</ul>
 
-					</li>
-				
-				
-			
-			
-		
-	</ul>
-
-			
-		</li>
-		
-		
-			
-		
+	   </li>
 	
 </ul>
 	</nav>
 	
 	
-	
-	<article class="content docs">
-	
-	
+
+
 		
 		<section class="title">
 			<div class="heading">
@@ -357,7 +318,10 @@
 		
 		
 		
-		<section class="contents">
+		<section class="contents-wrapper">
+			<span class="contents-title">Docs Warning</span>
+			<section class="contents">
+			</section>
 		</section>
 		
 		
@@ -384,9 +348,7 @@
 
 		
 	
-	
-	</article>
-	
+
 	
 
 </div>
@@ -396,24 +358,78 @@
 
 
 	
-		<script type="text/javascript">
-		var docObject = {"src":"node_modules/documentjs/site/default/static/styles/api.less","line":167,"codeLine":173,"type":"styles","description":"","name":"docs-warning","title":"Docs Warning","parent":"api.less","hideInParentMenu":true,"dest":"/Users/thelela/Documents/GitHub/documentcss/examples/styles","glob":{"pattern":"{pages/example.md,./node_modules/documentjs/{styles,site/default/static/styles}/**/*.{less,css,md}}","ignore":"{./node_modules/documentjs/styles/styles.md,./node_modules/documentjs/styles/demos/**/*}","cwd":"/Users/thelela/Documents/GitHub/documentcss"},"templates":"/Users/thelela/Documents/GitHub/documentcss/theme/templates","static":"/Users/thelela/Documents/GitHub/documentcss/theme/static","forceBuild":true,"generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
-	</script>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-8">
+					<div class="col-xs-1 footer-brand">
+						<a href="/"><img src="/static/img/logo-doc-css-white.svg"></a>
+					</div>
+
+					<ul class="footer-nav-main list-stacked">
+						<li>
+							<a href="/">HOME</a>
+						</li>
+						<li>
+							<a href="/Guides.html">GUIDES</a>
+						</li>
+						<li>
+							<a href="/examples/styles/index.html">LIVE EXAMPLE</a>
+						</li>
+						<li>
+							<a href="/faq.html">FAQS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<ul class="footer-nav-social list-stacked">
+						<li>
+							<a href="https://github.com/bitovi/documentcss">
+								<img class="footer-social-icon" src="/static/img/icon-github-white.svg">
+							</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/documentjs">
+								<img class="footer-social-icon" src="/static/img/icon-twitter-white.svg">
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-copyright col-sm-12">
+					&copy; <a href="http://www.bitovi.com">2016 Bitovi, Inc.</a>
+				</div>
+			</div>
+		</div>
+	</footer>
 	
+
+	<script type="text/javascript">
+		var docObject = {"src":"theme/donejs/static/styles/api.less","line":31,"codeLine":37,"type":"styles","description":"","name":"docs-warning","title":"Docs Warning","parent":"api.less","hideInParentMenu":true,"dest":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/examples/styles","glob":{"pattern":"{pages/styles.md,theme/donejs/static/styles/**/*.{less,css,md}}","ignore":"{node_modules,bower_components}/**/*","cwd":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss"},"templates":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/theme/donejs/templates","static":"/Users/adrianadelacuadra/Documents/Bitovi/repos/documentcss/theme/donejs/static","forceBuild":true,"generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+	</script>
+
 	
 		<script>
-		  steal = {
-		    instantiated: {
-		      "bundles/static.css!$css" : null
-		    }
-		  }
+			steal = {
+			instantiated: {
+				"bundles/static.css!$css" : null
+			}
+			}
 		</script>
-		<script type='text/javascript' 
+		<script type='text/javascript'
 				data-main="static"
 				data-config="./static/config.js"
 				src="./static/steal.production.js"
-		    		bundles-path="bundles"></script>
+				bundles-path="bundles"></script>
 	
+	<!-- Start of Async HubSpot Analytics Code -->
+  <script type="text/javascript">
+    (function(d,s,i,r) {
+      if (d.getElementById(i)){return;}
+      var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+      n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/2171535.js';
+      e.parentNode.insertBefore(n, e);
+    })(document,"script","hs-analytics",300000);
+  </script>
+<!-- End of Async HubSpot Analytics Code -->
 </body>
-
 </html>

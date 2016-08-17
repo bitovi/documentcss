@@ -1,0 +1,181 @@
+/**
+* @stylesheet sidebar.less Sidebar
+* @parent Styles.baseline-elements 4
+* @hide article
+* @description
+* Styles the sidebar navigation.
+**/
+
+
+// Sidebar structure
+.sidebar-wrapper,
+.contents-wrapper {
+  background-color: @sidebarBackground;
+  position: fixed;
+  margin-bottom: 15px;
+  z-index: @zindex-navbar-fixed;
+  padding: 10px 15px 20px;
+  top: 100px;
+  left: ~"calc( ( 100% - " @containerWidth ~" ) / 2 )";
+  width: 250px;
+  max-height: ~"calc( 100% - 100px )";
+  overflow: hidden;
+  @media(max-width: @screen-sm-max){
+    left:0;
+  } 
+}  
+.sidebar {
+  @media min-width(@screen-md) {
+    width: 255px;
+  }
+}
+
+.sidebar,
+.active-menu,
+.contents ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;      
+  .sidebar-title-link,
+  .page-link,
+  .stylesheet-link {
+    display: block;
+  }
+} 
+ 
+
+/**
+* @styles sidebar-versions Versions
+*
+* @description
+* Select menu used to display the documentation
+*
+* @demo demos/versions.html
+**/
+.sidebar-wrapper,
+.contents-wrapper {
+   .versions, 
+   #versions {
+    position: absolute;
+    right: 5px;
+    top: 7px;
+  }
+}
+
+
+/**
+* @styles sidebar-list List Items
+*
+* @description
+* Styles the groups of lists shown on the sidebar.
+*
+* @demo demos/lists.html
+**/    
+.page-title { 
+  font-size: 14px;
+  padding-left: 15px;
+    &.active, &:hover { 
+      position: relative;  
+      &:before {
+        content: ">";
+        position: absolute;
+        font-size: 12px;
+        left: 3px;
+        top: 4px;
+        z-index: 1000;
+      }
+      .page-link {
+        color: @darkSkies;
+      } 
+    }
+    &.active {
+        background-color: lighten(@sidebarBackground, 35%); 
+        &:hover {
+          background-color: lighten(@sidebarBackground, 35%);
+        }
+        ul { //this doesn't work atm because child page-titles are always marked as active, even when the parent page-title isn't.
+          //background-color: @sidebarBackground;
+        }
+    }
+    &:hover {
+        background-color: lighten(@sidebarBackground, 20%); 
+    }
+  &.collapsed {
+    > :not(a) {
+      display: none;
+    }
+  }
+  li {
+    padding-left: 15px;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+.page-link {
+  color: @clear;
+  padding: 3px 0;
+  font-weight: normal;
+  overflow-wrap: break-word;
+  white-space: normal;
+  &:visited, &:focus {
+    color: @clear;
+    text-decoration: none;
+  }
+}
+
+/**
+* @styles cascading-list Cascading List
+*
+* @description
+* Styles `.sidebar-title` as a child of the `.api` list, and up to 5 levels before inheriting the styles of level 1.
+*
+* @demo demos/cascading-list.html
+**/ 
+.sidebar-section-title,
+.contents-title {
+  font-weight: bold;
+  color: @clear;
+  line-height: 2em;
+}
+
+.group-heading {
+  color: @clear;
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+} 
+  
+  //Mobile Table of contents
+  @media(max-width: @screen-sm-max) {
+    .sidebar-wrapper,
+    .contents-wrapper {
+      display: none;
+      left: 0px;
+      max-height: ~"calc( 100% - 100px )";
+      overflow-y: scroll; /* has to be scroll, not auto */
+      -webkit-overflow-scrolling: touch;
+      z-index: @zindex-mobile-menu;
+      &.active {
+        display: block;
+        width: 100%;
+      }
+      .sidebar-section {
+        padding-top: 10px;
+        color: @clear;
+      }
+      a {
+        display: block;
+      }
+      .group-heading {
+        color: @clear;
+      }
+      .page-title {
+        text-indent: 0;
+        border-bottom: 1px solid @clear;
+      }
+      .page-link{
+        padding: 7px 20px;
+      }
+    }
+  }

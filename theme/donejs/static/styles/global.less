@@ -1,0 +1,44 @@
+
+/*
+* Responsive Columns Same Height
+* http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height
+* http://stackoverflow.com/questions/20773342/bootstrap-3-100-height-of-custom-div-inside-column
+*/
+.reset-padding {
+	padding:0;
+}
+.reset-margin {
+	margin:0;
+}
+.table-row {
+	display: table;
+	width: 100%;
+	margin: 0 auto;
+	> [class*="col-"] {
+		float: none;
+		display: table-cell;
+		vertical-align: top;
+	}
+}
+.center-block {
+	float: none;
+}
+.container {
+	@media (max-width: @screen-sm) {
+		width: auto;
+	}
+}
+
+#greyOutUnderNav {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba( 0, 0, 0, 0.5 );
+	z-index: @zindex-modal-background;
+}
+hr  {
+	margin: 40px 0;
+}
+/* site wide footer */

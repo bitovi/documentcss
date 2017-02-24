@@ -28,9 +28,10 @@ For example:
 ```json
 {
     "siteDefaults": {
-      "static": "style-guide-theme"
+      "templates": "style-guide-theme/templates",
+      "static": "style-guide-theme/static"
     },
-    "sites": {
+   "sites": {
         "styles": {
             "glob": "styles/**/*.{md,less,md}",
             "parent": "style-guide",

@@ -29,7 +29,7 @@
 
 </div>    
 <section class="homepage-closing">
-  <p class="explanation">DocumentCSS makes it easy to incorporate style documentation as part of your design workflow. Using a combination of custom tags and markdown, DocumentCSS parses coments on your CSS, Less, or SASS and autogenerates a site with your documentation.</p>
+  <p class="explanation">Easily incorporate style documentation as part of your design workflow! DocumentCSS generates a styleguide website from tags and markdown added to the comments in your CSS, Less, or SASS.</p>
   <div class="hero-cta">
     <a href="docs/index.html">
       <button class="btn btn-primary btn-lg">Get Started</button>

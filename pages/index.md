@@ -7,7 +7,7 @@
 
 
 <div class="hero">
-  <h1 class="lead">Create living style guides with interactive examples that change with your design.</h1>
+  <h1 class="lead">Create living style guides and interactive examples that change with your design.</h1>
   <p class="hero-note">Powered by <a href="http://documentjs.com">DocumentJS</a></p>
 
   <div class="hero-cta">

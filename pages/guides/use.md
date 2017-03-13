@@ -27,7 +27,7 @@ Use the following tags to structure your Living Style Guide:
       <td>Declare a stylesheet file as page in your site.</td>
   </tr>
   <tr>
-      <td>@@style</td>
+      <td>@@styles</td>
       <td>Declare a comment as a style inside of a stylesheet.</td>
   </tr>
   <tr>

@@ -50,7 +50,7 @@ module.exports = function(grunt){
     copy: {
 			main: {
 				expand: true,
-				src: 'theme-*/**',
+				src: ['CNAME','theme-*/**'],
 				dest: 'gh-pages/'
 			},
     },

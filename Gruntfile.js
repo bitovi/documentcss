@@ -77,7 +77,8 @@ module.exports = function(grunt){
 	}
 
 	grunt.registerTask('build', function(options){
-		if(options.indexOf('forceBuild')!==-1){
+		options = options || {};
+		if(typeof options.forceBuild != 'undefined'){
 			for(site in sites){
 				grunt.config('documentjs.sites.' + site + '.forceBuild', true);
 			}

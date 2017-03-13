@@ -58,7 +58,7 @@ module.exports = function(grunt){
 			server: {
 				options: {
 					livereload: true,
-          base: 'gh-pages',
+					base: 'gh-pages',
 					open: true,
 					port: 4000
 				}

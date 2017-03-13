@@ -2,7 +2,8 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('documentjs');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-build-control');
+	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-build-control');
 
 	grunt.initConfig({
 		documentjs: {
@@ -25,7 +26,7 @@ module.exports = function(grunt){
 					},
 					"templates": "theme/donejs/templates",
 					"static": "theme/donejs/static"
-				},				
+				},
 				"examples/demos": {
 					"parent": "demos",
 					"dest": "gh-pages/examples/demos",
@@ -46,10 +47,18 @@ module.exports = function(grunt){
 				}
 			}
 		},
+    copy: {
+			main: {
+				expand: true,
+				src: 'theme-*/**',
+				dest: 'gh-pages/'
+			},
+    },
 		connect: {
 			server: {
 				options: {
 					livereload: true,
+          base: 'gh-pages',
 					open: true,
 					port: 4000
 				}
@@ -104,7 +113,7 @@ module.exports = function(grunt){
 			}
 		}
 
-		grunt.task.run('documentjs');
+		grunt.task.run('documentjs', 'copy');
 	});
 
 	grunt.registerTask('generate', function(options){
